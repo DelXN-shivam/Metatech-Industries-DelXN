@@ -40,28 +40,28 @@ const Header = () => {
         { name: 'Abrasive Belts', slug: 'abrasive-belts' },
       ],
     },
-    {
-      title: 'Polishing Consumables',
-      slug: 'polishing-consumables',
-      items: [
-        { name: 'Polishing Pads', slug: 'polishing-pads' },
-        { name: 'Diamond Paste', slug: 'diamond-paste' },
-        { name: 'Polycrystalline Diamond Suspension', slug: 'polycrystalline-diamond-suspension' },
-        { name: 'Monocrystalline Diamond Suspension', slug: 'monocrystalline-diamond-suspension' },
-        { name: 'Alumina Polishing Powders', slug: 'alumina-polishing-powders' },
-      ],
-    },
-    {
-      title: 'Mounting Consumables',
-      slug: 'mounting-consumables',
-      items: [
-        { name: 'Mounting Resin', slug: 'mounting-resin' },
-        { name: 'Epoxy Compounds', slug: 'epoxy-compounds' },
-        { name: 'Phenolic Powders', slug: 'phenolic-powders' },
-        { name: 'Cold Mounting Kits', slug: 'cold-mounting-kits' },
-        { name: 'Release Agents', slug: 'release-agents' },
-      ],
-    },
+    // {
+    //   title: 'Polishing Consumables',
+    //   slug: 'polishing-consumables',
+    //   items: [
+    //     { name: 'Polishing Pads', slug: 'polishing-pads' },
+    //     { name: 'Diamond Paste', slug: 'diamond-paste' },
+    //     { name: 'Polycrystalline Diamond Suspension', slug: 'polycrystalline-diamond-suspension' },
+    //     { name: 'Monocrystalline Diamond Suspension', slug: 'monocrystalline-diamond-suspension' },
+    //     { name: 'Alumina Polishing Powders', slug: 'alumina-polishing-powders' },
+    //   ],
+    // },
+    // {
+    //   title: 'Mounting Consumables',
+    //   slug: 'mounting-consumables',
+    //   items: [
+    //     { name: 'Mounting Resin', slug: 'mounting-resin' },
+    //     { name: 'Epoxy Compounds', slug: 'epoxy-compounds' },
+    //     { name: 'Phenolic Powders', slug: 'phenolic-powders' },
+    //     { name: 'Cold Mounting Kits', slug: 'cold-mounting-kits' },
+    //     { name: 'Release Agents', slug: 'release-agents' },
+    //   ],
+    // },
   ];
 
   return (

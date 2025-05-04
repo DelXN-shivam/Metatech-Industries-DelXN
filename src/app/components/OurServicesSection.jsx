@@ -10,42 +10,42 @@ const Services = () => {
   const services = [
     {
       icon: '/images/Coffee maker.png',
-      image: '/images/microhardness-tester.jpg',
+      image: '/images/Microhardness-Tester-with-Image-Analyser.jpg',
       title: 'Microhardness Tester with Image Analyser',
       description: 'Precision hardness testing with advanced image analysis capabilities',
       category: 'Testing'
     },
     {
       icon: '/images/Gears set.png',
-      image: '/images/automatic-sectioning.jpg',
+      image: '/images/Automatic-Sectioning.jpg',
       title: 'Automatic Sectioning',
       description: 'High-precision automated sectioning for consistent sample preparation',
       category: 'Cutting'
     },
     {
       icon: '/images/Laser.png',
-      image: '/images/polishing-grinding.jpg',
+      image: '/images/Manual-Automatic-Polishing.jpg',
       title: 'Manual/Automatic Polishing',
       description: 'Surface preparation solutions for metallographic analysis',
       category: 'Finishing'
     },
     {
       icon: '/images/Coffee maker.png',
-      image: '/images/3d-profilometry.jpg',
+      image: '/images/3D-Surface-Profilometry.jpg',
       title: '3D Surface Profilometry',
       description: 'Advanced surface measurement with nanometer-level resolution',
       category: 'Analysis'
     },
     {
       icon: '/images/Gears set.png',
-      image: '/images/spectroscopic-analysis.jpg',
+      image: '/images/Spectroscopic-Analysis.jpg',
       title: 'Spectroscopic Analysis',
       description: 'Material composition analysis using advanced spectroscopy',
       category: 'Testing'
     },
     {
       icon: '/images/Laser.png',
-      image: '/images/automated-mounting.jpg',
+      image: '/images/Automated-Mounting.jpg',
       title: 'Automated Mounting',
       description: 'Precision mounting systems for sample preparation',
       category: 'Preparation'
