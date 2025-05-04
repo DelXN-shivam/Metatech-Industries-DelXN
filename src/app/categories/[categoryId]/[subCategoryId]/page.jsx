@@ -357,25 +357,25 @@ export default function SubCategoryPage({ params: paramsPromise }) {
               {
                 title: 'High Performance',
                 description: 'Optimized for high throughput and precision, ensuring consistent results across applications.',
-                image: '/product/highSpeed.png',
+                image: '/product/high-performance.png',
                 icon: 'fas fa-tachometer-alt',
               },
               {
                 title: 'User-Friendly Design',
                 description: 'Intuitive controls and programmable settings for ease of use and repeatable outcomes.',
-                image: '/product/intuitiveControlSystem.png',
+                image: '/product/user-friendly.png',
                 icon: 'fas fa-tachometer-alt',
               },
               {
                 title: 'Robust Construction',
                 description: 'Built for durability and reliability in demanding industrial and laboratory environments.',
-                image: '/product/dualMountCapability.png',
+                image: '/product/robust-construction.png',
                 icon: 'fas fa-tachometer-alt',
               },
               {
                 title: 'Advanced Technology',
                 description: 'Incorporates cutting-edge features for enhanced performance and efficiency.',
-                image: '/product/highSpeed2.png',
+                image: '/product/advanced-technology.jpg',
                 icon: 'fas fa-tachometer-alt',
               },
             ].map((feature, index) => (
@@ -386,7 +386,7 @@ export default function SubCategoryPage({ params: paramsPromise }) {
               >
                 <div className="h-40 relative overflow-hidden">
                   <Image src={feature.image} alt={feature.title} fill className="object-cover" />
-                  <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center p-6">
+                  <div className="absolute inset-0 bg-opacity-30 flex items-center justify-center p-6">
                     <i className={`${feature.icon} text-white text-5xl`}></i>
                   </div>
                 </div>

@@ -124,10 +124,10 @@ const products = [
         "Multiple machines can be conveniently lined up side by side, optimizing space usage",
       ],
       images: [
-        "/auto_cutting/simplimet1.jpg",
-        "/auto_cutting/simplimet2.jpg",
-        "/auto_cutting/simplimet3.jpg",
-        "/auto_cutting/simplimet4.jpg",
+        "/product/Simplimate1.jpg",
+        "/product/Simplimate2.jpg",
+        "/product/Simplimate3.jpg",
+        "/product/Simplimate4.jpg",
       ],
       video: "/product/SimpliMet_4000.mp4",
       specifications: [
