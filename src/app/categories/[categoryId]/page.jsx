@@ -8,7 +8,7 @@ import { useRouter, useParams } from 'next/navigation';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import { motion } from 'framer-motion';
-import { getCategoryBySlug, getProductBySlug } from '@/app/data/categories';
+import { getCategoryBySlug } from '@/app/data/categories';
 
 export default function CategoryPage() {
   const router = useRouter();
@@ -24,6 +24,13 @@ export default function CategoryPage() {
 
   // Find the category by slug
   const category = getCategoryBySlug(categoryId);
+
+  // Update document title when category is loaded
+  useEffect(() => {
+    if (category) {
+      document.title = `${category.name} | Metatech Industries`;
+    }
+  }, [category]);
 
   // Handle resize for responsive behavior
   useEffect(() => {
@@ -274,9 +281,17 @@ export default function CategoryPage() {
             >
               <div
                 className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${category.heroImage})` }}
+                style={{
+                  backgroundImage: `url(${category.heroImage})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
               ></div>
-              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+              {/* Optional: Dark gradient or solid overlay */}
+              <div className="absolute inset-0 bg-black opacity-60"></div>
+
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.h1
                   className="text-white text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide px-4 text-center"

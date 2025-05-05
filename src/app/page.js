@@ -7,6 +7,25 @@ import WhatSetsSection from "./components/WhatSetsSection";
 import Footer from "./components/Footer";
 import QueryAndMap from "./components/QueryAndMap";
 
+export const metadata = {
+  title: "Metatech Industries",
+  description: "Metatech Industries is a leading provider of advanced technology solutions, specializing in software development, IT consulting, and digital transformation services.",
+  keywords: "technology, software development, IT consulting, digital transformation, Metatech Industries",
+  openGraph: {
+    title: "Metatech Industries",
+    description: "Metatech Industries is a leading provider of advanced technology solutions, specializing in software development, IT consulting, and digital transformation services.",
+    url: "https://metatechindustries.com",
+    images: [
+      {
+        url: "/images/metatech_logo.png",
+        width: 800,
+        height: 600,
+        alt: "Metatech Industries Logo",
+      },
+    ],
+  },
+};
+
 const Home = () => {
   return (
     <div className="font-sans bg-gray-50 text-gray-900">

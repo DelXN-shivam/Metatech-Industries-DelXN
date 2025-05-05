@@ -15,7 +15,7 @@ export default function HeroSection() {
       totalSlides: 6,
       configStatus: "open",
       sidebarText: "Discover Auto Cut",
-      color: "bg-slate-400"
+      color: "bg-slate-500"
     },
     {
       id: 2,
@@ -246,7 +246,7 @@ export default function HeroSection() {
         </div>
 
         {/* Left vertical sidebar - Hidden on mobile */}
-        <div className="hidden md:flex absolute left-0 top-0 h-full bg-blue-900 w-16 lg:w-20 flex-col justify-center items-center text-white">
+        <div className={`hidden md:flex absolute left-0 top-0 h-full ${currentData.color} w-16 lg:w-20 flex-col justify-center items-center text-white`}>
           <div className={`transform -rotate-90 uppercase tracking-widest text-xs whitespace-nowrap transition-all duration-500 ${
             isTransitioning ? 'opacity-0' : 'opacity-100'
           }`}>

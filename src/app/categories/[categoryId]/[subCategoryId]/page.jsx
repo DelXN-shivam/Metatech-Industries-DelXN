@@ -20,6 +20,13 @@ export default function SubCategoryPage({ params: paramsPromise }) {
 
   const category = getCategoryBySlug(categoryId);
   const product = getProductBySlug(categoryId, subCategoryId);
+  
+  // Update document title when category is loaded
+  useEffect(() => {
+    if (product) {
+      document.title = `${product.name} | Metatech Industries`;
+    }
+  }, [product]);
 
   // Default video thumbnails if not provided
   const videoThumbnails = product?.videos || [
@@ -220,9 +227,8 @@ export default function SubCategoryPage({ params: paramsPromise }) {
                       <motion.button
                         key={`img-${index}`}
                         onClick={() => setSelectedImage(index)}
-                        className={`relative aspect-square w-12 sm:w-14 md:w-16 lg:w-20 flex-shrink-0 ${
-                          selectedImage === index ? 'ring-2 ring-[#0f7db7]' : 'hover:ring-2 hover:ring-gray-300'
-                        } rounded-md overflow-hidden`}
+                        className={`relative aspect-square w-12 sm:w-14 md:w-16 lg:w-20 flex-shrink-0 ${selectedImage === index ? 'ring-2 ring-[#0f7db7]' : 'hover:ring-2 hover:ring-gray-300'
+                          } rounded-md overflow-hidden`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -241,11 +247,10 @@ export default function SubCategoryPage({ params: paramsPromise }) {
                           setSelectedImage(productImages.length);
                           setIsPlaying(false);
                         }}
-                        className={`relative aspect-square w-12 sm:w-14 md:w-16 lg:w-20 flex-shrink-0 ${
-                          selectedImage === productImages.length
+                        className={`relative aspect-square w-12 sm:w-14 md:w-16 lg:w-20 flex-shrink-0 ${selectedImage === productImages.length
                             ? 'ring-2 ring-[#0f7db7]'
                             : 'hover:ring-2 hover:ring-gray-300'
-                        } rounded-md overflow-hidden`}
+                          } rounded-md overflow-hidden`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
