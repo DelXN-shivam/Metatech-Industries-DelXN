@@ -224,7 +224,7 @@ const Footer = () => {
                 </motion.div>
                 
                 {/* Footer Bottom */}
-                <div className="relative mt-20 pt-8 text-center text-gray-400 border-t border-[#0f7db7]/20">
+                <div className="relative mt-4 pt-8 text-center text-gray-400 border-t border-[#0f7db7]/20">
                     <div className="px-6 max-w-4xl mx-auto">
                         © 2025 <motion.span 
                             className="text-[#0f7db7] font-medium"
