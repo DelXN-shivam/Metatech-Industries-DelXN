@@ -87,7 +87,7 @@ const Footer = () => {
                 <div className="absolute left-3/4 top-0 h-full w-px bg-gradient-to-b from-transparent via-[#0f7db7]/20 to-transparent"></div>
             </div>
 
-            <div className="relative pt-20 pb-10 container mx-auto z-10">
+            <div className="relative pt-12 pb-4 container mx-auto z-10">
                 <motion.div 
                     className="flex flex-wrap justify-between px-6 lg:px-10 gap-10"
                     initial="hidden"
