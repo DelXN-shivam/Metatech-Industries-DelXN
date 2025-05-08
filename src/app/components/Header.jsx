@@ -1,26 +1,54 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
-import { FaTools } from 'react-icons/fa';
+import { FaTools, FaChalkboardTeacher, FaInfoCircle, FaEnvelope, FaUserCircle } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useRouter, useParams } from 'next/navigation';
+import { useRouter, useParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { categories } from '@/app/data/categories';
 
 const Header = () => {
   const [productsDropdown, setProductsDropdown] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
+  const [activeSubCategory, setActiveSubCategory] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  
   const router = useRouter();
-  const { categoryId } = useParams();
+  const pathname = usePathname();
+  const { categoryId, subCategoryId } = useParams();
+  
+  // Enhanced scroll detection for smoother animation
+  useEffect(() => {
+    const handleScroll = () => {
+      // Calculate scroll progress as a percentage (0 to 1) with a maximum threshold of 40px
+      const progress = Math.min(window.scrollY / 40, 1);
+      setScrollProgress(progress);
+    };
+    
+    // Add passive: true for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  // Consumables data (consistent with previous implementation)
+  // Set active states based on current path
+  useEffect(() => {
+    if (categoryId) {
+      setActiveCategory(categoryId);
+    }
+    if (subCategoryId) {
+      setActiveSubCategory(subCategoryId);
+    }
+  }, [categoryId, subCategoryId, pathname]);
+
+  // Consumables data
   const consumables = [
     {
       title: 'Cutting Machine Consumables',
       slug: 'cutting-machine-consumables',
+      icon: '🔪',
       items: [
         { name: 'Diamond Cutting Blades', slug: 'diamond-cutting-blades' },
         { name: 'Abrasive Cutting Wheels', slug: 'abrasive-cutting-wheels' },
@@ -32,6 +60,7 @@ const Header = () => {
     {
       title: 'Grinding Machine Consumables',
       slug: 'grinding-machine-consumables',
+      icon: '⚙️',
       items: [
         { name: 'Grinding Wheels', slug: 'grinding-wheels' },
         { name: 'Silicon Carbide Grinding Papers', slug: 'silicon-carbide-grinding-papers' },
@@ -42,408 +71,569 @@ const Header = () => {
     },
   ];
 
+  // Navigation items (excluding Home and Products which are handled separately)
+  const navItems = [
+    { name: 'Courses', path: '/courses', icon: <FaChalkboardTeacher /> },
+    { name: 'About', path: '/about', icon: <FaInfoCircle /> },
+    { name: 'Contact', path: '/contact', icon: <FaEnvelope /> },
+  ];
+
+  // Calculate interpolated styles based on scroll progress
+  const headerBgColor = scrollProgress > 0.99 ? 'white' : 'rgba(224, 242, 300, 1)';
+  const headerPadding = 16 - (scrollProgress * 8); // 16px (py-4) to 8px (py-2)
+  const shadowOpacity = scrollProgress * 0.1;
+
   return (
-    <header className="py-6 bg-gradient-to-t from-[#0f7db7] to-[#4babe5] relative z-50">
-      <div className="container mx-auto flex flex-row items-center justify-between px-4 gap-32">
-        {/* Logo */}
-        <div>
-          <Link href="/">
-            <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+    <header 
+      style={{
+        '--header-bg': headerBgColor,
+        '--header-padding': `${headerPadding}px`,
+        '--header-shadow': `0 4px 6px rgba(0, 0, 0, ${shadowOpacity})`,
+        transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+      }}
+      className="sticky top-0 z-50 shadow-lg"
+    >
+      <div 
+        style={{ 
+          background: 'var(--header-bg)',
+          paddingTop: 'var(--header-padding)',
+          paddingBottom: 'var(--header-padding)',
+          boxShadow: 'var(--header-shadow)',
+        }}
+        className="w-full"
+      >
+        <div className="container mx-auto flex items-center justify-between px-4">
+          {/* Logo */}
+          <Link href="/" className="shrink-0">
+            <div className="p-2 rounded-xl transition-all duration-300">
               <Image
                 src="/images/metatech_logo.png"
-                width={230}
-                height={80}
+                width={180}
+                height={60}
                 alt="Metatech Logo"
+                className="h-10 w-auto object-contain"
                 priority
               />
             </div>
           </Link>
-        </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center justify-center flex-1">
-          <nav>
-            <ul className="flex flex-row items-center space-x-8">
-              <li>
-                <Link
-                  href="/"
-                  className={`text-lg font-semibold py-3 px-5 rounded-full transition-all duration-300 ${
-                    !categoryId ? 'text-blue-500 bg-slate-100' : 'text-white hover:text-blue-500 hover:bg-slate-100'
-                  }`}
-                >
-                  Home
-                </Link>
-              </li>
-
-              {/* Products Dropdown - Enhanced Design */}
-              <li
-                className="relative"
-                onMouseEnter={() => setProductsDropdown(true)}
-                onMouseLeave={() => setProductsDropdown(false)}
-              >
-                <button
-                  className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300 flex items-center gap-1"
-                  aria-expanded={productsDropdown}
-                  aria-label="Toggle Products Dropdown"
-                >
-                  Products
-                  <svg 
-                    className={`w-4 h-4 transition-transform duration-200 ${productsDropdown ? 'rotate-180' : ''}`} 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24" 
-                    xmlns="http://www.w3.org/2000/svg"
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center justify-center flex-1 ml-10">
+            <nav className="flex items-center">
+              <ul className="flex items-center space-x-1">
+                {/* Home Link - First Position */}
+                <li>
+                  <Link
+                    href="/"
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-[15px] font-medium transition-all duration-200 ${
+                      pathname === '/' 
+                        ? scrollProgress > 0.5 
+                          ? 'text-sky-600 bg-sky-50' 
+                          : 'text-sky-700 bg-white'
+                        : scrollProgress > 0.5 
+                          ? 'text-gray-700 hover:text-sky-600 hover:bg-sky-50' 
+                          : 'text-sky-800 hover:text-sky-900 hover:bg-white/80'
+                    }`}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
+                    <span className="hidden sm:inline-block">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                    </span>
+                    Home
+                  </Link>
+                </li>
 
-                <AnimatePresence>
-                  {productsDropdown && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2, ease: "easeOut" }}
-                      className="absolute left-1/2 transform -translate-x-1/2 mt-3 w-[1200px] max-w-[90vw] bg-white shadow-2xl rounded-xl p-6 z-50 border border-gray-200"
-                      style={{
-                        boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
-                      }}
+                {/* Products Mega Menu - Second Position */}
+                <li className="relative">
+                  <button
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-[15px] font-medium transition-all duration-200 ${
+                      productsDropdown
+                        ? scrollProgress > 0.5 
+                          ? 'text-sky-600 bg-sky-50' 
+                          : 'text-sky-700 bg-white' 
+                        : scrollProgress > 0.5 
+                          ? 'text-gray-700 hover:text-sky-600 hover:bg-sky-50' 
+                          : 'text-sky-800 hover:text-sky-900 hover:bg-white/80'
+                    }`}
+                    onMouseEnter={() => setProductsDropdown(true)}
+                    onClick={() => setProductsDropdown(!productsDropdown)}
+                    aria-expanded={productsDropdown}
+                  >
+                    <FaTools className="hidden sm:inline-block" />
+                    Products
+                    <svg 
+                      className={`w-4 h-4 transition-transform duration-200 ${productsDropdown ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
                     >
-                      <div className="flex flex-row gap-8">
-                        {/* Categories Section - Enhanced */}
-                        <div className="w-2/3">
-                          <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                              <FaTools className="text-blue-600 text-lg" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-gray-800">Product Categories</h3>
-                          </div>
-                          <div className="grid grid-cols-2 gap-4 overflow-y-auto max-h-[70vh] pr-2">
-                            {categories.map((category) => (
-                              <div key={category.id} className="group">
-                                <Link
-                                  href={`/categories/${category.slug}`}
-                                  onClick={() => setActiveCategory(category.id)}
-                                  className={`w-full text-left p-4 rounded-xl transition-all duration-300 flex flex-col ${
-                                    activeCategory === category.id || categoryId === category.slug
-                                      ? 'bg-blue-50 border-2 border-blue-300 shadow-sm'
-                                      : 'bg-white border border-gray-200 hover:border-blue-200 hover:bg-blue-50 hover:shadow-md'
-                                  }`}
-                                >
-                                  <div className="flex items-center gap-3 mb-3">
-                                    <span
-                                      className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
-                                        activeCategory === category.id || categoryId === category.slug
-                                          ? 'bg-blue-100 text-blue-600'
-                                          : 'bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-600'
-                                      }`}
-                                    >
-                                      <FaTools className="text-lg" />
-                                    </span>
-                                    <span
-                                      className={`font-bold text-lg ${
-                                        activeCategory === category.id || categoryId === category.slug
-                                          ? 'text-blue-800'
-                                          : 'text-gray-800 group-hover:text-blue-800'
-                                      }`}
-                                    >
-                                      {category.name}
-                                    </span>
-                                  </div>
-                                  <ul className="space-y-2 pl-13">
-                                    {category.subCategories.map((subCategory) => (
-                                      <li key={subCategory.id} className="text-gray-600">
-                                        <Link
-                                          href={`/categories/${category.slug}/${subCategory.id}`}
-                                          className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200 py-1 px-2 rounded hover:bg-blue-50"
-                                        >
-                                          <span className={`w-2 h-2 rounded-full transition-colors ${
-                                            activeCategory === category.id || categoryId === category.slug
-                                              ? 'bg-blue-400'
-                                              : 'bg-gray-300 group-hover:bg-blue-400'
-                                          }`}></span>
-                                          <span className="text-sm font-medium">{subCategory.name}</span>
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </Link>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
 
-                        {/* Consumables Section - Enhanced */}
-                        <div className="w-1/3">
-                          <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                              <FaTools className="text-green-600 text-lg" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-gray-800">Consumables</h3>
-                          </div>
-                          <div className="space-y-4 overflow-y-auto max-h-[70vh] pr-2">
-                            {consumables.map((consumable) => (
-                              <div key={consumable.slug} className="group">
-                                <Link
-                                  href={`/consumables/${consumable.slug}`}
-                                  onClick={() => setActiveCategory(consumable.slug)}
-                                  className={`w-full text-left p-4 rounded-xl transition-all duration-300 flex flex-col ${
-                                    activeCategory === consumable.slug
-                                      ? 'bg-green-50 border-2 border-green-300 shadow-sm'
-                                      : 'bg-white border border-gray-200 hover:border-green-200 hover:bg-green-50 hover:shadow-md'
-                                  }`}
-                                >
-                                  <div className="flex items-center gap-3 mb-3">
-                                    <span
-                                      className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
-                                        activeCategory === consumable.slug
-                                          ? 'bg-green-100 text-green-600'
-                                          : 'bg-gray-100 text-gray-600 group-hover:bg-green-100 group-hover:text-green-600'
-                                      }`}
-                                    >
-                                      <FaTools className="text-lg" />
-                                    </span>
-                                    <span
-                                      className={`font-bold text-lg ${
-                                        activeCategory === consumable.slug
-                                          ? 'text-green-800'
-                                          : 'text-gray-800 group-hover:text-green-800'
-                                      }`}
-                                    >
-                                      {consumable.title}
-                                    </span>
-                                  </div>
-                                  <ul className="space-y-2 pl-13">
-                                    {consumable.items.map((item) => (
-                                      <li key={item.slug} className="text-gray-600">
-                                        <Link
-                                          href={`/consumables/${consumable.slug}/${item.slug}`}
-                                          className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200 py-1 px-2 rounded hover:bg-green-50"
-                                        >
-                                          <span className={`w-2 h-2 rounded-full transition-colors ${
-                                            activeCategory === consumable.slug
-                                              ? 'bg-green-400'
-                                              : 'bg-gray-300 group-hover:bg-green-400'
-                                          }`}></span>
-                                          <span className="text-sm font-medium">{item.name}</span>
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </Link>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {/* Footer with CTA */}
-                      <div className="mt-6 pt-6 border-t border-gray-100 flex justify-between items-center">
-                        <div className="text-gray-500 text-sm">
-                          Browse our complete product catalog
-                        </div>
-                        <Link 
-                          href="/all-products" 
-                          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+                  {/* Mega Menu Dropdown */}
+                  <div 
+                    className="fixed left-0 w-full mt-2"
+                    onMouseEnter={() => setProductsDropdown(true)}
+                    onMouseLeave={() => setProductsDropdown(false)}
+                  >
+                    <AnimatePresence>
+                      {productsDropdown && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
+                          transition={{ duration: 0.2 }}
+                          className="container mx-auto bg-white backdrop-blur-lg bg-opacity-95 rounded-xl shadow-lg border border-sky-100"
                         >
-                          View All Products
-                        </Link>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </li>
+                          <div className="flex p-6 gap-6">
+                            {/* Categories and Consumables Side by Side */}
+                            <div className="w-full">
+                              <div className="grid grid-cols-2 gap-8">
+                                {/* Product Categories - Left Side */}
+                                <div>
+                                  <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center text-white">
+                                      <FaTools className="text-lg" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-800">Product Categories</h3>
+                                  </div>
+                                  
+                                  <div className="max-h-[65vh] overflow-y-auto pr-2">
+                                    <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                                      {categories.map((category, index) => (
+                                        <div key={category.id} className="mb-4">
+                                          <Link
+                                            href={`/categories/${category.slug}`}
+                                            onClick={() => {
+                                              setActiveCategory(category.slug);
+                                              setActiveSubCategory(null);
+                                              setProductsDropdown(false);
+                                            }}
+                                            className={`flex items-center gap-3 py-2 px-3 rounded-lg transition-all duration-200 ${
+                                              activeCategory === category.slug
+                                                ? 'text-sky-700 font-medium bg-sky-50'
+                                                : 'text-gray-700 hover:text-sky-600 hover:bg-sky-50/50'
+                                            }`}
+                                          >
+                                            <span className={`w-1.5 h-1.5 rounded-full ${
+                                              activeCategory === category.slug 
+                                                ? 'bg-sky-500' 
+                                                : 'bg-gray-400'
+                                            }`} />
+                                            {category.name}
+                                          </Link>
+                                          
+                                          <div className="ml-6 mt-1 space-y-1">
+                                            {category.subCategories.map((subCategory) => (
+                                              <Link
+                                                key={subCategory.id}
+                                                href={`/categories/${category.slug}/${subCategory.id}`}
+                                                onClick={() => {
+                                                  setActiveCategory(category.slug);
+                                                  setActiveSubCategory(subCategory.id);
+                                                  setProductsDropdown(false);
+                                                }}
+                                                className={`block px-3 py-2 rounded-md text-sm transition-all duration-200 ${
+                                                  activeCategory === category.slug && activeSubCategory === subCategory.id
+                                                    ? 'text-sky-700 font-medium bg-sky-100'
+                                                    : 'text-gray-600 hover:text-sky-600 hover:bg-sky-50'
+                                                }`}
+                                              >
+                                                <div className="flex items-center gap-2">
+                                                  <span className={`w-1 h-1 rounded-full ${
+                                                    activeCategory === category.slug && activeSubCategory === subCategory.id
+                                                      ? 'bg-sky-500'
+                                                      : 'bg-gray-300'
+                                                  }`} />
+                                                  {subCategory.name}
+                                                </div>
+                                              </Link>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                {/* Consumables Section - Right Side */}
+                                <div>
+                                  <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-10 h-10 bg-green-400 rounded-lg flex items-center justify-center text-white">
+                                      <span className="text-lg">⚙️</span>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-800 ">Consumables</h3>
+                                  </div>
+                                  
+                                  <div className="max-h-[65vh] overflow-y-auto pr-2">
+                                    <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                                      {consumables.map((consumable, index) => (
+                                        <div key={consumable.slug} className="mb-4">
+                                          <Link
+                                            href={`/consumables/${consumable.slug}`}
+                                            onClick={() => {
+                                              setActiveCategory(consumable.slug);
+                                              setActiveSubCategory(null);
+                                              setProductsDropdown(false);
+                                            }}
+                                            className={`flex items-center gap-3 py-2 px-3 rounded-lg transition-all duration-200 ${
+                                              activeCategory === consumable.slug
+                                                ? 'text-sky-700 font-medium bg-sky-50'
+                                                : 'text-gray-700 hover:text-sky-600 hover:bg-sky-50/50'
+                                            }`}
+                                          >
+                                            <span className="text-base">{consumable.icon}</span>
+                                            {consumable.title}
+                                          </Link>
+                                          
+                                          <div className="ml-6 mt-2 space-y-2">
+                                            {consumable.items.map((item) => (
+                                              <Link
+                                                key={item.slug}
+                                                href={`/consumables/${consumable.slug}/${item.slug}`}
+                                                onClick={() => {
+                                                  setActiveCategory(consumable.slug);
+                                                  setActiveSubCategory(item.slug);
+                                                  setProductsDropdown(false);
+                                                }}
+                                                className={`block px-3 py-2 rounded-md text-sm transition-all duration-200 ${
+                                                  activeCategory === consumable.slug && activeSubCategory === item.slug
+                                                    ? 'text-sky-700 font-medium bg-sky-100'
+                                                    : 'text-gray-600 hover:text-sky-600 hover:bg-sky-50'
+                                                }`}
+                                              >
+                                                <div className="flex items-center gap-2">
+                                                  <span className={`w-1 h-1 rounded-full ${
+                                                    activeCategory === consumable.slug && activeSubCategory === item.slug
+                                                      ? 'bg-sky-500'
+                                                      : 'bg-gray-300'
+                                                  }`} />
+                                                  {item.name}
+                                                </div>
+                                              </Link>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Footer with View All Products CTA */}
+                          <div className="p-4 bg-sky-50 rounded-b-xl border-t border-sky-100 flex justify-between items-center">
+                            <p className="text-gray-600 text-sm">
+                              Explore our complete product catalog for all your material science needs
+                            </p>
+                            <Link 
+                              href="/all-products" 
+                              onClick={() => setProductsDropdown(false)}
+                              className="px-4 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition-all duration-200 text-sm font-medium flex items-center gap-2"
+                            >
+                              View All Products
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                              </svg>
+                            </Link>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </li>
 
-              <li>
-                <Link
-                  href="/courses"
-                  className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300"
-                >
-                  Courses
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/login"
-                  className="text-white hover:underline hover:text-blue-700 text-lg font-semibold transition-all duration-300"
-                >
-                  Login
-                </Link>
-              </li>
-            </ul>
-          </nav>
+                {/* Remaining Navigation Items */}
+                {navItems.map((item) => (
+                  <li key={item.path}>
+                    <Link
+                      href={item.path}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg text-[15px] font-medium transition-all duration-200 ${
+                        pathname === item.path 
+                          ? scrollProgress > 0.5 
+                            ? 'text-sky-600 bg-sky-50' 
+                            : 'text-sky-700 bg-white'
+                          : scrollProgress > 0.5 
+                            ? 'text-gray-700 hover:text-sky-600 hover:bg-sky-50' 
+                            : 'text-sky-800 hover:text-sky-900 hover:bg-white/80'
+                      }`}
+                    >
+                      <span className="hidden sm:inline-block">{item.icon}</span>
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          {/* Login Button & Mobile Menu Toggle */}
+          <div className="flex items-center gap-2">
+            <Link
+              href="/login"
+              className={`hidden md:flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                scrollProgress > 0.5 
+                  ? 'text-white bg-sky-500 hover:bg-sky-600' 
+                  : 'text-sky-800 bg-white hover:bg-sky-50 hover:text-sky-900'
+              }`}
+            >
+              <FaUserCircle className="text-lg" />
+              <span>Login</span>
+            </Link>
+            
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 rounded-lg transition-colors duration-200"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
+            >
+              <svg
+                className={`w-6 h-6 ${scrollProgress > 0.5 ? 'text-gray-700' : 'text-sky-800'}`}
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isMenuOpen ? (
+                  <path d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-white"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            {isMenuOpen ? (
-              <path d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            className="md:hidden mt-4 bg-white shadow-lg rounded-lg p-6 mx-4"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <ul className="space-y-4">
-              <li>
-                <Link
-                  href="/"
-                  className={`block text-gray-700 hover:text-[#0f7db7] font-medium ${
-                    !categoryId ? 'text-[#0f7db7] font-bold' : ''
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <button
-                  className="w-full text-left text-gray-700 hover:text-[#0f7db7] font-medium flex items-center justify-between"
-                  onClick={() => setProductsDropdown(!productsDropdown)}
-                  aria-expanded={productsDropdown}
-                >
-                  Products
-                  <IoIosArrowForward
-                    className={`transform transition-transform duration-300 ${productsDropdown ? 'rotate-90' : ''}`}
-                  />
-                </button>
-                {productsDropdown && (
-                  <div className="pl-4 mt-2 space-y-4 max-h-[60vh] overflow-y-auto">
-                    {categories.map((category) => (
-                      <div key={category.id}>
+          <>
+            <motion.div
+              className="fixed inset-0 bg-black/40 z-40 md:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMenuOpen(false)}
+            />
+            
+            <motion.div
+              className="fixed inset-y-0 right-0 w-[85%] max-w-sm bg-white shadow-xl z-50 md:hidden overflow-y-auto"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+            >
+              <div className="p-5 flex flex-col h-full">
+                <div className="flex justify-between items-center mb-6">
+                  <div className="w-32">
+                    <Image
+                      src="/images/metatech_logo.png"
+                      width={130}
+                      height={45}
+                      alt="Metatech Logo"
+                      className="h-8 w-auto"
+                    />
+                  </div>
+                  <button
+                    onClick={() => setIsMenuOpen(false)}
+                    className="p-2 rounded-full hover:bg-gray-100"
+                  >
+                    <svg className="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                
+                <nav className="flex-1 overflow-y-auto">
+                  <ul className="space-y-1">
+                    {/* Home - First Position */}
+                    <li>
+                      <Link
+                        href="/"
+                        className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
+                          pathname === '/'
+                            ? 'bg-sky-50 text-sky-700'
+                            : 'text-gray-700 hover:bg-gray-50'
+                        }`}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <span className="text-lg">
+                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                        </span>
+                        <span className="font-medium">Home</span>
+                      </Link>
+                    </li>
+
+                    {/* Products - Second Position */}
+                    <li>
+                      <button
+                        className={`w-full flex items-center justify-between gap-3 px-4 py-3 rounded-lg transition-colors ${
+                          productsDropdown
+                            ? 'bg-sky-50 text-sky-700'
+                            : 'text-gray-700 hover:bg-gray-50'
+                        }`}
+                        onClick={() => setProductsDropdown(!productsDropdown)}
+                      >
+                        <div className="flex items-center gap-3">
+                          <FaTools className="text-lg" />
+                          <span className="font-medium">Products</span>
+                        </div>
+                        <svg 
+                          className={`w-5 h-5 transition-transform duration-200 ${productsDropdown ? 'rotate-180' : ''}`}
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      
+                      <AnimatePresence>
+                        {productsDropdown && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="py-2 px-4">
+                              <div className="mb-3">
+                                <h4 className="font-medium text-sky-800 py-2">Product Categories</h4>
+                                <div className="grid grid-cols-1 gap-2">
+                                  {categories.map((category) => (
+                                    <div key={category.id} className="mb-2">
+                                      <Link
+                                        href={`/categories/${category.slug}`}
+                                        className={`block py-2 px-3 rounded-md text-sm ${
+                                          activeCategory === category.slug
+                                            ? 'text-sky-700 font-medium bg-sky-50'
+                                            : 'text-gray-700 hover:bg-gray-50'
+                                        }`}
+                                        onClick={() => {
+                                          setActiveCategory(category.slug);
+                                          setActiveSubCategory(null);
+                                          setIsMenuOpen(false);
+                                        }}
+                                      >
+                                        {category.name}
+                                      </Link>
+                                      
+                                      <div className="ml-4 space-y-1 mt-1">
+                                        {category.subCategories.map((subCategory) => (
+                                          <Link
+                                            key={subCategory.id}
+                                            href={`/categories/${category.slug}/${subCategory.id}`}
+                                            className={`block py-1.5 px-3 rounded-md text-xs ${
+                                              activeCategory === category.slug && activeSubCategory === subCategory.id
+                                                ? 'text-sky-700 font-medium bg-sky-50'
+                                                : 'text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                            onClick={() => {
+                                              setActiveCategory(category.slug);
+                                              setActiveSubCategory(subCategory.id);
+                                              setIsMenuOpen(false);
+                                            }}
+                                          >
+                                            {subCategory.name}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                              
+                              <div className="mt-4">
+                                <h4 className="font-medium text-sky-800 py-2">Consumables</h4>
+                                <div className="grid grid-cols-1 gap-2">
+                                  {consumables.map((consumable) => (
+                                    <div key={consumable.slug} className="mb-2">
+                                      <Link
+                                        href={`/consumables/${consumable.slug}`}
+                                        className={`flex items-center gap-2 py-2 px-3 rounded-md text-sm ${
+                                          activeCategory === consumable.slug
+                                            ? 'text-sky-700 font-medium bg-sky-50'
+                                            : 'text-gray-700 hover:bg-gray-50'
+                                        }`}
+                                        onClick={() => {
+                                          setActiveCategory(consumable.slug);
+                                          setActiveSubCategory(null);
+                                          setIsMenuOpen(false);
+                                        }}
+                                      >
+                                        <span>{consumable.icon}</span>
+                                        {consumable.title}
+                                      </Link>
+                                      
+                                      <div className="ml-4 space-y-1 mt-1">
+                                        {consumable.items.map((item) => (
+                                          <Link
+                                            key={item.slug}
+                                            href={`/consumables/${consumable.slug}/${item.slug}`}
+                                            className={`block py-1.5 px-3 rounded-md text-xs ${
+                                              activeCategory === consumable.slug && activeSubCategory === item.slug
+                                                ? 'text-sky-700 font-medium bg-sky-50'
+                                                : 'text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                            onClick={() => {
+                                              setActiveCategory(consumable.slug);
+                                              setActiveSubCategory(item.slug);
+                                              setIsMenuOpen(false);
+                                            }}
+                                          >
+                                            {item.name}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </li>
+
+                    {/* Remaining Navigation Items */}
+                    {navItems.map((item) => (
+                      <li key={item.path}>
                         <Link
-                          href={`/categories/${category.slug}`}
-                          className="block text-gray-700 hover:text-[#0f7db7] font-medium"
+                          href={item.path}
+                          className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
+                            pathname === item.path
+                              ? 'bg-sky-50 text-sky-700'
+                              : 'text-gray-700 hover:bg-gray-50'
+                          }`}
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          {category.name}
+                          <span className="text-lg">{item.icon}</span>
+                          <span className="font-medium">{item.name}</span>
                         </Link>
-                        <ul className="pl-4 mt-2 space-y-2">
-                          {category.subCategories.map((subCategory) => (
-                            <li key={subCategory.id}>
-                              <Link
-                                href={`/categories/${category.slug}/${subCategory.id}`}
-                                className="block text-gray-600 hover:text-[#0f7db7] text-sm"
-                                onClick={() => setIsMenuOpen(false)}
-                              >
-                                {subCategory.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      </li>
                     ))}
-                    <div className="mt-4">
-                      <h4 className="text-gray-800 font-semibold">Consumables</h4>
-                      <ul className="pl-4 mt-2 space-y-2">
-                        {consumables.map((consumable) => (
-                          <li key={consumable.slug}>
-                            <Link
-                              href={`/consumables/${consumable.slug}`}
-                              className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-                              onClick={() => setIsMenuOpen(false)}
-                            >
-                              {consumable.title}
-                            </Link>
-                            <ul className="pl-4 mt-2 space-y-2">
-                              {consumable.items.map((item) => (
-                                <li key={item.slug}>
-                                  <Link
-                                    href={`/consumables/${consumable.slug}/${item.slug}`}
-                                    className="block text-gray-600 hover:text-[#0f7db7] text-sm"
-                                    onClick={() => setIsMenuOpen(false)}
-                                  >
-                                    {item.name}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                )}
-              </li>
-              <li>
-                <Link
-                  href="/courses"
-                  className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Courses
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/login"
-                  className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Login
-                </Link>
-              </li>
-            </ul>
-          </motion.div>
+                  </ul>
+                </nav>
+                
+                {/* Mobile Login Button */}
+                <div className="pt-4 mt-auto border-t border-gray-100">
+                  <Link
+                    href="/login"
+                    className="flex items-center justify-center gap-2 w-full py-3 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <FaUserCircle />
+                    <span className="font-medium">Login to Your Account</span>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
@@ -451,1248 +641,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-// 'use client';
-
-// import Image from 'next/image';
-// import React, { useState } from 'react';
-// import { IoIosArrowForward } from 'react-icons/io';
-// import { FaTools } from 'react-icons/fa';
-// import { motion, AnimatePresence } from 'framer-motion';
-// import { useRouter, useParams } from 'next/navigation';
-// import Link from 'next/link';
-// import { categories } from '@/app/data/categories';
-
-// const Header = () => {
-//   const [productsDropdown, setProductsDropdown] = useState(false);
-//   const [activeCategory, setActiveCategory] = useState(null);
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
-//   const router = useRouter();
-//   const { categoryId } = useParams();
-
-//   // Consumables data (consistent with previous implementation)
-//   const consumables = [
-//     {
-//       title: 'Cutting Machine Consumables',
-//       slug: 'cutting-machine-consumables',
-//       items: [
-//         { name: 'Diamond Cutting Blades', slug: 'diamond-cutting-blades' },
-//         { name: 'Abrasive Cutting Wheels', slug: 'abrasive-cutting-wheels' },
-//         { name: 'Precision Wafering Blades', slug: 'precision-wafering-blades' },
-//         { name: 'Resin-Bonded Abrasive Blades', slug: 'resin-bonded-abrasive-blades' },
-//         { name: 'Cooling Lubricants', slug: 'cooling-lubricants' },
-//       ],
-//     },
-//     {
-//       title: 'Grinding Machine Consumables',
-//       slug: 'grinding-machine-consumables',
-//       items: [
-//         { name: 'Grinding Wheels', slug: 'grinding-wheels' },
-//         { name: 'Silicon Carbide Grinding Papers', slug: 'silicon-carbide-grinding-papers' },
-//         { name: 'Electroplated Diamond Discs', slug: 'electroplated-diamond-discs' },
-//         { name: 'Grinding Lubricants', slug: 'grinding-lubricants' },
-//         { name: 'Abrasive Belts', slug: 'abrasive-belts' },
-//       ],
-//     },
-//     // {
-//     //   title: 'Polishing Consumables',
-//     //   slug: 'polishing-consumables',
-//     //   items: [
-//     //     { name: 'Polishing Pads', slug: 'polishing-pads' },
-//     //     { name: 'Diamond Paste', slug: 'diamond-paste' },
-//     //     { name: 'Polycrystalline Diamond Suspension', slug: 'polycrystalline-diamond-suspension' },
-//     //     { name: 'Monocrystalline Diamond Suspension', slug: 'monocrystalline-diamond-suspension' },
-//     //     { name: 'Alumina Polishing Powders', slug: 'alumina-polishing-powders' },
-//     //   ],
-//     // },
-//     // {
-//     //   title: 'Mounting Consumables',
-//     //   slug: 'mounting-consumables',
-//     //   items: [
-//     //     { name: 'Mounting Resin', slug: 'mounting-resin' },
-//     //     { name: 'Epoxy Compounds', slug: 'epoxy-compounds' },
-//     //     { name: 'Phenolic Powders', slug: 'phenolic-powders' },
-//     //     { name: 'Cold Mounting Kits', slug: 'cold-mounting-kits' },
-//     //     { name: 'Release Agents', slug: 'release-agents' },
-//     //   ],
-//     // },
-//   ];
-
-//   return (
-//     <header className="py-6 bg-gradient-to-t from-[#0f7db7] to-[#4babe5] relative z-50">
-//       <div className="container mx-auto flex flex-row items-center justify-between px-4 gap-32">
-//         {/* Logo */}
-//         <div>
-//           <Link href="/">
-//             <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-//               <Image
-//                 src="/images/metatech_logo.png"
-//                 width={230}
-//                 height={80}
-//                 alt="Metatech Logo"
-//                 priority
-//               />
-//             </div>
-//           </Link>
-//         </div>
-
-//         {/* Desktop Navigation */}
-//         <div className="hidden md:flex items-center justify-center flex-1">
-//           <nav>
-//             <ul className="flex flex-row items-center space-x-8">
-//               <li>
-//                 <Link
-//                   href="/"
-//                   className={`text-lg font-semibold py-3 px-5 rounded-full transition-all duration-300 ${
-//                     !categoryId ? 'text-blue-500 bg-slate-100' : 'text-white hover:text-blue-500 hover:bg-slate-100'
-//                   }`}
-//                 >
-//                   Home
-//                 </Link>
-//               </li>
-
-//               {/* Products Dropdown - Enhanced Design */}
-//               <li
-//                 className="relative"
-//                 onMouseEnter={() => setProductsDropdown(true)}
-//                 onMouseLeave={() => setProductsDropdown(false)}
-//               >
-//                 <button
-//                   className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300 flex items-center gap-1"
-//                   aria-expanded={productsDropdown}
-//                   aria-label="Toggle Products Dropdown"
-//                 >
-//                   Products
-//                   <svg 
-//                     className={`w-4 h-4 transition-transform duration-200 ${productsDropdown ? 'rotate-180' : ''}`} 
-//                     fill="none" 
-//                     stroke="currentColor" 
-//                     viewBox="0 0 24 24" 
-//                     xmlns="http://www.w3.org/2000/svg"
-//                   >
-//                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-//                   </svg>
-//                 </button>
-
-//                 <AnimatePresence>
-//                   {productsDropdown && (
-//                     <motion.div
-//                       initial={{ opacity: 0, y: 10 }}
-//                       animate={{ opacity: 1, y: 0 }}
-//                       exit={{ opacity: 0, y: 10 }}
-//                       transition={{ duration: 0.2, ease: "easeOut" }}
-//                       className="absolute left-1/2 transform -translate-x-1/2 mt-3 w-[1200px] max-w-[90vw] bg-white shadow-2xl rounded-xl p-6 z-50 border border-gray-200"
-//                       style={{
-//                         boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
-//                       }}
-//                     >
-//                       <div className="flex flex-row gap-8">
-//                         {/* Categories Section - Enhanced */}
-//                         <div className="w-2/3">
-//                           <div className="flex items-center gap-3 mb-6">
-//                             <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-//                               <FaTools className="text-blue-600 text-lg" />
-//                             </div>
-//                             <h3 className="text-2xl font-bold text-gray-800">Product Categories</h3>
-//                           </div>
-//                           <div className="grid grid-cols-2 gap-4">
-//                             {categories.map((category) => (
-//                               <div key={category.id} className="group">
-//                                 <Link
-//                                   href={`/categories/${category.slug}`}
-//                                   onClick={() => setActiveCategory(category.id)}
-//                                   className={`w-full text-left p-4 rounded-xl transition-all duration-300 flex flex-col ${
-//                                     activeCategory === category.id || categoryId === category.slug
-//                                       ? 'bg-blue-50 border-2 border-blue-300 shadow-sm'
-//                                       : 'bg-white border border-gray-200 hover:border-blue-200 hover:bg-blue-50 hover:shadow-md'
-//                                   }`}
-//                                 >
-//                                   <div className="flex items-center gap-3 mb-3">
-//                                     <span
-//                                       className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
-//                                         activeCategory === category.id || categoryId === category.slug
-//                                           ? 'bg-blue-100 text-blue-600'
-//                                           : 'bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-600'
-//                                       }`}
-//                                     >
-//                                       <FaTools className="text-lg" />
-//                                     </span>
-//                                     <span
-//                                       className={`font-bold text-lg ${
-//                                         activeCategory === category.id || categoryId === category.slug
-//                                           ? 'text-blue-800'
-//                                           : 'text-gray-800 group-hover:text-blue-800'
-//                                       }`}
-//                                     >
-//                                       {category.name}
-//                                     </span>
-//                                   </div>
-//                                   <ul className="space-y-2 pl-13">
-//                                     {category.subCategories.map((subCategory) => (
-//                                       <li key={subCategory.id} className="text-gray-600">
-//                                         <Link
-//                                           href={`/categories/${category.slug}/${subCategory.id}`}
-//                                           className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200 py-1 px-2 rounded hover:bg-blue-50"
-//                                         >
-//                                           <span className={`w-2 h-2 rounded-full transition-colors ${
-//                                             activeCategory === category.id || categoryId === category.slug
-//                                               ? 'bg-blue-400'
-//                                               : 'bg-gray-300 group-hover:bg-blue-400'
-//                                           }`}></span>
-//                                           <span className="text-sm font-medium">{subCategory.name}</span>
-//                                         </Link>
-//                                       </li>
-//                                     ))}
-//                                   </ul>
-//                                 </Link>
-//                               </div>
-//                             ))}
-//                           </div>
-//                         </div>
-
-//                         {/* Consumables Section - Enhanced */}
-//                         <div className="w-1/3">
-//                           <div className="flex items-center gap-3 mb-6">
-//                             <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-//                               <FaTools className="text-green-600 text-lg" />
-//                             </div>
-//                             <h3 className="text-2xl font-bold text-gray-800">Consumables</h3>
-//                           </div>
-//                           <div className="space-y-4">
-//                             {consumables.map((consumable) => (
-//                               <div key={consumable.slug} className="group">
-//                                 <Link
-//                                   href={`/consumables/${consumable.slug}`}
-//                                   onClick={() => setActiveCategory(consumable.slug)}
-//                                   className={`w-full text-left p-4 rounded-xl transition-all duration-300 flex flex-col ${
-//                                     activeCategory === consumable.slug
-//                                       ? 'bg-green-50 border-2 border-green-300 shadow-sm'
-//                                       : 'bg-white border border-gray-200 hover:border-green-200 hover:bg-green-50 hover:shadow-md'
-//                                   }`}
-//                                 >
-//                                   <div className="flex items-center gap-3 mb-3">
-//                                     <span
-//                                       className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
-//                                         activeCategory === consumable.slug
-//                                           ? 'bg-green-100 text-green-600'
-//                                           : 'bg-gray-100 text-gray-600 group-hover:bg-green-100 group-hover:text-green-600'
-//                                       }`}
-//                                     >
-//                                       <FaTools className="text-lg" />
-//                                     </span>
-//                                     <span
-//                                       className={`font-bold text-lg ${
-//                                         activeCategory === consumable.slug
-//                                           ? 'text-green-800'
-//                                           : 'text-gray-800 group-hover:text-green-800'
-//                                       }`}
-//                                     >
-//                                       {consumable.title}
-//                                     </span>
-//                                   </div>
-//                                   <ul className="space-y-2 pl-13">
-//                                     {consumable.items.map((item) => (
-//                                       <li key={item.slug} className="text-gray-600">
-//                                         <Link
-//                                           href={`/consumables/${consumable.slug}/${item.slug}`}
-//                                           className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200 py-1 px-2 rounded hover:bg-green-50"
-//                                         >
-//                                           <span className={`w-2 h-2 rounded-full transition-colors ${
-//                                             activeCategory === consumable.slug
-//                                               ? 'bg-green-400'
-//                                               : 'bg-gray-300 group-hover:bg-green-400'
-//                                           }`}></span>
-//                                           <span className="text-sm font-medium">{item.name}</span>
-//                                         </Link>
-//                                       </li>
-//                                     ))}
-//                                   </ul>
-//                                 </Link>
-//                               </div>
-//                             ))}
-//                           </div>
-//                         </div>
-//                       </div>
-                      
-//                       {/* Footer with CTA */}
-//                       <div className="mt-6 pt-6 border-t border-gray-100 flex justify-between items-center">
-//                         <div className="text-gray-500 text-sm">
-//                           Browse our complete product catalog
-//                         </div>
-//                         <Link 
-//                           href="/all-products" 
-//                           className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
-//                         >
-//                           View All Products
-//                         </Link>
-//                       </div>
-//                     </motion.div>
-//                   )}
-//                 </AnimatePresence>
-//               </li>
-
-//               <li>
-//                 <Link
-//                   href="/courses"
-//                   className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300"
-//                 >
-//                   Courses
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/about"
-//                   className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300"
-//                 >
-//                   About
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/contact"
-//                   className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300"
-//                 >
-//                   Contact
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/login"
-//                   className="text-white hover:underline hover:text-blue-700 text-lg font-semibold transition-all duration-300"
-//                 >
-//                   Login
-//                 </Link>
-//               </li>
-//             </ul>
-//           </nav>
-//         </div>
-
-//         {/* Mobile Menu Button */}
-//         <button
-//           className="md:hidden text-white"
-//           onClick={() => setIsMenuOpen(!isMenuOpen)}
-//           aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
-//         >
-//           <svg
-//             className="w-6 h-6"
-//             fill="none"
-//             strokeLinecap="round"
-//             strokeLinejoin="round"
-//             strokeWidth="2"
-//             viewBox="0 0 24 24"
-//             stroke="currentColor"
-//           >
-//             {isMenuOpen ? (
-//               <path d="M6 18L18 6M6 6l12 12" />
-//             ) : (
-//               <path d="M4 6h16M4 12h16M4 18h16" />
-//             )}
-//           </svg>
-//         </button>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       <AnimatePresence>
-//         {isMenuOpen && (
-//           <motion.div
-//             className="md:hidden mt-4 bg-white shadow-lg rounded-lg p-6 mx-4"
-//             initial={{ opacity: 0, height: 0 }}
-//             animate={{ opacity: 1, height: 'auto' }}
-//             exit={{ opacity: 0, height: 0 }}
-//             transition={{ duration: 0.3 }}
-//           >
-//             <ul className="space-y-4">
-//               <li>
-//                 <Link
-//                   href="/"
-//                   className={`block text-gray-700 hover:text-[#0f7db7] font-medium ${
-//                     !categoryId ? 'text-[#0f7db7] font-bold' : ''
-//                   }`}
-//                   onClick={() => setIsMenuOpen(false)}
-//                 >
-//                   Home
-//                 </Link>
-//               </li>
-//               <li>
-//                 <button
-//                   className="w-full text-left text-gray-700 hover:text-[#0f7db7] font-medium flex items-center justify-between"
-//                   onClick={() => setProductsDropdown(!productsDropdown)}
-//                   aria-expanded={productsDropdown}
-//                 >
-//                   Products
-//                   <IoIosArrowForward
-//                     className={`transform transition-transform duration-300 ${productsDropdown ? 'rotate-90' : ''}`}
-//                   />
-//                 </button>
-//                 {productsDropdown && (
-//                   <div className="pl-4 mt-2 space-y-4">
-//                     {categories.map((category) => (
-//                       <div key={category.id}>
-//                         <Link
-//                           href={`/categories/${category.slug}`}
-//                           className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                           onClick={() => setIsMenuOpen(false)}
-//                         >
-//                           {category.name}
-//                         </Link>
-//                         <ul className="pl-4 mt-2 space-y-2">
-//                           {category.subCategories.map((subCategory) => (
-//                             <li key={subCategory.id}>
-//                               <Link
-//                                 href={`/categories/${category.slug}/${subCategory.id}`}
-//                                 className="block text-gray-600 hover:text-[#0f7db7] text-sm"
-//                                 onClick={() => setIsMenuOpen(false)}
-//                               >
-//                                 {subCategory.name}
-//                               </Link>
-//                             </li>
-//                           ))}
-//                         </ul>
-//                       </div>
-//                     ))}
-//                     <div className="mt-4">
-//                       <h4 className="text-gray-800 font-semibold">Consumables</h4>
-//                       <ul className="pl-4 mt-2 space-y-2">
-//                         {consumables.map((consumable) => (
-//                           <li key={consumable.slug}>
-//                             <Link
-//                               href={`/consumables/${consumable.slug}`}
-//                               className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                               onClick={() => setIsMenuOpen(false)}
-//                             >
-//                               {consumable.title}
-//                             </Link>
-//                             <ul className="pl-4 mt-2 space-y-2">
-//                               {consumable.items.map((item) => (
-//                                 <li key={item.slug}>
-//                                   <Link
-//                                     href={`/consumables/${consumable.slug}/${item.slug}`}
-//                                     className="block text-gray-600 hover:text-[#0f7db7] text-sm"
-//                                     onClick={() => setIsMenuOpen(false)}
-//                                   >
-//                                     {item.name}
-//                                   </Link>
-//                                 </li>
-//                               ))}
-//                             </ul>
-//                           </li>
-//                         ))}
-//                       </ul>
-//                     </div>
-//                   </div>
-//                 )}
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/courses"
-//                   className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                   onClick={() => setIsMenuOpen(false)}
-//                 >
-//                   Courses
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/about"
-//                   className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                   onClick={() => setIsMenuOpen(false)}
-//                 >
-//                   About
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/contact"
-//                   className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                   onClick={() => setIsMenuOpen(false)}
-//                 >
-//                   Contact
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/login"
-//                   className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                   onClick={() => setIsMenuOpen(false)}
-//                 >
-//                   Login
-//                 </Link>
-//               </li>
-//             </ul>
-//           </motion.div>
-//         )}
-//       </AnimatePresence>
-//     </header>
-//   );
-// };
-
-// export default Header;
-
-
-
-
-// 'use client';
-
-// import Image from 'next/image';
-// import React, { useState } from 'react';
-// import { IoIosArrowForward } from 'react-icons/io';
-// import { FaTools } from 'react-icons/fa';
-// import { motion, AnimatePresence } from 'framer-motion';
-// import { useRouter, useParams } from 'next/navigation';
-// import Link from 'next/link';
-// import { categories } from '@/app/data/categories';
-
-// const Header = () => {
-//   const [productsDropdown, setProductsDropdown] = useState(false);
-//   const [activeCategory, setActiveCategory] = useState(null);
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
-//   const router = useRouter();
-//   const { categoryId } = useParams();
-
-//   // Consumables data (consistent with previous implementation)
-//   const consumables = [
-//     {
-//       title: 'Cutting Machine Consumables',
-//       slug: 'cutting-machine-consumables',
-//       items: [
-//         { name: 'Diamond Cutting Blades', slug: 'diamond-cutting-blades' },
-//         { name: 'Abrasive Cutting Wheels', slug: 'abrasive-cutting-wheels' },
-//         { name: 'Precision Wafering Blades', slug: 'precision-wafering-blades' },
-//         { name: 'Resin-Bonded Abrasive Blades', slug: 'resin-bonded-abrasive-blades' },
-//         { name: 'Cooling Lubricants', slug: 'cooling-lubricants' },
-//       ],
-//     },
-//     {
-//       title: 'Grinding Machine Consumables',
-//       slug: 'grinding-machine-consumables',
-//       items: [
-//         { name: 'Grinding Wheels', slug: 'grinding-wheels' },
-//         { name: 'Silicon Carbide Grinding Papers', slug: 'silicon-carbide-grinding-papers' },
-//         { name: 'Electroplated Diamond Discs', slug: 'electroplated-diamond-discs' },
-//         { name: 'Grinding Lubricants', slug: 'grinding-lubricants' },
-//         { name: 'Abrasive Belts', slug: 'abrasive-belts' },
-//       ],
-//     },
-//     {
-//       title: 'Polishing Consumables',
-//       slug: 'polishing-consumables',
-//       items: [
-//         { name: 'Polishing Pads', slug: 'polishing-pads' },
-//         { name: 'Diamond Paste', slug: 'diamond-paste' },
-//         { name: 'Polycrystalline Diamond Suspension', slug: 'polycrystalline-diamond-suspension' },
-//         { name: 'Monocrystalline Diamond Suspension', slug: 'monocrystalline-diamond-suspension' },
-//         { name: 'Alumina Polishing Powders', slug: 'alumina-polishing-powders' },
-//       ],
-//     },
-//     {
-//       title: 'Mounting Consumables',
-//       slug: 'mounting-consumables',
-//       items: [
-//         { name: 'Mounting Resin', slug: 'mounting-resin' },
-//         { name: 'Epoxy Compounds', slug: 'epoxy-compounds' },
-//         { name: 'Phenolic Powders', slug: 'phenolic-powders' },
-//         { name: 'Cold Mounting Kits', slug: 'cold-mounting-kits' },
-//         { name: 'Release Agents', slug: 'release-agents' },
-//       ],
-//     },
-//   ];
-
-//   return (
-//     <header className="py-6 bg-gradient-to-t from-[#0f7db7] to-[#4babe5] relative z-50">
-//       <div className="container mx-auto flex flex-row items-center justify-between px-4 gap-32">
-//         {/* Logo */}
-//         <div>
-//           <Link href="/">
-//             <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-//               <Image
-//                 src="/images/metatech_logo.png"
-//                 width={230}
-//                 height={80}
-//                 alt="Metatech Logo"
-//                 priority
-//               />
-//             </div>
-//           </Link>
-//         </div>
-
-//         {/* Desktop Navigation */}
-//         <div className="hidden md:flex items-center justify-center flex-1">
-//           <nav>
-//             <ul className="flex flex-row items-center space-x-8">
-//               <li>
-//                 <Link
-//                   href="/"
-//                   className={`text-lg font-semibold py-3 px-5 rounded-full transition-all duration-300 ${
-//                     !categoryId ? 'text-blue-500 bg-slate-100' : 'text-white hover:text-blue-500 hover:bg-slate-100'
-//                   }`}
-//                 >
-//                   Home
-//                 </Link>
-//               </li>
-
-//               {/* Products Dropdown */}
-//               <li
-//                 className="relative"
-//                 onMouseEnter={() => setProductsDropdown(true)}
-//                 onMouseLeave={() => setProductsDropdown(false)}
-//               >
-//                 <button
-//                   className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300"
-//                   aria-expanded={productsDropdown}
-//                   aria-label="Toggle Products Dropdown"
-//                 >
-//                   Products
-//                 </button>
-
-//                 <AnimatePresence>
-//                   {productsDropdown && (
-//                     <motion.div
-//                       initial={{ opacity: 0, y: -10 }}
-//                       animate={{ opacity: 1, y: 0 }}
-//                       exit={{ opacity: 0, y: -10 }}
-//                       transition={{ duration: 0.2 }}
-//                       className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-[1200px] max-w-[90vw] bg-white shadow-xl rounded-xl p-6 z-50 border border-gray-100"
-//                     >
-//                       <div className="flex flex-row gap-8">
-//                         {/* Categories Section */}
-//                         <div className="w-2/3">
-//                           <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-//                             <span className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-//                               <FaTools className="text-blue-600" />
-//                             </span>
-//                             Categories
-//                           </h3>
-//                           <div className="grid grid-cols-2 gap-6">
-//                             {categories.map((category) => (
-//                               <div key={category.id} className="group">
-//                                 <Link
-//                                   href={`/categories/${category.slug}`}
-//                                   onClick={() => setActiveCategory(category.id)}
-//                                   className={`w-full text-left p-4 rounded-lg transition-all duration-300 ${
-//                                     activeCategory === category.id || categoryId === category.slug
-//                                       ? 'bg-blue-50 border border-blue-200'
-//                                       : 'bg-white border border-gray-100 hover:border-blue-200 hover:bg-blue-50'
-//                                   }`}
-//                                 >
-//                                   <div className="flex items-center gap-3 mb-3">
-//                                     <span
-//                                       className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-//                                         activeCategory === category.id || categoryId === category.slug
-//                                           ? 'bg-blue-100'
-//                                           : 'bg-gray-100 group-hover:bg-blue-100'
-//                                       }`}
-//                                     >
-//                                       <FaTools
-//                                         className={`${
-//                                           activeCategory === category.id || categoryId === category.slug
-//                                             ? 'text-blue-600'
-//                                             : 'text-gray-600 group-hover:text-blue-600'
-//                                         }`}
-//                                       />
-//                                     </span>
-//                                     <span
-//                                       className={`font-semibold ${
-//                                         activeCategory === category.id || categoryId === category.slug
-//                                           ? 'text-blue-800'
-//                                           : 'text-gray-800 group-hover:text-blue-800'
-//                                       }`}
-//                                     >
-//                                       {category.name}
-//                                     </span>
-//                                   </div>
-//                                   <ul className="space-y-2 pl-13">
-//                                     {category.subCategories.map((subCategory) => (
-//                                       <li key={subCategory.id} className="text-gray-600 text-sm">
-//                                         <Link
-//                                           href={`/categories/${category.slug}/${subCategory.id}`}
-//                                           className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200"
-//                                         >
-//                                           <span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-blue-400"></span>
-//                                           {subCategory.name}
-//                                         </Link>
-//                                       </li>
-//                                     ))}
-//                                   </ul>
-//                                 </Link>
-//                               </div>
-//                             ))}
-//                           </div>
-//                         </div>
-
-//                         {/* Consumables Section */}
-//                         <div className="w-1/3">
-//                           <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-//                             <span className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-//                               <FaTools className="text-green-600" />
-//                             </span>
-//                             Consumables
-//                           </h3>
-//                           <div className="grid grid-cols-1 gap-4">
-//                             {consumables.map((consumable) => (
-//                               <div key={consumable.slug} className="group">
-//                                 <Link
-//                                   href={`/consumables/${consumable.slug}`}
-//                                   onClick={() => setActiveCategory(consumable.slug)}
-//                                   className={`w-full text-left p-4 rounded-lg transition-all duration-300 ${
-//                                     activeCategory === consumable.slug
-//                                       ? 'bg-green-50 border border-green-200'
-//                                       : 'bg-white border border-gray-100 hover:border-green-200 hover:bg-green-50'
-//                                   }`}
-//                                 >
-//                                   <div className="flex items-center gap-3 mb-3">
-//                                     <span
-//                                       className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-//                                         activeCategory === consumable.slug
-//                                           ? 'bg-green-100'
-//                                           : 'bg-gray-100 group-hover:bg-green-100'
-//                                       }`}
-//                                     >
-//                                       <FaTools
-//                                         className={`${
-//                                           activeCategory === consumable.slug
-//                                             ? 'text-green-600'
-//                                             : 'text-gray-600 group-hover:text-green-600'
-//                                         }`}
-//                                       />
-//                                     </span>
-//                                     <span
-//                                       className={`font-semibold ${
-//                                         activeCategory === consumable.slug
-//                                           ? 'text-green-800'
-//                                           : 'text-gray-800 group-hover:text-green-800'
-//                                       }`}
-//                                     >
-//                                       {consumable.title}
-//                                     </span>
-//                                   </div>
-//                                   <ul className="space-y-2 pl-13">
-//                                     {consumable.items.map((item) => (
-//                                       <li key={item.slug} className="text-gray-600 text-sm">
-//                                         <Link
-//                                           href={`/consumables/${consumable.slug}/${item.slug}`}
-//                                           className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200"
-//                                         >
-//                                           <span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-green-400"></span>
-//                                           {item.name}
-//                                         </Link>
-//                                       </li>
-//                                     ))}
-//                                   </ul>
-//                                 </Link>
-//                               </div>
-//                             ))}
-//                           </div>
-//                         </div>
-//                       </div>
-//                     </motion.div>
-//                   )}
-//                 </AnimatePresence>
-//               </li>
-
-//               <li>
-//                 <Link
-//                   href="/courses"
-//                   className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300"
-//                 >
-//                   Courses
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/about"
-//                   className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300"
-//                 >
-//                   About
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/contact"
-//                   className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300"
-//                 >
-//                   Contact
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/login"
-//                   className="text-white hover:underline hover:text-blue-700 text-lg font-semibold transition-all duration-300"
-//                 >
-//                   Login
-//                 </Link>
-//               </li>
-//             </ul>
-//           </nav>
-//         </div>
-
-//         {/* Mobile Menu Button */}
-//         <button
-//           className="md:hidden text-white"
-//           onClick={() => setIsMenuOpen(!isMenuOpen)}
-//           aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
-//         >
-//           <svg
-//             className="w-6 h-6"
-//             fill="none"
-//             strokeLinecap="round"
-//             strokeLinejoin="round"
-//             strokeWidth="2"
-//             viewBox="0 0 24 24"
-//             stroke="currentColor"
-//           >
-//             {isMenuOpen ? (
-//               <path d="M6 18L18 6M6 6l12 12" />
-//             ) : (
-//               <path d="M4 6h16M4 12h16M4 18h16" />
-//             )}
-//           </svg>
-//         </button>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       <AnimatePresence>
-//         {isMenuOpen && (
-//           <motion.div
-//             className="md:hidden mt-4 bg-white shadow-lg rounded-lg p-6 mx-4"
-//             initial={{ opacity: 0, height: 0 }}
-//             animate={{ opacity: 1, height: 'auto' }}
-//             exit={{ opacity: 0, height: 0 }}
-//             transition={{ duration: 0.3 }}
-//           >
-//             <ul className="space-y-4">
-//               <li>
-//                 <Link
-//                   href="/"
-//                   className={`block text-gray-700 hover:text-[#0f7db7] font-medium ${
-//                     !categoryId ? 'text-[#0f7db7] font-bold' : ''
-//                   }`}
-//                   onClick={() => setIsMenuOpen(false)}
-//                 >
-//                   Home
-//                 </Link>
-//               </li>
-//               <li>
-//                 <button
-//                   className="w-full text-left text-gray-700 hover:text-[#0f7db7] font-medium flex items-center justify-between"
-//                   onClick={() => setProductsDropdown(!productsDropdown)}
-//                   aria-expanded={productsDropdown}
-//                 >
-//                   Products
-//                   <IoIosArrowForward
-//                     className={`transform transition-transform duration-300 ${productsDropdown ? 'rotate-90' : ''}`}
-//                   />
-//                 </button>
-//                 {productsDropdown && (
-//                   <div className="pl-4 mt-2 space-y-4">
-//                     {categories.map((category) => (
-//                       <div key={category.id}>
-//                         <Link
-//                           href={`/categories/${category.slug}`}
-//                           className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                           onClick={() => setIsMenuOpen(false)}
-//                         >
-//                           {category.name}
-//                         </Link>
-//                         <ul className="pl-4 mt-2 space-y-2">
-//                           {category.subCategories.map((subCategory) => (
-//                             <li key={subCategory.id}>
-//                               <Link
-//                                 href={`/categories/${category.slug}/${subCategory.id}`}
-//                                 className="block text-gray-600 hover:text-[#0f7db7] text-sm"
-//                                 onClick={() => setIsMenuOpen(false)}
-//                               >
-//                                 {subCategory.name}
-//                               </Link>
-//                             </li>
-//                           ))}
-//                         </ul>
-//                       </div>
-//                     ))}
-//                     <div className="mt-4">
-//                       <h4 className="text-gray-800 font-semibold">Consumables</h4>
-//                       <ul className="pl-4 mt-2 space-y-2">
-//                         {consumables.map((consumable) => (
-//                           <li key={consumable.slug}>
-//                             <Link
-//                               href={`/consumables/${consumable.slug}`}
-//                               className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                               onClick={() => setIsMenuOpen(false)}
-//                             >
-//                               {consumable.title}
-//                             </Link>
-//                             <ul className="pl-4 mt-2 space-y-2">
-//                               {consumable.items.map((item) => (
-//                                 <li key={item.slug}>
-//                                   <Link
-//                                     href={`/consumables/${consumable.slug}/${item.slug}`}
-//                                     className="block text-gray-600 hover:text-[#0f7db7] text-sm"
-//                                     onClick={() => setIsMenuOpen(false)}
-//                                   >
-//                                     {item.name}
-//                                   </Link>
-//                                 </li>
-//                               ))}
-//                             </ul>
-//                           </li>
-//                         ))}
-//                       </ul>
-//                     </div>
-//                   </div>
-//                 )}
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/courses"
-//                   className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                   onClick={() => setIsMenuOpen(false)}
-//                 >
-//                   Courses
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/about"
-//                   className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                   onClick={() => setIsMenuOpen(false)}
-//                 >
-//                   About
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/contact"
-//                   className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                   onClick={() => setIsMenuOpen(false)}
-//                 >
-//                   Contact
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   href="/login"
-//                   className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                   onClick={() => setIsMenuOpen(false)}
-//                 >
-//                   Login
-//                 </Link>
-//               </li>
-//             </ul>
-//           </motion.div>
-//         )}
-//       </AnimatePresence>
-//     </header>
-//   );
-// };
-
-// export default Header;
-
-
-
-
-// 'use client';
-// import Image from 'next/image';
-// import React, { useState } from 'react';
-// import { IoIosArrowForward } from "react-icons/io";
-// import { FaTools } from "react-icons/fa";
-// import { motion, AnimatePresence } from "framer-motion";
-// import { useRouter } from 'next/navigation';
-// import Link from 'next/link';
-// import { categories } from '@/app/data/categories';
-
-// const Header = () => {
-//     const [productsDropdown, setProductsDropdown] = useState(false);
-//     const [activeCategory, setActiveCategory] = useState(null);
-//     const router = useRouter();
-//     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-//     const consumables = [
-//         {
-//             title: "Cutting Machine Consumables",
-//             route: "/consumables/cutting-machine-consumables",
-//             items: [
-//                 "Diamond Cutting Blades",
-//                 "Abrasive Cutting Wheels",
-//                 "Precision Wafering Blades",
-//                 "Resin-Bonded Abrasive Blades",
-//                 "Cooling Lubricants",
-//             ],
-//         },
-//         {
-//             title: "Grinding Machine Consumables",
-//             route: "/consumables/grinding-machine-consumables",
-//             items: [
-//                 "Grinding Wheels",
-//                 "Silicon Carbide Grinding Papers",
-//                 "Electroplated Diamond Discs",
-//                 "Grinding Lubricants",
-//                 "Abrasive Belts",
-//             ],
-//         },
-//         {
-//             title: "Polishing Consumables",
-//             route: "/consumables/polishing-consumables",
-//             items: [
-//                 "Polishing Pads",
-//                 "Diamond Paste",
-//                 "Polycrystalline Diamond Suspension",
-//                 "Monocrystalline Diamond Suspension",
-//                 "Alumina Polishing Powders",
-//             ],
-//         },
-//         {
-//             title: "Mounting Consumables",
-//             route: "/consumables/mounting-consumables",
-//             items: [
-//                 "Mounting Resin",
-//                 "Epoxy Compounds",
-//                 "Phenolic Powders",
-//                 "Cold Mounting Kits",
-//                 "Release Agents",
-//             ],
-//         },
-//     ];
-
-//     return (
-//         <header className="py-6 bg-gradient-to-t from-[#0f7db7] to-[#4babe5]">
-//             <div className='flex flex-row gap-32 items-center justify-center'>
-//                 <div>
-//                     <a href="/">
-//                         <div className="bg-white p-4 rounded-lg">
-//                             <Image
-//                                 src="/images/metatech_logo.png"
-//                                 width={230}
-//                                 height={80}
-//                                 alt="Metatech Logo"
-//                             />
-//                         </div>
-//                     </a>
-//                 </div>
-//                 <div className="flex justify-center items-center p-0">
-//                     <nav>
-//                         <ul className="flex flex-row items-center space-x-8">
-//                             <li>
-//                                 <a href="/" className="text-blue-500 text-lg font-semibold bg-slate-100 py-3 px-5 rounded-full">
-//                                     Home
-//                                 </a>
-//                             </li>
-
-//                             {/* Products Dropdown */}
-//                             <li
-//                                 className="relative"
-//                                 onMouseEnter={() => setProductsDropdown(true)}
-//                                 onMouseLeave={() => setProductsDropdown(false)}
-//                             >
-//                                 <button className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full transition-all duration-300">
-//                                     Products
-//                                 </button>
-
-//                                 <AnimatePresence>
-//                                     {productsDropdown && (
-//                                         <motion.div
-//                                             initial={{ opacity: 0, y: -10 }}
-//                                             animate={{ opacity: 1, y: 0 }}
-//                                             exit={{ opacity: 0, y: -10 }}
-//                                             transition={{ duration: 0.2 }}
-//                                             className="absolute -left-[500px] mt-2 w-[1200px] bg-white shadow-xl rounded-xl p-6 z-50 border border-gray-100"
-//                                         >
-//                                             <div className="flex flex-row gap-8">
-//                                                 {/* Categories Section */}
-//                                                 <div className="w-2/3">
-//                                                     <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-//                                                         <span className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-//                                                             <FaTools className="text-blue-600" />
-//                                                         </span>
-//                                                         Categories
-//                                                     </h3>
-//                                                     <div className="grid grid-cols-2 gap-6">
-//                                                         {categories.map((category, index) => (
-//                                                             <div key={index} className="group">
-//                                                                 <button
-//                                                                     onClick={() => router.push(`/categories/${category.slug}`)}
-//                                                                     className={`w-full text-left p-4 rounded-lg transition-all duration-300 ${activeCategory === category.id
-//                                                                             ? 'bg-blue-50 border border-blue-200'
-//                                                                             : 'bg-white border border-gray-100 hover:border-blue-200 hover:bg-blue-50'
-//                                                                         }`}
-//                                                                 >
-//                                                                     <div className="flex items-center gap-3 mb-3">
-//                                                                         <span className={`w-10 h-10 rounded-lg flex items-center justify-center ${activeCategory === category.id
-//                                                                                 ? 'bg-blue-100'
-//                                                                                 : 'bg-gray-100 group-hover:bg-blue-100'
-//                                                                             }`}>
-//                                                                             <FaTools className={`${activeCategory === category.id
-//                                                                                     ? 'text-blue-600'
-//                                                                                     : 'text-gray-600 group-hover:text-blue-600'
-//                                                                                 }`} />
-//                                                                         </span>
-//                                                                         <span className={`font-semibold ${activeCategory === category.id
-//                                                                                 ? 'text-blue-800'
-//                                                                                 : 'text-gray-800 group-hover:text-blue-800'
-//                                                                             }`}>
-//                                                                             {category.name}
-//                                                                         </span>
-//                                                                     </div>
-//                                                                     <ul className="space-y-2 pl-13">
-//                                                                         {category.subCategories.map((subCategory, i) => (
-//                                                                             <li key={i} className="text-gray-600 text-sm">
-//                                                                                 <Link
-//                                                                                     href={`/categories/${category.id}/${subCategory.id}`}
-//                                                                                     className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200"
-//                                                                                 >
-//                                                                                     <span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-blue-400"></span>
-//                                                                                     {subCategory.name}
-//                                                                                 </Link>
-//                                                                             </li>
-//                                                                         ))}
-//                                                                     </ul>
-//                                                                 </button>
-//                                                             </div>
-//                                                         ))}
-//                                                     </div>
-//                                                 </div>
-
-//                                                 {/* Consumables Section */}
-//                                                 <div className="w-1/3">
-//                                                     <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-//                                                         <span className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-//                                                             <FaTools className="text-green-600" />
-//                                                         </span>
-//                                                         Consumables
-//                                                     </h3>
-//                                                     <div className="grid grid-cols-1 gap-4">
-//                                                         {consumables.map((consumable, index) => (
-//                                                             <div key={index} className="group">
-//                                                                 <button
-//                                                                     onClick={() => router.push(`/productlisting/${consumable.title}`)}
-//                                                                     className={`w-full text-left p-4 rounded-lg transition-all duration-300 ${activeCategory === consumable.title
-//                                                                             ? 'bg-green-50 border border-green-200'
-//                                                                             : 'bg-white border border-gray-100 hover:border-green-200 hover:bg-green-50'
-//                                                                         }`}
-//                                                                 >
-//                                                                     <div className="flex items-center gap-3 mb-3">
-//                                                                         <span className={`w-10 h-10 rounded-lg flex items-center justify-center ${activeCategory === consumable.title
-//                                                                                 ? 'bg-green-100'
-//                                                                                 : 'bg-gray-100 group-hover:bg-green-100'
-//                                                                             }`}>
-//                                                                             <FaTools className={`${activeCategory === consumable.title
-//                                                                                     ? 'text-green-600'
-//                                                                                     : 'text-gray-600 group-hover:text-green-600'
-//                                                                                 }`} />
-//                                                                         </span>
-//                                                                         <span className={`font-semibold ${activeCategory === consumable.title
-//                                                                                 ? 'text-green-800'
-//                                                                                 : 'text-gray-800 group-hover:text-green-800'
-//                                                                             }`}>
-//                                                                             {consumable.title}
-//                                                                         </span>
-//                                                                     </div>
-//                                                                     <ul className="space-y-2 pl-13">
-//                                                                         {consumable.items.map((item, i) => (
-//                                                                             <li key={i} className="text-gray-600 text-sm">
-//                                                                                 <Link
-//                                                                                     href={`/product/${item.toLowerCase().replace(/\s+/g, '-')}`}
-//                                                                                     className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200"
-//                                                                                 >
-//                                                                                     <span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-green-400"></span>
-//                                                                                     {item}
-//                                                                                 </Link>
-//                                                                             </li>
-//                                                                         ))}
-//                                                                     </ul>
-//                                                                 </button>
-//                                                             </div>
-//                                                         ))}
-//                                                     </div>
-//                                                 </div>
-//                                             </div>
-//                                         </motion.div>
-//                                     )}
-//                                 </AnimatePresence>
-//                             </li>
-
-//                             <li>
-//                                 <a href="#" className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full">
-//                                     Courses
-//                                 </a>
-//                             </li>
-//                             <li>
-//                                 <a href="#" className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full">
-//                                     About
-//                                 </a>
-//                             </li>
-//                             <li>
-//                                 <a href="#" className="text-white hover:text-blue-500 text-lg font-semibold hover:bg-slate-100 py-3 px-5 rounded-full">
-//                                     Contact
-//                                 </a>
-//                             </li>
-//                             <li>
-//                                 <a href="#" className="text-white hover:underline hover:text-blue-700 text-lg font-semibold">
-//                                     Login
-//                                 </a>
-//                             </li>
-//                         </ul>
-//                     </nav>
-//                 </div>
-//             </div>
-
-//             {/* Mobile Menu Button */}
-//             <button
-//                 className="md:hidden text-gray-700"
-//                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-//             >
-//                 <svg
-//                     className="w-6 h-6"
-//                     fill="none"
-//                     strokeLinecap="round"
-//                     strokeLinejoin="round"
-//                     strokeWidth="2"
-//                     viewBox="0 0 24 24"
-//                     stroke="currentColor"
-//                 >
-//                     {isMenuOpen ? (
-//                         <path d="M6 18L18 6M6 6l12 12" />
-//                     ) : (
-//                         <path d="M4 6h16M4 12h16M4 18h16" />
-//                     )}
-//                 </svg>
-//             </button>
-
-//             {/* Mobile Menu */}
-//             {isMenuOpen && (
-//                 <motion.div
-//                     className="md:hidden mt-4"
-//                     initial={{ opacity: 0, height: 0 }}
-//                     animate={{ opacity: 1, height: 'auto' }}
-//                     exit={{ opacity: 0, height: 0 }}
-//                     transition={{ duration: 0.3 }}
-//                 >
-//                     {categories.map((category) => (
-//                         <div key={category.id} className="py-2">
-//                             <Link
-//                                 href={`/categories/${category.id}`}
-//                                 className="block text-gray-700 hover:text-[#0f7db7] font-medium"
-//                             >
-//                                 {category.name}
-//                             </Link>
-//                             <div className="pl-4 mt-2 space-y-2">
-//                                 {Array.isArray(category.subCategories) && category.subCategories.map((subCategory) => (
-//                                     <Link
-//                                         key={subCategory.id}
-//                                         href={`/categories/${category.id}/${subCategory.id}`}
-//                                         className="block text-gray-600 hover:text-[#0f7db7]"
-//                                     >
-//                                         {subCategory.name}
-//                                     </Link>
-//                                 ))}
-//                             </div>
-//                         </div>
-//                     ))}
-//                 </motion.div>
-//             )}
-//         </header>
-//     );
-// };
-
-// export default Header;

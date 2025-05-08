@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { ChevronLeft, ChevronRight, FileText, BookOpen, FlaskConical, Download, ArrowRight, MessageSquareText, Menu, X } from 'lucide-react';
 import { IoIosArrowForward } from 'react-icons/io';
 import { useRouter, useParams } from 'next/navigation';
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
+
 import { motion } from 'framer-motion';
 import { getCategoryBySlug } from '@/app/data/categories';
 
@@ -121,7 +120,6 @@ export default function CategoryPage() {
   return (
     <>
       <div className="sticky top-0 z-50">
-        <Header />
       </div>
       <div className="flex flex-col lg:flex-row bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
         {/* Mobile Sidebar Toggle Button */}
@@ -871,7 +869,6 @@ export default function CategoryPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

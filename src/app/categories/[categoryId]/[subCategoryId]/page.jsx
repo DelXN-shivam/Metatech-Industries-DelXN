@@ -5,8 +5,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Footer from '@/app/components/Footer';
-import Header from '@/app/components/Header';
 import { getCategoryBySlug, getProductBySlug } from '@/app/data/categories';
 
 export default function SubCategoryPage({ params: paramsPromise }) {
@@ -104,7 +102,6 @@ export default function SubCategoryPage({ params: paramsPromise }) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
       </Head>
 
-      <Header />
 
       {/* Hero Banner with Parallax Effect */}
       <div
@@ -745,7 +742,6 @@ export default function SubCategoryPage({ params: paramsPromise }) {
           </motion.div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

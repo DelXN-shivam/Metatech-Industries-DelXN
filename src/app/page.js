@@ -30,7 +30,6 @@ const Home = () => {
   return (
     <div className="font-sans bg-gray-50 text-gray-900">
       {/* <CompanyHeader /> */}
-      <Header />
 
       {/* Hero Section */}
       <HeroSection />
@@ -48,7 +47,6 @@ const Home = () => {
       <QueryAndMap />
 
       {/* About Us Section + Footer*/}
-      <Footer />
     </div>
   );
 };

@@ -1,7 +1,6 @@
 'use client';
 
 import CompanyHeader from './CompanyLogo';
-import Header from './Header';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import ImageScrolling from '../components/ImageScrolling'
