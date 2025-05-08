@@ -94,7 +94,7 @@ export default function SubCategoryPage({ params: paramsPromise }) {
   }
 
   return (
-    <div className="min-h-screen w-full bg-white">
+    <div className="min-h-screen w-full bg-pink-500">
       <Head>
         <title>{`${product.name} | Buehler`}</title>
         <meta name="description" content={product.description} />
@@ -745,3 +745,984 @@ export default function SubCategoryPage({ params: paramsPromise }) {
     </div>
   );
 }
+
+// "use client";
+// import React, { useState, useEffect, useRef } from 'react';
+// import { useParams } from 'react-router-dom';
+// import { motion } from 'framer-motion';
+// import { ArrowDown, ArrowUp, ChevronDown, ChevronUp, Download, FileText } from "lucide-react";
+// import { getProductById } from "../../../../data/products.js";
+
+// // Utility function for className concatenation
+// const cn = (...classes) => {
+//   return classes.filter(Boolean).join(' ');
+// };
+
+// // Inline UI components
+// const Button = React.forwardRef(({ className, variant = 'default', size = 'default', ...props }, ref) => {
+//   const variantStyles = {
+//     default: "bg-primary text-primary-foreground hover:bg-primary/90",
+//     destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+//     outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+//     secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+//     ghost: "hover:bg-accent hover:text-accent-foreground",
+//     link: "text-primary underline-offset-4 hover:underline",
+//   };
+  
+//   const sizeStyles = {
+//     default: "h-10 px-4 py-2",
+//     sm: "h-9 rounded-md px-3",
+//     lg: "h-11 rounded-md px-8",
+//     icon: "h-10 w-10",
+//   };
+
+//   return (
+//     <button
+//       ref={ref}
+//       className={cn(
+//         "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+//         variantStyles[variant],
+//         sizeStyles[size],
+//         className
+//       )}
+//       {...props}
+//     />
+//   );
+// });
+// Button.displayName = "Button";
+
+// const Badge = ({ className, variant = 'default', ...props }) => {
+//   const variantStyles = {
+//     default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+//     secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+//     destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
+//     outline: "text-foreground",
+//   };
+
+//   return (
+//     <div className={cn(
+//       "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+//       variantStyles[variant],
+//       className
+//     )} {...props} />
+//   );
+// };
+
+// const Card = ({ className, ...props }) => (
+//   <div
+//     className={cn(
+//       "rounded-lg border bg-card text-card-foreground shadow-sm",
+//       className
+//     )}
+//     {...props}
+//   />
+// );
+
+// const CardHeader = ({ className, ...props }) => (
+//   <div
+//     className={cn("flex flex-col space-y-1.5 p-6", className)}
+//     {...props}
+//   />
+// );
+
+// const CardTitle = ({ className, ...props }) => (
+//   <h3
+//     className={cn(
+//       "text-2xl font-semibold leading-none tracking-tight",
+//       className
+//     )}
+//     {...props}
+//   />
+// );
+
+// const CardDescription = ({ className, ...props }) => (
+//   <p
+//     className={cn("text-sm text-muted-foreground", className)}
+//     {...props}
+//   />
+// );
+
+// const CardContent = ({ className, ...props }) => (
+//   <div className={cn("p-6 pt-0", className)} {...props} />
+// );
+
+// const CardFooter = ({ className, ...props }) => (
+//   <div
+//     className={cn("flex items-center p-6 pt-0", className)}
+//     {...props}
+//   />
+// );
+
+// const Tabs = ({ value, onValueChange, className, children, ...props }) => (
+//   <div className={className} {...props}>{children}</div>
+// );
+
+// const TabsList = React.forwardRef(({ className, ...props }, ref) => (
+//   <div
+//     ref={ref}
+//     className={cn(
+//       "inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground",
+//       className
+//     )}
+//     {...props}
+//   />
+// ));
+// TabsList.displayName = "TabsList";
+
+// const TabsTrigger = React.forwardRef(({ className, value, ...props }, ref) => (
+//   <button
+//     ref={ref}
+//     data-state={props['aria-selected'] ? 'active' : 'inactive'}
+//     className={cn(
+//       "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm",
+//       className
+//     )}
+//     {...props}
+//   />
+// ));
+// TabsTrigger.displayName = "TabsTrigger";
+
+// const TabsContent = React.forwardRef(({ className, value, ...props }, ref) => (
+//   <div
+//     ref={ref}
+//     data-state={props['aria-hidden'] ? 'inactive' : 'active'}
+//     className={cn(
+//       "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+//       className
+//     )}
+//     {...props}
+//   />
+// ));
+// TabsContent.displayName = "TabsContent";
+
+// // MediaGallery component
+// const MediaGallery = ({ images, video }) => {
+//   const [selectedIndex, setSelectedIndex] = useState(0);
+//   const [isPlaying, setIsPlaying] = useState(false);
+//   const videoIndex = images.length; // Video is always after all images
+  
+//   // Check if current selection is a video
+//   const isVideoSelected = video && selectedIndex === videoIndex;
+
+//   const handleVideoToggle = () => {
+//     const videoElement = document.querySelector('video');
+//     if (videoElement) {
+//       if (isPlaying) {
+//         videoElement.pause();
+//       } else {
+//         videoElement.play();
+//       }
+//       setIsPlaying(!isPlaying);
+//     }
+//   };
+
+//   return (
+//     <Card className="overflow-hidden border-0 shadow-lg">
+//       <div className="p-0">
+//         <div className="relative aspect-square w-full overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+//           {isVideoSelected ? (
+//             <div className="relative w-full h-full">
+//               <video
+//                 className="w-full h-full object-contain"
+//                 controls
+//                 src={video}
+//                 onPlay={() => setIsPlaying(true)}
+//                 onPause={() => setIsPlaying(false)}
+//               />
+//               <Button 
+//                 variant="secondary" 
+//                 size="sm" 
+//                 className="absolute top-4 right-4 bg-black/50 text-white hover:bg-black/70"
+//                 onClick={handleVideoToggle}
+//               >
+//                 {isPlaying ? <ChevronDown className="h-4 w-4" /> : <ChevronUp className="h-4 w-4" />}
+//               </Button>
+//             </div>
+//           ) : (
+//             <img
+//               src={images[selectedIndex]}
+//               alt={`Product view ${selectedIndex + 1}`}
+//               className="w-full h-full object-contain"
+//             />
+//           )}
+//         </div>
+
+//         {/* Thumbnail Gallery */}
+//         <div className="flex gap-2 p-4 overflow-x-auto scrollbar-hide bg-white border-t">
+//           {images.map((image, index) => (
+//             <button
+//               key={`img-${index}`}
+//               onClick={() => setSelectedIndex(index)}
+//               className={`relative aspect-square w-16 md:w-20 flex-shrink-0 rounded-md overflow-hidden border-2 transition-all ${
+//                 selectedIndex === index ? 'border-blue-600 shadow-md' : 'border-transparent hover:border-gray-300'
+//               }`}
+//             >
+//               <img
+//                 src={image}
+//                 alt={`Thumbnail ${index + 1}`}
+//                 className="w-full h-full object-cover"
+//               />
+//             </button>
+//           ))}
+          
+//           {video && (
+//             <button
+//               onClick={() => setSelectedIndex(videoIndex)}
+//               className={`relative aspect-square w-16 md:w-20 flex-shrink-0 rounded-md overflow-hidden border-2 transition-all ${
+//                 selectedIndex === videoIndex ? 'border-blue-600 shadow-md' : 'border-transparent hover:border-gray-300'
+//               }`}
+//             >
+//               <div className="relative w-full h-full bg-gray-800 flex items-center justify-center">
+//                 <ChevronUp className="h-6 w-6 text-white" />
+//               </div>
+//             </button>
+//           )}
+//         </div>
+//       </div>
+//     </Card>
+//   );
+// };
+
+// // ProductFeature component
+// const ProductFeature = ({
+//   title,
+//   description,
+//   icon,
+//   gradient = "from-blue-500 to-blue-700",
+//   badge,
+//   action
+// }) => {
+//   return (
+//     <motion.div
+//       whileHover={{ y: -5 }}
+//       transition={{ duration: 0.3 }}
+//     >
+//       <Card className="overflow-hidden h-full border-0 shadow-md hover:shadow-xl transition-all duration-300">
+//         <div className={`h-1.5 bg-gradient-to-r ${gradient}`}></div>
+//         <CardHeader className="pb-2">
+//           {badge && <Badge variant="outline" className="mb-2 w-fit">{badge}</Badge>}
+//           <div className="flex items-center gap-3">
+//             {icon && <div className="text-blue-500">{icon}</div>}
+//             <CardTitle className="text-lg">{title}</CardTitle>
+//           </div>
+//         </CardHeader>
+//         <CardContent>
+//           <p className="text-gray-600 text-sm">{description}</p>
+//         </CardContent>
+//         {action && (
+//           <CardFooter className="pt-0">
+//             <Button 
+//               variant="ghost" 
+//               className="w-full justify-start hover:bg-blue-50 hover:text-blue-700" 
+//               onClick={action.onClick}
+//             >
+//               {action.text}
+//             </Button>
+//           </CardFooter>
+//         )}
+//       </Card>
+//     </motion.div>
+//   );
+// };
+
+// // Main ProductPage component
+// const ProductPage = () => {
+//   const { categoryId, subcategoryId } = useParams();
+//   const [activeTab, setActiveTab] = useState("overview");
+//   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+//   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  
+//   // Refs for scroll navigation
+//   const overviewRef = useRef(null);
+//   const featuresRef = useRef(null);
+//   const specsRef = useRef(null);
+//   const orderingRef = useRef(null);
+//   const accessoriesRef = useRef(null);
+//   const literatureRef = useRef(null);
+//   const videosRef = useRef(null);
+//   const technotesRef = useRef(null);
+
+//   // Get product data from JSON
+//   const product = getProductById(subcategoryId) || {};
+
+//   // Animation variants
+//   const fadeIn = {
+//     hidden: { opacity: 0 },
+//     visible: { opacity: 1, transition: { duration: 0.6 } },
+//   };
+
+//   const slideUp = {
+//     hidden: { y: 50, opacity: 0 },
+//     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+//   };
+
+//   const staggerChildren = {
+//     hidden: { opacity: 0 },
+//     visible: {
+//       opacity: 1,
+//       transition: { staggerChildren: 0.1 },
+//     },
+//   };
+
+//   // Handle scroll to section
+//   const scrollToSection = (sectionId) => {
+//     const sectionRefs = {
+//       overview: overviewRef,
+//       features: featuresRef,
+//       specs: specsRef,
+//       ordering: orderingRef,
+//       accessories: accessoriesRef,
+//       literature: literatureRef,
+//       videos: videosRef,
+//       technotes: technotesRef
+//     };
+
+//     const section = sectionRefs[sectionId];
+//     if (section && section.current) {
+//       section.current.scrollIntoView({ behavior: 'smooth' });
+//       setActiveTab(sectionId);
+//     }
+//   };
+
+//   // Observe sections to update active tab during scrolling
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const scrollPosition = window.scrollY + 100;
+      
+//       const sections = [
+//         { id: "overview", ref: overviewRef },
+//         { id: "features", ref: featuresRef },
+//         { id: "specs", ref: specsRef },
+//         { id: "ordering", ref: orderingRef },
+//         { id: "accessories", ref: accessoriesRef },
+//         { id: "literature", ref: literatureRef },
+//         { id: "videos", ref: videosRef },
+//         { id: "technotes", ref: technotesRef }
+//       ];
+
+//       for (let i = sections.length - 1; i >= 0; i--) {
+//         const section = sections[i];
+//         if (section.ref.current && section.ref.current.offsetTop <= scrollPosition) {
+//           setActiveTab(section.id);
+//           break;
+//         }
+//       }
+//     };
+
+//     window.addEventListener('scroll', handleScroll);
+//     return () => window.removeEventListener('scroll', handleScroll);
+//   }, []);
+
+//   // Feature highlight data
+//   const featureHighlights = [
+//     {
+//       title: "High Performance",
+//       description: "Optimized for high throughput and precision, ensuring consistent results across applications.",
+//       gradient: "from-blue-500 to-cyan-400"
+//     },
+//     {
+//       title: "User-Friendly Design",
+//       description: "Intuitive controls and programmable settings for ease of use and repeatable outcomes.",
+//       gradient: "from-purple-500 to-indigo-500"
+//     },
+//     {
+//       title: "Robust Construction",
+//       description: "Built for durability and reliability in demanding industrial and laboratory environments.",
+//       gradient: "from-green-500 to-emerald-600"
+//     },
+//     {
+//       title: "Advanced Technology",
+//       description: "Incorporates cutting-edge features for enhanced performance and efficiency.",
+//       gradient: "from-amber-500 to-orange-600"
+//     }
+//   ];
+
+//   return (
+//     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+//       {/* Hero Banner with Parallax Effect */}
+//       <div
+//         className="relative w-full h-64 md:h-80 bg-cover bg-center flex items-center justify-center"
+//         style={{
+//           backgroundImage: "url('https://images.unsplash.com/photo-1531297484001-80022131f5a1')",
+//           backgroundAttachment: 'fixed',
+//         }}
+//       >
+//         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-indigo-700/70"></div>
+//         <motion.div
+//           className="relative z-10 w-full px-4 sm:px-6 md:px-8 lg:px-12 text-center"
+//           initial="hidden"
+//           animate="visible"
+//           variants={fadeIn}
+//         >
+//           <div className="w-full max-w-[1400px] mx-auto">
+//             <motion.h1
+//               className="text-white text-3xl md:text-5xl font-bold mb-2"
+//               initial={{ opacity: 0, y: -20 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               transition={{ duration: 0.5 }}
+//             >
+//               {product.name}
+//             </motion.h1>
+//             <motion.p
+//               className="text-white/90 text-lg md:text-2xl font-medium mb-6"
+//               initial={{ opacity: 0, y: -20 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               transition={{ duration: 0.5, delay: 0.2 }}
+//             >
+//               {product.tag}
+//             </motion.p>
+//             <motion.div
+//               initial={{ opacity: 0, y: 20 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               transition={{ duration: 0.5, delay: 0.4 }}
+//             >
+//               <Button
+//                 size="lg"
+//                 variant="secondary"
+//                 className="group hover:bg-white/95 transition-all duration-300 shadow-lg"
+//                 onClick={() => scrollToSection("overview")}
+//               >
+//                 <span className="mr-2">Explore Product</span>
+//                 <ArrowDown className="h-4 w-4 group-hover:translate-y-1 transition-transform" />
+//               </Button>
+//             </motion.div>
+//           </div>
+//         </motion.div>
+//       </div>
+
+//       {/* Breadcrumbs Navigation */}
+//       <div className="w-full bg-white py-3 px-4 sm:px-6 md:px-8 shadow-sm border-b">
+//         <div className="w-full max-w-[1400px] mx-auto flex items-center text-sm">
+//           <a href="/" className="text-blue-600 hover:text-blue-800 transition-colors">
+//             Home
+//           </a>
+//           <span className="mx-2 text-gray-400">/</span>
+//           <a href={`/categories/${categoryId}`} className="text-blue-600 hover:text-blue-800 transition-colors">
+//             Products
+//           </a>
+//           <span className="mx-2 text-gray-400">/</span>
+//           <span className="text-gray-600 font-medium">{product.name}</span>
+//         </div>
+//       </div>
+
+//       {/* Main Content Container */}
+//       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 py-6 md:py-12">
+//         <div className="w-full max-w-[1400px] mx-auto">
+//           {/* Main Content Tabs */}
+//           <div className="sticky top-0 bg-white z-50 shadow-md">
+//             <Tabs value={activeTab} onValueChange={scrollToSection} className="w-full">
+//               <TabsList className="w-full bg-white mb-0 flex border-b justify-start overflow-x-auto no-scrollbar">
+//                 <TabsTrigger 
+//                   value="overview" 
+//                   aria-selected={activeTab === "overview"}
+//                   onClick={() => scrollToSection("overview")}
+//                 >
+//                   Overview
+//                 </TabsTrigger>
+//                 <TabsTrigger 
+//                   value="features" 
+//                   aria-selected={activeTab === "features"}
+//                   onClick={() => scrollToSection("features")}
+//                 >
+//                   Features
+//                 </TabsTrigger>
+//                 <TabsTrigger 
+//                   value="specs" 
+//                   aria-selected={activeTab === "specs"}
+//                   onClick={() => scrollToSection("specs")}
+//                 >
+//                   Specifications
+//                 </TabsTrigger>
+//                 <TabsTrigger 
+//                   value="ordering" 
+//                   aria-selected={activeTab === "ordering"}
+//                   onClick={() => scrollToSection("ordering")}
+//                 >
+//                   Ordering
+//                 </TabsTrigger>
+//                 <TabsTrigger 
+//                   value="accessories" 
+//                   aria-selected={activeTab === "accessories"}
+//                   onClick={() => scrollToSection("accessories")}
+//                 >
+//                   Accessories
+//                 </TabsTrigger>
+//                 <TabsTrigger 
+//                   value="literature" 
+//                   aria-selected={activeTab === "literature"}
+//                   onClick={() => scrollToSection("literature")}
+//                 >
+//                   Literature
+//                 </TabsTrigger>
+//                 <TabsTrigger 
+//                   value="videos" 
+//                   aria-selected={activeTab === "videos"}
+//                   onClick={() => scrollToSection("videos")}
+//                 >
+//                   Videos
+//                 </TabsTrigger>
+//                 <TabsTrigger 
+//                   value="technotes" 
+//                   aria-selected={activeTab === "technotes"}
+//                   onClick={() => scrollToSection("technotes")}
+//                 >
+//                   Tech Notes
+//                 </TabsTrigger>
+//               </TabsList>
+//             </Tabs>
+//           </div>
+            
+//           {/* Overview Section */}
+//           <section ref={overviewRef} className="pt-10" id="overview">
+//             <div className="flex flex-col lg:flex-row gap-8">
+//               {/* Product Image Carousel */}
+//               <motion.div 
+//                 className="w-full lg:w-1/2"
+//                 initial={{ opacity: 0, x: -30 }}
+//                 animate={{ opacity: 1, x: 0 }}
+//                 transition={{ duration: 0.5 }}
+//               >
+//                 <MediaGallery 
+//                   images={product.images || []}
+//                   video={product.video}
+//                 />
+//               </motion.div>
+
+//               {/* Product Description */}
+//               <motion.div 
+//                 className="w-full lg:w-1/2"
+//                 initial={{ opacity: 0, x: 30 }}
+//                 animate={{ opacity: 1, x: 0 }}
+//                 transition={{ duration: 0.5 }}
+//               >
+//                 <Card className="border-0 shadow-lg h-full">
+//                   <CardHeader className="border-b bg-gradient-to-r from-blue-50 to-indigo-50">
+//                     <Badge variant="outline" className="w-fit mb-2 text-blue-700 border-blue-200 bg-blue-50">Premium Product</Badge>
+//                     <CardTitle className="text-2xl text-blue-900">{product.name}</CardTitle>
+//                     <CardDescription className="text-blue-700 font-medium">{product.tag}</CardDescription>
+//                   </CardHeader>
+                  
+//                   <CardContent className="pt-6 space-y-6">
+//                     <div>
+//                       <p className="text-gray-700">{product.description}</p>
+//                     </div>
+
+//                     {product.features && (
+//                       <div className="space-y-3">
+//                         <h3 className="text-lg font-medium text-blue-800 flex items-center">
+//                           <span className="mr-2">★</span>
+//                           Key Benefits
+//                         </h3>
+//                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+//                           {product.features.map((benefit, index) => (
+//                             <li 
+//                               key={index} 
+//                               className="flex items-start gap-2 bg-gradient-to-r from-blue-50/50 to-indigo-50/50 p-2 rounded-md"
+//                             >
+//                               <span className="text-green-500 mt-1">✓</span>
+//                               <span className="text-gray-700 text-sm">{benefit}</span>
+//                             </li>
+//                           ))}
+//                         </ul>
+//                       </div>
+//                     )}
+
+//                     {product.additionalFeatures && (
+//                       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg border-l-4 border-indigo-500">
+//                         <h3 className="text-lg font-medium text-indigo-800 flex items-center">
+//                           <span className="mr-2">💡</span>
+//                           Additional Features
+//                         </h3>
+//                         <ul className="mt-2 space-y-1">
+//                           {product.additionalFeatures.map((feature, index) => (
+//                             <li key={index} className="flex items-start gap-2 text-sm">
+//                               <span className="text-indigo-500 mt-1">→</span>
+//                               <span className="text-gray-700">{feature}</span>
+//                             </li>
+//                           ))}
+//                         </ul>
+//                       </div>
+//                     )}
+//                   </CardContent>
+
+//                   <CardFooter className="flex justify-between items-center border-t pt-4 bg-gradient-to-r from-gray-50 to-gray-100">
+//                     <div className="flex items-center">
+//                       <Badge variant="outline" className="mr-2">v5.2</Badge>
+//                       <span className="text-sm text-gray-500">Updated 2025</span>
+//                     </div>
+//                     <Button className="bg-blue-700 hover:bg-blue-800">
+//                       <Download className="h-4 w-4 mr-2" />
+//                       Download Brochure
+//                     </Button>
+//                   </CardFooter>
+//                 </Card>
+//               </motion.div>
+//             </div>
+
+//             {/* Feature Highlights */}
+//             <motion.div
+//               className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+//               initial={{ opacity: 0, y: 50 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               transition={{ delay: 0.3, duration: 0.5 }}
+//             >
+//               {featureHighlights.map((feature, index) => (
+//                 <ProductFeature 
+//                   key={index}
+//                   title={feature.title}
+//                   description={feature.description}
+//                   gradient={feature.gradient}
+//                 />
+//               ))}
+//             </motion.div>
+//           </section>
+
+//           {/* Features Section */}
+//           <section ref={featuresRef} className="pt-20 scroll-mt-20" id="features">
+//             <div className="section-heading mb-8">
+//               <h2 className="text-3xl font-bold text-gray-800">Product Features</h2>
+//               <div className="h-1 w-20 bg-blue-600 mt-2"></div>
+//             </div>
+            
+//             <Card>
+//               <CardHeader>
+//                 <CardTitle>Complete Feature Overview</CardTitle>
+//                 <CardDescription>
+//                   Comprehensive features of the {product.name}
+//                 </CardDescription>
+//               </CardHeader>
+//               <CardContent className="space-y-6">
+//                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+//                   <Card>
+//                     <CardHeader>
+//                       <CardTitle className="text-lg">Key Benefits</CardTitle>
+//                     </CardHeader>
+//                     <CardContent>
+//                       <ul className="space-y-2">
+//                         {product.features?.map((feature, index) => (
+//                           <li key={index} className="flex items-start gap-2">
+//                             <span className="text-green-500 mt-1">✓</span>
+//                             <span>{feature}</span>
+//                           </li>
+//                         ))}
+//                       </ul>
+//                     </CardContent>
+//                   </Card>
+                  
+//                   <Card>
+//                     <CardHeader>
+//                       <CardTitle className="text-lg">Additional Features</CardTitle>
+//                     </CardHeader>
+//                     <CardContent>
+//                       <ul className="space-y-2">
+//                         {product.additionalFeatures?.map((feature, index) => (
+//                           <li key={index} className="flex items-start gap-2">
+//                             <span className="text-blue-500 mt-1">→</span>
+//                             <span>{feature}</span>
+//                           </li>
+//                         ))}
+//                       </ul>
+//                     </CardContent>
+//                   </Card>
+//                 </div>
+//               </CardContent>
+//             </Card>
+//           </section>
+
+//           {/* Specifications Section */}
+//           <section ref={specsRef} className="pt-20 scroll-mt-20" id="specs">
+//             <div className="section-heading mb-8">
+//               <h2 className="text-3xl font-bold text-gray-800">Technical Specifications</h2>
+//               <div className="h-1 w-20 bg-blue-600 mt-2"></div>
+//             </div>
+            
+//             <Card>
+//               <CardHeader>
+//                 <CardTitle>Detailed Specifications</CardTitle>
+//                 <CardDescription>
+//                   Complete technical details for the {product.name}
+//                 </CardDescription>
+//               </CardHeader>
+//               <CardContent>
+//                 <div className="overflow-x-auto">
+//                   <table className="w-full border-collapse">
+//                     <thead>
+//                       <tr className="bg-blue-50 text-left">
+//                         <th className="py-3 px-4 font-medium text-blue-900 border-b">Parameter</th>
+//                         <th className="py-3 px-4 font-medium text-blue-900 border-b">Value</th>
+//                       </tr>
+//                     </thead>
+//                     <tbody className="divide-y">
+//                       {product.specifications?.map((spec, index) => (
+//                         <tr key={index} className="hover:bg-gray-50">
+//                           <td className="py-3 px-4 font-medium">{spec.param}</td>
+//                           <td className="py-3 px-4">{spec.value}</td>
+//                         </tr>
+//                       ))}
+//                     </tbody>
+//                   </table>
+//                 </div>
+//                 <div className="mt-6 flex justify-end">
+//                   <Button>
+//                     <Download className="h-4 w-4 mr-2" />
+//                     Download Complete Specifications
+//                   </Button>
+//                 </div>
+//               </CardContent>
+//             </Card>
+//           </section>
+
+//           {/* Ordering Section */}
+//           <section ref={orderingRef} className="pt-20 scroll-mt-20" id="ordering">
+//             <div className="section-heading mb-8">
+//               <h2 className="text-3xl font-bold text-gray-800">Ordering Information</h2>
+//               <div className="h-1 w-20 bg-blue-600 mt-2"></div>
+//             </div>
+            
+//             <Card>
+//               <CardHeader>
+//                 <CardTitle>Product Configurations</CardTitle>
+//                 <CardDescription>Select the configuration that best fits your needs</CardDescription>
+//               </CardHeader>
+//               <CardContent>
+//                 <div className="overflow-x-auto">
+//                   <table className="w-full border-collapse">
+//                     <thead>
+//                       <tr className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-left">
+//                         <th className="py-3 px-4 font-medium rounded-tl-lg">Part Number</th>
+//                         <th className="py-3 px-4 font-medium">Configuration</th>
+//                         <th className="py-3 px-4 font-medium">Voltage</th>
+//                         <th className="py-3 px-4 font-medium rounded-tr-lg"></th>
+//                       </tr>
+//                     </thead>
+//                     <tbody className="divide-y">
+//                       {product.ordering?.map((item, index) => (
+//                         <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+//                           <td className="py-4 px-4">{item.part}</td>
+//                           <td className="py-4 px-4">{item.mold}</td>
+//                           <td className="py-4 px-4">{item.voltage}</td>
+//                           <td className="py-4 px-4 text-right">
+//                             <Button variant="outline">Request Quote</Button>
+//                           </td>
+//                         </tr>
+//                       ))}
+//                     </tbody>
+//                   </table>
+//                 </div>
+//               </CardContent>
+//             </Card>
+//           </section>
+
+//           {/* Accessories Section */}
+//           <section ref={accessoriesRef} className="pt-20 scroll-mt-20" id="accessories">
+//             <div className="section-heading mb-8">
+//               <h2 className="text-3xl font-bold text-gray-800">Accessories & Consumables</h2>
+//               <div className="h-1 w-20 bg-blue-600 mt-2"></div>
+//             </div>
+            
+//             <Card>
+//               <CardHeader>
+//                 <CardTitle>Compatible Accessories</CardTitle>
+//                 <CardDescription>
+//                   Enhance your {product.name} with these compatible products
+//                 </CardDescription>
+//               </CardHeader>
+//               <CardContent>
+//                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+//                   {product.accessories?.map((item, index) => (
+//                     <Card key={index} className="overflow-hidden border hover:shadow-lg transition-all">
+//                       <div className="aspect-square relative overflow-hidden bg-gray-100">
+//                         <img 
+//                           src={item.image}
+//                           alt={item.title}
+//                           className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+//                         />
+//                       </div>
+//                       <CardHeader className="py-4">
+//                         <CardTitle className="text-lg">{item.title}</CardTitle>
+//                         <CardDescription>{item.subtitle}</CardDescription>
+//                       </CardHeader>
+//                       <CardFooter className="pt-0">
+//                         <Button variant="outline" className="w-full">View Details</Button>
+//                       </CardFooter>
+//                     </Card>
+//                   ))}
+//                 </div>
+//               </CardContent>
+//             </Card>
+//           </section>
+
+//           {/* Literature Section */}
+//           <section ref={literatureRef} className="pt-20 scroll-mt-20" id="literature">
+//             <div className="section-heading mb-8">
+//               <h2 className="text-3xl font-bold text-gray-800">Product Literature</h2>
+//               <div className="h-1 w-20 bg-blue-600 mt-2"></div>
+//             </div>
+            
+//             <Card>
+//               <CardHeader>
+//                 <CardTitle>Documentation</CardTitle>
+//                 <CardDescription>Documentation and guides for the {product.name}</CardDescription>
+//               </CardHeader>
+//               <CardContent>
+//                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+//                   {product.literature?.map((item, index) => (
+//                     <Card key={index} className="overflow-hidden hover:shadow-lg transition-all">
+//                       <div className="aspect-video relative overflow-hidden bg-gray-100">
+//                         <img 
+//                           src={item.image}
+//                           alt={item.title}
+//                           className="w-full h-full object-cover"
+//                         />
+//                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+//                           <h3 className="text-white font-medium">{item.title}</h3>
+//                         </div>
+//                       </div>
+//                       <CardFooter className="flex justify-between pt-4">
+//                         <Button variant="outline" size="sm">
+//                           <FileText className="h-4 w-4 mr-2" />
+//                           View
+//                         </Button>
+//                         <Button variant="secondary" size="sm">
+//                           <Download className="h-4 w-4 mr-2" />
+//                           Download
+//                         </Button>
+//                       </CardFooter>
+//                     </Card>
+//                   ))}
+//                 </div>
+//               </CardContent>
+//             </Card>
+//           </section>
+
+//           {/* Videos Section */}
+//           <section ref={videosRef} className="pt-20 scroll-mt-20" id="videos">
+//             <div className="section-heading mb-8">
+//               <h2 className="text-3xl font-bold text-gray-800">Product Videos</h2>
+//               <div className="h-1 w-20 bg-blue-600 mt-2"></div>
+//             </div>
+            
+//             <Card>
+//               <CardHeader>
+//                 <CardTitle>Watch & Learn</CardTitle>
+//                 <CardDescription>Watch tutorials and demonstrations of the {product.name}</CardDescription>
+//               </CardHeader>
+//               <CardContent>
+//                 <div className="flex flex-col lg:flex-row gap-6">
+//                   {/* Main Video Player */}
+//                   <div className="lg:w-2/3">
+//                     <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
+//                       <video
+//                         className="w-full h-full object-contain"
+//                         controls
+//                         poster={product.images ? product.images[0] : ""}
+//                       >
+//                         <source src="/example-video.mp4" type="video/mp4" />
+//                         Your browser does not support the video tag.
+//                       </video>
+//                     </div>
+//                     <div className="mt-4">
+//                       <h3 className="text-xl font-medium">{product.videos && product.videos[activeVideoIndex]?.title}</h3>
+//                       <p className="text-gray-500 text-sm">Duration: {product.videos && product.videos[activeVideoIndex]?.duration}</p>
+//                     </div>
+//                   </div>
+
+//                   {/* Video List */}
+//                   <div className="lg:w-1/3 space-y-4">
+//                     <h3 className="font-medium text-gray-700">Related Videos</h3>
+//                     <div className="bg-gray-50 rounded-lg p-4 space-y-3 h-[400px] overflow-y-auto">
+//                       {product.videos?.map((video, index) => (
+//                         <div
+//                           key={video.id}
+//                           className={`cursor-pointer flex gap-3 p-2 rounded-lg ${
+//                             index === activeVideoIndex ? 'bg-blue-100 ring-1 ring-blue-400' : 'hover:bg-gray-100'
+//                           }`}
+//                           onClick={() => {
+//                             setActiveVideoIndex(index);
+//                             setIsVideoPlaying(true);
+//                           }}
+//                         >
+//                           <div className="aspect-video w-24 bg-gray-200 relative rounded overflow-hidden">
+//                             <img 
+//                               src={product.images ? product.images[index % product.images.length] : ""} 
+//                               alt="" 
+//                               className="object-cover w-full h-full" 
+//                             />
+//                             <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+//                               <ChevronUp className="h-6 w-6 text-white" />
+//                             </div>
+//                             <div className="absolute bottom-1 right-1 text-white text-xs bg-black/60 px-1 rounded">
+//                               {video.duration}
+//                             </div>
+//                           </div>
+//                           <div className="flex-1">
+//                             <h4 className="font-medium text-sm">{video.title}</h4>
+//                           </div>
+//                         </div>
+//                       ))}
+//                     </div>
+//                   </div>
+//                 </div>
+//               </CardContent>
+//             </Card>
+//           </section>
+
+//           {/* Tech Notes Section */}
+//           <section ref={technotesRef} className="pt-20 pb-20 scroll-mt-20" id="technotes">
+//             <div className="section-heading mb-8">
+//               <h2 className="text-3xl font-bold text-gray-800">Tech Notes</h2>
+//               <div className="h-1 w-20 bg-blue-600 mt-2"></div>
+//             </div>
+            
+//             <Card>
+//               <CardHeader>
+//                 <CardTitle>Technical Documentation</CardTitle>
+//                 <CardDescription>Technical documentation and research notes for professionals</CardDescription>
+//               </CardHeader>
+//               <CardContent>
+//                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+//                   {product.technotes?.map((note, index) => (
+//                     <Card key={index} className="overflow-hidden border hover:shadow-lg transition-all">
+//                       <div className="h-2 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
+//                       <CardHeader>
+//                         <Badge variant="outline" className="mb-2 w-fit">Technical</Badge>
+//                         <CardTitle className="text-lg">{note.title}</CardTitle>
+//                         <CardDescription className="text-xs">
+//                           {note.date} • {note.author}
+//                         </CardDescription>
+//                       </CardHeader>
+//                       <CardContent>
+//                         <p className="text-sm text-gray-600">{note.description}</p>
+//                       </CardContent>
+//                       <CardFooter className="pt-0 flex justify-between">
+//                         <Button variant="outline" size="sm">Preview</Button>
+//                         <Button variant="secondary" size="sm">
+//                           <Download className="h-4 w-4 mr-2" />
+//                           Download
+//                         </Button>
+//                       </CardFooter>
+//                     </Card>
+//                   ))}
+//                 </div>
+//               </CardContent>
+//             </Card>
+//           </section>
+
+//           {/* Quick navigation buttons */}
+//           <div className="fixed bottom-6 right-6 space-y-2">
+//             <Button 
+//               variant="secondary"
+//               size="icon"
+//               className="rounded-full shadow-lg bg-blue-600 text-white hover:bg-blue-700"
+//               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+//             >
+//               <ArrowUp className="h-5 w-5" />
+//             </Button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ProductPage;
