@@ -7,7 +7,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { useRouter, useParams } from 'next/navigation';
 
 import { motion } from 'framer-motion';
-import { getCategoryBySlug } from '@/app/data/categories';
+import { mainCategories } from '@/app/data/categories';
 
 export default function CategoryPage() {
   const router = useRouter();
@@ -22,7 +22,13 @@ export default function CategoryPage() {
   });
 
   // Find the category by slug
-  const category = getCategoryBySlug(categoryId);
+  const category = (() => {
+    for (const mainCat of mainCategories) {
+      const found = mainCat.categories.find(cat => cat.slug === categoryId);
+      if (found) return found;
+    }
+    return null;
+  })();
 
   // Update document title when category is loaded
   useEffect(() => {
@@ -121,7 +127,7 @@ export default function CategoryPage() {
     <>
       <div className="sticky top-0 z-50">
       </div>
-      <div className="flex flex-col lg:flex-row bg-orange-700 p-2 gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+      <div className="flex flex-col lg:flex-row gradient-to-br from-gray-50 to-gray-100 min-h-screen">
         {/* Mobile Sidebar Toggle Button */}
         <div className="lg:hidden sticky top-16 z-40 bg-white shadow-sm p-4">
           <button

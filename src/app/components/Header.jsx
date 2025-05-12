@@ -7,7 +7,7 @@ import { FaTools, FaChalkboardTeacher, FaInfoCircle, FaEnvelope, FaUserCircle } 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter, useParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { categories } from '@/app/data/categories';
+import { mainCategories } from '@/app/data/categories';
 
 const Header = () => {
   const [productsDropdown, setProductsDropdown] = useState(false);
@@ -188,7 +188,7 @@ const Header = () => {
                           <div className="flex p-6 gap-6">
                             {/* Categories and Consumables Side by Side */}
                             <div className="w-full">
-                              <div className="grid grid-cols-2 gap-8">
+                            <div className="grid grid-cols-[1.5fr_0.5fr] gap-8">
                                 {/* Product Categories - Left Side */}
                                 <div>
                                   <div className="flex items-center gap-3 mb-4">
@@ -199,59 +199,65 @@ const Header = () => {
                                   </div>
                                   
                                   <div className="max-h-[65vh] overflow-y-auto pr-2">
-                                    <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                                      {categories.map((category, index) => (
-                                        <div key={category.id} className="mb-4">
-                                          <Link
-                                            href={`/categories/${category.slug}`}
-                                            onClick={() => {
-                                              setActiveCategory(category.slug);
-                                              setActiveSubCategory(null);
-                                              setProductsDropdown(false);
-                                            }}
-                                            className={`flex items-center gap-3 py-2 px-3 rounded-lg transition-all duration-200 ${
-                                              activeCategory === category.slug
-                                                ? 'text-sky-700 font-medium bg-sky-50'
-                                                : 'text-gray-700 hover:text-sky-600 hover:bg-sky-50/50'
-                                            }`}
-                                          >
-                                            <span className={`w-1.5 h-1.5 rounded-full ${
-                                              activeCategory === category.slug 
-                                                ? 'bg-sky-500' 
-                                                : 'bg-gray-400'
-                                            }`} />
-                                            {category.name}
-                                          </Link>
-                                          
-                                          <div className="ml-6 mt-1 space-y-1">
-                                            {category.subCategories.map((subCategory) => (
+                                    <div className="grid grid-cols-3 gap-x-4 gap-y-2">
+                                      {mainCategories && mainCategories.length > 0 ? mainCategories.map((mainCat, idx) => (
+                                        <div key={mainCat.mainCategory} className="mb-4">
+                                          <div className="font-semibold text-sky-700 mb-2">{mainCat.mainCategory}</div>
+                                          {mainCat.categories && mainCat.categories.map((category) => (
+                                            <div key={category.slug} className="mb-2">
                                               <Link
-                                                key={subCategory.id}
-                                                href={`/categories/${category.slug}/${subCategory.id}`}
+                                                href={`/categories/${category.slug}`}
                                                 onClick={() => {
                                                   setActiveCategory(category.slug);
-                                                  setActiveSubCategory(subCategory.id);
+                                                  setActiveSubCategory(null);
                                                   setProductsDropdown(false);
                                                 }}
-                                                className={`block px-3 py-2 rounded-md text-sm transition-all duration-200 ${
-                                                  activeCategory === category.slug && activeSubCategory === subCategory.id
-                                                    ? 'text-sky-700 font-medium bg-sky-100'
-                                                    : 'text-gray-600 hover:text-sky-600 hover:bg-sky-50'
+                                                className={`flex items-center gap-3 py-2 px-3 rounded-lg transition-all duration-200 ${
+                                                  activeCategory === category.slug
+                                                    ? 'text-sky-700 font-medium bg-sky-50'
+                                                    : 'text-gray-700 hover:text-sky-600 hover:bg-sky-50/50'
                                                 }`}
                                               >
-                                                <div className="flex items-center gap-2">
-                                                  <span className={`w-1 h-1 rounded-full ${
-                                                    activeCategory === category.slug && activeSubCategory === subCategory.id
-                                                      ? 'bg-sky-500'
-                                                      : 'bg-gray-300'
-                                                  }`} />
-                                                  {subCategory.name}
-                                                </div>
+                                                <span className={`w-1.5 h-1.5 rounded-full ${
+                                                  activeCategory === category.slug 
+                                                    ? 'bg-sky-500' 
+                                                    : 'bg-gray-400'
+                                                }`} />
+                                                {category.name}
                                               </Link>
-                                            ))}
-                                          </div>
+                                              <div className="ml-6 mt-1 space-y-1">
+                                                {category.subCategories && category.subCategories.length > 0 && category.subCategories.map((subCategory) => (
+                                                  <Link
+                                                    key={subCategory.id}
+                                                    href={`/categories/${category.slug}/${subCategory.id}`}
+                                                    onClick={() => {
+                                                      setActiveCategory(category.slug);
+                                                      setActiveSubCategory(subCategory.id);
+                                                      setProductsDropdown(false);
+                                                    }}
+                                                    className={`block px-3 py-2 rounded-md text-sm transition-all duration-200 ${
+                                                      activeCategory === category.slug && activeSubCategory === subCategory.id
+                                                        ? 'text-sky-700 font-medium bg-sky-100'
+                                                        : 'text-gray-600 hover:text-sky-600 hover:bg-sky-50'
+                                                    }`}
+                                                  >
+                                                    <div className="flex items-center gap-2">
+                                                      <span className={`w-1 h-1 rounded-full ${
+                                                        activeCategory === category.slug && activeSubCategory === subCategory.id
+                                                          ? 'bg-sky-500'
+                                                          : 'bg-gray-300'
+                                                      }`} />
+                                                      {subCategory.name}
+                                                    </div>
+                                                  </Link>
+                                                ))}
+                                              </div>
+                                            </div>
+                                          ))}
                                         </div>
-                                      ))}
+                                      )) : (
+                                        <div className="text-gray-500 py-2">No categories available</div>
+                                      )}
                                     </div>
                                   </div>
                                 </div>
@@ -266,7 +272,7 @@ const Header = () => {
                                   </div>
                                   
                                   <div className="max-h-[65vh] overflow-y-auto pr-2">
-                                    <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                                    <div className="grid grid-cols-1 gap-x-4 gap-y-2">
                                       {consumables.map((consumable, index) => (
                                         <div key={consumable.slug} className="mb-4">
                                           <Link
@@ -505,46 +511,55 @@ const Header = () => {
                               <div className="mb-3">
                                 <h4 className="font-medium text-sky-800 py-2">Product Categories</h4>
                                 <div className="grid grid-cols-1 gap-2">
-                                  {categories.map((category) => (
-                                    <div key={category.id} className="mb-2">
-                                      <Link
-                                        href={`/categories/${category.slug}`}
-                                        className={`block py-2 px-3 rounded-md text-sm ${
-                                          activeCategory === category.slug
-                                            ? 'text-sky-700 font-medium bg-sky-50'
-                                            : 'text-gray-700 hover:bg-gray-50'
-                                        }`}
-                                        onClick={() => {
-                                          setActiveCategory(category.slug);
-                                          setActiveSubCategory(null);
-                                          setIsMenuOpen(false);
-                                        }}
-                                      >
-                                        {category.name}
-                                      </Link>
-                                      
-                                      <div className="ml-4 space-y-1 mt-1">
-                                        {category.subCategories.map((subCategory) => (
+                                  {mainCategories && mainCategories.length > 0 ? mainCategories.map((mainCat) => (
+                                    <div key={mainCat.mainCategory}>
+                                      <h5 className="font-medium text-sky-700 py-1">{mainCat.mainCategory}</h5>
+                                      {mainCat.categories && mainCat.categories.map((category) => (
+                                        <div key={category.slug} className="mb-2">
                                           <Link
-                                            key={subCategory.id}
-                                            href={`/categories/${category.slug}/${subCategory.id}`}
-                                            className={`block py-1.5 px-3 rounded-md text-xs ${
-                                              activeCategory === category.slug && activeSubCategory === subCategory.id
+                                            href={`/categories/${category.slug}`}
+                                            className={`block py-2 px-3 rounded-md text-sm ${
+                                              activeCategory === category.slug
                                                 ? 'text-sky-700 font-medium bg-sky-50'
-                                                : 'text-gray-600 hover:bg-gray-50'
+                                                : 'text-gray-700 hover:bg-gray-50'
                                             }`}
                                             onClick={() => {
                                               setActiveCategory(category.slug);
-                                              setActiveSubCategory(subCategory.id);
+                                              setActiveSubCategory(null);
                                               setIsMenuOpen(false);
                                             }}
                                           >
-                                            {subCategory.name}
+                                            {category.name}
                                           </Link>
-                                        ))}
-                                      </div>
+                                          
+                                          {category.subCategories && category.subCategories.length > 0 && (
+                                            <div className="ml-4 space-y-1 mt-1">
+                                              {category.subCategories.map((subCategory) => (
+                                                <Link
+                                                  key={subCategory.id}
+                                                  href={`/categories/${category.slug}/${subCategory.id}`}
+                                                  className={`block py-1.5 px-3 rounded-md text-xs ${
+                                                    activeCategory === category.slug && activeSubCategory === subCategory.id
+                                                      ? 'text-sky-700 font-medium bg-sky-50'
+                                                      : 'text-gray-600 hover:bg-gray-50'
+                                                  }`}
+                                                  onClick={() => {
+                                                    setActiveCategory(category.slug);
+                                                    setActiveSubCategory(subCategory.id);
+                                                    setIsMenuOpen(false);
+                                                  }}
+                                                >
+                                                  {subCategory.name}
+                                                </Link>
+                                              ))}
+                                            </div>
+                                          )}
+                                        </div>
+                                      ))}
                                     </div>
-                                  ))}
+                                  )) : (
+                                    <div className="text-gray-500 py-2">No categories available</div>
+                                  )}
                                 </div>
                               </div>
                               
