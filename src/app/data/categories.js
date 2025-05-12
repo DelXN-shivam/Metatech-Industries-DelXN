@@ -1419,6 +1419,1049 @@ const products = [
     detail: "3D reconstruction",
     apiCall: "/api/microscope/confocal",
   },
+
+  // Automatic Micro Hardness Tester
+  {
+    id: 26,
+    categorySlug: "automatic-micro-hardness-testers",
+    name: "Fully Automatic MVH-V",
+    slug: "fully-automatic-mvh-v",
+    description: "The Fully Automatic MVH-V is a state-of-the-art micro Vickers hardness tester designed for precise and automated hardness testing. Featuring motorized X-Y and Z motion, autofocus, auto reading, and automatic effective case graph generation, it supports a load range of 1g to 2000g (3000g optional). With manual override for all automation and an optional overview camera for component imaging and hardness profile direction, it is ideal for metallographic laboratories and quality control.",
+    image: "/images/automatic-micro-hardness-testers/mvh-v.png",
+    alt: "Fully Automatic MVH-V Micro Hardness Tester",
+    rating: 4.9,
+    reviews: 48,
+    tag: "Automatic Micro Hardness Testing",
+    detail: "Motorized motion with autofocus and case depth graphing",
+    apiCall: "/api/automatic-micro-hardness/mvh-v",
+    features: [
+      "Motorized X-Y and Z motion for precise sample positioning",
+      "Autofocus and auto reading for fully automated testing",
+      "Manual override for all automation, ensuring flexibility",
+      "Automatic effective case graph generation for hardness profiles",
+      "Load range from 1g to 2000g, with optional 3000g extension",
+      "Optional overview camera for complete component imaging and hardness profile direction via computer screen",
+      "High-resolution CCD camera for clear indentation imaging",
+      "PLC-based software for programmable test cycles and data analysis"
+    ],
+    additionalFeatures: [
+      "Automatic hardness curve plotting and statistical analysis",
+      "Supports Vickers and Knoop hardness testing per ISO and ASTM standards",
+      "Data export in WORD, EXCEL, or PDF formats with customizable templates",
+      "Integrated collision avoidance system for mechanical safety",
+      "High-precision motorized XY stage with 2 µm positioning accuracy"
+    ],
+    images: [
+      "/product/MVHV1.jpg",
+      "/product/MVHV2.jpg",
+      "/product/MVHV3.jpg",
+      "/product/MVHV4.jpg"
+    ],
+    video: "/product/MVH_V.mp4",
+    specifications: [
+      { param: "Operation", value: "Fully Automatic with Manual Override" },
+      { param: "Load Range", value: "1g to 2000g (3000g optional)" },
+      { param: "Motion Control", value: "Motorized X-Y and Z" },
+      { param: "Focusing", value: "Autofocus" },
+      { param: "Indentation Measurement", value: "Auto Reading via CCD Camera" },
+      { param: "Control System", value: "PLC-based with HMI" },
+      { param: "Stage Dimensions", value: "110mm x 110mm (XY)" },
+      { param: "Stage Travel", value: "50mm x 50mm (XY)" },
+      { param: "Positioning Accuracy", value: "2 µm" },
+      { param: "Optical System", value: "100x, 400x magnification" },
+      { param: "Optional Features", value: "Overview camera for component imaging" },
+      { param: "Electrical Supply", value: "220V, 50/60Hz, Single phase" }
+    ],
+    ordering: [
+      { part: "160-2711-100", load: "1g to 2000g", voltage: "220V, 50/60Hz" },
+      { part: "160-2711-102", load: "1g to 3000g with Overview Camera", voltage: "220V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "Vickers Indenter",
+        subtitle: "For micro hardness testing",
+        image: "/product/vickersIndenterMVHV.png"
+      },
+      {
+        title: "Knoop Indenter",
+        subtitle: "For specialized hardness testing",
+        image: "/product/knoopIndenterMVHV.png"
+      },
+      {
+        title: "Test Blocks",
+        subtitle: "700HV for calibration",
+        image: "/product/testBlocksMVHV.png"
+      }
+    ],
+    literature: [
+      { title: "Fully Automatic MVH-V User Manual", image: "/product/mvh-v-manual.png" },
+      { title: "Fully Automatic MVH-V Brochure", image: "/product/mvh-v-brochure.png" },
+      { title: "Micro Hardness Testing Guide", image: "/product/micro-hardness-guide.png" }
+    ]
+  },
+
+  //Micro / Macro Hardness Tester Load Cell Based
+  {
+    id: 27,
+    categorySlug: "micro-macro-hardness-testers",
+    name: "MVH-I C",
+    slug: "mvh-i-c",
+    description: "The MVH-I C is a versatile micro/macro hardness tester with load cell-based technology and closed-loop control, offering both manual and computerized operation. With a load range from 10gf to 30kgf, optional autofocus, and an optional auto XY stage, it is designed for precise Vickers and Knoop hardness testing in metallographic and quality control applications.",
+    image: "/images/micro-macro-hardness-testers/mvh-i-c.png",
+    alt: "MVH-I C Micro Macro Hardness Tester",
+    rating: 4.8,
+    reviews: 42,
+    tag: "Load Cell Hardness Testing",
+    detail: "Manual and computerized with closed-loop technology",
+    apiCall: "/api/micro-macro-hardness/mvh-i-c",
+    features: [
+      "Load cell-based system with closed-loop technology for high accuracy",
+      "Wide load range from 10gf to 30kgf for micro and macro testing",
+      "Manual and computerized operation modes for flexibility",
+      "Optional autofocus for enhanced automation",
+      "Optional auto XY stage for precise sample positioning",
+      "High-resolution CCD camera for clear indentation imaging",
+      "Supports Vickers and Knoop hardness testing per ISO and ASTM standards",
+      "User-friendly software for hardness measurement and data analysis"
+    ],
+    additionalFeatures: [
+      "Automatic hardness value calculation and statistical reporting",
+      "Data export in EXCEL, WORD, or PDF formats",
+      "Manual override for fine-tuned control during testing",
+      "Compact design suitable for laboratory environments",
+      "Integrated safety features including overload protection"
+    ],
+    images: [
+      "/product/MVHIC1.jpg",
+      "/product/MVHIC2.jpg",
+      "/product/MVHIC3.jpg",
+      "/product/MVHIC4.jpg"
+    ],
+    video: "/product/MVH_I_C.mp4",
+    specifications: [
+      { param: "Operation", value: "Manual | Computerized" },
+      { param: "Load Range", value: "10gf to 30kgf" },
+      { param: "Load System", value: "Load cell-based with closed-loop technology" },
+      { param: "Test Methods", value: "Vickers, Knoop" },
+      { param: "Focusing", value: "Manual (Autofocus optional)" },
+      { param: "Stage Control", value: "Manual (Auto XY stage optional)" },
+      { param: "Stage Dimensions", value: "100mm x 100mm (XY)" },
+      { param: "Stage Travel", value: "50mm x 50mm (XY)" },
+      { param: "Positioning Accuracy", value: "2 µm (with auto XY stage)" },
+      { param: "Optical System", value: "100x, 400x magnification" },
+      { param: "Electrical Supply", value: "220V, 50/60Hz, Single phase" }
+    ],
+    ordering: [
+      { part: "170-2811-200", config: "Manual, 10gf to 30kgf", voltage: "220V, 50/60Hz" },
+      { part: "170-2811-202", config: "Computerized with Autofocus and Auto XY Stage", voltage: "220V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "Vickers Indenter",
+        subtitle: "For micro and macro hardness testing",
+        image: "/product/vickersIndenterMVHIC.png"
+      },
+      {
+        title: "Knoop Indenter",
+        subtitle: "For specialized hardness testing",
+        image: "/product/knoopIndenterMVHIC.png"
+      },
+      {
+        title: "Test Blocks",
+        subtitle: "700HV and 200HV for calibration",
+        image: "/product/testBlocksMVHIC.png"
+      }
+    ],
+    literature: [
+      { title: "MVH-I C User Manual", image: "/product/mvh-i-c-manual.png" },
+      { title: "MVH-I C Brochure", image: "/product/mvh-i-c-brochure.png" },
+      { title: "Micro and Macro Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+    ]
+  },
+
+  //Other Machines
+  {
+    id: 28,
+    categorySlug: "electro-polishing-machines",
+    name: "Electropol",
+    slug: "electropol",
+    description: "The Electropol is a high-efficiency electropolishing machine designed for rapid surface finishing, capable of polishing metal parts within 1 minute. Ideal for gold, silver, stainless steel, and other metals, it delivers a smooth, mirror-like finish with enhanced corrosion resistance and minimal material loss, perfect for jewelry, medical, and industrial applications.",
+    image: "/images/electro-polishing-machines/electropol.png",
+    alt: "Electropol Electro Polishing Machine",
+    rating: 4.7,
+    reviews: 38,
+    tag: "Rapid Electropolishing",
+    detail: "Polishes within 1 minute for high-throughput applications",
+    apiCall: "/api/electro-polishing/electropol",
+    features: [
+      "Ultra-fast polishing within 1 minute for maximum efficiency",
+      "Electrochemical process for smooth, mirror-like finishes",
+      "Suitable for gold, silver, stainless steel, copper, and other metals",
+      "Minimal material loss (0.0002-0.0003 inches per cycle)",
+      "Enhances corrosion resistance through passivation",
+      "Compact design with temperature-controlled electrolyte bath",
+      "User-friendly interface with adjustable current settings"
+    ],
+    additionalFeatures: [
+      "Automatic sludge removal for low maintenance",
+      "Supports multiple electrolyte types for various metals",
+      "Integrated safety features including overload protection",
+      "Compliant with ASTM B912 and ISO 15730 standards",
+      "Optional racking system for complex geometries"
+    ],
+    images: [
+      "/product/Electropol1.jpg",
+      "/product/Electropol2.jpg",
+      "/product/Electropol3.jpg",
+      "/product/Electropol4.jpg"
+    ],
+    video: "/product/Electropol.mp4",
+    specifications: [
+      { param: "Operation", value: "Automatic" },
+      { param: "Polishing Time", value: "Within 1 minute" },
+      { param: "Material Removal", value: "0.0002-0.0003 inches per cycle" },
+      { param: "Electrolyte Capacity", value: "2-5 liters (configurable)" },
+      { param: "Current Density", value: "2-5 A/dm²" },
+      { param: "Power Supply", value: "24V or 48V DC rectifier" },
+      { param: "Tank Material", value: "Polypropylene" },
+      { param: "Supported Metals", value: "Gold, Silver, Stainless Steel, Copper, Brass" },
+      { param: "Electrical Supply", value: "220V, 50/60Hz, Single phase" }
+    ],
+    ordering: [
+      { part: "180-2911-300", config: "Standard, 2L Electrolyte Tank", voltage: "220V, 50/60Hz" },
+      { part: "180-2911-302", config: "Enhanced, 5L Electrolyte Tank with Racking System", voltage: "220V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "Electrolyte Solutions",
+        subtitle: "For gold, silver, stainless steel, and copper",
+        image: "/product/electrolyteSolutionsElectropol.png"
+      },
+      {
+        title: "Anode/Cathode Sets",
+        subtitle: "For precise electrochemical polishing",
+        image: "/product/anodeCathodeSetsElectropol.png"
+      },
+      {
+        title: "Polishing Racks",
+        subtitle: "For small and complex parts",
+        image: "/product/polishingRacksElectropol.png"
+      }
+    ],
+    literature: [
+      { title: "Electropol User Manual", image: "/product/electropol-manual.png" },
+      { title: "Electropol Brochure", image: "/product/electropol-brochure.png" },
+      { title: "Electropolishing Guide", image: "/product/electropolishing-guide.png" }
+    ]
+  },
+  {
+    id: 29,
+    categorySlug: "in-situ-metallography-kits",
+    name: "Portpol",
+    slug: "portpol",
+    description: "The Portpol is a portable electro polisher designed for in-situ metallographic sample preparation in the field. Featuring a pen-type probe for precise polishing and etching, a compact 0.5L electrolyte reservoir, and battery-powered operation, it enables rapid surface preparation for microstructural analysis in applications such as power plants, pipelines, and weld inspections.",
+    image: "/images/in-situ-metallography-kits/portpol.png",
+    alt: "Portpol Portable Electro Polisher",
+    rating: 4.7,
+    reviews: 35,
+    tag: "Portable Electropolishing",
+    detail: "Pen-type probe for field metallography",
+    apiCall: "/api/in-situ-metallography/portpol",
+    features: [
+      "Pen-type probe for precise electropolishing and etching",
+      "Compact 0.5L electrolyte reservoir with 25W recirculation pump",
+      "Battery-powered operation for field use without external power",
+      "Supports polishing and etching modes with up to 60V output",
+      "Lightweight design with ergonomic handle for easy handling",
+      "Suitable for stainless steel, mild steel, and aluminum surfaces",
+      "Rapid preparation for in-situ microstructural analysis"
+    ],
+    additionalFeatures: [
+      "Electrolyte recirculation system for consistent results",
+      "Adjustable timer (0 to 99 seconds) for controlled polishing",
+      "Compatible with multiple electrolyte types for various metals",
+      "Integrated safety features including short-circuit protection",
+      "Portable carrying case for field transport"
+    ],
+    images: [
+      "/product/Portpol1.jpg",
+      "/product/Portpol2.jpg",
+      "/product/Portpol3.jpg",
+      "/product/Portpol4.jpg"
+    ],
+    video: "/product/Portpol.mp4",
+    specifications: [
+      { param: "Operation", value: "Portable, Manual" },
+      { param: "Electrolyte Reservoir", value: "0.5L" },
+      { param: "Pump Power", value: "25W (recirculation)" },
+      { param: "Voltage Output", value: "Up to 60V (polishing/etching modes)" },
+      { param: "Polishing Timer", value: "0 to 99 seconds" },
+      { param: "Supported Metals", value: "Stainless Steel, Mild Steel, Aluminum" },
+      { param: "Power Supply", value: "230V AC or battery (rechargeable)" },
+      { param: "Probe Type", value: "Pen-type with swabbing capability" },
+      { param: "Weight", value: "2.5 kg (including battery)" }
+    ],
+    ordering: [
+      { part: "190-3011-500", config: "Portpol with 0.5L Reservoir and Battery", voltage: "230V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "Electrolyte Solutions",
+        subtitle: "For stainless steel, mild steel, and aluminum",
+        image: "/product/electrolyteSolutionsPortpol.png"
+      },
+      {
+        title: "Swabbing Pads",
+        subtitle: "For pen-type probe",
+        image: "/product/swabbingPadsPortpol.png"
+      },
+      {
+        title: "Replacement Probes",
+        subtitle: "For electropolishing and etching",
+        image: "/product/replacementProbesPortpol.png"
+      }
+    ],
+    literature: [
+      { title: "Portpol User Manual", image: "/product/portpol-manual.png" },
+      { title: "Portpol Brochure", image: "/product/portpol-brochure.png" },
+      { title: "In-situ Metallography Guide", image: "/product/in-situ-metallography-guide.png" }
+    ]
+  },
+  {
+    id: 30,
+    categorySlug: "in-situ-metallography-kits",
+    name: "Portable Microscope Image Analyzer",
+    slug: "portable-microscope-image-analyzer",
+    description: "The Portable Microscope Image Analyzer is a compact, battery-powered device for in-situ metallographic analysis, offering up to 800x magnification and real-time image capture. Equipped with a 3.2MP CMOS camera and USB-connected image analysis software, it enables on-site microstructure examination for applications like power plants, pipelines, and weld inspections.",
+    image: "/images/in-situ-metallography-kits/portable-microscope.png",
+    alt: "Portable Microscope Image Analyzer",
+    rating: 4.8,
+    reviews: 38,
+    tag: "Portable Microscopy",
+    detail: "High-magnification field microstructure analysis",
+    apiCall: "/api/in-situ-metallography/portable-microscope-image-analyzer",
+    features: [
+      "Up to 800x magnification with 10x, 20x, 40x objectives",
+      "3.2MP CMOS camera for high-resolution image capture",
+      "USB-connected image analysis software for real-time processing",
+      "Battery-powered operation for field use without external power",
+      "LED illumination with 6V-20W halogen bulb for bright imaging",
+      "Suitable for microstructure analysis and weld quality inspection",
+      "Compact and lightweight design for easy portability"
+    ],
+    additionalFeatures: [
+      "Rugged carrying case for field transport",
+      "Stage scanning movement for precise sample positioning",
+      "Supports export of images and reports in PDF or JPEG formats",
+      "Integrated software for grain size and phase analysis",
+      "Anti-vibration base for stable field operation"
+    ],
+    images: [
+      "/product/PortableMicroscope1.jpg",
+      "/product/PortableMicroscope2.jpg",
+      "/product/PortableMicroscope3.jpg",
+      "/product/PortableMicroscope4.jpg"
+    ],
+    video: "/product/Portable_Microscope_Image_Analyzer.mp4",
+    specifications: [
+      { param: "Operation", value: "Portable, Manual" },
+      { param: "Magnification", value: "100x to 800x (10x, 20x, 40x objectives)" },
+      { param: "Camera", value: "3.2MP CMOS, USB-connected" },
+      { param: "Illumination", value: "LED with 6V-20W halogen bulb" },
+      { param: "Software", value: "Image analysis for grain size and phase analysis" },
+      { param: "Power Supply", value: "230V AC or battery (rechargeable)" },
+      { param: "Stage", value: "Manual scanning, 10mm x 10mm travel" },
+      { param: "Weight", value: "1.8 kg (including battery)" }
+    ],
+    ordering: [
+      { part: "190-3011-600", config: "Portable Microscope with 3.2MP Camera", voltage: "230V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "Objective Lenses",
+        subtitle: "10x, 20x, 40x for varying magnification",
+        image: "/product/objectiveLensesMicroscope.png"
+      },
+      {
+        title: "Calibration Slides",
+        subtitle: "For microscope calibration",
+        image: "/product/calibrationSlidesMicroscope.png"
+      },
+      {
+        title: "Cleaning Kit",
+        subtitle: "For lens and camera maintenance",
+        image: "/product/cleaningKitMicroscope.png"
+      }
+    ],
+    literature: [
+      { title: "Portable Microscope Image Analyzer User Manual", image: "/product/portable-microscope-manual.png" },
+      { title: "Portable Microscope Image Analyzer Brochure", image: "/product/portable-microscope-brochure.png" },
+      { title: "In-situ Metallography Guide", image: "/product/in-situ-metallography-guide.png" }
+    ]
+  },
+  {
+    id: 31,
+    categorySlug: "in-situ-metallography-kits",
+    name: "Replica",
+    slug: "replica",
+    description: "The Replica is a non-destructive surface replication system for in-situ metallographic analysis, enabling high-precision 3D surface replication with 0.1µm accuracy. Using cellulose acetate films and SiliKem compound, it captures detailed microstructures for off-site analysis, ideal for power plants, pipelines, and weld inspections.",
+    image: "/images/in-situ-metallography-kits/replica.png",
+    alt: "Replica Surface Replication System",
+    rating: 4.6,
+    reviews: 32,
+    tag: "Surface Replication",
+    detail: "Non-destructive 3D microstructure replication",
+    apiCall: "/api/in-situ-metallography/replica",
+    features: [
+      "High-precision 3D surface replication with 0.1µm accuracy",
+      "Cellulose acetate films in 35, 50, 75, 180 µm thicknesses",
+      "SiliKem replication compound for detailed microstructure capture",
+      "Non-destructive method for field metallographic analysis",
+      "Rapid replication process completed in under 3 minutes",
+      "Suitable for power plants, pipelines, and weld quality assessment",
+      "Portable kit for easy field application"
+    ],
+    additionalFeatures: [
+      "Compatible with portable microscopes for immediate analysis",
+      "Storage case for safe transport of replica films",
+      "Supports replication of complex geometries and rough surfaces",
+      "No power supply required for replication process",
+      "Compliant with ASTM E1351 standards for replication"
+    ],
+    images: [
+      "/product/Replica1.jpg",
+      "/product/Replica2.jpg",
+      "/product/Replica3.jpg",
+      "/product/Replica4.jpg"
+    ],
+    video: "/product/Replica.mp4",
+    specifications: [
+      { param: "Operation", value: "Manual, Non-destructive" },
+      { param: "Replication Accuracy", value: "0.1µm" },
+      { param: "Replication Media", value: "Cellulose acetate (35, 50, 75, 180 µm), SiliKem compound" },
+      { param: "Process Time", value: "Under 3 minutes" },
+      { param: "Applications", value: "Microstructure analysis, weld inspection, damage assessment" },
+      { param: "Power Supply", value: "None required" },
+      { param: "Kit Weight", value: "0.5 kg" }
+    ],
+    ordering: [
+      { part: "190-3011-700", config: "Replica Kit with Cellulose Acetate and SiliKem", voltage: "None" }
+    ],
+    consumables: [
+      {
+        title: "Cellulose Acetate Film",
+        subtitle: "35, 50, 75, 180 µm for surface replication",
+        image: "/product/celluloseAcetateFilm.png"
+      },
+      {
+        title: "SiliKem Replication Compound",
+        subtitle: "0.1µm accuracy for 3D replicas",
+        image: "/product/siliKemCompound.png"
+      },
+      {
+        title: "Backing Slides",
+        subtitle: "For replica mounting and storage",
+        image: "/product/backingSlidesReplica.png"
+      }
+    ],
+    literature: [
+      { title: "Replica User Manual", image: "/product/replica-manual.png" },
+      { title: "Replica Brochure", image: "/product/replica-brochure.png" },
+      { title: "In-situ Metallography Guide", image: "/product/in-situ-metallography-guide.png" }
+    ]
+  },
+  {
+    id: 32,
+    categorySlug: "in-situ-metallography-kits",
+    name: "Portgrinder",
+    slug: "portgrinder",
+    description: "The Portgrinder is a portable grinding tool designed for in-situ metallographic sample preparation. Featuring a high-torque motor, variable speed from 1000 to 25,000 rpm, and 38mm PSA discs, it offers flexible and efficient grinding for field applications such as power plants, pipelines, and weld inspections.",
+    image: "/images/in-situ-metallography-kits/portgrinder.png",
+    alt: "Portgrinder Portable Grinder",
+    rating: 4.7,
+    reviews: 36,
+    tag: "Portable Grinding",
+    detail: "High-torque grinding for field metallography",
+    apiCall: "/api/in-situ-metallography/portgrinder",
+    features: [
+      "High-torque motor with variable speed from 1000 to 25,000 rpm",
+      "38mm PSA discs for efficient and flexible grinding",
+      "Battery-powered operation for field use without external power",
+      "90-degree ergonomic handle for comfortable operation",
+      "Suitable for stainless steel, mild steel, and aluminum surfaces",
+      "Rapid surface preparation for in-situ metallographic analysis",
+      "Lightweight design for easy portability"
+    ],
+    additionalFeatures: [
+      "Quick disc replacement with PSA system",
+      "Rugged carrying case for field transport",
+      "Anti-vibration design for stable grinding",
+      "Supports wet and dry grinding modes",
+      "Integrated dust collection port for cleaner operation"
+    ],
+    images: [
+      "/product/Portgrinder1.jpg",
+      "/product/Portgrinder2.jpg",
+      "/product/Portgrinder3.jpg",
+      "/product/Portgrinder4.jpg"
+    ],
+    video: "/product/Portgrinder.mp4",
+    specifications: [
+      { param: "Operation", value: "Portable, Manual" },
+      { param: "Disc Size", value: "38mm (PSA)" },
+      { param: "Speed", value: "1000 to 25,000 rpm (variable)" },
+      { param: "Motor", value: "High-torque, 200W" },
+      { param: "Supported Materials", value: "Stainless Steel, Mild Steel, Aluminum" },
+      { param: "Power Supply", value: "230V AC or battery (rechargeable)" },
+      { param: "Weight", value: "1.2 kg (including battery)" }
+    ],
+    ordering: [
+      { part: "190-3011-800", config: "Portgrinder with 38mm PSA Discs and Battery", voltage: "230V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "PSA Grinding Discs",
+        subtitle: "38mm for coarse and fine grinding",
+        image: "/product/psaGrindingDiscsPortgrinder.png"
+      },
+      {
+        title: "Polishing Pads",
+        subtitle: "38mm for intermediate polishing",
+        image: "/product/polishingPadsPortgrinder.png"
+      },
+      {
+        title: "Dust Collection Filters",
+        subtitle: "For cleaner operation",
+        image: "/product/dustCollectionFiltersPortgrinder.png"
+      }
+    ],
+    literature: [
+      { title: "Portgrinder User Manual", image: "/product/portgrinder-manual.png" },
+      { title: "Portgrinder Brochure", image: "/product/portgrinder-brochure.png" },
+      { title: "In-situ Metallography Guide", image: "/product/in-situ-metallography-guide.png" }
+    ]
+  },
+
+  // Hardness Testers
+  {
+    id: 34,
+    categorySlug: "hardness-testers",
+    name: "Superficial Rockwell Hardness Tester",
+    slug: "superficial-rockwell-hardness-tester",
+    description: "The Superficial Rockwell Hardness Tester is designed for precise hardness testing of thin, soft, or surface-hardened materials using low test loads. Compliant with ASTM E18 and ISO 6508, it measures superficial Rockwell scales (HRN, HRT) with automatic load application, ideal for laboratory and quality control applications.",
+    image: "/images/hardness-testers/superficial-rockwell.png",
+    alt: "Superficial Rockwell Hardness Tester",
+    rating: 4.8,
+    reviews: 42,
+    tag: "Superficial Rockwell Testing",
+    detail: "Low-load testing for thin and soft materials",
+    apiCall: "/api/hardness-testers/superficial-rockwell",
+    features: [
+      "Measures superficial Rockwell scales (HR15N, HR30N, HR45N, HR15T, HR30T, HR45T)",
+      "Automatic load application with test forces of 15kgf, 30kgf, and 45kgf",
+      "High-precision digital display for accurate hardness readings",
+      "Motorized Z-axis for automated sample positioning",
+      "Compliant with ASTM E18 and ISO 6508 standards",
+      "Supports testing of thin sheets, coatings, and case-hardened surfaces",
+      "User-friendly interface with data storage and export capabilities"
+    ],
+    additionalFeatures: [
+      "Automatic conversion to Brinell (HB) and Vickers (HV) scales",
+      "Anti-vibration base for stable measurements",
+      "Calibration blocks included for HRC and HRN scales",
+      "Optional software for statistical analysis and reporting",
+      "Safety interlocks for operator protection"
+    ],
+    images: [
+      "/product/SuperficialRockwell1.jpg",
+      "/product/SuperficialRockwell2.jpg",
+      "/product/SuperficialRockwell3.jpg",
+      "/product/SuperficialRockwell4.jpg"
+    ],
+    video: "/product/Superficial_Rockwell_Hardness_Tester.mp4",
+    specifications: [
+      { param: "Operation", value: "Automatic" },
+      { param: "Test Scales", value: "HR15N, HR30N, HR45N, HR15T, HR30T, HR45T" },
+      { param: "Test Loads", value: "15kgf, 30kgf, 45kgf" },
+      { param: "Indenter", value: "Diamond cone, 1/16-inch steel ball" },
+      { param: "Resolution", value: "0.1 HR" },
+      { param: "Stage Travel", value: "50mm (Z-axis)" },
+      { param: "Power Supply", value: "230V, 50/60Hz, Single phase" },
+      { param: "Dimensions", value: "600mm x 400mm x 800mm (W x D x H)" },
+      { param: "Weight", value: "80 kg" }
+    ],
+    ordering: [
+      { part: "210-3211-100", config: "Superficial Rockwell with Motorized Z-axis", voltage: "230V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "Diamond Cone Indenter",
+        subtitle: "For superficial Rockwell testing",
+        image: "/product/diamondConeIndenter.png"
+      },
+      {
+        title: "1/16-inch Steel Ball Indenter",
+        subtitle: "For HR15T, HR30T, HR45T scales",
+        image: "/product/steelBallIndenter.png"
+      },
+      {
+        title: "Superficial Rockwell Test Blocks",
+        subtitle: "HR30N, HR30T for calibration",
+        image: "/product/superficialTestBlocks.png"
+      }
+    ],
+    literature: [
+      { title: "Superficial Rockwell Hardness Tester User Manual", image: "/product/superficial-rockwell-manual.png" },
+      { title: "Superficial Rockwell Hardness Tester Brochure", image: "/product/superficial-rockwell-brochure.png" },
+      { title: "Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+    ]
+  },
+  {
+    id: 35,
+    categorySlug: "hardness-testers",
+    name: "Portable Leeb Hardness Tester",
+    slug: "portable-leeb-hardness-tester",
+    description: "The Portable Leeb Hardness Tester is a compact, non-destructive device for on-site hardness testing of large or complex metal parts. Using the Leeb rebound method, it measures hardness in multiple scales (HL, HRC, HRB, HB, HV) and complies with ASTM A956, ideal for field applications like pipelines and heavy machinery.",
+    image: "/images/hardness-testers/portable-leeb.png",
+    alt: "Portable Leeb Hardness Tester",
+    rating: 4.7,
+    reviews: 40,
+    tag: "Leeb Hardness Testing",
+    detail: "Non-destructive field hardness testing",
+    apiCall: "/api/hardness-testers/portable-leeb",
+    features: [
+      "Measures hardness in Leeb (HL), Rockwell (HRC, HRB), Brinell (HB), and Vickers (HV) scales",
+      "Dynamic rebound method with D-type probe for rapid testing",
+      "Compact design with color TFT display and IP65 protection",
+      "Automatic probe direction detection for versatile use",
+      "Compliant with ASTM A956 standards",
+      "Battery-powered for field operation without external power",
+      "USB interface for data upload and reporting"
+    ],
+    additionalFeatures: [
+      "High/low tolerance alarm for quality control",
+      "Software for data analysis and printing",
+      "Supports multiple probe types (D, C, DL) for varied applications",
+      "Rugged carrying case for field transport",
+      "Calibration test block included for accuracy"
+    ],
+    images: [
+      "/product/PortableLeeb1.jpg",
+      "/product/PortableLeeb2.jpg",
+      "/product/PortableLeeb3.jpg",
+      "/product/PortableLeeb4.jpg"
+    ],
+    video: "/product/Portable_Leeb_Hardness_Tester.mp4",
+    specifications: [
+      { param: "Operation", value: "Portable, Manual" },
+      { param: "Test Scales", value: "HL, HRC, HRB, HB, HV" },
+      { param: "Probe", value: "D-type (optional C, DL)" },
+      { param: "Measuring Range", value: "170-960 HLD" },
+      { param: "Accuracy", value: "±6 HLD" },
+      { param: "Power Supply", value: "Rechargeable battery" },
+      { param: "Weight", value: "0.5 kg" },
+      { param: "Dimensions", value: "150mm x 80mm x 30mm (L x W x H)" }
+    ],
+    ordering: [
+      { part: "210-3211-200", config: "Portable Leeb with D-type Probe", voltage: "Battery-powered" }
+    ],
+    consumables: [
+      {
+        title: "Leeb Test Block",
+        subtitle: "For calibration of D-type probe",
+        image: "/product/leebTestBlock.png"
+      },
+      {
+        title: "Replacement D-type Probe",
+        subtitle: "For Leeb hardness testing",
+        image: "/product/dTypeProbe.png"
+      },
+      {
+        title: "Coupling Gel",
+        subtitle: "For improved probe contact",
+        image: "/product/couplingGel.png"
+      }
+    ],
+    literature: [
+      { title: "Portable Leeb Hardness Tester User Manual", image: "/product/portable-leeb-manual.png" },
+      { title: "Portable Leeb Hardness Tester Brochure", image: "/product/portable-leeb-brochure.png" },
+      { title: "Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+    ]
+  },
+  {
+    id: 36,
+    categorySlug: "hardness-testers",
+    name: "Portable Brinell Hardness Tester",
+    slug: "portable-brinell-hardness-tester",
+    description: "The Portable Brinell Hardness Tester is a lightweight, user-friendly device for on-site testing of large or coarse-grained metal parts. Using a 3000kgf load and carbide ball indenter, it measures Brinell hardness (HB) with high reliability, compliant with ASTM E10 and ISO 6506, ideal for forgings and castings.",
+    image: "/images/hardness-testers/portable-brinell.png",
+    alt: "Portable Brinell Hardness Tester",
+    rating: 4.6,
+    reviews: 38,
+    tag: "Brinell Hardness Testing",
+    detail: "Portable testing for coarse materials",
+    apiCall: "/api/hardness-testers/portable-brinell",
+    features: [
+      "Measures Brinell hardness (HB) with 3000kgf test load",
+      "10mm carbide ball indenter for robust testing",
+      "Lightweight design, under 4.5kg, for field portability",
+      "Simple operation with single hammer blow measurement",
+      "Compliant with ASTM E10 and ISO 6506 standards",
+      "Digital microscope for accurate indentation reading",
+      "Suitable for forgings, castings, and heavy steel parts"
+    ],
+    additionalFeatures: [
+      "Carrying case for easy transport",
+      "Optional test blocks for calibration",
+      "Supports conversion to Rockwell and Vickers scales",
+      "Rugged construction for harsh environments",
+      "Minimal surface preparation required"
+    ],
+    images: [
+      "/product/PortableBrinell1.jpg",
+      "/product/PortableBrinell2.jpg",
+      "/product/PortableBrinell3.jpg",
+      "/product/PortableBrinell4.jpg"
+    ],
+    video: "/product/Portable_Brinell_Hardness_Tester.mp4",
+    specifications: [
+      { param: "Operation", value: "Portable, Manual" },
+      { param: "Test Scale", value: "Brinell (HB)" },
+      { param: "Test Load", value: "3000kgf" },
+      { param: "Indenter", value: "10mm carbide ball" },
+      { param: "Measuring Range", value: "32-650 HB" },
+      { param: "Accuracy", value: "±3% HB" },
+      { param: "Power Supply", value: "None (mechanical)" },
+      { param: "Weight", value: "4.5 kg" },
+      { param: "Dimensions", value: "300mm x 150mm x 100mm (L x W x H)" }
+    ],
+    ordering: [
+      { part: "210-3211-300", config: "Portable Brinell with 10mm Indenter", voltage: "None" }
+    ],
+    consumables: [
+      {
+        title: "Brinell Test Block",
+        subtitle: "HB 200-300 for calibration",
+        image: "/product/brinellTestBlock.png"
+      },
+      {
+        title: "10mm Carbide Ball",
+        subtitle: "Replacement indenter",
+        image: "/product/carbideBallIndenter.png"
+      },
+      {
+        title: "Digital Microscope",
+        subtitle: "For indentation measurement",
+        image: "/product/digitalMicroscopeBrinell.png"
+      }
+    ],
+    literature: [
+      { title: "Portable Brinell Hardness Tester User Manual", image: "/product/portable-brinell-manual.png" },
+      { title: "Portable Brinell Hardness Tester Brochure", image: "/product/portable-brinell-brochure.png" },
+      { title: "Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+    ]
+  },
+  {
+    id: 37,
+    categorySlug: "hardness-testers",
+    name: "Rockwell Hardness Tester",
+    slug: "rockwell-hardness-tester",
+    description: "The Rockwell Hardness Tester is a versatile benchtop system for precise hardness testing of metals using standard Rockwell scales (HRA, HRB, HRC). With fully automated load/unload procedures and digital readouts, it complies with ASTM E18 and ISO 6508, suitable for laboratories, workshops, and quality control.",
+    image: "/images/hardness-testers/rockwell.png",
+    alt: "Rockwell Hardness Tester",
+    rating: 4.9,
+    reviews: 48,
+    tag: "Rockwell Hardness Testing",
+    detail: "Automated testing for standard Rockwell scales",
+    apiCall: "/api/hardness-testers/rockwell",
+    features: [
+      "Measures standard Rockwell scales (HRA, HRB, HRC, HRE, HRF)",
+      "Automatic load application with test forces of 60kgf, 100kgf, 150kgf",
+      "Digital display with 0.1 HR resolution for accurate readings",
+      "Motorized stage for precise sample positioning",
+      "Compliant with ASTM E18 and ISO 6508 standards",
+      "Automatic conversion to Brinell (HB) and Vickers (HV) scales",
+      "Robust design for high-throughput testing"
+    ],
+    additionalFeatures: [
+      "Software for statistical analysis and data export",
+      "Anti-vibration base for stable measurements",
+      "Calibration blocks included for HRC and HRB scales",
+      "Optional motorized Z-axis for fully automated operation",
+      "Safety cover for operator protection"
+    ],
+    images: [
+      "/product/Rockwell1.jpg",
+      "/product/Rockwell2.jpg",
+      "/product/Rockwell3.jpg",
+      "/product/Rockwell4.jpg"
+    ],
+    video: "/product/Rockwell_Hardness_Tester.mp4",
+    specifications: [
+      { param: "Operation", value: "Automatic" },
+      { param: "Test Scales", value: "HRA, HRB, HRC, HRE, HRF" },
+      { param: "Test Loads", value: "60kgf, 100kgf, 150kgf" },
+      { param: "Indenter", value: "Diamond cone, 1/16-inch steel ball" },
+      { param: "Resolution", value: "0.1 HR" },
+      { param: "Stage Travel", value: "100mm (X-axis), 50mm (Z-axis)" },
+      { param: "Power Supply", value: "230V, 50/60Hz, Single phase" },
+      { param: "Dimensions", value: "700mm x 500mm x 900mm (W x D x H)" },
+      { param: "Weight", value: "100 kg" }
+    ],
+    ordering: [
+      { part: "210-3211-400", config: "Rockwell with Motorized Stage", voltage: "230V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "Diamond Cone Indenter",
+        subtitle: "For HRA, HRC testing",
+        image: "/product/diamondConeIndenter.png"
+      },
+      {
+        title: "1/16-inch Steel Ball Indenter",
+        subtitle: "For HRB, HRE, HRF scales",
+        image: "/product/steelBallIndenter.png"
+      },
+      {
+        title: "Rockwell Test Blocks",
+        subtitle: "HRC 50, HRB 80 for calibration",
+        image: "/product/rockwellTestBlocks.png"
+      }
+    ],
+    literature: [
+      { title: "Rockwell Hardness Tester User Manual", image: "/product/rockwell-manual.png" },
+      { title: "Rockwell Hardness Tester Brochure", image: "/product/rockwell-brochure.png" },
+      { title: "Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+    ]
+  },
+  {
+    id: 38,
+    categorySlug: "hardness-testers",
+    name: "Portable Vickers Hardness Tester",
+    slug: "portable-vickers-hardness-tester",
+    description: "The Portable Vickers Hardness Tester is a compact device for on-site micro and macro hardness testing of metals using the Vickers method. With test loads from 0.1 to 30kgf and a diamond indenter, it complies with ASTM E384 and ISO 6507, ideal for small parts, thin layers, and field applications.",
+    image: "/images/hardness-testers/portable-vickers.png",
+    alt: "Portable Vickers Hardness Tester",
+    rating: 4.8,
+    reviews: 39,
+    tag: "Vickers Hardness Testing",
+    detail: "Portable micro/macro hardness testing",
+    apiCall: "/api/hardness-testers/portable-vickers",
+    features: [
+      "Measures Vickers hardness (HV) with test loads from 0.1 to 30kgf",
+      "Diamond pyramid indenter for precise micro and macro testing",
+      "Portable design with digital camera for indentation measurement",
+      "Automatic load application and hardness calculation",
+      "Compliant with ASTM E384 and ISO 6507 standards",
+      "Battery-powered for field operation",
+      "Suitable for thin layers, small parts, and heat-treated surfaces"
+    ],
+    additionalFeatures: [
+      "Software for automatic indent reading and data export",
+      "Rugged carrying case for field transport",
+      "Optional autofocus for enhanced precision",
+      "Supports conversion to Rockwell and Brinell scales",
+      "Lightweight at 3kg for easy handling"
+    ],
+    images: [
+      "/product/PortableVickers1.jpg",
+      "/product/PortableVickers2.jpg",
+      "/product/PortableVickers3.jpg",
+      "/product/PortableVickers4.jpg"
+    ],
+    video: "/product/Portable_Vickers_Hardness_Tester.mp4",
+    specifications: [
+      { param: "Operation", value: "Portable, Automatic" },
+      { param: "Test Scale", value: "Vickers (HV)" },
+      { param: "Test Loads", value: "0.1 to 30kgf" },
+      { param: "Indenter", value: "136-degree diamond pyramid" },
+      { param: "Measuring Range", value: "5-3000 HV" },
+      { param: "Accuracy", value: "±2% HV" },
+      { param: "Power Supply", value: "Rechargeable battery" },
+      { param: "Weight", value: "3 kg" },
+      { param: "Dimensions", value: "200mm x 100mm x 150mm (L x W x H)" }
+    ],
+    ordering: [
+      { part: "210-3211-500", config: "Portable Vickers with Digital Camera", voltage: "Battery-powered" }
+    ],
+    consumables: [
+      {
+        title: "Vickers Diamond Indenter",
+        subtitle: "For micro and macro testing",
+        image: "/product/vickersDiamondIndenter.png"
+      },
+      {
+        title: "Vickers Test Block",
+        subtitle: "HV 500 for calibration",
+        image: "/product/vickersTestBlock.png"
+      },
+      {
+        title: "Replacement Camera Lens",
+        subtitle: "For indentation measurement",
+        image: "/product/cameraLensVickers.png"
+      }
+    ],
+    literature: [
+      { title: "Portable Vickers Hardness Tester User Manual", image: "/product/portable-vickers-manual.png" },
+      { title: "Portable Vickers Hardness Tester Brochure", image: "/product/portable-vickers-brochure.png" },
+      { title: "Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+    ]
+  },
+
+  // Vertical Band Saw
+  {
+    id: 39,
+    categorySlug: "vertical-band-saw",
+    name: "Vertical Band Saw",
+    slug: "vertical-band-saw",
+    description: "The Vertical Band Saw is a versatile, high-performance machine designed for precision cutting of metal, wood, and plastic. Featuring a robust welded steel frame, variable blade speeds, and a tilting table, it excels in contour cutting, straight cuts, and complex shapes, making it ideal for workshops, fabrication shops, and small-scale production environments.",
+    image: "/images/vertical-band-saw/vertical-band-saw.png",
+    alt: "Vertical Band Saw for Metal and Wood Cutting",
+    rating: 4.8,
+    reviews: 50,
+    tag: "Vertical Band Saw",
+    detail: "Precision contour and straight cutting",
+    apiCall: "/api/vertical-band-saw/vertical-band-saw",
+    features: [
+      "Variable blade speeds from 65 to 1640 fpm for cutting metal, wood, and plastic",
+      "20.5-inch throat depth for wide workpieces",
+      "Accepts standard 0.25-inch to 0.75-inch blades for versatile applications",
+      "Cast iron table with front-to-back and left-to-right pivoting",
+      "Integrated blade welder with grinder for on-machine blade repair",
+      "Tungsten carbide blade guides and hardened rollers for enhanced blade life",
+      "Compliant with industry standards for safety and performance"
+    ],
+    additionalFeatures: [
+      "Hydraulic blade tensioning for consistent cutting performance",
+      "Air blowdown system to cool blade and clear chips",
+      "Halogen work light for improved visibility",
+      "Rip fence and miter gauge for accurate straight and angled cuts",
+      "Safety interlocks on top and bottom doors to prevent operation when open",
+      "Optional AC frequency drive for infinitely variable speed control",
+      "Two-year maintenance spare kit included"
+    ],
+    images: [
+      "/product/VerticalBandSaw1.jpg",
+      "/product/VerticalBandSaw2.jpg",
+      "/product/VerticalBandSaw3.jpg",
+      "/product/VerticalBandSaw4.jpg"
+    ],
+    video: "/product/Vertical_Band_Saw.mp4",
+    specifications: [
+      { param: "Operation", value: "Manual/Semi-Automatic" },
+      { param: "Throat Depth", value: "20.5 inches" },
+      { param: "Max Work Height", value: "12 inches" },
+      { param: "Blade Speed", value: "65 to 1640 fpm (variable)" },
+      { param: "Blade Size", value: "0.25 to 0.75 inches wide, 162 inches long" },
+      { param: "Table Size", value: "24 x 24 inches (cast iron)" },
+      { param: "Table Tilt", value: "10° left, 20° right, 5° front/back" },
+      { param: "Motor Power", value: "2 HP, 3-phase, 440V" },
+      { param: "Coolant System", value: "2-gallon capacity with pump" },
+      { param: "Weight", value: "450 kg" },
+      { param: "Dimensions", value: "1000mm x 800mm x 2000mm (W x D x H)" }
+    ],
+    ordering: [
+      { part: "220-3311-100", config: "Vertical Band Saw with Hydraulic Tensioning", voltage: "440V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "M42 Bimetal Blade",
+        subtitle: "162-inch, 0.75-inch width for metal cutting",
+        image: "/product/m42BimetalBlade.png"
+      },
+      {
+        title: "Wood Cutting Blade",
+        subtitle: "162-inch, 0.5-inch width for woodworking",
+        image: "/product/woodCuttingBlade.png"
+      },
+      {
+        title: "Tungsten Carbide Wear Pads",
+        subtitle: "For blade guide replacement",
+        image: "/product/tungstenCarbidePads.png"
+      }
+    ],
+    literature: [
+      { title: "Vertical Band Saw User Manual", image: "/product/vertical-band-saw-manual.png" },
+      { title: "Vertical Band Saw Brochure", image: "/product/vertical-band-saw-brochure.png" },
+      { title: "Band Saw Cutting Guide", image: "/product/band-saw-cutting-guide.png" }
+    ]
+  },
+
+  // Transparent Mould Making System 
+  {
+    id: 40,
+    categorySlug: "transparent-mould-making-system",
+    name: "Transmount",
+    slug: "transmount",
+    description: "The Transmount is a high-clarity, non-toxic transparent mould making system designed for precision casting of resin, wax, soap, and other materials. Featuring a 1:1 mix ratio clear silicone rubber with self-debubbling properties, it enables easy creation of durable, flexible moulds for DIY crafting, prototyping, and small-scale production, ensuring excellent detail reproduction and optical transparency.",
+    image: "/images/transparent-mould-making/transmount.png",
+    alt: "Transmount Transparent Mould Making System",
+    rating: 4.7,
+    reviews: 35,
+    tag: "Transparent Mould Making",
+    detail: "Clear silicone for precision casting",
+    apiCall: "/api/transparent-mould-making/transmount",
+    features: [
+      "High-clarity, non-toxic clear silicone rubber with 1:1 mix ratio by weight",
+      "Self-debubbling formula eliminates need for vacuum degassing",
+      "Cures in 12 hours at room temperature for durable, flexible moulds",
+      "Excellent tear strength (25 N/mm) and elongation (500%) for repeated use",
+      "Supports casting of epoxy resin, polyurethane, wax, soap, and clay",
+      "Ideal for jewellery, figurines, candle moulds, and prototyping",
+      "Compliant with safety standards for non-food applications"
+    ],
+    additionalFeatures: [
+      "UV-resistant to prevent yellowing over time",
+      "Low viscosity for easy pouring and detailed reproduction",
+      "Includes mixing cups and stirring sticks for convenient use",
+      "Reusable moulds withstand up to 50+ castings",
+      "Optional accelerator for faster curing (6 hours)"
+    ],
+    images: [
+      "/product/Transmount1.jpg",
+      "/product/Transmount2.jpg",
+      "/product/Transmount3.jpg",
+      "/product/Transmount4.jpg"
+    ],
+    video: "/product/Transmount.mp4",
+    specifications: [
+      { param: "Operation", value: "Manual" },
+      { param: "Material", value: "Clear Silicone Rubber" },
+      { param: "Mix Ratio", value: "1:1 by weight" },
+      { param: "Cure Time", value: "12 hours at 25°C (6 hours with accelerator)" },
+      { param: "Shore Hardness", value: "20A" },
+      { param: "Tear Strength", value: "25 N/mm" },
+      { param: "Elongation", value: "500%" },
+      { param: "Viscosity", value: "5000 cps" },
+      { param: "Working Temperature", value: "-50°C to 200°C" },
+      { param: "Kit Weight", value: "1 kg (Part A: 500g, Part B: 500g)" }
+    ],
+    ordering: [
+      { part: "230-3411-100", config: "Transmount 1kg Kit with Mixing Accessories", voltage: "None" }
+    ],
+    consumables: [
+      {
+        title: "Clear Silicone Rubber Refill",
+        subtitle: "1kg (500g Part A, 500g Part B)",
+        image: "/product/clearSiliconeRefill.png"
+      },
+      {
+        title: "Mixing Cups and Sticks",
+        subtitle: "For precise mixing",
+        image: "/product/mixingCupsSticks.png"
+      },
+      {
+        title: "Cure Accelerator",
+        subtitle: "For 6-hour curing",
+        image: "/product/cureAccelerator.png"
+      }
+    ],
+    literature: [
+      { title: "Transmount User Manual", image: "/product/transmount-manual.png" },
+      { title: "Transmount Brochure", image: "/product/transmount-brochure.png" },
+      { title: "Transparent Mould Making Guide", image: "/product/mould-making-guide.png" }
+    ]
+  },
 ];
 
 export const mainCategories = [
@@ -3458,16 +4501,1830 @@ export const mainCategories = [
       },
     ]
   },
+
+  // maincategory: "Micro Hardness Tester"
   {
     mainCategory: "Micro Hardness Tester",
-    categories:[
-
+    categories: [
+      {
+        "name": "Automatic Micro Hardness Tester",
+        "slug": "automatic-micro-hardness-tester",
+        "heroImage": "/images/automatic-micro-hardness-tester/automatic-micro-hardness-tester.png",
+        "intro": {
+          "title": "Precision Automatic Micro Hardness Testing",
+          "description": "The Automatic Micro Hardness Tester delivers precise Vickers, Knoop, and Brinell hardness measurements for thin materials, coatings, and small components. Fully compliant with ASTM E384 and ISO 4545, it features automated XY stage, auto-focus, and advanced software for high-throughput testing in automotive, aerospace, and metallurgical applications.",
+          "categoryLabel": "Explore our micro hardness testing solutions",
+          "buttons": [
+            { "text": "Discover Micro Hardness Tester", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Automatic Micro Hardness Tester",
+          "description": "Equipped with a motorized turret, CCD camera, and intuitive software, this tester automates load application, indentation measurement, and data analysis. With load ranges from 0.01 gf to 2 kgf, it ensures accurate, repeatable results for micro hardness testing of metals, ceramics, and coatings.",
+          "label": "Testing Features"
+        },
+        "specialtySection": {
+          "title": "Specialty Hardness Testing Solutions",
+          "description": "For complex test patterns, case depth analysis, or high-volume production, the Automatic Micro Hardness Tester offers customizable templates, fully automated sequences, and integration with metallographic analysis tools.",
+          "label": "Advanced Testing Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Hardness Testing Solutions",
+          "description": "Explore our Solutions section for ASTM E384-compliant protocols, technical guides, and industry-specific applications to optimize your micro hardness testing workflows.",
+          "image": "/productsListing/Hardness_Testing_Solutions.png",
+          "label": "Tailored Testing Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": [
+          {
+            "id": 1,
+            "image": "/images/automatic-micro-hardness-tester/vickers-testing.png",
+            "alt": "Vickers Hardness Testing",
+            "category": "Automatic Micro Hardness Tester",
+            "title": "Vickers Testing",
+            "description": "Automates Vickers hardness testing with a diamond pyramid indenter, ideal for thin materials and coatings, compliant with ASTM E384.",
+            "reviews": 18,
+            "rating": 4.9
+          },
+          {
+            "id": 2,
+            "image": "/images/automatic-micro-hardness-tester/knoop-testing.png",
+            "alt": "Knoop Hardness Testing",
+            "category": "Automatic Micro Hardness Tester",
+            "title": "Knoop Testing",
+            "description": "Performs Knoop hardness testing with a rhombic diamond indenter, perfect for brittle materials and thin layers, per ISO 4545.",
+            "reviews": 15,
+            "rating": 4.8
+          },
+          {
+            "id": 3,
+            "image": "/images/automatic-micro-hardness-tester/auto-focus-system.png",
+            "alt": "Auto-Focus System",
+            "category": "Automatic Micro Hardness Tester",
+            "title": "Auto-Focus System",
+            "description": "Ensures sharp indentation images with automated focus and fast image optimization for repeatable, accurate measurements.",
+            "reviews": 12,
+            "rating": 4.7
+          }
+        ],
+        "products": [
+          { "name": "Vickers Testing", "image": "/images/automatic-micro-hardness-tester/vickers-testing.png" },
+          { "name": "Knoop Testing", "image": "/images/automatic-micro-hardness-tester/knoop-testing.png" },
+          { "name": "Brinell Testing", "image": "/images/automatic-micro-hardness-tester/brinell-testing.png" },
+          { "name": "Auto-Focus System", "image": "/images/automatic-micro-hardness-tester/auto-focus-system.png" },
+          { "name": "Motorized XY Stage", "image": "/images/automatic-micro-hardness-tester/motorized-xy-stage.png" },
+          { "name": "Automated Turret", "image": "/images/automatic-micro-hardness-tester/automated-turret.png" },
+          { "name": "CCD Image Acquisition", "image": "/images/automatic-micro-hardness-tester/ccd-image-acquisition.png" },
+          { "name": "Hardness Mapping", "image": "/images/automatic-micro-hardness-tester/hardness-mapping.png" },
+          { "name": "Case Depth Analysis", "image": "/images/automatic-micro-hardness-tester/case-depth-analysis.png" },
+          { "name": "Data Export & Reporting", "image": "/images/automatic-micro-hardness-tester/data-export-reporting.png" }
+        ],
+        "items": [
+          {
+            "id": 1,
+            "name": "Automatic Micro Hardness Tester",
+            "color": "rgba(90, 110, 140, 0.1)",
+            "bgColor": "rgba(90, 110, 140, 0.1)",
+            "subItems": [
+              { "name": "Vickers Testing", "apiCall": "/api/products/vickers-testing" },
+              { "name": "Knoop Testing", "apiCall": "/api/products/knoop-testing" },
+              { "name": "Brinell Testing", "apiCall": "/api/products/brinell-testing" },
+              { "name": "Auto-Focus System", "apiCall": "/api/products/auto-focus-system" },
+              { "name": "Motorized XY Stage", "apiCall": "/api/products/motorized-xy-stage" },
+              { "name": "Automated Turret", "apiCall": "/api/products/automated-turret" },
+              { "name": "CCD Image Acquisition", "apiCall": "/api/products/ccd-image-acquisition" },
+              { "name": "Hardness Mapping", "apiCall": "/api/products/hardness-mapping" },
+              { "name": "Case Depth Analysis", "apiCall": "/api/products/case-depth-analysis" },
+              { "name": "Data Export & Reporting", "apiCall": "/api/products/data-export-reporting" }
+            ]
+          }
+        ],
+        "productCards": [
+          {
+            "id": 1,
+            "name": "Vickers Testing",
+            "tag": "High Precision",
+            "description": "Automates Vickers hardness testing with a diamond pyramid indenter, ideal for thin materials and coatings, compliant with ASTM E384.",
+            "image": "/images/automatic-micro-hardness-tester/vickers-testing.png",
+            "detail": "/products/vickers-testing",
+            "delay": 0.1
+          },
+          {
+            "id": 2,
+            "name": "Knoop Testing",
+            "tag": "Brittle Materials",
+            "description": "Performs Knoop hardness testing with a rhombic diamond indenter, suited for brittle materials and thin layers, per ISO 4545.",
+            "image": "/images/automatic-micro-hardness-tester/knoop-testing.png",
+            "detail": "/products/knoop-testing",
+            "delay": 0.2
+          },
+          {
+            "id": 3,
+            "name": "Brinell Testing",
+            "tag": "Small Load Range",
+            "description": "Supports Brinell hardness testing in the micro range (up to 62.5 kgf), ideal for softer materials and small components.",
+            "image": "/images/automatic-micro-hardness-tester/brinell-testing.png",
+            "detail": "/products/brinell-testing",
+            "delay": 0.3
+          },
+          {
+            "id": 4,
+            "name": "Auto-Focus System",
+            "tag": "Image Clarity",
+            "description": "Ensures sharp indentation images with automated focus and fast image optimization, reducing operator error.",
+            "image": "/images/automatic-micro-hardness-tester/auto-focus-system.png",
+            "detail": "/products/auto-focus-system",
+            "delay": 0.4
+          },
+          {
+            "id": 5,
+            "name": "Motorized XY Stage",
+            "tag": "Precise Positioning",
+            "description": "Automates sample positioning with high-precision motorized XY stage for complex test patterns and high-throughput testing.",
+            "image": "/images/automatic-micro-hardness-tester/motorized-xy-stage.png",
+            "detail": "/products/motorized-xy-stage",
+            "delay": 0.5
+          },
+          {
+            "id": 6,
+            "name": "Automated Turret",
+            "tag": "Efficient Workflow",
+            "description": "Features a 6-position automated turret for quick switching between indenters and lenses, streamlining test sequences.",
+            "image": "/images/automatic-micro-hardness-tester/automated-turret.png",
+            "detail": "/products/automated-turret",
+            "delay": 0.6
+          },
+          {
+            "id": 7,
+            "name": "CCD Image Acquisition",
+            "tag": "Advanced Imaging",
+            "description": "Captures high-resolution indentation images via CCD camera, enabling automated measurement and analysis.",
+            "image": "/images/automatic-micro-hardness-tester/ccd-image-acquisition.png",
+            "detail": "/products/ccd-image-acquisition",
+            "delay": 0.7
+          },
+          {
+            "id": 8,
+            "name": "Hardness Mapping",
+            "tag": "Surface Profiling",
+            "description": "Generates detailed hardness maps across sample surfaces, ideal for analyzing heat-treated zones and coatings.",
+            "image": "/images/automatic-micro-hardness-tester/hardness-mapping.png",
+            "detail": "/products/hardness-mapping",
+            "delay": 0.8
+          },
+          {
+            "id": 9,
+            "name": "Case Depth Analysis",
+            "tag": "Depth Profiling",
+            "description": "Automates case hardness depth (CHD) testing, measuring hardness gradients in heat-treated components.",
+            "image": "/images/automatic-micro-hardness-tester/case-depth-analysis.png",
+            "detail": "/products/case-depth-analysis",
+            "delay": 0.9
+          },
+          {
+            "id": 10,
+            "name": "Data Export & Reporting",
+            "tag": "Custom Reporting",
+            "description": "Exports test results in customizable formats with statistical analysis, supporting USB, VGA, and LAN interfaces.",
+            "image": "/images/automatic-micro-hardness-tester/data-export-reporting.png",
+            "detail": "/products/data-export-reporting",
+            "delay": 1.0
+          }
+        ],
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Vickers Testing",
+            "description": "Automates Vickers hardness testing with a diamond pyramid indenter, delivering precise measurements for thin materials and coatings, compliant with ASTM E384.",
+            "image": "/images/automatic-micro-hardness-tester/vickers-testing.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Knoop Testing",
+            "description": "Performs Knoop hardness testing with a rhombic diamond indenter, optimized for brittle materials and thin layers, per ISO 4545.",
+            "image": "/images/automatic-micro-hardness-tester/knoop-testing.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": [
+          { "id": "vickers-testing", "name": "Vickers Testing" },
+          { "id": "knoop-testing", "name": "Knoop Testing" },
+          { "id": "brinell-testing", "name": "Brinell Testing" },
+          { "id": "auto-focus-system", "name": "Auto-Focus System" },
+          { "id": "motorized-xy-stage", "name": "Motorized XY Stage" },
+          { "id": "automated-turret", "name": "Automated Turret" },
+          { "id": "ccd-image-acquisition", "name": "CCD Image Acquisition" },
+          { "id": "hardness-mapping", "name": "Hardness Mapping" },
+          { "id": "case-depth-analysis", "name": "Case Depth Analysis" },
+          { "id": "data-export-reporting", "name": "Data Export & Reporting" }
+        ]
+      },
+      {
+        "name": "Micro/Macro Hardness Tester (Load Cell Based)",
+        "slug": "micro-macro-hardness-tester-load-cell",
+        "heroImage": "/images/micro-macro-hardness-tester/micro-macro-hardness-tester.png",
+        "intro": {
+          "title": "Advanced Load Cell Based Hardness Testing",
+          "description": "The Micro/Macro Hardness Tester with load cell technology offers precise Vickers, Knoop, and Brinell testing across micro (0.01 gf to 1 kgf) and macro (1 kgf to 62.5 kgf) ranges. Compliant with ASTM E384, ISO 6507, and ASTM E10, it features closed-loop load control, automated XY stage, and intuitive software for high-throughput testing in metallurgical, automotive, and aerospace applications.",
+          "categoryLabel": "Explore our load cell hardness testing solutions",
+          "buttons": [
+            { "text": "Discover Hardness Tester", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Micro/Macro Hardness Tester",
+          "description": "Utilizing closed-loop load cell technology, this tester ensures accurate force application for Vickers, Knoop, and Brinell tests. With automated turret, CCD imaging, and touch-screen interface, it delivers repeatable results for micro and macro hardness testing of metals, ceramics, and coatings.",
+          "label": "Testing Features"
+        },
+        "specialtySection": {
+          "title": "Specialty Hardness Testing Solutions",
+          "description": "For advanced applications like case depth analysis, hardness mapping, or high-volume production, this tester offers customizable test patterns, fully automated sequences, and integration with image analysis software for comprehensive material characterization.",
+          "label": "Advanced Testing Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Hardness Testing Solutions",
+          "description": "Explore our Solutions section for ASTM E384 and ISO 6507-compliant protocols, technical guides, and industry-specific applications to optimize your hardness testing workflows.",
+          "image": "/productsListing/Hardness_Testing_Solutions.png",
+          "label": "Tailored Testing Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": [
+          {
+            "id": 1,
+            "image": "/images/micro-macro-hardness-tester/vickers-testing.png",
+            "alt": "Vickers Hardness Testing",
+            "category": "Micro/Macro Hardness Tester",
+            "title": "Vickers Testing",
+            "description": "Performs Vickers testing with loads from 0.01 gf to 62.5 kgf using a diamond pyramid indenter, compliant with ASTM E384 and ISO 6507.",
+            "reviews": 20,
+            "rating": 4.9
+          },
+          {
+            "id": 2,
+            "image": "/images/micro-macro-hardness-tester/knoop-testing.png",
+            "alt": "Knoop Hardness Testing",
+            "category": "Micro/Macro Hardness Tester",
+            "title": "Knoop Testing",
+            "description": "Conducts Knoop testing for brittle materials and thin coatings with loads up to 2 kgf, per ISO 4545, using a rhombic indenter.",
+            "reviews": 16,
+            "rating": 4.8
+          },
+          {
+            "id": 3,
+            "image": "/images/micro-macro-hardness-tester/load-cell-system.png",
+            "alt": "Closed-Loop Load Cell System",
+            "category": "Micro/Macro Hardness Tester",
+            "title": "Closed-Loop Load Cell",
+            "description": "Ensures precise force application across micro and macro ranges with closed-loop control, minimizing operator error.",
+            "reviews": 14,
+            "rating": 4.7
+          }
+        ],
+        "products": [
+          { "name": "Vickers Testing", "image": "/images/micro-macro-hardness-tester/vickers-testing.png" },
+          { "name": "Knoop Testing", "image": "/images/micro-macro-hardness-tester/knoop-testing.png" },
+          { "name": "Brinell Testing", "image": "/images/micro-macro-hardness-tester/brinell-testing.png" },
+          { "name": "Closed-Loop Load Cell", "image": "/images/micro-macro-hardness-tester/load-cell-system.png" },
+          { "name": "Auto-Focus System", "image": "/images/micro-macro-hardness-tester/auto-focus-system.png" },
+          { "name": "Motorized XY Stage", "image": "/images/micro-macro-hardness-tester/motorized-xy-stage.png" },
+          { "name": "Automated Turret", "image": "/images/micro-macro-hardness-tester/automated-turret.png" },
+          { "name": "CCD Image Acquisition", "image": "/images/micro-macro-hardness-tester/ccd-image-acquisition.png" },
+          { "name": "Hardness Mapping", "image": "/images/micro-macro-hardness-tester/hardness-mapping.png" },
+          { "name": "Data Export & Reporting", "image": "/images/micro-macro-hardness-tester/data-export-reporting.png" }
+        ],
+        "items": [
+          {
+            "id": 1,
+            "name": "Micro/Macro Hardness Tester",
+            "color": "rgba(100, 120, 160, 0.1)",
+            "bgColor": "rgba(100, 120, 160, 0.1)",
+            "subItems": [
+              { "name": "Vickers Testing", "apiCall": "/api/products/vickers-testing" },
+              { "name": "Knoop Testing", "apiCall": "/api/products/knoop-testing" },
+              { "name": "Brinell Testing", "apiCall": "/api/products/brinell-testing" },
+              { "name": "Closed-Loop Load Cell", "apiCall": "/api/products/closed-loop-load-cell" },
+              { "name": "Auto-Focus System", "apiCall": "/api/products/auto-focus-system" },
+              { "name": "Motorized XY Stage", "apiCall": "/api/products/motorized-xy-stage" },
+              { "name": "Automated Turret", "apiCall": "/api/products/automated-turret" },
+              { "name": "CCD Image Acquisition", "apiCall": "/api/products/ccd-image-acquisition" },
+              { "name": "Hardness Mapping", "apiCall": "/api/products/hardness-mapping" },
+              { "name": "Data Export & Reporting", "apiCall": "/api/products/data-export-reporting" }
+            ]
+          }
+        ],
+        "productCards": [
+          {
+            "id": 1,
+            "name": "Vickers Testing",
+            "tag": "Versatile Precision",
+            "description": "Supports Vickers testing with loads from 0.01 gf to 62.5 kgf, ideal for micro and macro applications, compliant with ASTM E384 and ISO 6507.",
+            "image": "/images/micro-macro-hardness-tester/vickers-testing.png",
+            "detail": "/products/vickers-testing",
+            "delay": 0.1
+          },
+          {
+            "id": 2,
+            "name": "Knoop Testing",
+            "tag": "Thin Layer Analysis",
+            "description": "Performs Knoop testing with loads up to 2 kgf, optimized for brittle materials and thin coatings, per ISO 4545.",
+            "image": "/images/micro-macro-hardness-tester/knoop-testing.png",
+            "detail": "/products/knoop-testing",
+            "delay": 0.2
+          },
+          {
+            "id": 3,
+            "name": "Brinell Testing",
+            "tag": "Light Load Range",
+            "description": "Conducts Brinell testing with loads up to 62.5 kgf, suitable for softer materials and small components, per ASTM E10.",
+            "image": "/images/micro-macro-hardness-tester/brinell-testing.png",
+            "detail": "/products/brinell-testing",
+            "delay": 0.3
+          },
+          {
+            "id": 4,
+            "name": "Closed-Loop Load Cell",
+            "tag": "Accurate Force",
+            "description": "Utilizes closed-loop load cell technology for precise force application across micro and macro ranges, reducing variability.",
+            "image": "/images/micro-macro-hardness-tester/load-cell-system.png",
+            "detail": "/products/closed-loop-load-cell",
+            "delay": 0.4
+          },
+          {
+            "id": 5,
+            "name": "Auto-Focus System",
+            "tag": "Image Clarity",
+            "description": "Automates focus for sharp indentation images, enhancing measurement accuracy and repeatability.",
+            "image": "/images/micro-macro-hardness-tester/auto-focus-system.png",
+            "detail": "/products/auto-focus-system",
+            "delay": 0.5
+          },
+          {
+            "id": 6,
+            "name": "Motorized XY Stage",
+            "tag": "High Throughput",
+            "description": "Enables precise sample positioning for complex test patterns and automated multi-point testing.",
+            "image": "/images/micro-macro-hardness-tester/motorized-xy-stage.png",
+            "detail": "/products/motorized-xy-stage",
+            "delay": 0.6
+          },
+          {
+            "id": 7,
+            "name": "Automated Turret",
+            "tag": "Streamlined Operation",
+            "description": "Features a 6-position auto turret for seamless switching between indenters and objectives, boosting efficiency.",
+            "image": "/images/micro-macro-hardness-tester/automated-turret.png",
+            "detail": "/products/automated-turret",
+            "delay": 0.7
+          },
+          {
+            "id": 8,
+            "name": "CCD Image Acquisition",
+            "tag": "High-Resolution Imaging",
+            "description": "Captures high-resolution indentation images for automated measurement and analysis via CCD camera.",
+            "image": "/images/micro-macro-hardness-tester/ccd-image-acquisition.png",
+            "detail": "/products/ccd-image-acquisition",
+            "delay": 0.8
+          },
+          {
+            "id": 9,
+            "name": "Hardness Mapping",
+            "tag": "Surface Analysis",
+            "description": "Generates detailed hardness maps for heat-treated zones, coatings, and welds, enhancing material characterization.",
+            "image": "/images/micro-macro-hardness-tester/hardness-mapping.png",
+            "detail": "/products/hardness-mapping",
+            "delay": 0.9
+          },
+          {
+            "id": 10,
+            "name": "Data Export & Reporting",
+            "tag": "Customizable Output",
+            "description": "Exports test results with statistical analysis in customizable formats, supporting USB, LAN, and thermal printing.",
+            "image": "/images/micro-macro-hardness-tester/data-export-reporting.png",
+            "detail": "/products/data-export-reporting",
+            "delay": 1.0
+          }
+        ],
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Vickers Testing",
+            "description": "Performs Vickers testing across micro (0.01 gf) to macro (62.5 kgf) ranges with a diamond pyramid indenter, ensuring ASTM E384 and ISO 6507 compliance.",
+            "image": "/images/micro-macro-hardness-tester/vickers-testing.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Closed-Loop Load Cell",
+            "description": "Employs advanced closed-loop load cell technology for precise force application, supporting a wide range of Vickers, Knoop, and Brinell tests.",
+            "image": "/images/micro-macro-hardness-tester/load-cell-system.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": [
+          { "id": "vickers-testing", "name": "Vickers Testing" },
+          { "id": "knoop-testing", "name": "Knoop Testing" },
+          { "id": "brinell-testing", "name": "Brinell Testing" },
+          { "id": "closed-loop-load-cell", "name": "Closed-Loop Load Cell" },
+          { "id": "auto-focus-system", "name": "Auto-Focus System" },
+          { "id": "motorized-xy-stage", "name": "Motorized XY Stage" },
+          { "id": "automated-turret", "name": "Automated Turret" },
+          { "id": "ccd-image-acquisition", "name": "CCD Image Acquisition" },
+          { "id": "hardness-mapping", "name": "Hardness Mapping" },
+          { "id": "data-export-reporting", "name": "Data Export & Reporting" }
+        ]
+      },
     ]
   },
+
+  // mainCategory: "Other Machines"
   {
     mainCategory: "Other Machines",
     categories: [
-      
+      {
+        "name": "Electro Polishing Machine",
+        "slug": "electro-polishing-machine",
+        "heroImage": "/images/electro-polishing-machine/electro-polishing-machine.png",
+        "intro": {
+          "title": "Precision Electro Polishing Solutions",
+          "description": "The Electro Polishing Machine, featuring the Electropol system, delivers mirror-like, corrosion-resistant finishes on stainless steel, gold, silver, copper, and other metals. Compliant with ASTM B912 and ISO 13485, it offers automated, high-throughput polishing for medical devices, aerospace components, jewelry, and industrial parts, ensuring repeatable micro-tolerance surface roughness finishing.",
+          "categoryLabel": "Explore our electro polishing solutions",
+          "buttons": [
+            { "text": "Discover Electropol", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Electro Polishing Machine",
+          "description": "The Electropol system automates electrochemical polishing with advanced rectifiers (24V/48V), digital timers, and temperature controls. It removes micro-peaks and impurities, enhancing corrosion resistance and surface smoothness for complex geometries in medical, aerospace, and jewelry applications.",
+          "label": "Polishing Features"
+        },
+        "specialtySection": {
+          "title": "Specialty Electro Polishing Solutions",
+          "description": "For intricate parts, high-volume production, or delicate materials, the Electropol system offers customizable fixtures, no-dead-angle polishing, and environmentally friendly processes, reducing chemical waste and ensuring high-quality finishes.",
+          "label": "Advanced Polishing Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Electro Polishing Solutions",
+          "description": "Explore our Solutions section for ASTM B912-compliant protocols, technical guides, and industry-specific applications to optimize your electro polishing workflows.",
+          "image": "/productsListing/Electro_Polishing_Solutions.png",
+          "label": "Tailored Polishing Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": [
+          {
+            "id": 1,
+            "image": "/images/electro-polishing-machine/electropol-tabletop.png",
+            "alt": "Electropol Tabletop System",
+            "category": "Electro Polishing Machine",
+            "title": "Electropol Tabletop",
+            "description": "Compact 0.5-15 gallon system for prototyping and small-scale production, ideal for medical devices and jewelry, with 24V/48V rectifiers.",
+            "reviews": 15,
+            "rating": 4.8
+          },
+          {
+            "id": 2,
+            "image": "/images/electro-polishing-machine/electropol-wet-bench.png",
+            "alt": "Electropol Wet Bench",
+            "category": "Electro Polishing Machine",
+            "title": "Electropol Wet Bench",
+            "description": "All-in-one console integrating washing, rinsing, polishing, and drying, designed for high-throughput industrial applications.",
+            "reviews": 12,
+            "rating": 4.7
+          },
+          {
+            "id": 3,
+            "image": "/images/electro-polishing-machine/electropol-large-scale.png",
+            "alt": "Electropol Large-Scale System",
+            "category": "Electro Polishing Machine",
+            "title": "Electropol Large-Scale",
+            "description": "Custom-designed system with overhead hoist for large parts, suited for aerospace and industrial stainless steel polishing.",
+            "reviews": 10,
+            "rating": 4.6
+          }
+        ],
+        "products": [
+          { "name": "Electropol Tabletop", "image": "/images/electro-polishing-machine/electropol-tabletop.png" },
+          { "name": "Electropol Wet Bench", "image": "/images/electro-polishing-machine/electropol-wet-bench.png" },
+          { "name": "Electropol Large-Scale", "image": "/images/electro-polishing-machine/electropol-large-scale.png" },
+          { "name": "Automated Rectifier Control", "image": "/images/electro-polishing-machine/automated-rectifier-control.png" },
+          { "name": "No-Dead-Angle Polishing", "image": "/images/electro-polishing-machine/no-dead-angle-polishing.png" },
+          { "name": "Electrolyte Recovery System", "image": "/images/electro-polishing-machine/electrolyte-recovery-system.png" },
+          { "name": "Custom Fixtures", "image": "/images/electro-polishing-machine/custom-fixtures.png" },
+          { "name": "Digital Process Monitoring", "image": "/images/electro-polishing-machine/digital-process-monitoring.png" }
+        ],
+        "items": [
+          {
+            "id": 1,
+            "name": "Electro Polishing Machine",
+            "color": "rgba(70, 130, 180, 0.1)",
+            "bgColor": "rgba(70, 130, 180, 0.1)",
+            "subItems": [
+              { "name": "Electropol Tabletop", "apiCall": "/api/products/electropol-tabletop" },
+              { "name": "Electropol Wet Bench", "apiCall": "/api/products/electropol-wet-bench" },
+              { "name": "Electropol Large-Scale", "apiCall": "/api/products/electropol-large-scale" },
+              { "name": "Automated Rectifier Control", "apiCall": "/api/products/automated-rectifier-control" },
+              { "name": "No-Dead-Angle Polishing", "apiCall": "/api/products/no-dead-angle-polishing" },
+              { "name": "Electrolyte Recovery System", "apiCall": "/api/products/electrolyte-recovery-system" },
+              { "name": "Custom Fixtures", "apiCall": "/api/products/custom-fixtures" },
+              { "name": "Digital Process Monitoring", "apiCall": "/api/products/digital-process-monitoring" }
+            ]
+          }
+        ],
+        "productCards": [
+          {
+            "id": 1,
+            "name": "Electropol Tabletop",
+            "tag": "Compact Precision",
+            "description": "Portable 0.5-15 gallon system for small to medium parts, ideal for laboratory prototyping and jewelry polishing, with 24V/48V rectifiers.",
+            "image": "/images/electro-polishing-machine/electropol-tabletop.png",
+            "detail": "/products/electropol-tabletop",
+            "delay": 0.1
+          },
+          {
+            "id": 2,
+            "name": "Electropol Wet Bench",
+            "tag": "Integrated Efficiency",
+            "description": "Multi-tank console combining washing, rinsing, polishing, and drying, constructed with polypropylene tanks and stainless steel frames.",
+            "image": "/images/electro-polishing-machine/electropol-wet-bench.png",
+            "detail": "/products/electropol-wet-bench",
+            "delay": 0.2
+          },
+          {
+            "id": 3,
+            "name": "Electropol Large-Scale",
+            "tag": "High-Volume Production",
+            "description": "Custom system with overhead hoist or jib crane for large parts, optimized for aerospace and industrial stainless steel applications.",
+            "image": "/images/electro-polishing-machine/electropol-large-scale.png",
+            "detail": "/products/electropol-large-scale",
+            "delay": 0.3
+          },
+          {
+            "id": 4,
+            "name": "Automated Rectifier Control",
+            "tag": "Precise Current Delivery",
+            "description": "Features 24V/48V rectifiers with digital timers and temperature controls for consistent polishing results across metals.",
+            "image": "/images/electro-polishing-machine/automated-rectifier-control.png",
+            "detail": "/products/automated-rectifier-control",
+            "delay": 0.4
+          },
+          {
+            "id": 5,
+            "name": "No-Dead-Angle Polishing",
+            "tag": "Complex Geometries",
+            "description": "Ensures uniform polishing of intricate parts, ideal for jewelry and medical devices, without compromising sharp edges.",
+            "image": "/images/electro-polishing-machine/no-dead-angle-polishing.png",
+            "detail": "/products/no-dead-angle-polishing",
+            "delay": 0.5
+          },
+          {
+            "id": 6,
+            "name": "Electrolyte Recovery System",
+            "tag": "Sustainable Processing",
+            "description": "Recovers 95-98% of dissolved metal from electrolyte, reducing waste and operational costs in high-volume polishing.",
+            "image": "/images/electro-polishing-machine/electrolyte-recovery-system.png",
+            "detail": "/products/electrolyte-recovery-system",
+            "delay": 0.6
+          },
+          {
+            "id": 7,
+            "name": "Custom Fixtures",
+            "tag": "Tailored Handling",
+            "description": "Designed to securely hold complex or delicate parts, ensuring precise polishing without damage to intricate geometries.",
+            "image": "/images/electro-polishing-machine/custom-fixtures.png",
+            "detail": "/products/custom-fixtures",
+            "delay": 0.7
+          },
+          {
+            "id": 8,
+            "name": "Digital Process Monitoring",
+            "tag": "Real-Time Control",
+            "description": "HMI panel for intuitive monitoring of current, temperature, and process duration, ensuring repeatable, high-quality finishes.",
+            "image": "/images/electro-polishing-machine/digital-process-monitoring.png",
+            "detail": "/products/digital-process-monitoring",
+            "delay": 0.8
+          }
+        ],
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Electropol Tabletop",
+            "description": "Compact and portable 0.5-15 gallon system for small-scale electro polishing, perfect for medical device prototyping and jewelry finishing with 24V/48V rectifiers.",
+            "image": "/images/electro-polishing-machine/electropol-tabletop.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Electropol Large-Scale",
+            "description": "Custom-designed system with overhead hoist for polishing large parts, optimized for aerospace and industrial stainless steel applications with high-throughput.",
+            "image": "/images/electro-polishing-machine/electropol-large-scale.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": [
+          { "id": "electropol-tabletop", "name": "Electropol Tabletop" },
+          { "id": "electropol-wet-bench", "name": "Electropol Wet Bench" },
+          { "id": "electropol-large-scale", "name": "Electropol Large-Scale" },
+          { "id": "automated-rectifier-control", "name": "Automated Rectifier Control" },
+          { "id": "no-dead-angle-polishing", "name": "No-Dead-Angle Polishing" },
+          { "id": "electrolyte-recovery-system", "name": "Electrolyte Recovery System" },
+          { "id": "custom-fixtures", "name": "Custom Fixtures" },
+          { "id": "digital-process-monitoring", "name": "Digital Process Monitoring" }
+        ]
+      },
+      {
+        "name": "In-situ Metallography Kit",
+        "slug": "in-situ-metallography-kit",
+        "heroImage": "/images/in-situ-metallography-kit/in-situ-metallography-kit.png",
+        "intro": {
+          "title": "Portable In-situ Metallography Solutions",
+          "description": "The In-situ Metallography Kit enables non-destructive, on-site microstructural analysis for large or in-service components. Compliant with ASTM E1351 and ISO 643, it includes a Portable Microscope, Image Analyzer, Replica materials, Portpol Electro Polisher, and Portgrinder Grinder, ideal for power plants, pipelines, and weld inspections in automotive, aerospace, and industrial applications.",
+          "categoryLabel": "Explore our in-situ metallography solutions",
+          "buttons": [
+            { "text": "Discover In-situ Kit", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "In-situ Metallography Kit",
+          "description": "Designed for field use, this kit combines a high-magnification portable microscope, real-time image analysis, replication media, and portable polishing/grinding tools. It supports on-site microstructure observation, failure analysis, and weld quality checks without damaging components, with battery-powered operation for remote locations.",
+          "label": "Kit Components"
+        },
+        "specialtySection": {
+          "title": "Specialty In-situ Metallography Solutions",
+          "description": "For challenging field conditions or complex alloys, the kit offers advanced replication techniques, high-resolution imaging, and custom polishing probes, ensuring accurate microstructure analysis and condition monitoring in critical applications.",
+          "label": "Advanced Metallography Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive In-situ Metallography Solutions",
+          "description": "Explore our Solutions section for ASTM E1351-compliant protocols, technical guides, and industry-specific applications to optimize your on-site metallographic analysis workflows.",
+          "image": "/productsListing/In-situ_Metallography_Solutions.png",
+          "label": "Tailored Metallography Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": [
+          {
+            "id": 1,
+            "image": "/images/in-situ-metallography-kit/portable-microscope.png",
+            "alt": "Portable Microscope for In-situ Metallography",
+            "category": "In-situ Metallography Kit",
+            "title": "Portable Microscope",
+            "description": "Battery-powered microscope with up to 800x magnification, featuring X-Y stage scanning and CMOS camera for on-site microstructure analysis.",
+            "reviews": 18,
+            "rating": 4.9
+          },
+          {
+            "id": 2,
+            "image": "/images/in-situ-metallography-kit/image-analyzer.png",
+            "alt": "Image Analyzer for In-situ Metallography",
+            "category": "In-situ Metallography Kit",
+            "title": "Image Analyzer",
+            "description": "Laptop-based software with high-resolution USB camera for real-time image capture, analysis, and database generation, enabling on-site reporting.",
+            "reviews": 15,
+            "rating": 4.8
+          },
+          {
+            "id": 3,
+            "image": "/images/in-situ-metallography-kit/portgrinder.png",
+            "alt": "Portgrinder Portable Grinder",
+            "category": "In-situ Metallography Kit",
+            "title": "Portgrinder",
+            "description": "Variable-speed, high-torque grinder with 38 mm PSA discs and flexible shaft, powered by 230V AC for field surface preparation.",
+            "reviews": 12,
+            "rating": 4.7
+          }
+        ],
+        "products": [
+          { "name": "Portable Microscope", "image": "/images/in-situ-metallography-kit/portable-microscope.png" },
+          { "name": "Image Analyzer", "image": "/images/in-situ-metallography-kit/image-analyzer.png" },
+          { "name": "Replica", "image": "/images/in-situ-metallography-kit/replica.png" },
+          { "name": "Portpol Electro Polisher", "image": "/images/in-situ-metallography-kit/portpol.png" },
+          { "name": "Portgrinder Grinder", "image": "/images/in-situ-metallography-kit/portgrinder.png" }
+        ],
+        "items": [
+          {
+            "id": 1,
+            "name": "In-situ Metallography Kit",
+            "color": "rgba(60, 140, 170, 0.1)",
+            "bgColor": "rgba(60, 140, 170, 0.1)",
+            "subItems": [
+              { "name": "Portable Microscope", "apiCall": "/api/products/portable-microscope" },
+              { "name": "Image Analyzer", "apiCall": "/api/products/image-analyzer" },
+              { "name": "Replica", "apiCall": "/api/products/replica" },
+              { "name": "Portpol Electro Polisher", "apiCall": "/api/products/portpol" },
+              { "name": "Portgrinder Grinder", "apiCall": "/api/products/portgrinder" }
+            ]
+          }
+        ],
+        "productCards": [
+          {
+            "id": 1,
+            "name": "Portable Microscope",
+            "tag": "High Magnification",
+            "description": "Lightweight, battery-powered microscope with 100x-800x magnification, X-Y stage, and 3MP CMOS camera for on-site metallographic inspection.",
+            "image": "/images/in-situ-metallography-kit/portable-microscope.png",
+            "detail": "/products/portable-microscope",
+            "delay": 0.1
+          },
+          {
+            "id": 2,
+            "name": "Image Analyzer",
+            "tag": "Real-Time Analysis",
+            "description": "Laptop-integrated software with USB camera for image capture, microstructure analysis, and data export, streamlining on-site reporting.",
+            "image": "/images/in-situ-metallography-kit/image-analyzer.png",
+            "detail": "/products/image-analyzer",
+            "delay": 0.2
+          },
+          {
+            "id": 3,
+            "name": "Replica",
+            "tag": "Non-Destructive",
+            "description": "Cellulose acetate and SiliKem replication media for 3D surface replicas, offering 0.1μm accuracy for flat and curved surfaces.",
+            "image": "/images/in-situ-metallography-kit/replica.png",
+            "detail": "/products/replica",
+            "delay": 0.3
+          },
+          {
+            "id": 4,
+            "name": "Portpol Electro Polisher",
+            "tag": "Portable Polishing",
+            "description": "Pen-type probe with 0.5L electrolyte reservoir and 25W pump, offering up to 60V for polishing and etching in the field.",
+            "image": "/images/in-situ-metallography-kit/portpol.png",
+            "detail": "/products/portpol",
+            "delay": 0.4
+          },
+          {
+            "id": 5,
+            "name": "Portgrinder Grinder",
+            "tag": "Field Grinding",
+            "description": "High-torque, variable-speed grinder with 38 mm PSA discs, 90-degree handle, and 230V AC supply for on-site surface prep.",
+            "image": "/images/in-situ-metallography-kit/portgrinder.png",
+            "detail": "/products/portgrinder",
+            "delay": 0.5
+          }
+        ],
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Portable Microscope",
+            "description": "Battery-powered, portable microscope with 100x-800x magnification, X-Y stage scanning, and 3MP CMOS camera, ideal for on-site microstructure analysis of in-service components.",
+            "image": "/images/in-situ-metallography-kit/portable-microscope.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Replica",
+            "description": "Non-destructive replication using cellulose acetate film and SiliKem compound, providing 0.1μm accuracy for 3D surface replicas of flat or curved components.",
+            "image": "/images/in-situ-metallography-kit/replica.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": [
+          { "id": "portable-microscope", "name": "Portable Microscope" },
+          { "id": "image-analyzer", "name": "Image Analyzer" },
+          { "id": "replica", "name": "Replica" },
+          { "id": "portpol", "name": "Portpol Electro Polisher" },
+          { "id": "portgrinder", "name": "Portgrinder Grinder" }
+        ]
+      },
+      {
+        "name": "Jominy End Quench Hardenability Set-up",
+        "slug": "jominy-end-quench-hardenability-setup",
+        "heroImage": "/images/jominy-end-quench/jominy-end-quench-setup.png",
+        "intro": {
+          "title": "Precision Jominy End Quench Hardenability Testing",
+          "description": "The Jominy End Quench Hardenability Set-up, featuring an advanced Hardness Fixture and Chiller, delivers precise hardenability testing per ASTM A255 and ISO 642. With a motorized fixture for successive hardness indentations and a fully automatic hardness tester with a motorized programmable stage, it ensures accurate, repeatable results for steel mills, metallurgical labs, and quality control in automotive and aerospace industries.",
+          "categoryLabel": "Explore our Jominy hardenability solutions",
+          "buttons": [
+            { "text": "Discover Jominy Set-up", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Jominy End Quench Hardenability Set-up",
+          "description": "This set-up automates the Jominy test with a motorized hardness fixture for precise indentation spacing (1.5 mm or 1/16 in.) and a chiller for consistent 24°C water quenching. The fully automatic hardness tester with a motorized programmable stage performs direct Rockwell (HRC) or Vickers (HV) measurements, plotting hardenability curves for alloy selection and heat treatment optimization.",
+          "label": "Testing Features"
+        },
+        "specialtySection": {
+          "title": "Specialty Hardenability Testing Solutions",
+          "description": "Designed for low to medium hardenability steels (D1 = 1-6 in.), the set-up offers programmable test sequences, digital micrometer indexing, and integration with metallographic analysis software for comprehensive microstructure and hardness profiling.",
+          "label": "Advanced Testing Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Hardenability Testing Solutions",
+          "description": "Explore our Solutions section for ASTM A255-compliant protocols, Lamont charts for hardness correlation, and industry-specific applications to optimize your Jominy testing workflows.",
+          "image": "/productsListing/Hardenability_Testing_Solutions.png",
+          "label": "Tailored Testing Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Alloy", "variant": "secondary" }
+          ]
+        },
+        "slides": [
+          {
+            "id": 1,
+            "image": "/images/jominy-end-quench/hardness-fixture.png",
+            "alt": "Motorized Hardness Fixture",
+            "category": "Jominy End Quench Set-up",
+            "title": "Hardness Fixture",
+            "description": "Motorized fixture with digital micrometer for precise 1.5 mm indentation spacing, ensuring accurate hardness measurements along Jominy specimen.",
+            "reviews": 20,
+            "rating": 4.9
+          },
+          {
+            "id": 2,
+            "image": "/images/jominy-end-quench/chiller-system.png",
+            "alt": "Chiller System",
+            "category": "Jominy End Quench Set-up",
+            "title": "Chiller System",
+            "description": "Maintains 24°C water temperature with ±0.5°C accuracy for consistent quenching, compliant with ASTM A255 standards.",
+            "reviews": 18,
+            "rating": 4.8
+          },
+          {
+            "id": 3,
+            "image": "/images/jominy-end-quench/automatic-hardness-tester.png",
+            "alt": "Automatic Hardness Tester",
+            "category": "Jominy End Quench Set-up",
+            "title": "Automatic Hardness Tester",
+            "description": "Fully automatic tester with motorized programmable stage for direct Rockwell or Vickers hardness testing, streamlining Jominy curve generation.",
+            "reviews": 15,
+            "rating": 4.7
+          }
+        ],
+        "products": [
+          { "name": "Hardness Fixture", "image": "/images/jominy-end-quench/hardness-fixture.png" },
+          { "name": "Chiller System", "image": "/images/jominy-end-quench/chiller-system.png" },
+          { "name": "Automatic Hardness Tester", "image": "/images/jominy-end-quench/automatic-hardness-tester.png" },
+          { "name": "Motorized Programmable Stage", "image": "/images/jominy-end-quench/motorized-stage.png" },
+          { "name": "Digital Micrometer Indexing", "image": "/images/jominy-end-quench/digital-micrometer.png" },
+          { "name": "Quenching Jet System", "image": "/images/jominy-end-quench/quenching-jet.png" },
+          { "name": "Specimen Holder", "image": "/images/jominy-end-quench/specimen-holder.png" },
+          { "name": "Hardenability Software", "image": "/images/jominy-end-quench/hardenability-software.png" }
+        ],
+        "items": [
+          {
+            "id": 1,
+            "name": "Jominy End Quench Hardenability Set-up",
+            "color": "rgba(80, 120, 150, 0.1)",
+            "bgColor": "rgba(80, 120, 150, 0.1)",
+            "subItems": [
+              { "name": "Hardness Fixture", "apiCall": "/api/products/hardness-fixture" },
+              { "name": "Chiller System", "apiCall": "/api/products/chiller-system" },
+              { "name": "Automatic Hardness Tester", "apiCall": "/api/products/automatic-hardness-tester" },
+              { "name": "Motorized Programmable Stage", "apiCall": "/api/products/motorized-stage" },
+              { "name": "Digital Micrometer Indexing", "apiCall": "/api/products/digital-micrometer" },
+              { "name": "Quenching Jet System", "apiCall": "/api/products/quenching-jet" },
+              { "name": "Specimen Holder", "apiCall": "/api/products/specimen-holder" },
+              { "name": "Hardenability Software", "apiCall": "/api/products/hardenability-software" }
+            ]
+          }
+        ],
+        "productCards": [
+          {
+            "id": 1,
+            "name": "Hardness Fixture",
+            "tag": "Precision Indentation",
+            "description": "Motorized fixture with digital micrometer for successive 1.5 mm or 1/16 in. indentations, ensuring precise positioning on Jominy specimens.",
+            "image": "/images/jominy-end-quench/hardness-fixture.png",
+            "detail": "/products/hardness-fixture",
+            "delay": 0.1
+          },
+          {
+            "id": 2,
+            "name": "Chiller System",
+            "tag": "Consistent Quenching",
+            "description": "Maintains water at 24°C ±0.5°C with a 13 mm orifice jet, meeting ASTM A255 quenching requirements for reproducible hardenability results.",
+            "image": "/images/jominy-end-quench/chiller-system.png",
+            "detail": "/products/chiller-system",
+            "delay": 0.2
+          },
+          {
+            "id": 3,
+            "name": "Automatic Hardness Tester",
+            "tag": "Fully Automated",
+            "description": "Performs direct Rockwell (HRC) or Vickers (HV) tests with a motorized programmable stage, automating Jominy hardness curve generation.",
+            "image": "/images/jominy-end-quench/automatic-hardness-tester.png",
+            "detail": "/products/automatic-hardness-tester",
+            "delay": 0.3
+          },
+          {
+            "id": 4,
+            "name": "Motorized Programmable Stage",
+            "tag": "High Accuracy",
+            "description": "Enables precise movement for automated hardness testing at specified intervals, supporting 1.5 mm or 1/16 in. spacing per ISO 642.",
+            "image": "/images/jominy-end-quench/motorized-stage.png",
+            "detail": "/products/motorized-stage",
+            "delay": 0.4
+          },
+          {
+            "id": 5,
+            "name": "Digital Micrometer Indexing",
+            "tag": "Accurate Spacing",
+            "description": "Provides digital indexing for precise indentation positioning, reducing operator error during hardness measurements.",
+            "image": "/images/jominy-end-quench/digital-micrometer.png",
+            "detail": "/products/digital-micrometer",
+            "delay": 0.5
+          },
+          {
+            "id": 6,
+            "name": "Quenching Jet System",
+            "tag": "Controlled Cooling",
+            "description": "Delivers a 12.5 mm ±0.5 mm water jet for rapid quenching, ensuring consistent cooling rates along the Jominy specimen.",
+            "image": "/images/jominy-end-quench/quenching-jet.png",
+            "detail": "/products/quenching-jet",
+            "delay": 0.6
+          },
+          {
+            "id": 7,
+            "name": "Specimen Holder",
+            "tag": "Secure Positioning",
+            "description": "Automatically centers 25 mm x 100 mm Jominy specimens, ensuring alignment with the water jet for accurate quenching.",
+            "image": "/images/jominy-end-quench/specimen-holder.png",
+            "detail": "/products/specimen-holder",
+            "delay": 0.7
+          },
+          {
+            "id": 8,
+            "name": "Hardenability Software",
+            "tag": "Data Analysis",
+            "description": "Plots hardenability curves, integrates with Lamont charts, and exports data for alloy selection and quality control reporting.",
+            "image": "/images/jominy-end-quench/hardenability-software.png",
+            "detail": "/products/hardenability-software",
+            "delay": 0.8
+          }
+        ],
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Hardness Fixture",
+            "description": "Motorized fixture with digital micrometer indexing for precise, successive hardness indentations at 1.5 mm or 1/16 in. intervals, ensuring accurate Jominy hardenability testing per ASTM A255.",
+            "image": "/images/jominy-end-quench/hardness-fixture.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Automatic Hardness Tester",
+            "description": "Fully automatic hardness tester with a motorized programmable stage, enabling direct Rockwell or Vickers testing for rapid, reliable Jominy hardenability curve generation.",
+            "image": "/images/jominy-end-quench/automatic-hardness-tester.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": [
+          { "id": "hardness-fixture", "name": "Hardness Fixture" },
+          { "id": "chiller-system", "name": "Chiller System" },
+          { "id": "automatic-hardness-tester", "name": "Automatic Hardness Tester" },
+          { "id": "motorized-stage", "name": "Motorized Programmable Stage" },
+          { "id": "digital-micrometer", "name": "Digital Micrometer Indexing" },
+          { "id": "quenching-jet", "name": "Quenching Jet System" },
+          { "id": "specimen-holder", "name": "Specimen Holder" },
+          { "id": "hardenability-software", "name": "Hardenability Software" }
+        ]
+      },
+      {
+        "name": "CNC Tensile Sample Preparation Machines",
+        "slug": "cnc-tensile-sample-preparation-machines",
+        "heroImage": "/images/cnc-tensile-sample-preparation/cnc-tensile-sample-preparation.png",
+        "intro": {
+          "title": "Advanced CNC Tensile Sample Preparation",
+          "description": "CNC Tensile Sample Preparation Machines deliver precision milling for flat and round tensile specimens, ensuring repeatability and compliance with ASTM E8, ISO 6892, and ASTM A255 for Jominy testing. Featuring threading capabilities, floor and tabletop models, and powerful CNC programs, these machines minimize production time for high-throughput labs in aerospace, automotive, and steel industries.",
+          "categoryLabel": "Explore our tensile sample preparation solutions",
+          "buttons": [
+            { "text": "Discover CNC Machines", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "CNC Tensile Sample Preparation Machines",
+          "description": "Equipped with high-precision servo motors, intuitive TensileSoft™ software, and triple clamping fixtures, these machines offer 0.0003” accuracy for tensile and Jominy sample preparation. Automated threading, rapid milling, and preloaded ASTM/ISO standards ensure repeatable results with minimal operator effort, suitable for soft aluminum to hard Inconel materials.",
+          "label": "Preparation Features"
+        },
+        "specialtySection": {
+          "title": "Specialty Sample Preparation Solutions",
+          "description": "Designed for diverse applications, these machines support custom fixturing, Jominy specimen preparation, and advanced CNC machining for complex geometries. Floor and tabletop models cater to labs of all sizes, with optional upgrades for impact testing and threading for button-head or threaded tensile bars.",
+          "label": "Advanced Preparation Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Sample Preparation Solutions",
+          "description": "Explore our Solutions section for ASTM E8 and ISO 6892-compliant protocols, Jominy test guides, and industry-specific applications to optimize your tensile sample preparation workflows.",
+          "image": "/productsListing/Tensile_Sample_Preparation_Solutions.png",
+          "label": "Tailored Preparation Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": [
+          {
+            "id": 1,
+            "image": "/images/cnc-tensile-sample-preparation/flat-tensile-preparation.png",
+            "alt": "Flat Tensile Sample Preparation",
+            "category": "CNC Tensile Sample Preparation",
+            "title": "Flat Tensile Preparation",
+            "description": "Mills flat tensile specimens up to 14” long, 2” wide, and 0.5” thick with 0.0003” accuracy, meeting ASTM E8 and ISO 6892 standards.",
+            "reviews": 22,
+            "rating": 4.9
+          },
+          {
+            "id": 2,
+            "image": "/images/cnc-tensile-sample-preparation/round-tensile-preparation.png",
+            "alt": "Round Tensile Sample Preparation",
+            "category": "CNC Tensile Sample Preparation",
+            "title": "Round Tensile Preparation",
+            "description": "Prepares round tensile specimens up to 4” diameter and 12” length, including threaded and button-head bars, compliant with ASTM E8.",
+            "reviews": 18,
+            "rating": 4.8
+          },
+          {
+            "id": 3,
+            "image": "/images/cnc-tensile-sample-preparation/jominy-sample-preparation.png",
+            "alt": "Jominy Sample Preparation",
+            "category": "CNC Tensile Sample Preparation",
+            "title": "Jominy Sample Preparation",
+            "description": "Supports Jominy specimen preparation (25 mm x 100 mm) with precise grinding and milling for hardenability testing per ASTM A255.",
+            "reviews": 15,
+            "rating": 4.7
+          }
+        ],
+        "products": [
+          { "name": "Flat Tensile Preparation", "image": "/images/cnc-tensile-sample-preparation/flat-tensile-preparation.png" },
+          { "name": "Round Tensile Preparation", "image": "/images/cnc-tensile-sample-preparation/round-tensile-preparation.png" },
+          { "name": "Jominy Sample Preparation", "image": "/images/cnc-tensile-sample-preparation/jominy-sample-preparation.png" },
+          { "name": "Threading Facility", "image": "/images/cnc-tensile-sample-preparation/threading-facility.png" },
+          { "name": "Tabletop Model", "image": "/images/cnc-tensile-sample-preparation/tabletop-model.png" },
+          { "name": "Floor Model", "image": "/images/cnc-tensile-sample-preparation/floor-model.png" },
+          { "name": "TensileSoft™ Software", "image": "/images/cnc-tensile-sample-preparation/tensilesoft-software.png" },
+          { "name": "Auto Tool Changer", "image": "/images/cnc-tensile-sample-preparation/auto-tool-changer.png" }
+        ],
+        "items": [
+          {
+            "id": 1,
+            "name": "CNC Tensile Sample Preparation Machines",
+            "color": "rgba(90, 130, 160, 0.1)",
+            "bgColor": "rgba(90, 130, 160, 0.1)",
+            "subItems": [
+              { "name": "Flat Tensile Preparation", "apiCall": "/api/products/flat-tensile-preparation" },
+              { "name": "Round Tensile Preparation", "apiCall": "/api/products/round-tensile-preparation" },
+              { "name": "Jominy Sample Preparation", "apiCall": "/api/products/jominy-sample-preparation" },
+              { "name": "Threading Facility", "apiCall": "/api/products/threading-facility" },
+              { "name": "Tabletop Model", "apiCall": "/api/products/tabletop-model" },
+              { "name": "Floor Model", "apiCall": "/api/products/floor-model" },
+              { "name": "TensileSoft™ Software", "apiCall": "/api/products/tensilesoft-software" },
+              { "name": "Auto Tool Changer", "apiCall": "/api/products/auto-tool-changer" }
+            ]
+          }
+        ],
+        "productCards": [
+          {
+            "id": 1,
+            "name": "Flat Tensile Preparation",
+            "tag": "High Precision",
+            "description": "Mills flat tensile specimens with 0.0003” accuracy, supporting ASTM E8 and ISO 6892, with triple clamping for up to three 1.0” thick stacks.",
+            "image": "/images/cnc-tensile-sample-preparation/flat-tensile-preparation.png",
+            "detail": "/products/flat-tensile-preparation",
+            "delay": 0.1
+          },
+          {
+            "id": 2,
+            "name": "Round Tensile Preparation",
+            "tag": "Versatile Machining",
+            "description": "Prepares round specimens up to 4” diameter, including threaded and button-head bars, with high-speed milling for ASTM E8 compliance.",
+            "image": "/images/cnc-tensile-sample-preparation/round-tensile-preparation.png",
+            "detail": "/products/round-tensile-preparation",
+            "delay": 0.2
+          },
+          {
+            "id": 3,
+            "name": "Jominy Sample Preparation",
+            "tag": "Hardenability Testing",
+            "description": "Mills and grinds 25 mm x 100 mm Jominy specimens with precise surface finish for ASTM A255 hardenability testing, with custom fixturing options.",
+            "image": "/images/cnc-tensile-sample-preparation/jominy-sample-preparation.png",
+            "detail": "/products/jominy-sample-preparation",
+            "delay": 0.3
+          },
+          {
+            "id": 4,
+            "name": "Threading Facility",
+            "tag": "Advanced Capability",
+            "description": "Automates threading for tensile bars and button-head specimens, ensuring precise thread geometry with minimal operator intervention.",
+            "image": "/images/cnc-tensile-sample-preparation/threading-facility.png",
+            "detail": "/products/threading-facility",
+            "delay": 0.4
+          },
+          {
+            "id": 5,
+            "name": "Tabletop Model",
+            "tag": "Compact Design",
+            "description": "Compact CNC machine with 47” x 47” x 5” footprint, ideal for small labs, offering precision milling for tensile and Jominy samples.",
+            "image": "/images/cnc-tensile-sample-preparation/tabletop-model.png",
+            "detail": "/products/tabletop-model",
+            "delay": 0.5
+          },
+          {
+            "id": 6,
+            "name": "Floor Model",
+            "tag": "High Volume",
+            "description": "Robust floor model with extended table (31.5” x 9.4”) for high-volume tensile and Jominy sample preparation, handling tougher materials.",
+            "image": "/images/cnc-tensile-sample-preparation/floor-model.png",
+            "detail": "/products/floor-model",
+            "delay": 0.6
+          },
+          {
+            "id": 7,
+            "name": "TensileSoft™ Software",
+            "tag": "User-Friendly",
+            "description": "Intuitive software with touch-screen interface and preloaded ASTM/ISO standards, enabling rapid setup and repeatable milling results.",
+            "image": "/images/cnc-tensile-sample-preparation/tensilesoft-software.png",
+            "detail": "/products/tensilesoft-software",
+            "delay": 0.7
+          },
+          {
+            "id": 8,
+            "name": "Auto Tool Changer",
+            "tag": "Time-Saving",
+            "description": "Enhances efficiency with automatic tool changes, supporting complex milling tasks for tensile, Jominy, and custom specimens.",
+            "image": "/images/cnc-tensile-sample-preparation/auto-tool-changer.png",
+            "detail": "/products/auto-tool-changer",
+            "delay": 0.8
+          }
+        ],
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Tabletop Model",
+            "description": "Compact CNC machine with a 47” x 47” x 5” footprint, delivering 0.0003” precision for tensile and Jominy sample preparation, ideal for small labs with limited space.",
+            "image": "/images/cnc-tensile-sample-preparation/tabletop-model.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Jominy Sample Preparation",
+            "description": "Customizable milling and grinding for 25 mm x 100 mm Jominy specimens, ensuring precise surface finish and compliance with ASTM A255 for hardenability testing.",
+            "image": "/images/cnc-tensile-sample-preparation/jominy-sample-preparation.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": [
+          { "id": "flat-tensile-preparation", "name": "Flat Tensile Preparation" },
+          { "id": "round-tensile-preparation", "name": "Round Tensile Preparation" },
+          { "id": "jominy-sample-preparation", "name": "Jominy Sample Preparation" },
+          { "id": "threading-facility", "name": "Threading Facility" },
+          { "id": "tabletop-model", "name": "Tabletop Model" },
+          { "id": "floor-model", "name": "Floor Model" },
+          { "id": "tensilesoft-software", "name": "TensileSoft™ Software" },
+          { "id": "auto-tool-changer", "name": "Auto Tool Changer" }
+        ]
+      },
+      {
+        "name": "Hardness Testers",
+        "slug": "hardness-testers",
+        "heroImage": "/images/hardness-testers/hardness-testers.png",
+        "intro": {
+          "title": "Precision Hardness Testing Solutions",
+          "description": "Hardness Testers measure a material’s resistance to indentation without residual deformation, critical for assessing the quality of metals and parts in automotive, aerospace, and manufacturing. Compliant with ASTM E18, ISO 6506, ISO 6507, and ISO 6508, our testers include Superficial Rockwell, Portable Leeb, Portable Brinell, Rockwell, and Portable Vickers models, suitable for ferrous metals, alloy steel, carbides, treated surfaces, cast iron, non-ferrous metals, and non-metallic materials like hard plastics and Bakelite.",
+          "categoryLabel": "Explore our hardness testing solutions",
+          "buttons": [
+            { "text": "Discover Hardness Testers", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Hardness Testers",
+          "description": "Designed for precision and versatility, our hardness testers evaluate material hardness for quality control. From Superficial Rockwell for treated surfaces and parallel planes to portable Leeb and Vickers for field testing, these systems support cast iron, steel, non-ferrous metals, and hard plastics, delivering accurate, repeatable results across lab and on-site applications.",
+          "label": "Testing Solutions"
+        },
+        "specialtySection": {
+          "title": "Specialty Hardness Testing Solutions",
+          "description": "For demanding applications like carburized surfaces, large castings, or field inspections, our testers offer advanced features like digital displays, portable designs, and automated data logging, ensuring compliance with ASTM and ISO standards for diverse materials and geometries.",
+          "label": "Advanced Testing Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Hardness Testing Solutions",
+          "description": "Explore our Solutions section for ASTM E18 and ISO 6508-compliant protocols, technical guides, and industry-specific applications to optimize your hardness testing workflows.",
+          "image": "/productsListing/Hardness_Testing_Solutions.png",
+          "label": "Tailored Testing Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": [
+          {
+            "id": 1,
+            "image": "/images/hardness-testers/superficial-rockwell.png",
+            "alt": "Superficial Rockwell Hardness Tester",
+            "category": "Hardness Testers",
+            "title": "Superficial Rockwell Hardness Tester",
+            "description": "Precision tester for superficial Rockwell scales (HR15N, HR30T), ideal for treated surfaces and parallel planes, compliant with ASTM E18.",
+            "reviews": 20,
+            "rating": 4.9
+          },
+          {
+            "id": 2,
+            "image": "/images/hardness-testers/portable-leeb.png",
+            "alt": "Portable Leeb Hardness Tester",
+            "category": "Hardness Testers",
+            "title": "Portable Leeb Hardness Tester",
+            "description": "Handheld tester for on-site hardness measurement using rebound method, suitable for large metal parts, per ISO 16859.",
+            "reviews": 18,
+            "rating": 4.8
+          },
+          {
+            "id": 3,
+            "image": "/images/hardness-testers/rockwell.png",
+            "alt": "Rockwell Hardness Tester",
+            "category": "Hardness Testers",
+            "title": "Rockwell Hardness Tester",
+            "description": "Versatile tester for HRC, HRB scales, designed for cast iron, steel, and non-ferrous metals, compliant with ISO 6508.",
+            "reviews": 16,
+            "rating": 4.7
+          }
+        ],
+        "products": [
+          { "name": "Superficial Rockwell Hardness Tester", "image": "/images/hardness-testers/superficial-rockwell.png" },
+          { "name": "Portable Leeb Hardness Tester", "image": "/images/hardness-testers/portable-leeb.png" },
+          { "name": "Portable Brinell Hardness Tester", "image": "/images/hardness-testers/portable-brinell.png" },
+          { "name": "Rockwell Hardness Tester", "image": "/images/hardness-testers/rockwell.png" },
+          { "name": "Portable Vickers Hardness Tester", "image": "/images/hardness-testers/portable-vickers.png" }
+        ],
+        "items": [
+          {
+            "id": 1,
+            "name": "Hardness Testers",
+            "color": "rgba(70, 110, 150, 0.1)",
+            "bgColor": "rgba(70, 110, 150, 0.1)",
+            "subItems": [
+              { "name": "Superficial Rockwell Hardness Tester", "apiCall": "/api/products/superficial-rockwell" },
+              { "name": "Portable Leeb Hardness Tester", "apiCall": "/api/products/portable-leeb" },
+              { "name": "Portable Brinell Hardness Tester", "apiCall": "/api/products/portable-brinell" },
+              { "name": "Rockwell Hardness Tester", "apiCall": "/api/products/rockwell" },
+              { "name": "Portable Vickers Hardness Tester", "apiCall": "/api/products/portable-vickers" }
+            ]
+          }
+        ],
+        "productCards": [
+          {
+            "id": 1,
+            "name": "Superficial Rockwell Hardness Tester",
+            "tag": "Precision Measurement",
+            "description": "Measures superficial Rockwell hardness (HR15N, HR30T) for ferrous metals, alloy steel, and treated surfaces, with high accuracy for parallel planes, per ASTM E18.",
+            "image": "/images/hardness-testers/superficial-rockwell.png",
+            "detail": "/products/superficial-rockwell",
+            "delay": 0.1
+          },
+          {
+            "id": 2,
+            "name": "Portable Leeb Hardness Tester",
+            "tag": "Field Testing",
+            "description": "Handheld device using rebound method for on-site testing of large metal parts, supporting multiple scales (HL, HB, HV), compliant with ISO 16859.",
+            "image": "/images/hardness-testers/portable-leeb.png",
+            "detail": "/products/portable-leeb",
+            "delay": 0.2
+          },
+          {
+            "id": 3,
+            "name": "Portable Brinell Hardness Tester",
+            "tag": "On-Site Versatility",
+            "description": "Portable tester for Brinell hardness (HB) of soft alloys and castings, with hydraulic or ultrasonic methods, compliant with ISO 6506.",
+            "image": "/images/hardness-testers/portable-brinell.png",
+            "detail": "/products/portable-brinell",
+            "delay": 0.3
+          },
+          {
+            "id": 4,
+            "name": "Rockwell Hardness Tester",
+            "tag": "Broad Material Range",
+            "description": "Tests Rockwell hardness (HRC, HRB) for cast iron, steel, and non-ferrous metals, with digital display and auto-load, per ISO 6508.",
+            "image": "/images/hardness-testers/rockwell.png",
+            "detail": "/products/rockwell",
+            "delay": 0.4
+          },
+          {
+            "id": 5,
+            "name": "Portable Vickers Hardness Tester",
+            "tag": "Micro Hardness",
+            "description": "Portable tester for Vickers hardness (HV) of thin coatings and small parts, with digital imaging and lightweight design, compliant with ISO 6507.",
+            "image": "/images/hardness-testers/portable-vickers.png",
+            "detail": "/products/portable-vickers",
+            "delay": 0.5
+          }
+        ],
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Superficial Rockwell Hardness Tester",
+            "description": "Precision tester for superficial Rockwell scales (HR15N, HR30T), optimized for carburized, nitrided, and plated surfaces, with high repeatability for parallel planes, compliant with ASTM E18.",
+            "image": "/images/hardness-testers/superficial-rockwell.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Portable Leeb Hardness Tester",
+            "description": "Lightweight, handheld tester for on-site hardness measurement of large metal components, supporting multiple scales (HL, HB, HV, HRC) with data logging, per ISO 16859.",
+            "image": "/images/hardness-testers/portable-leeb.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": [
+          { "id": "superficial-rockwell", "name": "Superficial Rockwell Hardness Tester" },
+          { "id": "portable-leeb", "name": "Portable Leeb Hardness Tester" },
+          { "id": "portable-brinell", "name": "Portable Brinell Hardness Tester" },
+          { "id": "rockwell", "name": "Rockwell Hardness Tester" },
+          { "id": "portable-vickers", "name": "Portable Vickers Hardness Tester" }
+        ]
+      },
+      {
+        "name": "Vertical Band Saw",
+        "slug": "vertical-band-saw",
+        "heroImage": "/images/vertical-band-saw/vertical-band-saw.png",
+        "intro": {
+          "title": "Precision Vertical Band Saw Solutions",
+          "description": "The Vertical Band Saw delivers high-precision cutting for metals, plastics, and composites, ideal for metallurgical sample preparation, fabrication, and manufacturing. Compliant with ASTM E8 for tensile sample cutting, it features variable speed control, robust construction, and versatility for complex shapes, serving automotive, aerospace, and steel industries with reliable, high-throughput performance.",
+          "categoryLabel": "Explore our vertical band saw solutions",
+          "buttons": [
+            { "text": "Discover Vertical Band Saw", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Vertical Band Saw",
+          "description": "Designed for precision and durability, the Vertical Band Saw offers variable blade speeds (40-10,000 fpm), a tilting worktable (up to 45°), and heavy-duty steel frames. With blade widths from 1/8” to 1” and digital speed indicators, it ensures clean, accurate cuts for materials like stainless steel, aluminum, and hard plastics in lab and production environments.",
+          "label": "Cutting Features"
+        },
+        "specialtySection": {
+          "title": "Specialty Cutting Solutions",
+          "description": "For intricate contours, large workpieces, or high-volume production, the Vertical Band Saw provides advanced features like hydraulic table feeds, mist coolant systems, and programmable speed settings, ensuring efficiency and precision in demanding applications.",
+          "label": "Advanced Cutting Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Cutting Solutions",
+          "description": "Explore our Solutions section for ASTM E8-compliant cutting protocols, technical guides, and industry-specific applications to optimize your Vertical Band Saw workflows.",
+          "image": "/productsListing/Vertical_Band_Saw_Solutions.png",
+          "label": "Tailored Cutting Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": [
+          {
+            "id": 1,
+            "image": "/images/vertical-band-saw/standard-model.png",
+            "alt": "Standard Vertical Band Saw",
+            "category": "Vertical Band Saw",
+            "title": "Standard Model",
+            "description": "Versatile saw with 20” throat depth, 12” work height, and variable speeds (40-5,000 fpm), ideal for general-purpose cutting of metals and plastics.",
+            "reviews": 25,
+            "rating": 4.9
+          },
+          {
+            "id": 2,
+            "image": "/images/vertical-band-saw/heavy-duty-model.png",
+            "alt": "Heavy-Duty Vertical Band Saw",
+            "category": "Vertical Band Saw",
+            "title": "Heavy-Duty Model",
+            "description": "Robust saw with 26” throat depth, hydraulic table feed, and high-speed blades (up to 10,000 fpm) for cutting tough alloys and large workpieces.",
+            "reviews": 20,
+            "rating": 4.8
+          },
+          {
+            "id": 3,
+            "image": "/images/vertical-band-saw/compact-model.png",
+            "alt": "Compact Vertical Band Saw",
+            "category": "Vertical Band Saw",
+            "title": "Compact Model",
+            "description": "Space-saving saw with 14” throat depth and digital controls, designed for small labs and precision cutting of tensile samples.",
+            "reviews": 18,
+            "rating": 4.7
+          }
+        ],
+        "products": [
+          { "name": "Standard Model", "image": "/images/vertical-band-saw/standard-model.png" },
+          { "name": "Heavy-Duty Model", "image": "/images/vertical-band-saw/heavy-duty-model.png" },
+          { "name": "Compact Model", "image": "/images/vertical-band-saw/compact-model.png" },
+          { "name": "Variable Speed Control", "image": "/images/vertical-band-saw/variable-speed-control.png" },
+          { "name": "Tilting Worktable", "image": "/images/vertical-band-saw/tilting-worktable.png" },
+          { "name": "Mist Coolant System", "image": "/images/vertical-band-saw/mist-coolant-system.png" },
+          { "name": "Digital Speed Indicator", "image": "/images/vertical-band-saw/digital-speed-indicator.png" },
+          { "name": "Blade Tensioning System", "image": "/images/vertical-band-saw/blade-tensioning-system.png" }
+        ],
+        "items": [
+          {
+            "id": 1,
+            "name": "Vertical Band Saw",
+            "color": "rgba(80, 120, 160, 0.1)",
+            "bgColor": "rgba(80, 120, 160, 0.1)",
+            "subItems": [
+              { "name": "Standard Model", "apiCall": "/api/products/standard-model" },
+              { "name": "Heavy-Duty Model", "apiCall": "/api/products/heavy-duty-model" },
+              { "name": "Compact Model", "apiCall": "/api/products/compact-model" },
+              { "name": "Variable Speed Control", "apiCall": "/api/products/variable-speed-control" },
+              { "name": "Tilting Worktable", "apiCall": "/api/products/tilting-worktable" },
+              { "name": "Mist Coolant System", "apiCall": "/api/products/mist-coolant-system" },
+              { "name": "Digital Speed Indicator", "apiCall": "/api/products/digital-speed-indicator" },
+              { "name": "Blade Tensioning System", "apiCall": "/api/products/blade-tensioning-system" }
+            ]
+          }
+        ],
+        "productCards": [
+          {
+            "id": 1,
+            "name": "Standard Model",
+            "tag": "Versatile Cutting",
+            "description": "Features 20” throat depth, 12” work height, and variable speeds (40-5,000 fpm) for precise cutting of metals, plastics, and composites.",
+            "image": "/images/vertical-band-saw/standard-model.png",
+            "detail": "/products/standard-model",
+            "delay": 0.1
+          },
+          {
+            "id": 2,
+            "name": "Heavy-Duty Model",
+            "tag": "High Capacity",
+            "description": "Equipped with 26” throat depth, hydraulic table feed, and high-speed blades (up to 10,000 fpm) for tough alloys and large workpieces.",
+            "image": "/images/vertical-band-saw/heavy-duty-model.png",
+            "detail": "/products/heavy-duty-model",
+            "delay": 0.2
+          },
+          {
+            "id": 3,
+            "name": "Compact Model",
+            "tag": "Space-Saving",
+            "description": "Designed for small labs with 14” throat depth, digital controls, and precision cutting for tensile samples and small components.",
+            "image": "/images/vertical-band-saw/compact-model.png",
+            "detail": "/products/compact-model",
+            "delay": 0.3
+          },
+          {
+            "id": 4,
+            "name": "Variable Speed Control",
+            "tag": "Flexible Performance",
+            "description": "Adjustable blade speeds (40-10,000 fpm) via digital controls, optimizing cutting for soft plastics to hard stainless steel.",
+            "image": "/images/vertical-band-saw/variable-speed-control.png",
+            "detail": "/products/variable-speed-control",
+            "delay": 0.4
+          },
+          {
+            "id": 5,
+            "name": "Tilting Worktable",
+            "tag": "Angled Cutting",
+            "description": "Tilts up to 45° for bevel and contour cuts, enhancing versatility for complex shapes and metallurgical samples.",
+            "image": "/images/vertical-band-saw/tilting-worktable.png",
+            "detail": "/products/tilting-worktable",
+            "delay": 0.5
+          },
+          {
+            "id": 6,
+            "name": "Mist Coolant System",
+            "tag": "Enhanced Cutting",
+            "description": "Reduces heat and extends blade life with mist coolant, ideal for high-speed cutting of tough materials.",
+            "image": "/images/vertical-band-saw/mist-coolant-system.png",
+            "detail": "/products/mist-coolant-system",
+            "delay": 0.6
+          },
+          {
+            "id": 7,
+            "name": "Digital Speed Indicator",
+            "tag": "User-Friendly",
+            "description": "Displays real-time blade speed for precise adjustments, ensuring optimal performance across various materials.",
+            "image": "/images/vertical-band-saw/digital-speed-indicator.png",
+            "detail": "/products/digital-speed-indicator",
+            "delay": 0.7
+          },
+          {
+            "id": 8,
+            "name": "Blade Tensioning System",
+            "tag": "Reliable Operation",
+            "description": "Ensures consistent blade tension with hydraulic or manual controls, minimizing blade wear and improving cut accuracy.",
+            "image": "/images/vertical-band-saw/blade-tensioning-system.png",
+            "detail": "/products/blade-tensioning-system",
+            "delay": 0.8
+          }
+        ],
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Heavy-Duty Model",
+            "description": "Robust Vertical Band Saw with 26” throat depth, hydraulic table feed, and high-speed blades (up to 10,000 fpm), optimized for cutting tough alloys and large workpieces in high-volume production.",
+            "image": "/images/vertical-band-saw/heavy-duty-model.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Compact Model",
+            "description": "Space-saving Vertical Band Saw with 14” throat depth and digital controls, designed for precision cutting of tensile samples and small components in metallurgical labs.",
+            "image": "/images/vertical-band-saw/compact-model.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": [
+          { "id": "standard-model", "name": "Standard Model" },
+          { "id": "heavy-duty-model", "name": "Heavy-Duty Model" },
+          { "id": "compact-model", "name": "Compact Model" },
+          { "id": "variable-speed-control", "name": "Variable Speed Control" },
+          { "id": "tilting-worktable", "name": "Tilting Worktable" },
+          { "id": "mist-coolant-system", "name": "Mist Coolant System" },
+          { "id": "digital-speed-indicator", "name": "Digital Speed Indicator" },
+          { "id": "blade-tensioning-system", "name": "Blade Tensioning System" }
+        ]
+      },
+      {
+        "name": "Transparent Mould Making System - Transmount",
+        "slug": "transparent-mould-making-system-transmount",
+        "heroImage": "/images/transmount/transmount-system.png",
+        "intro": {
+          "title": "Transmount Transparent Mould Making Solutions",
+          "description": "The Transmount Transparent Mould Making System revolutionizes mould creation with high-clarity silicone rubber, enabling precise monitoring of casting processes. Compliant with ASTM D412, it offers a 1:1 mixing ratio, bubble-free casting, and durability for resins, silicones, and low-melting-point metals, ideal for prototyping, jewelry, and industrial design in automotive, aerospace, and artisanal applications.",
+          "categoryLabel": "Explore our transparent mould making solutions",
+          "buttons": [
+            { "text": "Discover Transmount System", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Transmount Transparent Mould Making System",
+          "description": "The Transmount system uses translucent silicone rubber (Shore A 22-50) for moulds with excellent tear resistance and transparency, allowing real-time monitoring of resin flow and part formation. Features include a 1:1 mixing ratio, heat resistance up to 250°C, and compatibility with epoxy, polyurethane, and tin/lead casting, ensuring precision and repeatability for complex geometries.",
+          "label": "Mould Making Features"
+        },
+        "specialtySection": {
+          "title": "Specialty Mould Making Solutions",
+          "description": "Optimized for intricate designs and high-detail replication, Transmount supports custom pigmentation, rapid-curing options, and food-grade applications. Its transparent nature aids in cutting partial seams for block moulds, making it perfect for one-off prototypes and high-volume production in demanding environments.",
+          "label": "Advanced Mould Making Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Mould Making Solutions",
+          "description": "Explore our Solutions section for ASTM D412-compliant protocols, technical guides for silicone mould making, and industry-specific applications to optimize your Transmount workflows.",
+          "image": "/productsListing/Transmount_Solutions.png",
+          "label": "Tailored Mould Making Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": [
+          {
+            "id": 1,
+            "image": "/images/transmount/standard-kit.png",
+            "alt": "Transmount Standard Kit",
+            "category": "Transmount System",
+            "title": "Standard Kit",
+            "description": "1kg translucent silicone kit with 1:1 mixing ratio, ideal for small-scale prototyping and jewelry casting with bubble-free results.",
+            "reviews": 22,
+            "rating": 4.9
+          },
+          {
+            "id": 2,
+            "image": "/images/transmount/high-temp-kit.png",
+            "alt": "Transmount High-Temperature Kit",
+            "category": "Transmount System",
+            "title": "High-Temperature Kit",
+            "description": "2kg kit with heat-resistant silicone (up to 250°C), designed for casting low-melting-point metals like tin and lead.",
+            "reviews": 18,
+            "rating": 4.8
+          },
+          {
+            "id": 3,
+            "image": "/images/transmount/rapid-cure-kit.png",
+            "alt": "Transmount Rapid-Cure Kit",
+            "category": "Transmount System",
+            "title": "Rapid-Cure Kit",
+            "description": "500g fast-curing silicone kit for quick turnaround, perfect for high-detail moulds in time-sensitive projects.",
+            "reviews": 15,
+            "rating": 4.7
+          }
+        ],
+        "products": [
+          { "name": "Standard Kit", "image": "/images/transmount/standard-kit.png" },
+          { "name": "High-Temperature Kit", "image": "/images/transmount/high-temp-kit.png" },
+          { "name": "Rapid-Cure Kit", "image": "/images/transmount/rapid-cure-kit.png" },
+          { "name": "Silicone Pigments", "image": "/images/transmount/silicone-pigments.png" },
+          { "name": "Release Agent", "image": "/images/transmount/release-agent.png" },
+          { "name": "Mixing Tools", "image": "/images/transmount/mixing-tools.png" },
+          { "name": "Vacuum Degassing Chamber", "image": "/images/transmount/vacuum-degassing-chamber.png" },
+          { "name": "Mould Box System", "image": "/images/transmount/mould-box-system.png" }
+        ],
+        "items": [
+          {
+            "id": 1,
+            "name": "Transmount Transparent Mould Making System",
+            "color": "rgba(90, 140, 170, 0.1)",
+            "bgColor": "rgba(90, 140, 170, 0.1)",
+            "subItems": [
+              { "name": "Standard Kit", "apiCall": "/api/products/standard-kit" },
+              { "name": "High-Temperature Kit", "apiCall": "/api/products/high-temp-kit" },
+              { "name": "Rapid-Cure Kit", "apiCall": "/api/products/rapid-cure-kit" },
+              { "name": "Silicone Pigments", "apiCall": "/api/products/silicone-pigments" },
+              { "name": "Release Agent", "apiCall": "/api/products/release-agent" },
+              { "name": "Mixing Tools", "apiCall": "/api/products/mixing-tools" },
+              { "name": "Vacuum Degassing Chamber", "apiCall": "/api/products/vacuum-degassing-chamber" },
+              { "name": "Mould Box System", "apiCall": "/api/products/mould-box-system" }
+            ]
+          }
+        ],
+        "productCards": [
+          {
+            "id": 1,
+            "name": "Standard Kit",
+            "tag": "Versatile Casting",
+            "description": "1kg translucent silicone with 1:1 mixing ratio, perfect for resin and polyurethane casting with minimal bubbles and high detail.",
+            "image": "/images/transmount/standard-kit.png",
+            "detail": "/products/standard-kit",
+            "delay": 0.1
+          },
+          {
+            "id": 2,
+            "name": "High-Temperature Kit",
+            "tag": "Heat Resistant",
+            "description": "2kg silicone kit resistant up to 250°C, ideal for casting low-melting-point metals like tin and lead in industrial applications.",
+            "image": "/images/transmount/high-temp-kit.png",
+            "detail": "/products/high-temp-kit",
+            "delay": 0.2
+          },
+          {
+            "id": 3,
+            "name": "Rapid-Cure Kit",
+            "tag": "Fast Turnaround",
+            "description": "500g fast-curing silicone for quick mould production, ensuring high-detail replication in time-sensitive projects.",
+            "image": "/images/transmount/rapid-cure-kit.png",
+            "detail": "/products/rapid-cure-kit",
+            "delay": 0.3
+          },
+          {
+            "id": 4,
+            "name": "Silicone Pigments",
+            "tag": "Customizable Color",
+            "description": "Specialized pigments for coloring transparent silicone, enabling vibrant, elastic moulds with precise detail reproduction.",
+            "image": "/images/transmount/silicone-pigments.png",
+            "detail": "/products/silicone-pigments",
+            "delay": 0.4
+          },
+          {
+            "id": 5,
+            "name": "Release Agent",
+            "tag": "Easy Demoulding",
+            "description": "Non-stick agent ensures smooth mould release, preserving intricate details and extending mould lifespan.",
+            "image": "/images/transmount/release-agent.png",
+            "detail": "/products/release-agent",
+            "delay": 0.5
+          },
+          {
+            "id": 6,
+            "name": "Mixing Tools",
+            "tag": "Precision Mixing",
+            "description": "Includes cups, stirrers, and spatulas for accurate 1:1 silicone mixing, reducing waste and ensuring uniformity.",
+            "image": "/images/transmount/mixing-tools.png",
+            "detail": "/products/mixing-tools",
+            "delay": 0.6
+          },
+          {
+            "id": 7,
+            "name": "Vacuum Degassing Chamber",
+            "tag": "Bubble-Free Casting",
+            "description": "Removes air bubbles from silicone before pouring, ensuring flawless, transparent moulds with high clarity.",
+            "image": "/images/transmount/vacuum-degassing-chamber.png",
+            "detail": "/products/vacuum-degassing-chamber",
+            "delay": 0.7
+          },
+          {
+            "id": 8,
+            "name": "Mould Box System",
+            "tag": "Stable Moulding",
+            "description": "Reusable mould boxes for secure silicone pouring, accommodating various part sizes and complex geometries.",
+            "image": "/images/transmount/mould-box-system.png",
+            "detail": "/products/mould-box-system",
+            "delay": 0.8
+          }
+        ],
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "High-Temperature Kit",
+            "description": "2kg transparent silicone kit with heat resistance up to 250°C, optimized for casting low-melting-point metals and high-detail industrial prototypes.",
+            "image": "/images/transmount/high-temp-kit.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Rapid-Cure Kit",
+            "description": "500g fast-curing translucent silicone kit, designed for rapid mould production with high tear resistance and clarity for artisanal and prototyping needs.",
+            "image": "/images/transmount/rapid-cure-kit.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": [
+          { "id": "standard-kit", "name": "Standard Kit" },
+          { "id": "high-temp-kit", "name": "High-Temperature Kit" },
+          { "id": "rapid-cure-kit", "name": "Rapid-Cure Kit" },
+          { "id": "silicone-pigments", "name": "Silicone Pigments" },
+          { "id": "release-agent", "name": "Release Agent" },
+          { "id": "mixing-tools", "name": "Mixing Tools" },
+          { "id": "vacuum-degassing-chamber", "name": "Vacuum Degassing Chamber" },
+          { "id": "mould-box-system", "name": "Mould Box System" }
+        ]
+      },
     ]
   }
 ];
