@@ -8,6 +8,7 @@ import { useRouter, useParams } from 'next/navigation';
 
 import { motion } from 'framer-motion';
 import { mainCategories } from '@/app/data/categories';
+import Sidebar from '@/app/components/ProductSidebar';
 
 export default function CategoryPage() {
   const router = useRouter();
@@ -156,75 +157,7 @@ export default function CategoryPage() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="bg-gradient-to-r from-[#0f7db7] to-[#4babe5] p-6">
-              <h2 className="text-white font-bold text-xl tracking-wide">Product Categories</h2>
-            </div>
-            <nav className="p-6">
-              <ul className="space-y-3">
-                {items.map((item, index) => (
-                  <motion.li
-                    key={item.id}
-                    className="group"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05, duration: 0.5 }}
-                  >
-                    <div
-                      className={`w-full text-left p-4 rounded-xl transition-all duration-300 bg-${item.color} text-gray-700 font-medium flex items-center justify-between group-hover:translate-x-1 border border-transparent hover:border-[#0f7db7]/20 hover:text-[#0f7db7] hover:bg-[#0f7db7]/10 cursor-pointer`}
-                      onClick={() => toggleSublist(index)}
-                    >
-                      <div className="flex items-center">
-                        <span
-                          className={`transform transition-transform duration-300 ${openIndex === index ? 'rotate-90' : ''
-                            }`}
-                        >
-                          <IoIosArrowForward className="w-5 h-5" />
-                        </span>
-                        <span className="ml-3">{item.name}</span>
-                      </div>
-                      <span className="text-sm text-gray-400 group-hover:text-[#4babe5]">
-                        {item.subItems.length} items
-                      </span>
-                    </div>
-                    {openIndex === index && (
-                      <motion.ul
-                        className="mt-2 ml-8 space-y-2"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        {item.subItems.map((subItem, subIndex) => {
-                          // Find the corresponding product to get its slug
-                          const product = category.subCategories.find(
-                            (sub) => sub.name === subItem.name
-                          );
-                          const subCategorySlug = product?.id || subItem.name.toLowerCase().replace(/ /g, '-');
-                          return (
-                            <motion.li
-                              key={subIndex}
-                              className="px-4 py-2.5 rounded-lg text-gray-600 hover:text-[#0f7db7] hover:bg-[#0f7db7]/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#0f7db7]/20"
-                              initial={{ opacity: 0, x: -20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: subIndex * 0.05, duration: 0.3 }}
-                            >
-                              <Link
-                                href={`/categories/${categoryId}/${subCategorySlug}`}
-                                className="flex items-center w-full"
-                                onClick={() => setSidebarOpen(false)}
-                              >
-                                <span className="w-1.5 h-1.5 bg-[#4babe5] rounded-full mr-3"></span>
-                                {subItem.name}
-                              </Link>
-                            </motion.li>
-                          );
-                        })}
-                      </motion.ul>
-                    )}
-                  </motion.li>
-                ))}
-              </ul>
-            </nav>
+            <Sidebar />
           </motion.div>
         </motion.div>
 
