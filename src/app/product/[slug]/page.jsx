@@ -94,8 +94,8 @@ export default function SimpliMet4000() {
   return (
     <div className="min-h-screen w-full bg-white">
       <Head>
-        <title>SimpliMet 4000 Compression Mounting Press | Buehler</title>
-        <meta name="description" content="SimpliMet 4000 Compression Hot Mounting Machine by Buehler" />
+        <title>SimpliMet 4000 Compression Mounting Press | Metatech</title>
+        <meta name="description" content="SimpliMet 4000 Compression Hot Mounting Machine by Metatech" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
       </Head>
@@ -606,7 +606,7 @@ export default function SimpliMet4000() {
                     image: "/product/simplimet-brochure.png"
                   },
                   {
-                    title: "Buehler Product Catalog",
+                    title: "Metatech Product Catalog",
                     icon: "fas fa-bookmark",
                     image: "/product/product-catalog.png"
                   }

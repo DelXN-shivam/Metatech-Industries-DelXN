@@ -19,7 +19,7 @@ export default function GrindingPolishingPage() {
     {
       id: 1,
       image: "/productsListing/AutoMet-300.png",
-      alt: "Buehler Grinding Machine",
+      alt: "Metatech Grinding Machine",
       category: "Metallography",
       title: "AutoMet Pro Grinder",
       description: "Precision grinding machine with automatic pressure control for consistent surface preparation across all specimens.",
@@ -29,7 +29,7 @@ export default function GrindingPolishingPage() {
     {
       id: 2,
       image: "/productsListing/AutoMet-300.png",
-      alt: "Buehler Polishing System",
+      alt: "Metatech Polishing System",
       category: "Metallography",
       title: "EcoMet 300 Pro",
       description: "Advanced polishing system with variable speed control and splash guard for optimal specimen finishing.",
@@ -511,7 +511,7 @@ export default function GrindingPolishingPage() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.6, duration: 0.6 }}
                   >
-                    The most important step in the preparation of a good sample is a specialty at Buehler. Choose between our various grinding and polishing equipment for the application right for your laboratory.
+                    The most important step in the preparation of a good sample is a specialty at Metatech. Choose between our various grinding and polishing equipment for the application right for your laboratory.
                   </motion.p>
                   <div className="flex flex-wrap gap-4">
                     <motion.button

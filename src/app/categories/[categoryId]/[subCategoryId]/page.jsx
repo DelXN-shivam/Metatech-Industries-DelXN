@@ -96,7 +96,7 @@ export default function SubCategoryPage({ params: paramsPromise }) {
   return (
     <div className="min-h-screen w-full bg-slate-200">
       <Head>
-        <title>{`${product.name} | Buehler`}</title>
+        <title>{`${product.name} | Metatech`}</title>
         <meta name="description" content={product.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -145,7 +145,6 @@ export default function SubCategoryPage({ params: paramsPromise }) {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-[#0f7db7] px-6 sm:px-8 py-3 sm:py-4 rounded-md font-semibold shadow-lg hover:bg-[#0f7db7]/10 hover:text-white transition duration-300 text-sm sm:text-base inline-flex items-center"
               >
-                <i className="fas fa-play-circle mr-2"></i>
                 Explore Product
               </motion.button>
             </motion.div>

@@ -77,20 +77,6 @@ const products = [
     ]
   },
   {
-    id: 2,
-    categorySlug: "automatic-cutting-machines",
-    name: "Auto S",
-    slug: "auto-s",
-    description: "Semi-automatic cutting system with intelligent feed control for optimal cutting performance and safety.",
-    image: "/images/automatic-cutting-machines/auto-s.png",
-    alt: "Automatic Cutting Machine - Auto S",
-    rating: 4.4,
-    reviews: 35,
-    tag: "Semi-Automatic",
-    detail: "Manual override",
-    apiCall: "/api/automatic-cutting/auto-s",
-  },
-  {
     id: 3,
     categorySlug: "automatic-cutting-machines",
     name: "MetaCut SACT 50/80",
@@ -159,20 +145,6 @@ const products = [
       { title: "MetaCut SACT Brochure", image: "/product/metacut-brochure.png" },
       { title: "Hardened Material Cutting Guide", image: "/product/hardened-cutting-guide.png" }
     ]
-  },
-  {
-    id: 4,
-    categorySlug: "automatic-cutting-machines",
-    name: "Oscillating Abrasive Cut-off",
-    slug: "oscillating-abrasive",
-    description: "Designed for fast and precise cutting of hard materials using oscillating abrasive blades for minimal burring.",
-    image: "/images/automatic-cutting-machines/oscillating-cut-off.png",
-    alt: "Oscillating Abrasive Cut-off Machine",
-    rating: 4.5,
-    reviews: 30,
-    tag: "Hard Material",
-    detail: "Low burring",
-    apiCall: "/api/automatic-cutting/oscillating-abrasive",
   },
   {
     id: 12,
@@ -305,103 +277,6 @@ const products = [
       { title: "Metacut-I Auto Brochure", image: "/product/metacut-i-auto-brochure.png" },
       { title: "Automated Cutting Guide", image: "/product/automated-cutting-guide.png" }
     ]
-  },
-  {
-    id: 6,
-    categorySlug: "automatic-cutting-machines",
-    name: "Tube Cutting Machine",
-    slug: "tube-cutting",
-    description: "Specialized cutting equipment for tubes and cylindrical specimens ensuring clean cuts without deformation.",
-    image: "/images/automatic-cutting-machines/tube-cutting.png",
-    alt: "Tube Cutting Machine",
-    rating: 4.6,
-    reviews: 32,
-    tag: "Specialized",
-    detail: "Tubular parts",
-    apiCall: "/api/automatic-cutting/tube-cutting",
-  },
-  {
-    id: 7,
-    categorySlug: "automatic-cutting-machines",
-    name: "High-Precision Servo Cut",
-    slug: "high-precision-cut",
-    description: "Servo-controlled cutting system offering unmatched accuracy and smooth motion control for critical applications.",
-    image: "/images/automatic-cutting-machines/high-precision-cut.png",
-    alt: "High-Precision Servo Cut Machine",
-    rating: 4.8,
-    reviews: 35,
-    tag: "Servo-Controlled",
-    detail: "Critical tolerance",
-    apiCall: "/api/automatic-cutting/high-precision-cut",
-  },
-  {
-    id: 8,
-    categorySlug: "automatic-cutting-machines",
-    name: "SimpliMet 4000",
-    slug: "simplimet-4000",
-    description: "The SimpliMet 4000 Compression Mounting press is a robust machine designed to encapsulate metallographic samples. It mounts samples from 1 to 1.5in (25 to 40mm) in molds.",
-    image: "/images/automatic-cutting-machines/simplimet-4000.png",
-    alt: "SimpliMet 4000 Compression Mounting Press",
-    rating: 4.8,
-    reviews: 45,
-    tag: "Compression Mounting",
-    detail: "Dual mount capability",
-    apiCall: "/api/automatic-cutting/simplimet-4000",
-    features: [
-      "Reduced cycle time – under 8 minutes",
-      "SmartCool feature actively monitors for safe handling",
-      "Programmable control system for reproducible results",
-      "Robust design with high efficiency heating and cooling",
-      "Water-saving automatic cooling circuit",
-      "Duplex spacer enables the machine to create 2 fully cured mounts in one cycle",
-    ],
-    additionalFeatures: [
-      "Programmable height which saves benchtop space",
-      "Multiple machines can be conveniently lined up side by side, optimizing space usage",
-    ],
-    images: [
-      "/product/Simplimate1.jpg",
-      "/product/Simplimate2.jpg",
-      "/product/Simplimate3.jpg",
-      "/product/Simplimate4.jpg",
-    ],
-    video: "/product/SimpliMet_4000.mp4",
-    specifications: [
-      { param: "Operation", value: "Automatic | Semi-Automatic" },
-      { param: "Mounting Mold Sizes", value: "English: 1in, 1.25in, 1.5in<br/>Metric: 25mm, 30mm, 40mm" },
-      { param: "Pressure", value: "600 - 4500psi (4.1 - 310bar) operational pressure range<br/>Adjustable in 50psi increments" },
-      { param: "Heat Time", value: "User selectable from 1-99 minutes" },
-      { param: "Curing Temperature", value: "150°F - 392°F (65°C - 200°C) selectable temperature range" },
-      { param: "Heating Power", value: "1000 Watts (110VAC) / 1500 Watts (230VAC)" },
-    ],
-    ordering: [
-      { part: "20-1311-500", mold: "1in Mold", voltage: "85-264VAC, 50/60Hz" },
-      { part: "20-1311-502", mold: "30mm Mold", voltage: "85-264VAC, 50/60Hz" },
-      { part: "20-1311-512", mold: "1.25in Mold", voltage: "85-264VAC, 50/60Hz" },
-      { part: "20-1311-514", mold: "40mm Mold", voltage: "85-264VAC, 50/60Hz" },
-    ],
-    consumables: [
-      {
-        title: "Compression Mounting Compound",
-        subtitle: "for SimpliMet 4000",
-        image: "/product/compressionMountingCompound.png",
-      },
-      {
-        title: "Release Agent",
-        subtitle: "for compression mounting",
-        image: "/product/releaseAgent.png",
-      },
-      {
-        title: "Mounting Accessories",
-        subtitle: "Support Clips / Sample Holders",
-        image: "/product/mountingAccessories.png",
-      },
-    ],
-    literature: [
-      { title: "Compression Mounting Guide", image: "/product/mounting-guide.png" },
-      { title: "SimpliMet 4000 Brochure", image: "/product/simplimet-brochure.png" },
-      { title: "Buehler Product Catalog", image: "/product/product-catalog.png" },
-    ],
   },
   // Oscillating Abrasive Cut-off Machine
   {
@@ -977,7 +852,7 @@ const products = [
   // Heavy Duty Belt Grinder
   {
     id: 21,
-    categorySlug: "heavy-duty-belt-grinders",
+    categorySlug: "heavy-duty-belt-grinder",
     name: "Heavy Duty Belt Grinder",
     slug: "heavy-duty-belt-grinder",
     description: "The Heavy Duty Belt Grinder is a robust machine designed for industrial metallographic and material preparation. With a 150x2000mm belt, 3 HP motor, and twin RPM settings (1800/2400), it features V-belt drive, suction facility, guards, starter, and a belt tracking and tensioning system for optimal performance.",
@@ -1336,98 +1211,1615 @@ const products = [
   },
   // Microscope and Image Analyzer
   {
-    id: 9,
-    categorySlug: "microscope-and-image-analyzer",
-    name: "Inverted Microscope",
-    slug: "inverted-microscope",
-    description: "High-resolution inverted microscope for precise imaging of flat, mounted samples in material science.",
-    image: "/images/microscope-and-image-analyzer/inverted-microscope.png",
-    alt: "Inverted Microscope",
+    id: 41,
+    categorySlug: "inverted-microscope",
+    name: "Metagraph - I",
+    slug: "metagraph-i",
+    description: "The Metagraph - I is a professional-grade inverted metallurgical microscope designed for routine microstructural analysis of metals, alloys, and solid materials. Offering up to 1000X magnification with infinity-corrected plan achromatic objectives and a trinocular head, it is ideal for industrial quality control, materials science, and educational applications. Optional 20X eyepieces enable 2000X magnification for specialized tasks.",
+    image: "/images/inverted-microscope/metagraph-i.png",
+    alt: "Metagraph - I Inverted Metallurgical Microscope",
+    rating: 4.7,
+    reviews: 38,
+    tag: "Metallurgical Microscopy",
+    detail: "Routine microstructural analysis up to 1000X",
+    apiCall: "/api/inverted-microscope/metagraph-i",
+    features: [
+      "Magnification up to 1000X with 10X eyepieces (2000X optional with 20X eyepieces)",
+      "Infinity-corrected plan achromatic LWD objectives: 5X, 10X, 20X, 50X, 100X",
+      "Trinocular head with 30° inclination for camera integration",
+      "Reflected illumination with 6V 20W halogen lamp, adjustable brightness",
+      "Coaxial coarse and fine focusing with tension adjustment",
+      "Mechanical stage with 180mm x 155mm travel for large samples",
+      "Compliant with ASTM E45 and ISO 4967 for metallographic analysis"
+    ],
+    additionalFeatures: [
+      "Widefield 10X eyepieces with 20mm field of view",
+      "Anti-fungal coated objectives for durability",
+      "Optional C-mount camera for photomicrography",
+      "Ergonomic drop-down stage controls for user comfort",
+      "Rugged construction for industrial environments"
+    ],
+    images: [
+      "/product/MetagraphI1.jpg",
+      "/product/MetagraphI2.jpg",
+      "/product/MetagraphI3.jpg",
+      "/product/MetagraphI4.jpg"
+    ],
+    video: "/product/Metagraph_I.mp4",
+    specifications: [
+      { param: "Operation", value: "Manual" },
+      { param: "Magnification", value: "50X-1000X (2000X with optional 20X eyepieces)" },
+      { param: "Objectives", value: "LWD Plan Achromatic 5X/0.12, 10X/0.25, 20X/0.40, 50X/0.60, 100X/1.25" },
+      { param: "Eyepieces", value: "WF 10X/20mm (WF 20X/12.5mm optional)" },
+      { param: "Illumination", value: "Reflected, 6V 20W halogen, adjustable" },
+      { param: "Stage", value: "Mechanical, 180mm x 155mm, XY travel" },
+      { param: "Focus", value: "Coaxial coarse/fine, 0.002mm precision" },
+      { param: "Power Supply", value: "230V, 50/60Hz, Single phase" },
+      { param: "Dimensions", value: "600mm x 500mm x 550mm (W x D x H)" },
+      { param: "Weight", value: "15 kg" }
+    ],
+    ordering: [
+      { part: "240-3511-100", config: "Metagraph - I with 10X Eyepieces", voltage: "230V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "LWD Plan Achromatic Objectives",
+        subtitle: "5X, 10X, 20X, 50X, 100X replacements",
+        image: "/product/lwdObjectivesMetagraph.png"
+      },
+      {
+        title: "WF 20X Eyepieces",
+        subtitle: "For optional 2000X magnification",
+        image: "/product/wf20xEyepieces.png"
+      },
+      {
+        title: "Halogen Lamp",
+        subtitle: "6V 20W replacement",
+        image: "/product/halogenLamp6V20W.png"
+      }
+    ],
+    literature: [
+      { title: "Metagraph - I User Manual", image: "/product/metagraph-i-manual.png" },
+      { title: "Metagraph - I Brochure", image: "/product/metagraph-i-brochure.png" },
+      { title: "Metallographic Microscopy Guide", image: "/product/metallographic-microscopy-guide.png" }
+    ]
+  },
+  {
+    id: 42,
+    categorySlug: "inverted-microscope",
+    name: "Metagraph - SPL",
+    slug: "metagraph-spl",
+    description: "The Metagraph - SPL is an advanced inverted metallurgical microscope with enhanced imaging capabilities, offering up to 1000X magnification for detailed microstructural analysis. Equipped with polarized light, DIC options, and a digital imaging port, it supports grain size determination, defect inspection, and material composition analysis. Optional 20X eyepieces enable 2000X magnification for specialized applications in materials science and industrial quality control.",
+    image: "/images/inverted-microscope/metagraph-spl.png",
+    alt: "Metagraph - SPL Advanced Inverted Metallurgical Microscope",
+    rating: 4.9,
+    reviews: 45,
+    tag: "Advanced Metallurgical Microscopy",
+    detail: "Enhanced imaging with polarized light and DIC",
+    apiCall: "/api/inverted-microscope/metagraph-spl",
+    features: [
+      "Magnification up to 1000X with 10X eyepieces (2000X optional with 20X eyepieces)",
+      "Infinity-corrected plan achromatic LWD objectives: 5X, 10X, 20X, 50X, 100X",
+      "Trinocular head with 30° inclination and C-mount for digital imaging",
+      "Reflected illumination with 12V 50W halogen lamp and polarized light",
+      "Differential Interference Contrast (DIC) for enhanced contrast",
+      "Large mechanical stage (200mm x 150mm) with coaxial XY controls",
+      "Compliant with ASTM E45, ISO 4967, and DIN 50602 standards"
+    ],
+    additionalFeatures: [
+      "Widefield 10X eyepieces with 22mm field of view",
+      "Polarizer and analyzer for birefringence analysis",
+      "Metallurgical image analysis software for grain size and phase measurement",
+      "Anti-fungal and anti-reflection coated objectives",
+      "Optional LED illumination upgrade for energy efficiency"
+    ],
+    images: [
+      "/product/MetagraphSPL1.jpg",
+      "/product/MetagraphSPL2.jpg",
+      "/product/MetagraphSPL3.jpg",
+      "/product/MetagraphSPL4.jpg"
+    ],
+    video: "/product/Metagraph_SPL.mp4",
+    specifications: [
+      { param: "Operation", value: "Manual" },
+      { param: "Magnification", value: "50X-1000X (2000X with optional 20X eyepieces)" },
+      { param: "Objectives", value: "LWD Plan Achromatic 5X/0.12, 10X/0.25, 20X/0.40, 50X/0.60, 100X/1.25" },
+      { param: "Eyepieces", value: "WF 10X/22mm (WF 20X/12.5mm optional)" },
+      { param: "Illumination", value: "Reflected, 12V 50W halogen, polarized, DIC" },
+      { param: "Stage", value: "Mechanical, 200mm x 150mm, XY travel" },
+      { param: "Focus", value: "Coaxial coarse/fine, 0.001mm precision" },
+      { param: "Power Supply", value: "230V, 50/60Hz, Single phase" },
+      { param: "Dimensions", value: "650mm x 550mm x 600mm (W x D x H)" },
+      { param: "Weight", value: "18 kg" }
+    ],
+    ordering: [
+      { part: "240-3511-200", config: "Metagraph - SPL with Polarized Light and DIC", voltage: "230V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "LWD Plan Achromatic Objectives",
+        subtitle: "5X, 10X, 20X, 50X, 100X replacements",
+        image: "/product/lwdObjectivesMetagraph.png"
+      },
+      {
+        title: "WF 20X Eyepieces",
+        subtitle: "For optional 2000X magnification",
+        image: "/product/wf20xEyepieces.png"
+      },
+      {
+        title: "Halogen Lamp",
+        subtitle: "12V 50W replacement",
+        image: "/product/halogenLamp12V50W.png"
+      },
+      {
+        title: "DIC Slider",
+        subtitle: "For enhanced contrast imaging",
+        image: "/product/dicSliderMetagraph.png"
+      }
+    ],
+    literature: [
+      { title: "Metagraph - SPL User Manual", image: "/product/metagraph-spl-manual.png" },
+      { title: "Metagraph - SPL Brochure", image: "/product/metagraph-spl-brochure.png" },
+      { title: "Metallographic Microscopy Guide", image: "/product/metallographic-microscopy-guide.png" }
+    ]
+  },
+  {
+    id: 43,
+    categorySlug: "upright-microscope",
+    name: "Metagraph (UP)",
+    slug: "metagraph-up",
+    description: "The Metagraph (UP) is a high-performance upright metallurgical microscope designed for detailed microstructural analysis of metals, alloys, and opaque materials. Offering up to 1000X magnification with infinity-corrected plan achromatic objectives, it features both reflected and transmitted illumination for versatile sample analysis. Equipped with a trinocular head and polarization capabilities, it is ideal for materials science, quality control, and industrial research applications. Optional 20X eyepieces enable 2000X magnification for specialized tasks.",
+    image: "/images/upright-microscope/metagraph-up.png",
+    alt: "Metagraph (UP) Upright Metallurgical Microscope",
+    rating: 4.8,
+    reviews: 40,
+    tag: "Metallurgical Microscopy",
+    detail: "Versatile analysis with reflected and transmitted light",
+    apiCall: "/api/upright-microscope/metagraph-up",
+    features: [
+      "Magnification up to 1000X with 10X eyepieces (2000X optional with 20X eyepieces)",
+      "Infinity-corrected plan achromatic objectives: 5X, 10X, 20X, 50X, 100X",
+      "Trinocular head with 30° inclination for camera integration",
+      "Reflected and transmitted illumination with 6V 30W halogen lamp, adjustable brightness",
+      "Polarizer and analyzer for birefringence and grain boundary analysis",
+      "Coaxial coarse and fine focusing with 0.002mm precision",
+      "Compliant with ASTM E45, ISO 4967, and DIN 50602 for metallographic analysis"
+    ],
+    additionalFeatures: [
+      "Widefield 10X eyepieces with 22mm field of view",
+      "Mechanical stage with 150mm x 140mm travel for precise sample positioning",
+      "Anti-fungal and anti-reflection coated objectives for durability",
+      "Optional DIC (Differential Interference Contrast) for enhanced contrast",
+      "Software for image capture, grain size, and phase analysis"
+    ],
+    images: [
+      "/product/MetagraphUP1.jpg",
+      "/product/MetagraphUP2.jpg",
+      "/product/MetagraphUP3.jpg",
+      "/product/MetagraphUP4.jpg"
+    ],
+    video: "/product/Metagraph_UP.mp4",
+    specifications: [
+      { param: "Operation", value: "Manual" },
+      { param: "Magnification", value: "50X-1000X (2000X with optional 20X eyepieces)" },
+      { param: "Objectives", value: "Plan Achromatic 5X/0.12, 10X/0.25, 20X/0.40, 50X/0.60, 100X/1.25" },
+      { param: "Eyepieces", value: "WF 10X/22mm (WF 20X/12.5mm optional)" },
+      { param: "Illumination", value: "Reflected/Transmitted, 6V 30W halogen, adjustable" },
+      { param: "Stage", value: "Mechanical, 150mm x 140mm, XY travel" },
+      { param: "Focus", value: "Coaxial coarse/fine, 0.002mm precision" },
+      { param: "Power Supply", value: "230V, 50/60Hz, Single phase" },
+      { param: "Dimensions", value: "550mm x 450mm x 500mm (W x D x H)" },
+      { param: "Weight", value: "12 kg" }
+    ],
+    ordering: [
+      { part: "250-3611-100", config: "Metagraph (UP) with Polarization", voltage: "230V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "Plan Achromatic Objectives",
+        subtitle: "5X, 10X, 20X, 50X, 100X replacements",
+        image: "/product/planObjectivesMetagraph.png"
+      },
+      {
+        title: "WF 20X Eyepieces",
+        subtitle: "For optional 2000X magnification",
+        image: "/product/wf20xEyepieces.png"
+      },
+      {
+        title: "Halogen Lamp",
+        subtitle: "6V 30W replacement",
+        image: "/product/halogenLamp6V30W.png"
+      },
+      {
+        title: "Polarization Filter Set",
+        subtitle: "Replacement polarizer and analyzer",
+        image: "/product/polarizationFilterSet.png"
+      }
+    ],
+    literature: [
+      { title: "Metagraph (UP) User Manual", image: "/product/metagraph-up-manual.png" },
+      { title: "Metagraph (UP) Brochure", image: "/product/metagraph-up-brochure.png" },
+      { title: "Metallographic Microscopy Guide", image: "/product/metallographic-microscopy-guide.png" }
+    ]
+  },
+  {
+    "id": 71,
+    "categorySlug": "stereo-microscope",
+    "name": "Stereo Microscope",
+    "slug": "stereo-microscope",
+    "description": "The Stereo Microscope is a versatile, zoom-style optical microscope designed for low-magnification, three-dimensional observation of solid specimens. With a 0.7x–4.5x zoom range and ergonomic features, it supports metallographic inspection, biological dissection, and industrial quality control, delivering high-resolution images with excellent depth of field.",
+    "image": "/images/stereo-microscope/stereo-microscope.png",
+    "alt": "Stereo Microscope for 3D Observation",
+    "rating": 4.8,
+    "reviews": 55,
+    "tag": "Microscopy",
+    "detail": "Zoom stereo microscope for metallography and inspection",
+    "apiCall": "/api/stereo-microscope/stereo-microscope",
+    "features": [
+      "0.7x–4.5x zoom objective with 7x–45x magnification (10x eyepieces), expandable to 180x with auxiliary lenses",
+      "Greenough optical system for true stereoscopic imaging with high depth of field",
+      "LED illumination (incident and transmitted) with adjustable intensity and contrast",
+      "Ergonomic 45-degree binocular head, adjustable for multiple users",
+      "Trinocular port for digital camera integration, supporting live video and image capture",
+      "Large working distance (100 mm standard, up to 165 mm with 0.5x Barlow lens)",
+      "Compliant with ASTM E112 and ISO 643 for metallographic analysis"
+    ],
+    "additionalFeatures": [
+      "Modular design with interchangeable eyepieces (10x, 15x, 20x) and auxiliary lenses (0.5x, 2x)",
+      "Antistatic coatings and high color fidelity for accurate sample observation",
+      "Flexible stand options (boom, pole, or universal LED base) for diverse applications",
+      "Integrated Enersight OSD software for on-screen measurements and image sharing",
+      "Rugged, all-metal body for durability in industrial environments"
+    ],
+    "images": [
+      "/product/StereoMicroscope1.jpg",
+      "/product/StereoMicroscope2.jpg",
+      "/product/StereoMicroscope3.jpg",
+      "/product/StereoMicroscope4.jpg"
+    ],
+    "video": "/product/Stereo_Microscope.mp4",
+    "specifications": [
+      { "param": "Magnification Range", "value": "7x–45x (standard), 3.5x–180x (with auxiliaries)" },
+      { "param": "Zoom Ratio", "value": "6.4:1" },
+      { "param": "Working Distance", "value": "100 mm (standard), 165 mm (with 0.5x Barlow)" },
+      { "param": "Field of View", "value": "33 mm–5.1 mm" },
+      { "param": "Illumination", "value": "LED (Incident/Transmitted), Adjustable" },
+      { "param": "Camera Compatibility", "value": "Trinocular port, C-mount adapter" },
+      { "param": "Standards", "value": "ASTM E112, ISO 643" },
+      { "param": "Weight", "value": "5.5 kg" },
+      { "param": "Dimensions", "value": "300mm x 240mm x 400mm (L x W x H)" }
+    ],
+    "ordering": [
+      { "part": "290-3811-500", "config": "Stereo Microscope, Trinocular Zoom, LED Base", "voltage": "110-240V AC" }
+    ],
+    "consumables": [
+      {
+        "title": "Auxiliary Barlow Lens",
+        "subtitle": "0.5x and 2x for extended magnification",
+        "image": "/product/barlowLens.png"
+      },
+      {
+        "title": "LED Replacement Bulb",
+        "subtitle": "For incident/transmitted illumination",
+        "image": "/product/ledBulb.png"
+      },
+      {
+        "title": "Eyepieces",
+        "subtitle": "10x, 15x, 20x, wide-field",
+        "image": "/product/eyepieces.png"
+      }
+    ],
+    "literature": [
+      { "title": "Stereo Microscope User Manual", "image": "/product/stereo-microscope-manual.png" },
+      { "title": "Microscopy Solutions Brochure", "image": "/product/microscopy-brochure.png" },
+      { "title": "Metallographic Analysis Guide", "image": "/product/metallographic-analysis-guide.png" }
+    ]
+  },
+  {
+    id: 44,
+    categorySlug: "particle-size-analysis-systems",
+    name: "CLEAN-EST (Stereo)",
+    slug: "clean-est-stereo",
+    description: "The CLEAN-EST (Stereo) is an automated particle size analysis system designed for cleanliness testing of automotive and industrial components. Fully compliant with ISO 16232 and VDA 19.1, it features complete filter paper scanning to classify non-metallic, metallic, and fiber particles larger than 10 microns. With a motorized stage and particle height measurement, it offers easy operation and rapid report generation tailored to user requirements, ideal for quality control in manufacturing environments.",
+    image: "/images/particle-size-analysis/clean-est-stereo.png",
+    alt: "CLEAN-EST (Stereo) Particle Size Analysis System",
     rating: 4.8,
     reviews: 42,
-    tag: "Metallography",
-    detail: "High magnification",
-    apiCall: "/api/microscope/inverted",
+    tag: "Cleanliness Analysis",
+    detail: "Automated particle analysis for particles >10 microns",
+    apiCall: "/api/particle-size-analysis/clean-est-stereo",
+    features: [
+      "Fully compliant with ISO 16232:2018 and VDA 19.1-2015 for cleanliness testing",
+      "Automatic filter paper scanning with high-resolution stereo microscopy",
+      "Classifies non-metallic, metallic, and fiber particles per VDA 19.1 definitions",
+      "Minimum particle size detection of 10 microns with 2 microns/pixel resolution",
+      "Motorized stage for precise filter positioning and full membrane coverage",
+      "Particle height measurement using Z-axis focus stacking",
+      "User-friendly interface with one-click operation and customizable report generation"
+    ],
+    additionalFeatures: [
+      "Polarized light for distinguishing metallic and non-metallic particles in a single scan",
+      "High-brightness LED illumination with 20,000-hour lifespan",
+      "Intelligent software with machine learning for particle classification",
+      "Supports multiple standards: ISO 4406, ISO 4407, and user-defined protocols",
+      "Automatic focus compensation for clear imaging across the filter"
+    ],
+    images: [
+      "/product/CleanEstStereo1.jpg",
+      "/product/CleanEstStereo2.jpg",
+      "/product/CleanEstStereo3.jpg",
+      "/product/CleanEstStereo4.jpg"
+    ],
+    video: "/product/CleanEst_Stereo.mp4",
+    specifications: [
+      { param: "Operation", value: "Automatic" },
+      { param: "Particle Size Range", value: ">10 microns" },
+      { param: "Measurement Resolution", value: "2 microns/pixel" },
+      { param: "Camera", value: "5MP CMOS, 2.2 x 2.2 μm pixel size" },
+      { param: "Magnification", value: "7.5X to 45X (adjustable zoom)" },
+      { param: "Stage", value: "Motorized XY, 100mm x 100mm travel" },
+      { param: "Illumination", value: "LED, polarized, adjustable" },
+      { param: "Filter Size", value: "47mm diameter (standard)" },
+      { param: "Power Supply", value: "230V, 50/60Hz, Single phase" },
+      { param: "Dimensions", value: "700mm x 600mm x 650mm (W x D x H)" },
+      { param: "Weight", value: "50 kg" }
+    ],
+    ordering: [
+      { part: "260-3711-100", config: "CLEAN-EST (Stereo) with Motorized Stage", voltage: "230V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "47mm Filter Membranes",
+        subtitle: "5 micron polyester, ISO 16232 compliant",
+        image: "/product/filterMembranes47mm.png"
+      },
+      {
+        title: "Calibration Standard",
+        subtitle: "For particle size verification",
+        image: "/product/calibrationStandard.png"
+      },
+      {
+        title: "Polarization Filter",
+        subtitle: "Replacement for metallic particle detection",
+        image: "/product/polarizationFilter.png"
+      }
+    ],
+    literature: [
+      { title: "CLEAN-EST (Stereo) User Manual", image: "/product/clean-est-stereo-manual.png" },
+      { title: "CLEAN-EST (Stereo) Brochure", image: "/product/clean-est-stereo-brochure.png" },
+      { title: "Cleanliness Testing Guide", image: "/product/cleanliness-testing-guide.png" }
+    ]
   },
   {
-    id: 10,
-    categorySlug: "microscope-and-image-analyzer",
-    name: "Upright Microscope",
-    slug: "upright-microscope",
-    description: "Upright microscope for high-magnification imaging of non-flat or mounted samples in various applications.",
-    image: "/images/microscope-and-image-analyzer/upright-microscope.png",
-    alt: "Upright Microscope",
+    id: 45,
+    categorySlug: "particle-size-analysis-systems",
+    name: "CLEAN-EST (Metallurgical)",
+    slug: "clean-est-metallurgical",
+    description: "The CLEAN-EST (Metallurgical) is a high-precision particle size analysis system for advanced cleanliness testing in automotive, aerospace, and metallurgical industries. Fully compliant with ISO 16232 and VDA 19.1, it provides automated filter paper scanning to classify non-metallic, metallic, and fiber particles larger than 3 microns. Featuring a motorized stage, particle height measurement, and metallurgical microscopy, it ensures ease of use and rapid, customizable report generation for stringent quality control requirements.",
+    image: "/images/particle-size-analysis/clean-est-metallurgical.png",
+    alt: "CLEAN-EST (Metallurgical) Particle Size Analysis System",
+    rating: 4.9,
+    reviews: 48,
+    tag: "Advanced Cleanliness Analysis",
+    detail: "High-precision particle analysis for particles >3 microns",
+    apiCall: "/api/particle-size-analysis/clean-est-metallurgical",
+    features: [
+      "Fully compliant with ISO 16232:2018 and VDA 19.1-2015 for cleanliness testing",
+      "Automatic filter paper scanning with high-resolution metallurgical microscopy",
+      "Classifies non-metallic, metallic, and fiber particles per VDA 19.1 definitions",
+      "Minimum particle size detection of 3 microns with 0.3 microns/pixel resolution",
+      "Motorized stage for precise filter positioning and full membrane coverage",
+      "Particle height measurement using advanced Z-axis focus stacking",
+      "Intuitive interface with automated workflows and user-defined report generation"
+    ],
+    additionalFeatures: [
+      "Polarized light and brightfield illumination for enhanced particle classification",
+      "High-brightness LED illumination with 20,000-hour lifespan",
+      "Machine learning-based software for accurate particle type identification",
+      "Supports ISO 4406, ISO 4407, and custom standards for versatile applications",
+      "Seamless image stitching for comprehensive filter analysis"
+    ],
+    images: [
+      "/product/CleanEstMetallurgical1.jpg",
+      "/product/CleanEstMetallurgical2.jpg",
+      "/product/CleanEstMetallurgical3.jpg",
+      "/product/CleanEstMetallurgical4.jpg"
+    ],
+    video: "/product/CleanEst_Metallurgical.mp4",
+    specifications: [
+      { param: "Operation", value: "Automatic" },
+      { param: "Particle Size Range", value: ">3 microns" },
+      { param: "Measurement Resolution", value: "0.3 microns/pixel" },
+      { param: "Camera", value: "10MP CMOS, 1.67 x 1.67 μm pixel size" },
+      { param: "Magnification", value: "50X to 200X (fixed objectives)" },
+      { param: "Stage", value: "Motorized XY, 150mm x 150mm travel" },
+      { param: "Illumination", value: "LED, polarized/brightfield, adjustable" },
+      { param: "Filter Size", value: "47mm diameter (standard)" },
+      { param: "Power Supply", value: "230V, 50/60Hz, Single phase" },
+      { param: "Dimensions", value: "800mm x 700mm x 700mm (W x D x H)" },
+      { param: "Weight", value: "60 kg" }
+    ],
+    ordering: [
+      { part: "260-3711-200", config: "CLEAN-EST (Metallurgical) with Motorized Stage", voltage: "230V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "47mm Filter Membranes",
+        subtitle: "1 micron polyester, ISO 16232 compliant",
+        image: "/product/filterMembranes47mm.png"
+      },
+      {
+        title: "Calibration Standard",
+        subtitle: "For particle size verification",
+        image: "/product/calibrationStandard.png"
+      },
+      {
+        title: "Polarization Filter",
+        subtitle: "Replacement for metallic particle detection",
+        image: "/product/polarizationFilter.png"
+      }
+    ],
+    literature: [
+      { title: "CLEAN-EST (Metallurgical) User Manual", image: "/product/clean-est-metallurgical-manual.png" },
+      { title: "CLEAN-EST (Metallurgical) Brochure", image: "/product/clean-est-metallurgical-brochure.png" },
+      { title: "Cleanliness Testing Guide", image: "/product/cleanliness-testing-guide.png" }
+    ]
+  },
+
+  // Millipore Fluid Contamination Analysis Kit
+  {
+    id: 46,
+    categorySlug: "millipore-fluid-contamination-analysis-kit",
+    name: "Vacuum / Pressure Pump",
+    slug: "vacuum-pressure-pump",
+    description: "The Vacuum / Pressure Pump is a compact, dual-function unit designed for Millipore fluid contamination analysis kits. It provides reliable vacuum for filtration and pressure for solvent dispensing, ensuring efficient sample preparation for particulate and biological contamination testing. Equipped with a permanently lubricated motor and thermal overload protection, it is ideal for laboratory and field use in automotive and industrial quality control.",
+    image: "/images/fluid-contamination/vacuum-pressure-pump.png",
+    alt: "Vacuum / Pressure Pump for Fluid Contamination Analysis",
+    rating: 4.7,
+    reviews: 35,
+    tag: "Fluid Contamination Analysis",
+    detail: "Dual-function pump for filtration and dispensing",
+    apiCall: "/api/fluid-contamination/vacuum-pressure-pump",
+    features: [
+      "Dual vacuum and pressure operation for filtration and solvent dispensing",
+      "Maximum vacuum of 25 inHg and pressure of 35 psig",
+      "Permanently lubricated motor with thermal overload protection and auto-reset",
+      "Air flow rate of 25 L/min at open flow",
+      "Compatible with Millipore filtration systems and 47mm filter holders",
+      "Portable design for bench and field applications",
+      "Compliant with ASTM D2276 and ISO 4406 standards"
+    ],
+    additionalFeatures: [
+      "Low-noise operation for laboratory environments",
+      "Vacuum trap compatibility to prevent liquid ingress",
+      "Corrosion-resistant components for solvent handling",
+      "Optional voltage configurations (115V or 230V)",
+      "Includes silicone tubing for connection to filter holders"
+    ],
+    images: [
+      "/product/VacuumPressurePump1.jpg",
+      "/product/VacuumPressurePump2.jpg",
+      "/product/VacuumPressurePump3.jpg",
+      "/product/VacuumPressurePump4.jpg"
+    ],
+    video: "/product/Vacuum_Pressure_Pump.mp4",
+    specifications: [
+      { param: "Operation", value: "Dual Vacuum/Pressure" },
+      { param: "Max Vacuum", value: "25 inHg" },
+      { param: "Max Pressure", value: "35 psig" },
+      { param: "Air Flow Rate", value: "25 L/min" },
+      { param: "Motor Power", value: "1/16 HP" },
+      { param: "Power Supply", value: "230V, 50/60Hz, Single phase" },
+      { param: "Dimensions", value: "300mm x 200mm x 250mm (W x D x H)" },
+      { param: "Weight", value: "5 kg" }
+    ],
+    ordering: [
+      { part: "270-3811-100", config: "Vacuum / Pressure Pump, 230V", voltage: "230V, 50/60Hz" }
+    ],
+    consumables: [
+      {
+        title: "Silicone Tubing",
+        subtitle: "For pump to filter holder connection",
+        image: "/product/siliconeTubing.png"
+      },
+      {
+        title: "Vacuum Trap Kit",
+        subtitle: "Prevents liquid ingress into pump",
+        image: "/product/vacuumTrapKit.png"
+      }
+    ],
+    literature: [
+      { title: "Vacuum / Pressure Pump User Manual", image: "/product/vacuum-pressure-pump-manual.png" },
+      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
+      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+    ]
+  },
+  {
+    id: 47,
+    categorySlug: "millipore-fluid-contamination-analysis-kit",
+    name: "Dispensing Pressure Vessel",
+    slug: "dispensing-pressure-vessel",
+    description: "The Dispensing Pressure Vessel is a robust, stainless-steel container for holding and dispensing liquids during Millipore fluid contamination analysis. Designed for filtration through pressure-operated filter holders, it ensures ultra-clean solvent delivery for sample preparation. ASME-UM code compliant, it is autoclavable and suitable for automotive, aerospace, and industrial applications.",
+    image: "/images/fluid-contamination/dispensing-pressure-vessel.png",
+    alt: "Dispensing Pressure Vessel for Fluid Contamination Analysis",
+    rating: 4.8,
+    reviews: 38,
+    tag: "Fluid Contamination Analysis",
+    detail: "Stainless-steel vessel for pressure filtration",
+    apiCall: "/api/fluid-contamination/dispensing-pressure-vessel",
+    features: [
+      "316 stainless-steel construction with fluoroelastomer gaskets and O-rings",
+      "Available in 5L, 10L, and 20L capacities",
+      "Cam-lock handle for secure closure",
+      "0.25-inch NPTF fittings for inlet, outlet, pressure gauge, and vent/relief valve",
+      "Meets ASME-UM code requirements for safety",
+      "Autoclavable when vented for sterilization",
+      "Compatible with Millipore pressure-operated filter holders"
+    ],
+    additionalFeatures: [
+      "Molded neoprene rubber base for stability",
+      "Optional relief valve and pressure gauge for enhanced safety",
+      "Vacuum adapter for dual-mode operation",
+      "Corrosion-resistant for use with aggressive solvents",
+      "Easy disassembly for cleaning and maintenance"
+    ],
+    images: [
+      "/product/DispensingPressureVessel1.jpg",
+      "/product/DispensingPressureVessel2.jpg",
+      "/product/DispensingPressureVessel3.jpg",
+      "/product/DispensingPressureVessel4.jpg"
+    ],
+    video: "/product/Dispensing_Pressure_Vessel.mp4",
+    specifications: [
+      { param: "Operation", value: "Pressure Filtration" },
+      { param: "Material", value: "316 Stainless Steel" },
+      { param: "Capacity", value: "5L, 10L, 20L" },
+      { param: "Fittings", value: "0.25-inch NPTF" },
+      { param: "Max Pressure", value: "100 psig" },
+      { param: "Dimensions (10L)", value: "250mm diameter x 400mm height" },
+      { param: "Weight (10L)", value: "10 kg" }
+    ],
+    ordering: [
+      { part: "270-3811-200", config: "Dispensing Pressure Vessel, 10L", voltage: "None" }
+    ],
+    consumables: [
+      {
+        title: "Fluoroelastomer Gaskets",
+        subtitle: "Replacement for vessel sealing",
+        image: "/product/fluoroelastomerGaskets.png"
+      },
+      {
+        title: "Pressure Relief Valve",
+        subtitle: "For safety compliance",
+        image: "/product/pressureReliefValve.png"
+      }
+    ],
+    literature: [
+      { title: "Dispensing Pressure Vessel User Manual", image: "/product/dispensing-pressure-vessel-manual.png" },
+      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
+      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+    ]
+  },
+  {
+    id: 48,
+    categorySlug: "millipore-fluid-contamination-analysis-kit",
+    name: "Filter Paper",
+    slug: "filter-paper",
+    description: "Millipore Filter Paper consists of mixed cellulose ester (MCE) membranes designed for fluid contamination analysis. With pore sizes ranging from 0.45 to 5.0 microns, these hydrophilic filters capture particulate and biological contaminants during vacuum filtration. Compatible with 47mm filter holders, they ensure reliable analysis of hydraulic fluids, fuels, and water in automotive and industrial applications.",
+    image: "/images/fluid-contamination/filter-paper.png",
+    alt: "Filter Paper for Fluid Contamination Analysis",
+    rating: 4.6,
+    reviews: 40,
+    tag: "Fluid Contamination Analysis",
+    detail: "Mixed cellulose ester membranes for filtration",
+    apiCall: "/api/fluid-contamination/filter-paper",
+    features: [
+      "Mixed cellulose ester (MCE) membranes for high particle retention",
+      "Pore sizes: 0.45, 0.8, 1.2, 5.0 microns",
+      "47mm diameter for compatibility with Millipore filter holders",
+      "Hydrophilic for easy wetting with aqueous solutions",
+      "High flow rates for efficient filtration",
+      "Compliant with ASTM D2276, ISO 4406, and ISO 16232 standards",
+      "Sterilizable by autoclaving for biological testing"
+    ],
+    additionalFeatures: [
+      "Low extractables to minimize sample contamination",
+      "White, plain surface for easy particle visualization",
+      "Packaged in sterile conditions to prevent contamination",
+      "Compatible with organic solvents when pre-wetted",
+      "Available in packs of 100 for high-throughput testing"
+    ],
+    images: [
+      "/product/FilterPaper1.jpg",
+      "/product/FilterPaper2.jpg",
+      "/product/FilterPaper3.jpg",
+      "/product/FilterPaper4.jpg"
+    ],
+    video: "/product/Filter_Paper.mp4",
+    specifications: [
+      { param: "Material", value: "Mixed Cellulose Ester (MCE)" },
+      { param: "Pore Sizes", value: "0.45, 0.8, 1.2, 5.0 microns" },
+      { param: "Diameter", value: "47mm" },
+      { param: "Filtration Area", value: "9.6 cm²" },
+      { param: "Flow Rate (0.8 μm)", value: "60 mL/min/cm² at 10 psi" },
+      { param: "Thickness", value: "150 μm" },
+      { param: "Pack Size", value: "100 filters" }
+    ],
+    ordering: [
+      { part: "270-3811-300", config: "Filter Paper, 0.8 micron, 47mm, 100/pk", voltage: "None" }
+    ],
+    consumables: [
+      {
+        title: "MCE Filter Membranes",
+        subtitle: "0.45, 0.8, 1.2, 5.0 microns, 47mm",
+        image: "/product/mceFilterMembranes.png"
+      },
+      {
+        title: "Filter Storage Box",
+        subtitle: "For 47mm filter membranes",
+        image: "/product/filterStorageBox.png"
+      }
+    ],
+    literature: [
+      { title: "Filter Paper User Guide", image: "/product/filter-paper-guide.png" },
+      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
+      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+    ]
+  },
+  {
+    id: 49,
+    categorySlug: "millipore-fluid-contamination-analysis-kit",
+    name: "Filter Flask",
+    slug: "filter-flask",
+    description: "The Filter Flask is a borosilicate glass vessel designed for vacuum filtration in Millipore fluid contamination analysis kits. With a 1000mL capacity and silicone stopper, it supports 47mm filter holders for particulate and biological contamination testing. Its robust construction ensures reliable collection of filtrates during analysis of hydraulic fluids, fuels, and water.",
+    image: "/images/fluid-contamination/filter-flask.png",
+    alt: "Filter Flask for Fluid Contamination Analysis",
+    rating: 4.7,
+    reviews: 36,
+    tag: "Fluid Contamination Analysis",
+    detail: "Borosilicate glass flask for vacuum filtration",
+    apiCall: "/api/fluid-contamination/filter-flask",
+    features: [
+      "1000mL capacity borosilicate 3.3 glass for thermal resistance",
+      "Supports 47mm filter holders with silicone stopper",
+      "Fritted glass filter base for secure membrane placement",
+      "Designed for vacuum filtration of liquids",
+      "Compatible with Millipore vacuum pumps and tubing",
+      "Compliant with ASTM D2276 and ISO 4406 standards",
+      "Autoclavable for sterilization"
+    ],
+    additionalFeatures: [
+      "Graduated markings for volume measurement",
+      "Chemically resistant to solvents and acids",
+      "Neoprene bulb for manual vacuum initiation",
+      "Ground glass joint for secure stopper fit",
+      "Dishwasher-safe for easy cleaning"
+    ],
+    images: [
+      "/product/FilterFlask1.jpg",
+      "/product/FilterFlask2.jpg",
+      "/product/FilterFlask3.jpg",
+      "/product/FilterFlask4.jpg"
+    ],
+    video: "/product/Filter_Flask.mp4",
+    specifications: [
+      { param: "Material", value: "Borosilicate 3.3 Glass" },
+      { param: "Capacity", value: "1000 mL" },
+      { param: "Filter Diameter", value: "47mm" },
+      { param: "Filtration Area", value: "9.6 cm²" },
+      { param: "Stopper", value: "Silicone" },
+      { param: "Dimensions", value: "120mm diameter x 250mm height" },
+      { param: "Weight", value: "0.5 kg" }
+    ],
+    ordering: [
+      { part: "270-3811-400", config: "Filter Flask, 1000mL", voltage: "None" }
+    ],
+    consumables: [
+      {
+        title: "Silicone Stopper",
+        subtitle: "Replacement for filter flask",
+        image: "/product/siliconeStopper.png"
+      },
+      {
+        title: "Neoprene Bulb",
+        subtitle: "For manual vacuum initiation",
+        image: "/product/neopreneBulb.png"
+      }
+    ],
+    literature: [
+      { title: "Filter Flask User Guide", image: "/product/filter-flask-guide.png" },
+      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
+      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+    ]
+  },
+  {
+    id: 50,
+    categorySlug: "millipore-fluid-contamination-analysis-kit",
+    name: "Filter Jet Solvent Dispenser",
+    slug: "filter-jet-solvent-dispenser",
+    description: "The Filter Jet Solvent Dispenser is a hand-pressure operated device for delivering ultra-clean solvent jets in Millipore fluid contamination analysis. Equipped with a 25mm stainless-steel filter holder, it directs filtered solvent or rinse solution onto surfaces for cleaning, ensuring precise sample preparation for contamination testing in automotive and industrial applications.",
+    image: "/images/fluid-contamination/filter-jet-solvent-dispenser.png",
+    alt: "Filter Jet Solvent Dispenser for Fluid Contamination Analysis",
+    rating: 4.6,
+    reviews: 33,
+    tag: "Fluid Contamination Analysis",
+    detail: "Hand-operated solvent jet dispenser",
+    apiCall: "/api/fluid-contamination/filter-jet-solvent-dispenser",
+    features: [
+      "Hand-pressure operated for precise solvent jet delivery",
+      "25mm stainless-steel filter holder with support screen",
+      "Delivers ultra-clean solvent or rinse solution for surface cleaning",
+      "Compatible with 25mm Millipore membrane filters",
+      "Teflon gasket for chemical compatibility",
+      "Designed for contamination analysis sample preparation",
+      "Compliant with ASTM D2276 and ISO 4406 standards"
+    ],
+    additionalFeatures: [
+      "Delivery tube for targeted solvent application",
+      "Lightweight and ergonomic for field use",
+      "Easy disassembly for filter replacement",
+      "Corrosion-resistant stainless-steel construction",
+      "Supports low surface tension solvents"
+    ],
+    images: [
+      "/product/FilterJetSolventDispenser1.jpg",
+      "/product/FilterJetSolventDispenser2.jpg",
+      "/product/FilterJetSolventDispenser3.jpg",
+      "/product/FilterJetSolventDispenser4.jpg"
+    ],
+    video: "/product/Filter_Jet_Solvent_Dispenser.mp4",
+    specifications: [
+      { param: "Operation", value: "Manual, Hand-Pressure" },
+      { param: "Filter Diameter", value: "25mm" },
+      { param: "Material", value: "Stainless Steel, Teflon Gasket" },
+      { param: "Capacity", value: "50 mL" },
+      { param: "Dimensions", value: "50mm diameter x 150mm length" },
+      { param: "Weight", value: "0.3 kg" }
+    ],
+    ordering: [
+      { part: "270-3811-500", config: "Filter Jet Solvent Dispenser, 25mm", voltage: "None" }
+    ],
+    consumables: [
+      {
+        title: "25mm MCE Membranes",
+        subtitle: "0.8 micron, for solvent filtration",
+        image: "/product/mceMembranes25mm.png"
+      },
+      {
+        title: "Teflon Gasket",
+        subtitle: "Replacement for filter holder",
+        image: "/product/teflonGasket.png"
+      }
+    ],
+    literature: [
+      { title: "Filter Jet Solvent Dispenser User Guide", image: "/product/filter-jet-solvent-dispenser-guide.png" },
+      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
+      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+    ]
+  },
+  {
+    id: 51,
+    categorySlug: "millipore-fluid-contamination-analysis-kit",
+    name: "Solvent Filtering Dispenser",
+    slug: "solvent-filtering-dispenser",
+    description: "The Solvent Filtering Dispenser is a squeeze-bottle action device for ultra-clean solvent dispensing in Millipore fluid contamination analysis. Featuring a 25mm stainless-steel filter holder with a neoprene bulb, it filters and dispenses small volumes of solvent for sample preparation, ensuring contamination-free analysis of hydraulic fluids and fuels.",
+    image: "/images/fluid-contamination/solvent-filtering-dispenser.png",
+    alt: "Solvent Filtering Dispenser for Fluid Contamination Analysis",
+    rating: 4.5,
+    reviews: 32,
+    tag: "Fluid Contamination Analysis",
+    detail: "Squeeze-bottle solvent dispenser",
+    apiCall: "/api/fluid-contamination/solvent-filtering-dispenser",
+    features: [
+      "Squeeze-bottle action for controlled solvent dispensing",
+      "25mm stainless-steel filter holder with support screen",
+      "Neoprene bulb for manual operation",
+      "Filters and dispenses ultra-clean solvent for sample preparation",
+      "Compatible with 25mm Millipore membrane filters",
+      "Teflon gasket for chemical resistance",
+      "Compliant with ASTM D2276 and ISO 4406 standards"
+    ],
+    additionalFeatures: [
+      "Compact design for benchtop and field use",
+      "Easy filter replacement with screw-on holder",
+      "Supports aqueous and organic solvents",
+      "Transparent body for solvent level monitoring",
+      "Autoclavable components for sterilization"
+    ],
+    images: [
+      "/product/SolventFilteringDispenser1.jpg",
+      "/product/SolventFilteringDispenser2.jpg",
+      "/product/SolventFilteringDispenser3.jpg",
+      "/product/SolventFilteringDispenser4.jpg"
+    ],
+    video: "/product/Solvent_Filtering_Dispenser.mp4",
+    specifications: [
+      { param: "Operation", value: "Manual, Squeeze-Bottle" },
+      { param: "Filter Diameter", value: "25mm" },
+      { param: "Material", value: "Stainless Steel, Neoprene, Plastic" },
+      { param: "Capacity", value: "100 mL" },
+      { param: "Dimensions", value: "60mm diameter x 200mm height" },
+      { param: "Weight", value: "0.4 kg" }
+    ],
+    ordering: [
+      { part: "270-3811-600", config: "Solvent Filtering Dispenser, 25mm", voltage: "None" }
+    ],
+    consumables: [
+      {
+        title: "25mm MCE Membranes",
+        subtitle: "0.8 micron, for solvent filtration",
+        image: "/product/mceMembranes25mm.png"
+      },
+      {
+        title: "Neoprene Bulb",
+        subtitle: "Replacement for dispenser",
+        image: "/product/neopreneBulb.png"
+      }
+    ],
+    literature: [
+      { title: "Solvent Filtering Dispenser User Guide", image: "/product/solvent-filtering-dispenser-guide.png" },
+      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
+      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+    ]
+  },
+  {
+    id: 52,
+    categorySlug: "millipore-fluid-contamination-analysis-kit",
+    name: "Petri Slides",
+    slug: "petri-slides",
+    description: "Petri Slides are specialized storage units for 47mm filter membranes used in Millipore fluid contamination analysis. With a transparent cover and rectangular base, they enable microscopic examination of filtered particles without removal. Designed for secure storage and analysis, they are ideal for automotive and industrial contamination testing.",
+    image: "/images/fluid-contamination/petri-slides.png",
+    alt: "Petri Slides for Fluid Contamination Analysis",
+    rating: 4.6,
+    reviews: 30,
+    tag: "Fluid Contamination Analysis",
+    detail: "Storage for 47mm filter membranes",
+    apiCall: "/api/fluid-contamination/petri-slides",
+    features: [
+      "Designed for 47mm filter membrane storage and analysis",
+      "Transparent cover for direct microscopic examination",
+      "Rectangular base with rounded corners for microscope stage compatibility",
+      "Securely holds filters to prevent contamination",
+      "Compliant with ASTM D2276 and ISO 4406 standards",
+      "Stackable design for efficient storage",
+      "Durable plastic construction for repeated use"
+    ],
+    additionalFeatures: [
+      "Airtight seal to protect filters from environmental contamination",
+      "Labeling area for sample identification",
+      "Compatible with standard optical microscopes",
+      "Packaged in sets of 50 for high-throughput testing",
+      "Lightweight for easy handling"
+    ],
+    images: [
+      "/product/PetriSlides1.jpg",
+      "/product/PetriSlides2.jpg",
+      "/product/PetriSlides3.jpg",
+      "/product/PetriSlides4.jpg"
+    ],
+    video: "/product/Petri_Slides.mp4",
+    specifications: [
+      { param: "Material", value: "Polystyrene" },
+      { param: "Filter Diameter", value: "47mm" },
+      { param: "Dimensions", value: "60mm x 50mm x 10mm (L x W x H)" },
+      { param: "Pack Size", value: "50 slides" },
+      { param: "Weight (per slide)", value: "10 g" }
+    ],
+    ordering: [
+      { part: "270-3811-700", config: "Petri Slides, 47mm, 50/pk", voltage: "None" }
+    ],
+    consumables: [
+      {
+        title: "47mm MCE Membranes",
+        subtitle: "0.8 micron, for contamination analysis",
+        image: "/product/mceMembranes47mm.png"
+      },
+      {
+        title: "Filter Storage Box",
+        subtitle: "For Petri slide organization",
+        image: "/product/filterStorageBox.png"
+      }
+    ],
+    literature: [
+      { title: "Petri Slides User Guide", image: "/product/petri-slides-guide.png" },
+      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
+      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+    ]
+  },
+  {
+    id: 53,
+    categorySlug: "millipore-fluid-contamination-analysis-kit",
+    name: "Dispensing Bottles",
+    slug: "dispensing-bottles",
+    description: "Dispensing Bottles are designed for controlled delivery of ultra-clean solvents and rinse solutions in Millipore fluid contamination analysis. With a 250mL capacity and screw-cap nozzle, they ensure precise application during sample preparation, minimizing contamination in automotive and industrial testing environments.",
+    image: "/images/fluid-contamination/dispensing-bottles.png",
+    alt: "Dispensing Bottles for Fluid Contamination Analysis",
+    rating: 4.5,
+    reviews: 28,
+    tag: "Fluid Contamination Analysis",
+    detail: "Controlled solvent dispensing",
+    apiCall: "/api/fluid-contamination/dispensing-bottles",
+    features: [
+      "250mL capacity for solvent and rinse solution dispensing",
+      "Screw-cap nozzle for controlled, drop-by-drop application",
+      "High-density polyethylene (HDPE) construction for chemical resistance",
+      "Designed for ultra-clean sample preparation",
+      "Compliant with ASTM D2276 and ISO 4406 standards",
+      "Ergonomic design for easy handling",
+      "Autoclavable for sterilization"
+    ],
+    additionalFeatures: [
+      "Transparent body for liquid level monitoring",
+      "Leak-proof cap to prevent solvent evaporation",
+      "Compatible with isopropanol and other solvents",
+      "Packaged in sets of 10 for laboratory use",
+      "Lightweight and durable for field applications"
+    ],
+    images: [
+      "/product/DispensingBottles1.jpg",
+      "/product/DispensingBottles2.jpg",
+      "/product/DispensingBottles3.jpg",
+      "/product/DispensingBottles4.jpg"
+    ],
+    video: "/product/Dispensing_Bottles.mp4",
+    specifications: [
+      { param: "Material", value: "High-Density Polyethylene (HDPE)" },
+      { param: "Capacity", value: "250 mL" },
+      { param: "Nozzle", value: "Screw-Cap, Drop-by-Drop" },
+      { param: "Dimensions", value: "60mm diameter x 150mm height" },
+      { param: "Weight", value: "50 g" },
+      { param: "Pack Size", value: "10 bottles" }
+    ],
+    ordering: [
+      { part: "270-3811-800", config: "Dispensing Bottles, 250mL, 10/pk", voltage: "None" }
+    ],
+    consumables: [
+      {
+        title: "Replacement Screw-Cap Nozzle",
+        subtitle: "For dispensing bottles",
+        image: "/product/screwCapNozzle.png"
+      },
+      {
+        title: "Isopropanol",
+        subtitle: "2.5L for solvent dispensing",
+        image: "/product/isopropanol.png"
+      }
+    ],
+    literature: [
+      { title: "Dispensing Bottles User Guide", image: "/product/dispensing-bottles-guide.png" },
+      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
+      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+    ]
+  },
+
+  //Image Analyzers
+  {
+    id: 54,
+    categorySlug: "image-analyzer",
+    name: "Grain Analysis (Intercept Method)",
+    slug: "grain-analysis-intercept-method",
+    description: "The Grain Analysis (Intercept Method) module automates grain size measurement in metallic and non-metallic materials using the intercept method per ASTM E112 and EN ISO 643. It counts grain boundary intersections along test lines to calculate the mean lineal intercept length and ASTM grain size number (G), ideal for quality control in metallography and materials science.",
+    image: "/images/image-analyzer/grain-analysis-intercept.png",
+    alt: "Grain Analysis Intercept Method Module",
+    rating: 4.8,
+    reviews: 45,
+    tag: "Metallographic Analysis",
+    detail: "Automated intercept method for grain size measurement",
+    apiCall: "/api/image-analyzer/grain-analysis-intercept-method",
+    features: [
+      "Automated counting of grain boundary intersections per ASTM E112 and EN ISO 643",
+      "Calculates mean lineal intercept length and ASTM grain size number (G)",
+      "Supports linear and circular test lines for equiaxed and elongated grains",
+      "Topological skeleton algorithm for accurate boundary detection",
+      "User-defined test line patterns (lines, circles, cross-and-circles)",
+      "Exports results to spreadsheets for reporting",
+      "Compatible with optical and scanning electron microscopy images"
+    ],
+    additionalFeatures: [
+      "Handles unimodal grain size distributions with log-normal characteristics",
+      "Interactive filter adjustments for real-time intercept visualization",
+      "Supports multiple fields (up to 5) for statistical accuracy",
+      "Precision of ±0.5 grain size units with minimal operator bias",
+      "Automated image preprocessing for enhanced grain boundary clarity"
+    ],
+    images: [
+      "/product/GrainAnalysisIntercept1.jpg",
+      "/product/GrainAnalysisIntercept2.jpg",
+      "/product/GrainAnalysisIntercept3.jpg",
+      "/product/GrainAnalysisIntercept4.jpg"
+    ],
+    video: "/product/Grain_Analysis_Intercept.mp4",
+    specifications: [
+      { param: "Standards", value: "ASTM E112, EN ISO 643" },
+      { param: "Grain Size Range", value: "G 00 to G 10" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Test Line Types", value: "Linear, Circular, Cross-and-Circles" },
+      { param: "Output", value: "Mean Lineal Intercept, ASTM G, Spreadsheet" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 55,
+    categorySlug: "image-analyzer",
+    name: "Planimetry Method",
+    slug: "planimetry-method",
+    description: "The Planimetry Method module provides precise grain size measurement by counting grains within a known area, per ASTM E112 (Jeffries method). It calculates the number of grains per unit area (NA) to determine the ASTM grain size number (G), offering high accuracy for quality control in metallurgical analysis.",
+    image: "/images/image-analyzer/planimetry-method.png",
+    alt: "Planimetry Method Module",
+    rating: 4.9,
+    reviews: 50,
+    tag: "Metallographic Analysis",
+    detail: "Accurate grain counting for grain size determination",
+    apiCall: "/api/image-analyzer/planimetry-method",
+    features: [
+      "Counts grains within a defined area per ASTM E112 (Jeffries method)",
+      "Calculates grains per unit area (NA) and ASTM grain size number (G)",
+      "Automated grain marking to eliminate counting errors",
+      "Precision of ±0.25 grain size units with sufficient grain counts",
+      "Supports equiaxed grain structures with unimodal distributions",
+      "Integrates with digital microscopy for automated analysis",
+      "Exports results to customizable reports"
+    ],
+    additionalFeatures: [
+      "Bias-free results with repeatability < ±0.5 grain size units",
+      "User-defined area selection for flexible analysis",
+      "Handles single-phase and multiphase specimens",
+      "Image enhancement for clear grain boundary detection",
+      "Supports multiple image formats (JPEG, BMP, PNG)"
+    ],
+    images: [
+      "/product/PlanimetryMethod1.jpg",
+      "/product/PlanimetryMethod2.jpg",
+      "/product/PlanimetryMethod3.jpg",
+      "/product/PlanimetryMethod4.jpg"
+    ],
+    video: "/product/Planimetry_Method.mp4",
+    specifications: [
+      { param: "Standards", value: "ASTM E112" },
+      { param: "Grain Size Range", value: "G 00 to G 10" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Area Selection", value: "User-defined, Circular/Rectangular" },
+      { param: "Output", value: "NA, ASTM G, Spreadsheet" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 56,
+    categorySlug: "image-analyzer",
+    name: "Grain Size Distribution",
+    slug: "grain-size-distribution",
+    description: "The Grain Size Distribution module analyzes the distribution of grain sizes in metallic materials, providing area-weighted and number-frequency histograms. Compliant with ASTM E112 and E1181, it characterizes unimodal and duplex grain structures for materials science and quality control applications.",
+    image: "/images/image-analyzer/grain-size-distribution.png",
+    alt: "Grain Size Distribution Module",
+    rating: 4.7,
+    reviews: 42,
+    tag: "Metallographic Analysis",
+    detail: "Detailed grain size distribution analysis",
+    apiCall: "/api/image-analyzer/grain-size-distribution",
+    features: [
+      "Generates area-weighted and number-frequency histograms per ASTM E112",
+      "Characterizes unimodal and duplex grain size distributions (ASTM E1181)",
+      "Measures grain areas, diameters, and equivalent circle diameters",
+      "Automated grain boundary detection using image processing",
+      "Supports high-strength low-alloy (HSLA) steels and other alloys",
+      "Quantifies bimodality with peak height ratio (PHR) and peak grain size range (PGSR)",
+      "Exports distribution data to spreadsheets and graphs"
+    ],
+    additionalFeatures: [
+      "Handles polycrystalline structures with irregular grain boundaries",
+      "Deconvolution approach for bimodal distribution analysis",
+      "User-defined classification bins for customized histograms",
+      "Integrates with EBSD for crystallographic validation",
+      "Supports multiple fields for statistical robustness"
+    ],
+    images: [
+      "/product/GrainSizeDistribution1.jpg",
+      "/product/GrainSizeDistribution2.jpg",
+      "/product/GrainSizeDistribution3.jpg",
+      "/product/GrainSizeDistribution4.jpg"
+    ],
+    video: "/product/Grain_Size_Distribution.mp4",
+    specifications: [
+      { param: "Standards", value: "ASTM E112, ASTM E1181" },
+      { param: "Grain Size Range", value: "0.5 μm to 500 μm" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Histograms, PHR, PGSR, Spreadsheet" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 57,
+    categorySlug: "image-analyzer",
+    name: "Phase Analysis",
+    slug: "phase-analysis",
+    description: "The Phase Analysis module quantifies the volume fraction and distribution of phases in multiphase metallic materials, such as ferrite, pearlite, and austenite. Compliant with ASTM E562 and E1245, it supports automated phase segmentation and area ratio measurements for quality control and research.",
+    image: "/images/image-analyzer/phase-analysis.png",
+    alt: "Phase Analysis Module",
+    rating: 4.8,
+    reviews: 48,
+    tag: "Metallographic Analysis",
+    detail: "Quantitative phase fraction analysis",
+    apiCall: "/api/image-analyzer/phase-analysis",
+    features: [
+      "Automated phase segmentation per ASTM E562 and E1245",
+      "Measures volume fraction and area ratios of phases (e.g., ferrite, pearlite)",
+      "Supports manual point count method for validation",
+      "Image enhancement for clear phase boundary detection",
+      "Handles complex microstructures with multiple phases",
+      "Generates phase distribution maps and statistical reports",
+      "Compatible with optical and electron microscopy"
+    ],
+    additionalFeatures: [
+      "User-defined phase identification criteria",
+      "Supports importing nodularity/flake analysis results for graphite phases",
+      "Automated thresholding for consistent phase detection",
+      "Exports phase data to spreadsheets and graphs",
+      "Integrates with 4K digital microscopes for high-resolution analysis"
+    ],
+    images: [
+      "/product/PhaseAnalysis1.jpg",
+      "/product/PhaseAnalysis2.jpg",
+      "/product/PhaseAnalysis3.jpg",
+      "/product/PhaseAnalysis4.jpg"
+    ],
+    video: "/product/Phase_Analysis.mp4",
+    specifications: [
+      { param: "Standards", value: "ASTM E562, ASTM E1245" },
+      { param: "Phase Types", value: "Ferrite, Pearlite, Austenite, Graphite, etc." },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Volume Fraction, Area Ratio, Distribution Maps" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 58,
+    categorySlug: "image-analyzer",
+    name: "Nodularity Analysis",
+    slug: "nodularity-analysis",
+    description: "The Nodularity Analysis module evaluates graphite nodularity in cast iron per ASTM A247 and ISO 16112. It quantifies nodule count, area, and density, classifying nodules by size (1 to 8) for quality control in automotive and industrial castings.",
+    image: "/images/image-analyzer/nodularity-analysis.png",
+    alt: "Nodularity Analysis Module",
+    rating: 4.7,
+    reviews: 40,
+    tag: "Metallographic Analysis",
+    detail: "Graphite nodularity evaluation for cast iron",
+    apiCall: "/api/image-analyzer/nodularity-analysis",
+    features: [
+      "Automated detection of graphite nodules per ASTM A247 and ISO 16112",
+      "Quantifies nodule count, area, and density",
+      "Classifies nodules by size (1 to 8) based on diameter",
+      "User-defined filter conditions for nodule identification",
+      "Generates nodularity reports with statistical summaries",
+      "Supports multiple samples for batch analysis",
+      "Compatible with optical microscopy and image analysis systems"
+    ],
+    additionalFeatures: [
+      "Handles irregular nodule shapes with advanced image processing",
+      "Exports results for phase analysis integration",
+      "Interactive nodule editing for manual corrections",
+      "Supports live video for focus adjustment",
+      "High-resolution imaging for accurate nodule detection"
+    ],
+    images: [
+      "/product/NodularityAnalysis1.jpg",
+      "/product/NodularityAnalysis2.jpg",
+      "/product/NodularityAnalysis3.jpg",
+      "/product/NodularityAnalysis4.jpg"
+    ],
+    video: "/product/Nodularity_Analysis.mp4",
+    specifications: [
+      { param: "Standards", value: "ASTM A247, ISO 16112" },
+      { param: "Nodule Size Range", value: "5 μm to 500 μm" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Nodule Count, Area, Density, Size Classification" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 59,
+    categorySlug: "image-analyzer",
+    name: "Graphite",
+    slug: "graphite",
+    description: "The Graphite module analyzes graphite morphology in cast iron, including flake, nodular, and vermicular forms, per ASTM A247 and ISO 16112. It measures shape, size, and distribution, supporting quality control in automotive and heavy machinery castings.",
+    image: "/images/image-analyzer/graphite.png",
+    alt: "Graphite Morphology Analysis Module",
+    rating: 4.8,
+    reviews: 44,
+    tag: "Metallographic Analysis",
+    detail: "Comprehensive graphite morphology analysis",
+    apiCall: "/api/image-analyzer/graphite",
+    features: [
+      "Analyzes graphite morphology (flake, nodular, vermicular) per ASTM A247 and ISO 16112",
+      "Measures graphite size, shape, and distribution",
+      "Automated detection of graphite forms using image processing",
+      "Supports cast iron microstructure analysis",
+      "Generates detailed morphology reports with histograms",
+      "Compatible with 4K digital microscopes",
+      "Integrates with phase analysis for comprehensive reporting"
+    ],
+    additionalFeatures: [
+      "User-defined shape factor thresholds for graphite classification",
+      "Handles complex microstructures with multiple graphite forms",
+      "Exports data to spreadsheets and graphical formats",
+      "Supports multiple fields for statistical accuracy",
+      "Live view for real-time morphology assessment"
+    ],
+    images: [
+      "/product/Graphite1.jpg",
+      "/product/Graphite2.jpg",
+      "/product/Graphite3.jpg",
+      "/product/Graphite4.jpg"
+    ],
+    video: "/product/Graphite.mp4",
+    specifications: [
+      { param: "Standards", value: "ASTM A247, ISO 16112" },
+      { param: "Graphite Size Range", value: "5 μm to 500 μm" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Size, Shape Factor, Distribution, Histograms" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 59,
+    categorySlug: "image-analyzer",
+    name: "Graphite",
+    slug: "graphite",
+    description: "The Graphite module analyzes graphite morphology in cast iron, including flake, nodular, and vermicular forms, per ASTM A247 and ISO 16112. It measures shape, size, and distribution, supporting quality control in automotive and heavy machinery castings.",
+    image: "/images/image-analyzer/graphite.png",
+    alt: "Graphite Morphology Analysis Module",
+    rating: 4.8,
+    reviews: 44,
+    tag: "Metallographic Analysis",
+    detail: "Comprehensive graphite morphology analysis",
+    apiCall: "/api/image-analyzer/graphite",
+    features: [
+      "Analyzes graphite morphology (flake, nodular, vermicular) per ASTM A247 and ISO 16112",
+      "Measures graphite size, shape, and distribution",
+      "Automated detection of graphite forms using image processing",
+      "Supports cast iron microstructure analysis",
+      "Generates detailed morphology reports with histograms",
+      "Compatible with 4K digital microscopes",
+      "Integrates with phase analysis for comprehensive reporting"
+    ],
+    additionalFeatures: [
+      "User-defined shape factor thresholds for graphite classification",
+      "Handles complex microstructures with multiple graphite forms",
+      "Exports data to spreadsheets and graphical formats",
+      "Supports multiple fields for statistical accuracy",
+      "Live view for real-time morphology assessment"
+    ],
+    images: [
+      "/product/Graphite1.jpg",
+      "/product/Graphite2.jpg",
+      "/product/Graphite3.jpg",
+      "/product/Graphite4.jpg"
+    ],
+    video: "/product/Graphite.mp4",
+    specifications: [
+      { param: "Standards", value: "ASTM A247, ISO 16112" },
+      { param: "Graphite Size Range", value: "5 μm to 500 μm" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Size, Shape Factor, Distribution, Histograms" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 60,
+    categorySlug: "image-analyzer",
+    name: "B Type Flake Separation",
+    slug: "b-type-flake-separation",
+    description: "The B Type Flake Separation module identifies and quantifies Type B graphite flakes (rosette patterns) in cast iron per ASTM A247. It isolates B-type flakes from other graphite forms, measuring their size and distribution for quality control in cast iron production.",
+    image: "/images/image-analyzer/b-type-flake-separation.png",
+    alt: "B Type Flake Separation Module",
+    rating: 4.6,
+    reviews: 38,
+    tag: "Metallographic Analysis",
+    detail: "Specialized B-type graphite flake analysis",
+    apiCall: "/api/image-analyzer/b-type-flake-separation",
+    features: [
+      "Automated detection of Type B graphite flakes per ASTM A247",
+      "Isolates rosette-pattern flakes from other graphite forms",
+      "Measures flake size, count, and distribution",
+      "User-defined filter conditions for accurate separation",
+      "Generates detailed reports with statistical summaries",
+      "Supports optical microscopy and image analysis systems",
+      "Integrates with graphite morphology analysis"
+    ],
+    additionalFeatures: [
+      "Handles complex cast iron microstructures",
+      "Interactive flake editing for manual corrections",
+      "Exports data to spreadsheets and histograms",
+      "Supports live video for real-time analysis",
+      "High-resolution imaging for precise flake detection"
+    ],
+    images: [
+      "/product/BTypeFlakeSeparation1.jpg",
+      "/product/BTypeFlakeSeparation2.jpg",
+      "/product/BTypeFlakeSeparation3.jpg",
+      "/product/BTypeFlakeSeparation4.jpg"
+    ],
+    video: "/product/B_Type_Flake_Separation.mp4",
+    specifications: [
+      { param: "Standards", value: "ASTM A247" },
+      { param: "Flake Size Range", value: "5 μm to 500 μm" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Flake Count, Size, Distribution, Histograms" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 61,
+    categorySlug: "image-analyzer",
+    name: "Point Counter",
+    slug: "point-counter",
+    description: "The Point Counter module performs manual and automated point counting for phase fraction and inclusion analysis per ASTM E562 and E45. It overlays a grid on microscopic images to quantify phase or inclusion content, ideal for metallographic quality control.",
+    image: "/images/image-analyzer/point-counter.png",
+    alt: "Point Counter Module",
+    rating: 4.7,
+    reviews: 36,
+    tag: "Metallographic Analysis",
+    detail: "Point counting for phase and inclusion analysis",
+    apiCall: "/api/image-analyzer/point-counter",
+    features: [
+      "Manual and automated point counting per ASTM E562 and E45",
+      "Quantifies phase fractions and inclusion content",
+      "User-defined grid sizes for flexible analysis",
+      "Automated grid overlay on microscopic images",
+      "Supports single-phase and multiphase specimens",
+      "Generates statistical reports with point count data",
+      "Compatible with optical and electron microscopy"
+    ],
+    additionalFeatures: [
+      "Interactive point marking for manual verification",
+      "Handles irregular phase boundaries with high accuracy",
+      "Exports data to spreadsheets and graphical formats",
+      "Supports multiple fields for statistical robustness",
+      "Integrates with phase analysis for comprehensive reporting"
+    ],
+    images: [
+      "/product/PointCounter1.jpg",
+      "/product/PointCounter2.jpg",
+      "/product/PointCounter3.jpg",
+      "/product/PointCounter4.jpg"
+    ],
+    video: "/product/Point_Counter.mp4",
+    specifications: [
+      { param: "Standards", value: "ASTM E562, ASTM E45" },
+      { param: "Grid Size", value: "User-defined, 10x10 to 100x100 points" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Phase Fraction, Inclusion Content, Spreadsheet" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 62,
+    categorySlug: "image-analyzer",
+    name: "Linear Measurement",
+    slug: "linear-measurement",
+    description: "The Linear Measurement module enables precise measurement of distances, lengths, and thicknesses in microscopic images. It supports manual and automated measurements for features like grain boundaries, cracks, and coatings, ideal for metallographic and defect analysis.",
+    image: "/images/image-analyzer/linear-measurement.png",
+    alt: "Linear Measurement Module",
+    rating: 4.6,
+    reviews: 34,
+    tag: "Metallographic Analysis",
+    detail: "Precise linear measurements in microscopy",
+    apiCall: "/api/image-analyzer/linear-measurement",
+    features: [
+      "Manual and automated measurement of distances and lengths",
+      "Measures grain boundary lengths, crack lengths, and coating thicknesses",
+      "User-defined measurement tools (lines, polylines, arcs)",
+      "Calibrated measurements with sub-micron accuracy",
+      "Supports optical and scanning electron microscopy",
+      "Generates measurement reports with statistical summaries",
+      "Compliant with ASTM E112 and E45 for linear features"
+    ],
+    additionalFeatures: [
+      "Interactive measurement editing for manual corrections",
+      "Handles irregular features with high precision",
+      "Exports measurement data to spreadsheets",
+      "Supports live video for real-time measurements",
+      "Integrates with annotation for feature labeling"
+    ],
+    images: [
+      "/product/LinearMeasurement1.jpg",
+      "/product/LinearMeasurement2.jpg",
+      "/product/LinearMeasurement3.jpg",
+      "/product/LinearMeasurement4.jpg"
+    ],
+    video: "/product/Linear_Measurement.mp4",
+    specifications: [
+      { param: "Standards", value: "ASTM E112, ASTM E45" },
+      { param: "Measurement Range", value: "0.1 μm to 10 mm" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Length, Thickness, Spreadsheet" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 63,
+    categorySlug: "image-analyzer",
+    name: "Inclusion",
+    slug: "inclusion",
+    description: "The Inclusion module detects and classifies non-metallic inclusions in steel per ASTM E45 and ISO 4967. It categorizes inclusions by type (A, B, C, D) and thickness (thin/thick), supporting quality control in steel production and automotive applications.",
+    image: "/images/image-analyzer/inclusion.png",
+    alt: "Inclusion Analysis Module",
+    rating: 4.8,
+    reviews: 46,
+    tag: "Metallographic Analysis",
+    detail: "Non-metallic inclusion analysis in steel",
+    apiCall: "/api/image-analyzer/inclusion",
+    features: [
+      "Automated detection of non-metallic inclusions per ASTM E45 and ISO 4967",
+      "Classifies inclusions by type (A, B, C, D) and thickness (thin/thick)",
+      "Measures inclusion size, count, and distribution",
+      "User-defined filter conditions for accurate detection",
+      "Detects oversized inclusions for defect analysis",
+      "Generates detailed inclusion reports with histograms",
+      "Compatible with optical and electron microscopy"
+    ],
+    additionalFeatures: [
+      "Handles complex steel microstructures",
+      "Interactive inclusion editing for manual corrections",
+      "Exports data to spreadsheets and graphical formats",
+      "Supports multiple samples for batch analysis",
+      "Integrates with 4K digital microscopes for high-resolution imaging"
+    ],
+    images: [
+      "/product/Inclusion1.jpg",
+      "/product/Inclusion2.jpg",
+      "/product/Inclusion3.jpg",
+      "/product/Inclusion4.jpg"
+    ],
+    video: "/product/Inclusion.mp4",
+    specifications: [
+      { param: "Standards", value: "ASTM E45, ISO 4967" },
+      { param: "Inclusion Size Range", value: "1 μm to 500 μm" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Inclusion Type, Size, Count, Distribution" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 64,
+    categorySlug: "image-analyzer",
+    name: "Welding Analysis Setup",
+    slug: "welding-analysis-setup",
+    description: "The Welding Analysis Setup module evaluates weld imperfections, such as cracks, porosity, and inclusions, in metallic welds. Compliant with ISO 5817 and AWS D1.1, it quantifies weld quality for automotive, aerospace, and structural applications.",
+    image: "/images/image-analyzer/welding-analysis-setup.png",
+    alt: "Welding Analysis Setup Module",
+    rating: 4.7,
+    reviews: 41,
+    tag: "Metallographic Analysis",
+    detail: "Comprehensive weld imperfection analysis",
+    apiCall: "/api/image-analyzer/welding-analysis-setup",
+    features: [
+      "Automated detection of weld imperfections per ISO 5817 and AWS D1.1",
+      "Quantifies cracks, porosity, inclusions, and lack of fusion",
+      "Measures weld bead geometry (width, height, penetration)",
+      "User-defined filter conditions for defect detection",
+      "Generates detailed weld quality reports with images",
+      "Compatible with optical and electron microscopy",
+      "Supports cross-sectional and surface weld analysis"
+    ],
+    additionalFeatures: [
+      "Handles complex weld microstructures",
+      "Interactive defect editing for manual corrections",
+      "Exports data to spreadsheets and graphical formats",
+      "Supports live video for real-time analysis",
+      "Integrates with porosity and inclusion modules"
+    ],
+    images: [
+      "/product/WeldingAnalysisSetup1.jpg",
+      "/product/WeldingAnalysisSetup2.jpg",
+      "/product/WeldingAnalysisSetup3.jpg",
+      "/product/WeldingAnalysisSetup4.jpg"
+    ],
+    video: "/product/Welding_Analysis_Setup.mp4",
+    specifications: [
+      { param: "Standards", value: "ISO 5817, AWS D1.1" },
+      { param: "Defect Size Range", value: "1 μm to 10 mm" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Defect Type, Size, Geometry, Spreadsheet" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" }
+    ]
+  },
+  {
+    id: 65,
+    categorySlug: "image-analyzer",
+    name: "Porosity Estimation",
+    slug: "porosity-estimation",
+    description: "The Porosity Estimation module detects and quantifies porosity in castings and welds per BDG P 203 and ASTM E1245. It measures pore size, count, and distribution, supporting quality control in automotive and aerospace manufacturing.",
+    image: "/images/image-analyzer/porosity-estimation.png",
+    alt: "Porosity Estimation Module",
+    rating: 4.8,
+    reviews: 43,
+    tag: "Metallographic Analysis",
+    detail: "Quantitative porosity analysis",
+    apiCall: "/api/image-analyzer/porosity-estimation",
+    features: [
+      "Automated detection of pores per BDG P 203 and ASTM E1245",
+      "Measures pore size, count, and distribution",
+      "Distinguishes gas pores, shrinkage cavities, and cracks",
+      "User-defined filter conditions for accurate pore detection",
+      "Generates 2D and 3D porosity maps with statistical reports",
+      "Compatible with optical and computed tomography (CT) images",
+      "Supports OK/NOK decisions for quality control"
+    ],
+    additionalFeatures: [
+      "Handles complex casting and weld microstructures",
+      "Plots sphericity vs. equivalent diameter for pore classification",
+      "Exports data to spreadsheets and histograms",
+      "Supports multiple samples for batch analysis",
+      "Integrates with welding analysis for comprehensive defect reporting"
+    ],
+    images: [
+      "/product/PorosityEstimation1.jpg",
+      "/product/PorosityEstimation2.jpg",
+      "/product/PorosityEstimation3.jpg",
+      "/product/PorosityEstimation4.jpg"
+    ],
+    video: "/product/Porosity_Estimation.mp4",
+    specifications: [
+      { param: "Standards", value: "BDG P 203, ASTM E1245" },
+      { param: "Pore Size Range", value: "1 μm to 10 mm" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Pore Size, Count, Distribution, 2D/3D Maps" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG, CT Scans" }
+    ]
+  },
+  {
+    id: 66,
+    categorySlug: "image-analyzer",
+    name: "Annotation",
+    slug: "annotation",
+    description: "The Annotation module enables labeling and markup of microscopic images for documentation and reporting. It supports text, arrows, shapes, and measurements, enhancing communication of metallographic analysis results in quality control and research.",
+    image: "/images/image-analyzer/annotation.png",
+    alt: "Annotation Module",
     rating: 4.6,
     reviews: 39,
-    tag: "Versatile",
-    detail: "Multi-light sources",
-    apiCall: "/api/microscope/upright",
-  },
-  {
-    id: 11,
-    categorySlug: "microscope-and-image-analyzer",
-    name: "Stereo Microscope",
-    slug: "stereo-microscope",
-    description: "Zoom stereo microscope designed for large sample analysis and multi-focal imaging.",
-    image: "/images/microscope-and-image-analyzer/stereo-microscope.png",
-    alt: "Stereo Microscope",
-    rating: 4.5,
-    reviews: 37,
-    tag: "Macro Imaging",
-    detail: "Wide field of view",
-    apiCall: "/api/microscope/stereo",
-  },
-  {
-    id: 12,
-    categorySlug: "microscope-and-image-analyzer",
-    name: "OmniMet Software",
-    slug: "omnimet-software",
-    description: "Advanced image analysis software for quantitative measurements, including grain size and phase analysis.",
-    image: "/images/microscope-and-image-analyzer/omnimet-software.png",
-    alt: "OmniMet Image Analysis Software",
-    rating: 4.7,
-    reviews: 34,
-    tag: "Image Analysis",
-    detail: "Quantitative analysis",
-    apiCall: "/api/image-analyzer/omnimet",
-  },
-  {
-    id: 13,
-    categorySlug: "microscope-and-image-analyzer",
-    name: "Metallurgical Image Analyzer",
-    slug: "metallurgical-analyzer",
-    description: "Dedicated system for metallographic analysis, including nodularity and inclusion measurements.",
-    image: "/images/microscope-and-image-analyzer/metallurgical-analyzer.png",
-    alt: "Metallurgical Image Analyzer",
-    rating: 4.6,
-    reviews: 31,
-    tag: "Specialized",
-    detail: "Standards-compliant",
-    apiCall: "/api/image-analyzer/metallurgical",
-  },
-  {
-    id: 14,
-    categorySlug: "microscope-and-image-analyzer",
-    name: "Confocal Microscope",
-    slug: "confocal-microscope",
-    description: "Confocal microscope for high-resolution 3D imaging and advanced material characterization.",
-    image: "/images/microscope-and-image-analyzer/confocal-microscope.png",
-    alt: "Confocal Microscope",
-    rating: 4.9,
-    reviews: 40,
-    tag: "3D Imaging",
-    detail: "3D reconstruction",
-    apiCall: "/api/microscope/confocal",
+    tag: "Metallographic Analysis",
+    detail: "Image labeling and markup for documentation",
+    apiCall: "/api/image-analyzer/annotation",
+    features: [
+      "Adds text, arrows, shapes, and measurements to microscopic images",
+      "Supports customizable annotation styles and colors",
+      "Integrates with grain, phase, and defect analysis modules",
+      "Generates annotated images for reports and presentations",
+      "Compatible with optical and electron microscopy",
+      "User-friendly interface for rapid markup",
+      "Supports live video for real-time annotation"
+    ],
+    additionalFeatures: [
+      "Saves annotations as layers for non-destructive editing",
+      "Exports annotated images in multiple formats",
+      "Handles high-resolution images with zoom capabilities",
+      "Supports batch annotation for multiple images",
+      "Integrates with reporting tools for automated documentation"
+    ],
+    images: [
+      "/product/Annotation1.jpg",
+      "/product/Annotation2.jpg",
+      "/product/Annotation3.jpg",
+      "/product/Annotation4.jpg"
+    ],
+    video: "/product/Annotation.mp4",
+    specifications: [
+      { param: "Annotation Types", value: "Text, Arrows, Shapes, Measurements" },
+      { param: "Resolution", value: "0.1 μm/pixel minimum" },
+      { param: "Output", value: "Annotated Images, PDF Reports" },
+      { param: "Image Formats", value: "JPEG, BMP, PNG" },
+      { param: "Layer Support", value: "Non-destructive Annotation Layers" }
+    ]
   },
 
   // Automatic Micro Hardness Tester
   {
     id: 26,
-    categorySlug: "automatic-micro-hardness-testers",
+    categorySlug: "automatic-micro-hardness-tester",
     name: "Fully Automatic MVH-V",
     slug: "fully-automatic-mvh-v",
     description: "The Fully Automatic MVH-V is a state-of-the-art micro Vickers hardness tester designed for precise and automated hardness testing. Featuring motorized X-Y and Z motion, autofocus, auto reading, and automatic effective case graph generation, it supports a load range of 1g to 2000g (3000g optional). With manual override for all automation and an optional overview camera for component imaging and hardness profile direction, it is ideal for metallographic laboratories and quality control.",
-    image: "/images/automatic-micro-hardness-testers/mvh-v.png",
+    image: "/images/automatic-micro-hardness-tester/mvh-v.png",
     alt: "Fully Automatic MVH-V Micro Hardness Tester",
     rating: 4.9,
     reviews: 48,
@@ -1503,12 +2895,12 @@ const products = [
   //Micro / Macro Hardness Tester Load Cell Based
   {
     id: 27,
-    categorySlug: "micro-macro-hardness-testers",
+    categorySlug: "micro-macro-hardness-tester-load-cell",
     name: "MVH-I C",
     slug: "mvh-i-c",
     description: "The MVH-I C is a versatile micro/macro hardness tester with load cell-based technology and closed-loop control, offering both manual and computerized operation. With a load range from 10gf to 30kgf, optional autofocus, and an optional auto XY stage, it is designed for precise Vickers and Knoop hardness testing in metallographic and quality control applications.",
-    image: "/images/micro-macro-hardness-testers/mvh-i-c.png",
-    alt: "MVH-I C Micro Macro Hardness Tester",
+    image: "/images/micro-macro-hardness-tester-load-cell/mvh-i-c.png",
+    alt: "MVH-I C Micro Macro Hardness Tester Load Cell Based",
     rating: 4.8,
     reviews: 42,
     tag: "Load Cell Hardness Testing",
@@ -1582,7 +2974,7 @@ const products = [
   //Other Machines
   {
     id: 28,
-    categorySlug: "electro-polishing-machines",
+    categorySlug: "electro-polishing-machine",
     name: "Electropol",
     slug: "electropol",
     description: "The Electropol is a high-efficiency electropolishing machine designed for rapid surface finishing, capable of polishing metal parts within 1 minute. Ideal for gold, silver, stainless steel, and other metals, it delivers a smooth, mirror-like finish with enhanced corrosion resistance and minimal material loss, perfect for jewelry, medical, and industrial applications.",
@@ -1656,7 +3048,7 @@ const products = [
   },
   {
     id: 29,
-    categorySlug: "in-situ-metallography-kits",
+    categorySlug: "in-situ-metallography-kit",
     name: "Portpol",
     slug: "portpol",
     description: "The Portpol is a portable electro polisher designed for in-situ metallographic sample preparation in the field. Featuring a pen-type probe for precise polishing and etching, a compact 0.5L electrolyte reservoir, and battery-powered operation, it enables rapid surface preparation for microstructural analysis in applications such as power plants, pipelines, and weld inspections.",
@@ -1729,7 +3121,7 @@ const products = [
   },
   {
     id: 30,
-    categorySlug: "in-situ-metallography-kits",
+    categorySlug: "in-situ-metallography-kit",
     name: "Portable Microscope Image Analyzer",
     slug: "portable-microscope-image-analyzer",
     description: "The Portable Microscope Image Analyzer is a compact, battery-powered device for in-situ metallographic analysis, offering up to 800x magnification and real-time image capture. Equipped with a 3.2MP CMOS camera and USB-connected image analysis software, it enables on-site microstructure examination for applications like power plants, pipelines, and weld inspections.",
@@ -1801,7 +3193,7 @@ const products = [
   },
   {
     id: 31,
-    categorySlug: "in-situ-metallography-kits",
+    categorySlug: "in-situ-metallography-kit",
     name: "Replica",
     slug: "replica",
     description: "The Replica is a non-destructive surface replication system for in-situ metallographic analysis, enabling high-precision 3D surface replication with 0.1µm accuracy. Using cellulose acetate films and SiliKem compound, it captures detailed microstructures for off-site analysis, ideal for power plants, pipelines, and weld inspections.",
@@ -1872,7 +3264,7 @@ const products = [
   },
   {
     id: 32,
-    categorySlug: "in-situ-metallography-kits",
+    categorySlug: "in-situ-metallography-kit",
     name: "Portgrinder",
     slug: "portgrinder",
     description: "The Portgrinder is a portable grinding tool designed for in-situ metallographic sample preparation. Featuring a high-torque motor, variable speed from 1000 to 25,000 rpm, and 38mm PSA discs, it offers flexible and efficient grinding for field applications such as power plants, pipelines, and weld inspections.",
@@ -1941,6 +3333,234 @@ const products = [
       { title: "In-situ Metallography Guide", image: "/product/in-situ-metallography-guide.png" }
     ]
   },
+  {
+    "id": 72,
+    "categorySlug": "jominy-end-quench-hardenability-setup",
+    "name": "Hardness Fixture and Chiller",
+    "slug": "hardness-fixture-and-chiller",
+    "description": "The Hardness Fixture and Chiller is an advanced system for Jominy end quench hardenability testing, featuring a motorized fixture for successive hardness indentations and a fully automatic hardness tester with a programmable stage. Designed for ASTM A255 and ISO 642 compliance, it ensures precise positioning and rapid cooling for accurate hardenability evaluation of steels, ideal for metallurgical labs and steel mills.",
+    "image": "/images/jominy-end-quench/hardness-fixture-and-chiller.png",
+    "alt": "Hardness Fixture and Chiller for Jominy End Quench Testing",
+    "rating": 4.9,
+    "reviews": 40,
+    "tag": "Hardenability Testing",
+    "detail": "Motorized fixture and automatic hardness tester for Jominy testing",
+    "apiCall": "/api/jominy-end-quench/hardness-fixture-and-chiller",
+    "features": [
+      "Motorized fixture for successive Rockwell C (HRC) indentations with 0.01 mm positioning accuracy",
+      "Fully automatic hardness tester with programmable XY stage for direct Jominy hardness testing",
+      "Integrated chiller unit maintaining 24°C ± 1°C water for consistent quenching per ASTM A255",
+      "Digital micrometer for indexing indents at 1.5 mm intervals (alloy steels) or 0.75 mm (carbon steels)",
+      "Automated hardness measurement at 1/16 in. (1.6 mm) intervals, plotting Jominy curves",
+      "Supports Vickers (HV) and Rockwell (HRC) scales with conversion per ASTM E140",
+      "Compliant with ASTM A255, ISO 642, SAE J406, and DIN 50191 standards"
+    ],
+    "additionalFeatures": [
+      "Touchscreen interface for programming test sequences and data logging",
+      "Closed-loop water management system with 50L tank and 0.5 kW pump",
+      "Specimen holder with automatic centering for 25 mm x 100 mm Jominy bars",
+      "Graphical output of hardenability curves with export to CSV/PDF formats",
+      "Anti-vibration base for stable hardness testing in industrial environments"
+    ],
+    "images": [
+      "/product/HardnessFixtureAndChiller1.jpg",
+      "/product/HardnessFixtureAndChiller2.jpg",
+      "/product/HardnessFixtureAndChiller3.jpg",
+      "/product/HardnessFixtureAndChiller4.jpg"
+    ],
+    "video": "/product/Hardness_Fixture_And_Chiller.mp4",
+    "specifications": [
+      { "param": "Hardness Scales", "value": "Rockwell C (HRC), Vickers (HV)" },
+      { "param": "Positioning Accuracy", "value": "0.01 mm" },
+      { "param": "Indentation Intervals", "value": "1.5 mm (alloy), 0.75 mm (carbon), 1.6 mm (standard)" },
+      { "param": "Chiller Water Temperature", "value": "24°C ± 1°C" },
+      { "param": "Tank Capacity", "value": "50 L" },
+      { "param": "Pump Power", "value": "0.5 kW" },
+      { "param": "Standards", "value": "ASTM A255, ISO 642, SAE J406, DIN 50191" },
+      { "param": "Weight", "value": "150 kg" },
+      { "param": "Dimensions", "value": "800mm x 600mm x 1200mm (L x W x H)" },
+      { "param": "Power Supply", "value": "220-240V AC, 50/60 Hz" }
+    ],
+    "ordering": [
+      { "part": "290-3811-600", "config": "Hardness Fixture and Chiller, Automatic Jominy Tester", "voltage": "220-240V AC" }
+    ],
+    "consumables": [
+      {
+        "title": "Diamond Indenter",
+        "subtitle": "For Vickers hardness testing",
+        "image": "/product/diamondIndenter.png"
+      },
+      {
+        "title": "Rockwell C Indenter",
+        "subtitle": "120° diamond cone for HRC testing",
+        "image": "/product/rockwellIndenter.png"
+      },
+      {
+        "title": "Jominy Specimen Holder",
+        "subtitle": "For 25 mm x 100 mm bars",
+        "image": "/product/specimenHolder.png"
+      }
+    ],
+    "literature": [
+      { "title": "Hardness Fixture and Chiller User Manual", "image": "/product/hardness-fixture-manual.png" },
+      { "title": "Jominy End Quench Testing Guide", "image": "/product/jominy-testing-guide.png" },
+      { "title": "Hardenability Standards Brochure", "image": "/product/hardenability-brochure.png" }
+    ]
+  },
+  {
+    "id": 73,
+    "categorySlug": "cnc-tensile-sample-preparation-machines",
+    "name": "CNC Tensile Sample Preparation Machines",
+    "slug": "cnc-tensile-sample-preparation-machines",
+    "description": "The CNC Tensile Sample Preparation Machines are advanced, user-friendly systems designed for precise and repeatable preparation of flat and round tensile specimens, including threaded and Jominy samples. Featuring powerful CNC programs, high-speed milling, and a modular design, they support ASTM E8, ISO 6892, and ASTM A255 standards, offering both floor and tabletop models for metallurgical labs and high-volume manufacturing facilities.",
+    "image": "/images/cnc-tensile-sample-preparation/cnc-tensile-sample-preparation-machines.png",
+    "alt": "CNC Tensile Sample Preparation Machines for Tensile and Jominy Testing",
+    "rating": 4.9,
+    "reviews": 60,
+    "tag": "Tensile Sample Preparation",
+    "detail": "High-precision CNC machines for tensile and Jominy sample preparation",
+    "apiCall": "/api/cnc-tensile-sample-preparation/cnc-tensile-sample-preparation-machines",
+    "features": [
+      "High-precision milling with 0.01 mm (0.0004 in.) accuracy for flat, round, and threaded tensile specimens",
+      "Rapid sample preparation with triple clamping fixture, processing up to three 25 mm stacks in one cycle",
+      "Repeatable results meeting ASTM E8, ISO 6892, DIN, JIS, and ASTM A255 (Jominy) standards",
+      "Threading facility for preparing threaded tensile specimens and button-head bars",
+      "Powerful CNC programs with TensileSoft™ and Carbon software for intuitive operation and custom dimensions",
+      "Modular design with floor and tabletop models for diverse lab and production environments",
+      "Optional Jominy sample preparation module for 25 mm x 100 mm hardenability test bars"
+    ],
+    "additionalFeatures": [
+      "10-inch touchscreen interface with preloaded ASTM/ISO standards for one-touch milling",
+      "Automatic tool changer with 10-tool capacity for seamless transitions between sample types",
+      "High-torque 3.2 kW servo motor supporting materials up to 60 HRC, including Inconel",
+      "WiFi/Ethernet connectivity for remote software updates and data export to CSV/PDF",
+      "Vibration-dampening granite frame (floor model) or cast iron frame (tabletop) for stability"
+    ],
+    "images": [
+      "/product/CNCTensileSamplePreparation1.jpg",
+      "/product/CNCTensileSamplePreparation2.jpg",
+      "/product/CNCTensileSamplePreparation3.jpg",
+      "/product/CNCTensileSamplePreparation4.jpg"
+    ],
+    "video": "/product/CNC_Tensile_Sample_Preparation.mp4",
+    "specifications": [
+      { "param": "Accuracy", "value": "0.01 mm (0.0004 in.)" },
+      { "param": "Specimen Types", "value": "Flat, Round, Threaded, Jominy, Button-Head, Fatigue" },
+      { "param": "Max Specimen Size (Flat)", "value": "350 mm L x 50 mm W x 12.5 mm T" },
+      { "param": "Max Specimen Size (Round)", "value": "100 mm L x 25 mm Dia" },
+      { "param": "Jominy Specimen Size", "value": "25 mm Dia x 100 mm L" },
+      { "param": "Motor Power", "value": "3.2 kW Servo" },
+      { "param": "Spindle Speed", "value": "Up to 10,000 RPM" },
+      { "param": "Standards", "value": "ASTM E8, ISO 6892, ASTM A255, DIN, JIS" },
+      { "param": "Tabletop Dimensions", "value": "1200 mm x 1200 mm x 1300 mm (L x W x H)" },
+      { "param": "Floor Model Dimensions", "value": "2000 mm x 1500 mm x 1800 mm (L x W x H)" },
+      { "param": "Weight (Tabletop/Floor)", "value": "500 kg / 1200 kg" },
+      { "param": "Power Supply", "value": "220-240V AC, 50/60 Hz" }
+    ],
+    "ordering": [
+      { "part": "290-3811-700", "config": "CNC Tensile Sample Preparation Machine, Tabletop Model", "voltage": "220-240V AC" },
+      { "part": "290-3811-701", "config": "CNC Tensile Sample Preparation Machine, Floor Model with Jominy Module", "voltage": "220-240V AC" }
+    ],
+    "consumables": [
+      {
+        "title": "End Mills",
+        "subtitle": "Carbide end mills for tensile and Jominy samples",
+        "image": "/product/endMills.png"
+      },
+      {
+        "title": "Clamping Fixtures",
+        "subtitle": "Triple-stack and Jominy-specific fixtures",
+        "image": "/product/clampingFixtures.png"
+      },
+      {
+        "title": "Cutting Fluid",
+        "subtitle": "500 mL for spindle cooling and milling",
+        "image": "/product/cuttingFluid.png"
+      }
+    ],
+    "literature": [
+      { "title": "CNC Tensile Sample Preparation Machine User Manual", "image": "/product/cnc-tensile-manual.png" },
+      { "title": "Tensile and Jominy Testing Guide", "image": "/product/tensile-jominy-guide.png" },
+      { "title": "CNC Sample Preparation Brochure", "image": "/product/cnc-sample-preparation-brochure.png" }
+    ]
+  },
+  {
+    "id": 74,
+    "categorySlug": "transparent-mould-making-system",
+    "name": "Transmount",
+    "slug": "transmount",
+    "description": "The Transmount is a high-performance, transparent silicone mould making system designed for precision casting of complex parts. Its platinum-based, translucent rubber with a 1:1 mixing ratio ensures bubble-free moulds with exceptional detail reproduction, ideal for resin, plaster, concrete, and low-melt metal casting in metallurgical, artistic, and industrial applications.",
+    "image": "/images/transparent-mould-making/transmount.png",
+    "alt": "Transmount Transparent Silicone Mould Making System",
+    "rating": 4.8,
+    "reviews": 45,
+    "tag": "Mould Making",
+    "detail": "Translucent silicone system for precision mould making",
+    "apiCall": "/api/transparent-mould-making/transmount",
+    "features": [
+      "Platinum-based, translucent silicone rubber with 13 Shore A hardness for flexible, durable moulds",
+      "1:1 mixing ratio for easy, precise preparation with 6-8 hour curing time at room temperature",
+      "High dimensional stability and 0.01 mm reproduction accuracy for intricate details and undercuts",
+      "Compatible with epoxy, polyurethane, acrylic resins, plaster, cement, and low-melt metals (up to 250°C)",
+      "Transparency allows visual monitoring of casting process and precise seam cutting for block moulds",
+      "Non-toxic, solvent-free, and odorless, certified for safe use in professional and hobby applications",
+      "Reusable moulds with high tear resistance, supporting multiple casts without degradation"
+    ],
+    "additionalFeatures": [
+      "Supports silicone pigments for custom-colored moulds, enhancing aesthetic versatility",
+      "Low-viscosity formula minimizes bubbles, ensuring flawless mould surfaces",
+      "Optional vacuum degassing compatibility for enhanced clarity and detail",
+      "Food-grade option available for culinary moulds (e.g., chocolate, sugar casting)",
+      "Integrated release agent compatibility for easy demoulding of complex shapes"
+    ],
+    "images": [
+      "/product/Transmount1.jpg",
+      "/product/Transmount2.jpg",
+      "/product/Transmount3.jpg",
+      "/product/Transmount4.jpg"
+    ],
+    "video": "/product/Transmount.mp4",
+    "specifications": [
+      { "param": "Hardness", "value": "13 Shore A" },
+      { "param": "Mixing Ratio", "value": "1:1 by volume" },
+      { "param": "Curing Time", "value": "6-8 hours at 25°C" },
+      { "param": "Reproduction Accuracy", "value": "0.01 mm" },
+      { "param": "Temperature Resistance", "value": "Up to 250°C" },
+      { "param": "Viscosity", "value": "Low, 5000 cP" },
+      { "param": "Standards", "value": "Non-toxic, Food-grade (optional)" },
+      { "param": "Kit Sizes", "value": "250g, 1kg, 5kg" },
+      { "param": "Weight (1kg Kit)", "value": "1.2 kg" },
+      { "param": "Dimensions (1kg Kit)", "value": "200mm x 150mm x 100mm (L x W x H)" }
+    ],
+    "ordering": [
+      { "part": "290-3811-800", "config": "Transmount Transparent Silicone Mould Making Kit, 1kg", "voltage": "None" },
+      { "part": "290-3811-801", "config": "Transmount with Food-Grade Option, 1kg", "voltage": "None" }
+    ],
+    "consumables": [
+      {
+        "title": "Silicone Pigments",
+        "subtitle": "8 colors, 10mL each for custom mould coloring",
+        "image": "/product/siliconePigments.png"
+      },
+      {
+        "title": "Release Agent",
+        "subtitle": "500mL for easy demoulding",
+        "image": "/product/releaseAgent.png"
+      },
+      {
+        "title": "Mixing Cups and Stirrers",
+        "subtitle": "Disposable, 100/pk for precise mixing",
+        "image": "/product/mixingCups.png"
+      }
+    ],
+    "literature": [
+      { "title": "Transmount User Manual", "image": "/product/transmount-manual.png" },
+      { "title": "Transparent Mould Making Guide", "image": "/product/mould-making-guide.png" },
+      { "title": "Silicone Casting Brochure", "image": "/product/silicone-casting-brochure.png" }
+    ]
+  },
+
+
 
   // Hardness Testers
   {
@@ -2386,82 +4006,6 @@ const products = [
       { title: "Band Saw Cutting Guide", image: "/product/band-saw-cutting-guide.png" }
     ]
   },
-
-  // Transparent Mould Making System 
-  {
-    id: 40,
-    categorySlug: "transparent-mould-making-system",
-    name: "Transmount",
-    slug: "transmount",
-    description: "The Transmount is a high-clarity, non-toxic transparent mould making system designed for precision casting of resin, wax, soap, and other materials. Featuring a 1:1 mix ratio clear silicone rubber with self-debubbling properties, it enables easy creation of durable, flexible moulds for DIY crafting, prototyping, and small-scale production, ensuring excellent detail reproduction and optical transparency.",
-    image: "/images/transparent-mould-making/transmount.png",
-    alt: "Transmount Transparent Mould Making System",
-    rating: 4.7,
-    reviews: 35,
-    tag: "Transparent Mould Making",
-    detail: "Clear silicone for precision casting",
-    apiCall: "/api/transparent-mould-making/transmount",
-    features: [
-      "High-clarity, non-toxic clear silicone rubber with 1:1 mix ratio by weight",
-      "Self-debubbling formula eliminates need for vacuum degassing",
-      "Cures in 12 hours at room temperature for durable, flexible moulds",
-      "Excellent tear strength (25 N/mm) and elongation (500%) for repeated use",
-      "Supports casting of epoxy resin, polyurethane, wax, soap, and clay",
-      "Ideal for jewellery, figurines, candle moulds, and prototyping",
-      "Compliant with safety standards for non-food applications"
-    ],
-    additionalFeatures: [
-      "UV-resistant to prevent yellowing over time",
-      "Low viscosity for easy pouring and detailed reproduction",
-      "Includes mixing cups and stirring sticks for convenient use",
-      "Reusable moulds withstand up to 50+ castings",
-      "Optional accelerator for faster curing (6 hours)"
-    ],
-    images: [
-      "/product/Transmount1.jpg",
-      "/product/Transmount2.jpg",
-      "/product/Transmount3.jpg",
-      "/product/Transmount4.jpg"
-    ],
-    video: "/product/Transmount.mp4",
-    specifications: [
-      { param: "Operation", value: "Manual" },
-      { param: "Material", value: "Clear Silicone Rubber" },
-      { param: "Mix Ratio", value: "1:1 by weight" },
-      { param: "Cure Time", value: "12 hours at 25°C (6 hours with accelerator)" },
-      { param: "Shore Hardness", value: "20A" },
-      { param: "Tear Strength", value: "25 N/mm" },
-      { param: "Elongation", value: "500%" },
-      { param: "Viscosity", value: "5000 cps" },
-      { param: "Working Temperature", value: "-50°C to 200°C" },
-      { param: "Kit Weight", value: "1 kg (Part A: 500g, Part B: 500g)" }
-    ],
-    ordering: [
-      { part: "230-3411-100", config: "Transmount 1kg Kit with Mixing Accessories", voltage: "None" }
-    ],
-    consumables: [
-      {
-        title: "Clear Silicone Rubber Refill",
-        subtitle: "1kg (500g Part A, 500g Part B)",
-        image: "/product/clearSiliconeRefill.png"
-      },
-      {
-        title: "Mixing Cups and Sticks",
-        subtitle: "For precise mixing",
-        image: "/product/mixingCupsSticks.png"
-      },
-      {
-        title: "Cure Accelerator",
-        subtitle: "For 6-hour curing",
-        image: "/product/cureAccelerator.png"
-      }
-    ],
-    literature: [
-      { title: "Transmount User Manual", image: "/product/transmount-manual.png" },
-      { title: "Transmount Brochure", image: "/product/transmount-brochure.png" },
-      { title: "Transparent Mould Making Guide", image: "/product/mould-making-guide.png" }
-    ]
-  },
 ];
 
 export const mainCategories = [
@@ -2585,1019 +4129,702 @@ export const mainCategories = [
           })),
       },
       {
-        "name": "Oscillating Abrasive Cut-off Machines",
-        "slug": "oscillating-abrasive-cut-off-machines",
-        "heroImage": "/images/oscillating-abrasive-cut-off-machines/oscillating-abrasive-cut-off-machines.png",
-        "intro": {
-          "title": "Advanced Oscillating Cutting Technology",
-          "description": "Our Oscillating Abrasive Cut-off Machines provide precision and efficiency for cutting hard materials in industrial and laboratory settings. Featuring advanced oscillation technology, these machines ensure minimal thermal damage and superior surface finish for metallographic and materialographic applications.",
-          "categoryLabel": "Explore our oscillating cutting solutions",
-          "buttons": [
-            { "text": "Discover Oscillating Machines", "variant": "primary" },
-            { "text": "Contact Our Team", "variant": "secondary", "link": "/contact" }
+        name: "Oscillating Abrasive Cut-off Machines",
+        slug: "oscillating-abrasive-cut-off-machines",
+        heroImage: "/images/oscillating-abrasive-cut-off-machines/oscillating-abrasive-cut-off-machines.png",
+        intro: {
+          title: "Advanced Oscillating Cutting Technology",
+          description: "Our Oscillating Abrasive Cut-off Machines provide precision and efficiency for cutting hard materials in industrial and laboratory settings. Featuring advanced oscillation technology, these machines ensure minimal thermal damage and superior surface finish for metallographic and materialographic applications.",
+          categoryLabel: "Explore our oscillating cutting solutions",
+          buttons: [
+            { text: "Discover Oscillating Machines", variant: "primary" },
+            { text: "Contact Our Team", variant: "secondary", link: "/contact" }
           ]
         },
-        "semiAutomaticSection": {
-          "title": "Oscillating Abrasive Cut-off Machines",
-          "description": "Enhance productivity with oscillating cut-off machines that process samples with reduced contact area, ensuring high-quality cuts and extended wheel life. Ideal for hard materials and high-volume applications.",
-          "label": "Our Oscillating Products"
+        semiAutomaticSection: {
+          title: "Oscillating Abrasive Cut-off Machines",
+          description: "Enhance productivity with oscillating cut-off machines that process samples with reduced contact area, ensuring high-quality cuts and extended wheel life. Ideal for hard materials and high-volume applications.",
+          label: "Our Oscillating Products"
         },
-        "specialtySection": {
-          "title": "Specialty Oscillating Cutting Solutions",
-          "description": "For applications requiring exceptional precision, flatness, or surface finish, our specialty oscillating cut-off machines deliver unmatched performance tailored to your needs.",
-          "label": "Precision Cutting Solutions"
+        specialtySection: {
+          title: "Specialty Oscillating Cutting Solutions",
+          description: "For applications requiring exceptional precision, flatness, or surface finish, our specialty oscillating cut-off machines deliver unmatched performance tailored to your needs.",
+          label: "Precision Cutting Solutions"
         },
-        "solutionsBanner": {
-          "title": "Complete Oscillating Cutting Solutions",
-          "description": "Dive into our Solutions section for technical insights, recommended cutting techniques, and industry-specific applications to optimize your cutting processes.",
-          "image": "/productsListing/Oscillating_Solutions.png",
-          "label": "Tailored Cutting Solutions",
-          "buttons": [
-            { "text": "Industry-Specific Solutions", "variant": "primary" },
-            { "text": "Material-Specific Solutions", "variant": "secondary" }
+        solutionsBanner: {
+          title: "Complete Oscillating Cutting Solutions",
+          description: "Dive into our Solutions section for technical insights, recommended cutting techniques, and industry-specific applications to optimize your cutting processes.",
+          image: "/productsListing/Oscillating_Solutions.png",
+          label: "Tailored Cutting Solutions",
+          buttons: [
+            { text: "Industry-Specific Solutions", variant: "primary" },
+            { text: "Material-Specific Solutions", variant: "secondary" }
           ]
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "oscillating-abrasive-cut-off-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Cutting Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "oscillating-abrasive-cut-off-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/oscillating-abrasive-cut-off-machines/axitom.png",
-            "alt": "Axitom Oscillating Cut-off Machine",
-            "category": "Oscillating Cutting Machines",
-            "title": "Axitom",
-            "description": "Fully automatic high-volume cutting machine with oscillating ExciCut mode for minimal thermal damage.",
-            "reviews": 12,
-            "rating": 4.8
+            id: 1,
+            name: "Oscillating Abrasive Cut-off Machines",
+            color: "rgba(50, 168, 82, 0.1)",
+            bgColor: "rgba(50, 168, 82, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "oscillating-abrasive-cut-off-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           },
-          {
-            "id": 2,
-            "image": "/images/oscillating-abrasive-cut-off-machines/servocut-602.png",
-            "alt": "SERVOCUT 602 Oscillating Cut-off Machine",
-            "category": "Oscillating Cutting Machines",
-            "title": "SERVOCUT 602",
-            "description": "Advanced high-capacity machine with 4-axis cutting and oscillation for complex specimens.",
-            "reviews": 8,
-            "rating": 4.7
-          },
-          {
-            "id": 3,
-            "image": "/images/oscillating-abrasive-cut-off-machines/metacut-302.png",
-            "alt": "METACUT 302 Oscillating Cut-off Machine",
-            "category": "Oscillating Cutting Machines",
-            "title": "METACUT 302",
-            "description": "Versatile machine for wet cutting of large and irregularly shaped workpieces with oscillation.",
-            "reviews": 10,
-            "rating": 4.6
-          }
         ],
-        "products": [
-          { "name": "Oscicut", "image": "/images/oscillating-abrasive-cut-off-machines/oscicut.png" },
-          { "name": "SERVOCUT 602", "image": "/images/oscillating-abrasive-cut-off-machines/servocut-602.png" },
-          { "name": "METACUT 302", "image": "/images/oscillating-abrasive-cut-off-machines/metacut-302.png" }
-        ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Oscillating Abrasive Cut-off Machines",
-            "color": "rgba(50, 168, 82, 0.1)",
-            "bgColor": "rgba(50, 168, 82, 0.1)",
-            "subItems": [
-              { "name": "Oscicut", "apiCall": "/api/products/axitom" },
-              { "name": "SERVOCUT 602", "apiCall": "/api/products/servocut-602" },
-              { "name": "METACUT 302", "apiCall": "/api/products/metacut-302" }
+        productCards: products
+          .filter((p) => p.categorySlug === "oscillating-abrasive-cut-off-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: products
+          .filter((p) => p.categorySlug === "oscillating-abrasive-cut-off-machines" && p.tag === "Specialty")
+          .slice(0, 2)
+          .map((p, index) => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            image: p.image,
+            delay: 0.1 * (index + 1),
+            animationX: index % 2 === 0 ? -50 : 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" }
             ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Oscicut",
-            "tag": "High-Volume Cutting",
-            "description": "Fully automatic high-volume cutting machine with oscillating ExciCut mode for minimal thermal damage and enhanced wheel life.",
-            "image": "/images/oscillating-abrasive-cut-off-machines/oscicut.png",
-            "detail": "/products/oscicut",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "SERVOCUT 602",
-            "tag": "4-Axis Precision",
-            "description": "Advanced high-capacity machine with 4-axis cutting and oscillation for complex specimens, featuring a large rotary table.",
-            "image": "/images/oscillating-abrasive-cut-off-machines/servocut-602.png",
-            "detail": "/products/servocut-602",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "METACUT 302",
-            "tag": "Versatile Cutting",
-            "description": "Designed for wet cutting of large and irregularly shaped workpieces with oscillation for improved surface finish.",
-            "image": "/images/oscillating-abrasive-cut-off-machines/metacut-302.png",
-            "detail": "/products/metacut-302",
-            "delay": 0.3
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Oscicut",
-            "description": "Fully automatic high-volume cutting machine with ExciCut oscillating mode to reduce thermal damage and enhance cutting precision. Ideal for automotive and metallographic applications.",
-            "image": "/images/oscillating-abrasive-cut-off-machines/oscicut.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "SERVOCUT 602",
-            "description": "High-capacity cutting machine with 4-axis capability and oscillation for complex and large specimens, perfect for advanced materialographic labs.",
-            "image": "/images/oscillating-abrasive-cut-off-machines/servocut-602.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "oscicut", "name": "Oscicut" },
-          { "id": "servocut-602", "name": "SERVOCUT 602" },
-          { "id": "metacut-302", "name": "METACUT 302" }
-        ]
+          })),
+        subCategories: products
+          .filter((p) => p.categorySlug === "oscillating-abrasive-cut-off-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "Large Component Cutting Machines",
-        "slug": "large-component-cutting-machines",
-        "heroImage": "/images/large-component-cutting-machines/large-component-cutting-machines.png",
-        "intro": {
-          "title": "Heavy-Duty Cutting for Oversized Components",
-          "description": "Our Large Component Cutting Machines are engineered for precision and power, tackling massive workpieces in industries like aerospace, automotive, and heavy manufacturing. Designed for large-scale CNC machining, these machines deliver exceptional accuracy and efficiency for complex, oversized parts.",
-          "categoryLabel": "Explore our large component cutting solutions",
-          "buttons": [
-            { "text": "Discover Large Cutting Machines", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+        name: "Large Component Cutting Machines",
+        slug: "large-component-cutting-machines",
+        heroImage: "/images/large-component-cutting-machines/large-component-cutting-machines.png",
+        intro: {
+          title: "Heavy-Duty Cutting for Oversized Components",
+          description: "Our Large Component Cutting Machines are engineered for precision and power, tackling massive workpieces in industries like aerospace, automotive, and heavy manufacturing. Designed for large-scale CNC machining, these machines deliver exceptional accuracy and efficiency for complex, oversized parts.",
+          categoryLabel: "Explore our large component cutting solutions",
+          buttons: [
+            { text: "Discover Large Cutting Machines", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
           ]
         },
-        "semiAutomaticSection": {
-          "title": "Large Component Cutting Machines",
-          "description": "Handle oversized components with ease using our advanced CNC cutting machines, capable of milling, turning, and boring large parts with tight tolerances. Perfect for high-volume and prototype production in demanding industries.",
-          "label": "Our Large Cutting Products"
+        semiAutomaticSection: {
+          title: "Large Component Cutting Machines",
+          description: "Handle oversized components with ease using our advanced CNC cutting machines, capable of milling, turning, and boring large parts with tight tolerances. Perfect for high-volume and prototype production in demanding industries.",
+          label: "Our Large Cutting Products"
         },
-        "specialtySection": {
-          "title": "Specialty Large Component Cutting Solutions",
-          "description": "For unique challenges requiring extreme precision or specialized processes, our large component cutting machines provide tailored solutions for complex geometries and heavy-duty materials.",
-          "label": "Advanced Large-Scale Solutions"
+        specialtySection: {
+          title: "Specialty Large Component Cutting Solutions",
+          description: "For unique challenges requiring extreme precision or specialized processes, our large component cutting machines provide tailored solutions for complex geometries and heavy-duty materials.",
+          label: "Advanced Large-Scale Solutions"
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Large Component Cutting Solutions",
-          "description": "Explore our Solutions section for technical articles, recommended machining methods, and industry-specific applications to optimize your large component cutting processes.",
-          "image": "/productsListing/Large_Component_Solutions.png",
-          "label": "Industry-Tailored Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
+        solutionsBanner: {
+          title: "Comprehensive Large Component Cutting Solutions",
+          description: "Explore our Solutions section for technical articles, recommended machining methods, and industry-specific applications to optimize your large component cutting processes.",
+          image: "/productsListing/Large_Component_Solutions.png",
+          label: "Industry-Tailored Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" }
           ]
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "large-component-cutting-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Large Component Cutting Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "large-component-cutting-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/large-component-cutting-machines/metacut-l-10-15.png",
-            "alt": "Metacut L 10 / L 15 Large Component Cutting Machine",
-            "category": "Large Component Cutting Machines",
-            "title": "Metacut L 10 / L 15",
-            "description": "A 5-axis CNC machining center for large-scale assembly tools, offering precision up to 42 microns over a 46-foot X-axis. Ideal for aerospace components.",
-            "reviews": 15,
-            "rating": 4.9
-          },
-          {
-            "id": 2,
-            "image": "/images/large-component-cutting-machines/maf-180c.png",
-            "alt": "MAF-180C Large Component Cutting Machine",
-            "category": "Large Component Cutting Machines",
-            "title": "MAF-180C",
-            "description": "High-power CNC machine with 85 kW spindle for large diameter turning and deep boring, designed for heavy-duty industrial applications.",
-            "reviews": 10,
-            "rating": 4.7
-          },
-          {
-            "id": 3,
-            "image": "/images/large-component-cutting-machines/hexram-gantry.png",
-            "alt": "Hexram Gantry Large Component Cutting Machine",
-            "category": "Large Component Cutting Machines",
-            "title": "Hexram Gantry",
-            "description": "Gantry-style CNC mill for 5-sided machining of tall, heavy parts, with advanced chip management and high rigidity.",
-            "reviews": 8,
-            "rating": 4.6
+            id: 1,
+            name: "Large Component Cutting Machines",
+            color: "rgba(120, 50, 183, 0.1)",
+            bgColor: "rgba(120, 50, 183, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "large-component-cutting-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           }
         ],
-        "products": [
-          { "name": "Metacut L 10 / L 15", "image": "/images/large-component-cutting-machines/metacut-l-10-15.png" },
-          { "name": "MAF-180C", "image": "/images/large-component-cutting-machines/maf-180c.png" },
-          { "name": "Hexram Gantry", "image": "/images/large-component-cutting-machines/hexram-gantry.png" }
-        ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Large Component Cutting Machines",
-            "color": "rgba(120, 50, 183, 0.1)",
-            "bgColor": "rgba(120, 50, 183, 0.1)",
-            "subItems": [
-              { "name": "Metacut L 10 / L 15", "apiCall": "/api/products/metacut-l-10-15" },
-              { "name": "MAF-180C", "apiCall": "/api/products/maf-180c" },
-              { "name": "Hexram Gantry", "apiCall": "/api/products/hexram-gantry" }
+        productCards: products
+          .filter((p) => p.categorySlug === "large-component-cutting-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: products
+          .filter((p) => p.categorySlug === "large-component-cutting-machines" && p.tag === "Specialty")
+          .slice(0, 2)
+          .map((p, index) => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            image: p.image,
+            delay: 0.1 * (index + 1),
+            animationX: index % 2 === 0 ? -50 : 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" }
             ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Metacut L 10 / L 15",
-            "tag": "5-Axis Precision",
-            "description": "A massive 5-axis CNC machining center with laser trackers for precision cutting of large aerospace and automotive components, capable of handling parts up to 100 tons.",
-            "image": "/images/large-component-cutting-machines/metacut-l-10-15.png",
-            "detail": "/products/metacut-l-10-15",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "MAF-180C",
-            "tag": "High-Power Machining",
-            "description": "Designed for large-scale turning and boring, this CNC machine features an 85 kW spindle and hydrostatic slide ways for heavy-duty applications.",
-            "image": "/images/large-component-cutting-machines/maf-180c.png",
-            "detail": "/products/maf-180c",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Hexram Gantry",
-            "tag": "Versatile Gantry Milling",
-            "description": "A gantry-style CNC mill for 5-sided machining of oversized parts, offering superior chip management and high rigidity for heavy industries.",
-            "image": "/images/large-component-cutting-machines/hexram-gantry.png",
-            "detail": "/products/hexram-gantry",
-            "delay": 0.3
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Metacut L 10 / L 15",
-            "description": "A 5-axis CNC machining center designed for large-scale assembly tools, with laser trackers ensuring precision for aerospace and automotive applications. Handles parts up to 100 tons.",
-            "image": "/images/large-component-cutting-machines/metacut-l-10-15.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "MAF-180C",
-            "description": "High-power CNC machine with an 85 kW spindle for large diameter turning and deep boring, ideal for heavy-duty industrial components with minimal thermal expansion.",
-            "image": "/images/large-component-cutting-machines/maf-180c.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "metacut-l-10-15", "name": "Metacut L 10 / L 15" },
-          { "id": "maf-180c", "name": "MAF-180C" },
-          { "id": "hexram-gantry", "name": "Hexram Gantry" }
-        ]
+          })),
+        subCategories: products
+          .filter((p) => p.categorySlug === "large-component-cutting-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "Diamond Cutting Machines",
-        "slug": "diamond-cutting-machines",
-        "heroImage": "/images/diamond-cutting-machines/diamond-cutting-machines.png",
-        "intro": {
-          "title": "Precision Diamond Cutting Technology",
-          "description": "Our Diamond Cutting Machines offer unmatched precision and efficiency for processing natural and lab-grown diamonds. From laser sawing to advanced 4P cutting and fancy shaping, these machines are designed for jewelers and manufacturers seeking high-quality results with minimal material loss.",
-          "categoryLabel": "Explore our diamond cutting solutions",
-          "buttons": [
-            { "text": "Discover Diamond Cutting Machines", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+        name: "Diamond Cutting Machines",
+        slug: "diamond-cutting-machines",
+        heroImage: "/images/diamond-cutting-machines/diamond-cutting-machines.png",
+        intro: {
+          title: "Precision Diamond Cutting Technology",
+          description: "Our Diamond Cutting Machines offer unmatched precision and efficiency for processing natural and lab-grown diamonds. From laser sawing to advanced 4P cutting and fancy shaping, these machines are designed for jewelers and manufacturers seeking high-quality results with minimal material loss.",
+          categoryLabel: "Explore our diamond cutting solutions",
+          buttons: [
+            { text: "Discover Diamond Cutting Machines", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
           ]
         },
-        "semiAutomaticSection": {
-          "title": "Diamond Cutting Machines",
-          "description": "Process rough diamonds with precision using our advanced laser and CNC-based cutting machines. These systems ensure maximum yield, minimal breakage, and high-quality finishes for both jewelry and industrial applications.",
-          "label": "Our Diamond Cutting Products"
+        semiAutomaticSection: {
+          title: "Diamond Cutting Machines",
+          description: "Process rough diamonds with precision using our advanced laser and CNC-based cutting machines. These systems ensure maximum yield, minimal breakage, and high-quality finishes for both jewelry and industrial applications.",
+          label: "Our Diamond Cutting Products"
         },
-        "specialtySection": {
-          "title": "Specialty Diamond Cutting Solutions",
-          "description": "For intricate designs, fancy shapes, or high-volume production, our specialty diamond cutting machines deliver tailored performance for complex requirements in the jewelry and gemstone industries.",
-          "label": "Advanced Diamond Processing Solutions"
+        specialtySection: {
+          title: "Specialty Diamond Cutting Solutions",
+          description: "For intricate designs, fancy shapes, or high-volume production, our specialty diamond cutting machines deliver tailored performance for complex requirements in the jewelry and gemstone industries.",
+          label: "Advanced Diamond Processing Solutions"
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Diamond Cutting Solutions",
-          "description": "Visit our Solutions section for technical guides, cutting techniques, and industry-specific applications to optimize your diamond processing workflow.",
-          "image": "/productsListing/Diamond_Cutting_Solutions.png",
-          "label": "Tailored Diamond Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
+        solutionsBanner: {
+          title: "Comprehensive Diamond Cutting Solutions",
+          description: "Visit our Solutions section for technical guides, cutting techniques, and industry-specific applications to optimize your diamond processing workflow.",
+          image: "/productsListing/Diamond_Cutting_Solutions.png",
+          label: "Tailored Diamond Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" }
           ]
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "diamond-cutting-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Diamond Cutting Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "diamond-cutting-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/diamond-cutting-machines/dcm.png",
-            "alt": "Diamond Cutting Machine",
-            "category": "Diamond Cutting Machines",
-            "title": "DCM",
-            "description": "Automated cutting robot for unparalleled precision, capable of processing complex shapes and stones in just one hour, ideal for high-end jewelry production.",
-            "reviews": 18,
-            "rating": 4.9
-          },
-          {
-            "id": 2,
-            "image": "/images/diamond-cutting-machines/lasermax-sawing.png",
-            "alt": "Lasermax Sawing Machine",
-            "category": "Diamond Cutting Machines",
-            "title": "Lasermax Sawing",
-            "description": "High-performance laser sawing machine for natural and CVD diamonds, offering smooth cuts and minimal weight loss.",
-            "reviews": 12,
-            "rating": 4.7
-          },
-          {
-            "id": 3,
-            "image": "/images/diamond-cutting-machines/davinci-factory.png",
-            "alt": "DaVinci Diamond Factory",
-            "category": "Diamond Cutting Machines",
-            "title": "DaVinci Diamond Factory",
-            "description": "Automated laser system for cutting and shaping rough diamonds into brilliant cuts with up to 57 facets in a single process.",
-            "reviews": 10,
-            "rating": 4.8
+            id: 1,
+            name: "Diamond Cutting Machines",
+            color: "rgba(200, 50, 100, 0.1)",
+            bgColor: "rgba(200, 50, 100, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "diamond-cutting-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           }
         ],
-        "products": [
-          { "name": "DCM", "image": "/images/diamond-cutting-machines/dcm.png" },
-          { "name": "Lasermax Sawing", "image": "/images/diamond-cutting-machines/lasermax-sawing.png" },
-          { "name": "DaVinci Diamond Factory", "image": "/images/diamond-cutting-machines/davinci-factory.png" }
-        ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Diamond Cutting Machines",
-            "color": "rgba(200, 50, 100, 0.1)",
-            "bgColor": "rgba(200, 50, 100, 0.1)",
-            "subItems": [
-              { "name": "DCM", "apiCall": "/api/products/dcm" },
-              { "name": "Lasermax Sawing", "apiCall": "/api/products/lasermax-sawing" },
-              { "name": "DaVinci Diamond Factory", "apiCall": "/api/products/davinci-factory" }
+        productCards: products
+          .filter((p) => p.categorySlug === "diamond-cutting-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: products
+          .filter((p) => p.categorySlug === "diamond-cutting-machines" && p.tag === "Specialty")
+          .slice(0, 2)
+          .map((p, index) => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            image: p.image,
+            delay: 0.1 * (index + 1),
+            animationX: index % 2 === 0 ? -50 : 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" }
             ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "DCM",
-            "tag": "Automated Precision",
-            "description": "Revolutionary cutting robot that processes diamonds with unmatched accuracy, handling complex shapes and stones in one hour, perfect for high-end jewelry.",
-            "image": "/images/diamond-cutting-machines/dcm.png",
-            "detail": "/products/dcm",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Lasermax Sawing",
-            "tag": "Laser Efficiency",
-            "description": "Advanced laser sawing machine for natural and CVD diamonds, designed for high performance, low maintenance, and smooth surface finishes.",
-            "image": "/images/diamond-cutting-machines/lasermax-sawing.png",
-            "detail": "/products/lasermax-sawing",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "DaVinci Diamond Factory",
-            "tag": "Multi-Facet Cutting",
-            "description": "Automated laser system for transforming rough diamonds into brilliant cuts with up to 57 facets, supporting fancy shaping with minimal material loss.",
-            "image": "/images/diamond-cutting-machines/davinci-factory.png",
-            "detail": "/products/davinci-factory",
-            "delay": 0.3
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "DCM",
-            "description": "Developed by Antwerp’s Scientific and Technical Research Center, this cutting robot offers precision and versatility for complex diamond shapes, completing tasks in one hour that take human cutters a day.",
-            "image": "/images/diamond-cutting-machines/dcm.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "DaVinci Diamond Factory",
-            "description": "Automated laser cutting and shaping system using Synova’s Laser MicroJet technology, capable of producing brilliant cut diamonds with up to 57 facets in a single process, ideal for high-volume production.",
-            "image": "/images/diamond-cutting-machines/davinci-factory.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "dcm", "name": "DCM" },
-          { "id": "lasermax-sawing", "name": "Lasermax Sawing" },
-          { "id": "davinci-factory", "name": "DaVinci Diamond Factory" }
-        ]
+          })),
+        subCategories: products
+          .filter((p) => p.categorySlug === "diamond-cutting-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
     ]
   },
-
-  // Moulding / Grinding / Polishing
   {
     mainCategory: "Moulding / Grinding / Polishing",
     categories: [
       {
-        "name": "Moulding Machines",
-        "slug": "moulding-machines",
-        "heroImage": "/images/moulding-machines/moulding-machines.png",
-        "intro": {
-          "title": "High-Precision Moulding Solutions",
-          "description": "Our Moulding Machines deliver advanced technology for shaping plastics, metals, and composites with unmatched precision and efficiency. From injection moulding to blow moulding and compression moulding, our solutions cater to industries like automotive, packaging, and medical device manufacturing.",
-          "categoryLabel": "Explore our moulding solutions",
-          "buttons": [
-            { "text": "Discover Moulding Machines", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+        name: "Moulding Machines",
+        slug: "moulding-machines",
+        heroImage: "/images/moulding-machines/moulding-machines.png",
+        intro: {
+          title: "High-Precision Moulding Solutions",
+          description: "Our Moulding Machines deliver advanced technology for shaping plastics, metals, and composites with unmatched precision and efficiency. From injection moulding to blow moulding and compression moulding, our solutions cater to industries like automotive, packaging, and medical device manufacturing.",
+          categoryLabel: "Explore our moulding solutions",
+          buttons: [
+            { text: "Discover Moulding Machines", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
           ]
         },
-        "semiAutomaticSection": {
-          "title": "Moulding Machines",
-          "description": "Our range of moulding machines, including hydraulic, electric, and hybrid models, ensures high-speed production, energy efficiency, and precision for diverse applications, from small components to large industrial parts.",
-          "label": "Our Moulding Products"
+        semiAutomaticSection: {
+          title: "Moulding Machines",
+          description: "Our range of moulding machines, including hydraulic, electric, and hybrid models, ensures high-speed production, energy efficiency, and precision for diverse applications, from small components to large industrial parts.",
+          label: "Our Moulding Products"
         },
-        "specialtySection": {
-          "title": "Specialty Moulding Solutions",
-          "description": "For complex geometries, cleanroom applications, or high-volume production, our specialty moulding machines provide customized solutions to meet stringent industry requirements.",
-          "label": "Advanced Moulding Solutions"
+        specialtySection: {
+          title: "Specialty Moulding Solutions",
+          description: "For complex geometries, cleanroom applications, or high-volume production, our specialty moulding machines provide customized solutions to meet stringent industry requirements.",
+          label: "Advanced Moulding Solutions"
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Moulding Solutions",
-          "description": "Browse our Solutions section for technical resources, process optimization guides, and industry-specific applications to enhance your moulding operations.",
-          "image": "/productsListing/Moulding_Solutions.png",
-          "label": "Tailored Moulding Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
+        solutionsBanner: {
+          title: "Comprehensive Moulding Solutions",
+          description: "Browse our Solutions section for technical resources, process optimization guides, and industry-specific applications to enhance your moulding operations.",
+          image: "/productsListing/Moulding_Solutions.png",
+          label: "Tailored Moulding Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" }
           ]
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "moulding-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Moulding Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "moulding-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/moulding-machines/engel-victory.png",
-            "alt": "ENGEL Victory Injection Moulding Machine",
-            "category": "Moulding Machines",
-            "title": "ENGEL Victory",
-            "description": "Tie-bar-less injection moulding machine with clamping forces from 280 to 5000 kN, ideal for large moulds and precision parts in automotive and packaging industries.",
-            "reviews": 20,
-            "rating": 4.8
-          },
-          {
-            "id": 2,
-            "image": "/images/moulding-machines/shibaura-ecsxiii.png",
-            "alt": "Shibaura ECSXIII Injection Moulding Machine",
-            "category": "Moulding Machines",
-            "title": "Shibaura ECSXIII",
-            "description": "All-electric injection moulding machine with 60 to 1300-ton clamping force, offering high precision and energy efficiency for medical and consumer goods.",
-            "reviews": 15,
-            "rating": 4.7
-          },
-          {
-            "id": 3,
-            "image": "/images/moulding-machines/windsor-sprint.png",
-            "alt": "Windsor Sprint Injection Moulding Machine",
-            "category": "Moulding Machines",
-            "title": "Windsor Sprint",
-            "description": "Hydro-mechanical injection moulding machine with 150 to 350-ton capacity, designed for high-speed production of packaging and household items.",
-            "reviews": 12,
-            "rating": 4.6
+            id: 1,
+            name: "Moulding Machines",
+            color: "rgba(30, 150, 70, 0.1)",
+            bgColor: "rgba(30, 150, 70, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "moulding-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           }
         ],
-        "products": [
-          { "name": "ENGEL Victory", "image": "/images/moulding-machines/engel-victory.png" },
-          { "name": "Shibaura ECSXIII", "image": "/images/moulding-machines/shibaura-ecsxiii.png" },
-          { "name": "Windsor Sprint", "image": "/images/moulding-machines/windsor-sprint.png" }
-        ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Moulding Machines",
-            "color": "rgba(30, 150, 70, 0.1)",
-            "bgColor": "rgba(30, 150, 70, 0.1)",
-            "subItems": [
-              { "name": "ENGEL Victory", "apiCall": "/api/products/engel-victory" },
-              { "name": "Shibaura ECSXIII", "apiCall": "/api/products/shibaura-ecsxiii" },
-              { "name": "Windsor Sprint", "apiCall": "/api/products/windsor-sprint" }
+        productCards: products
+          .filter((p) => p.categorySlug === "moulding-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: products
+          .filter((p) => p.categorySlug === "moulding-machines" && p.tag === "Specialty")
+          .slice(0, 2)
+          .map((p, index) => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            image: p.image,
+            delay: 0.1 * (index + 1),
+            animationX: index % 2 === 0 ? -50 : 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" }
             ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "ENGEL Victory",
-            "tag": "Tie-Bar-Less Design",
-            "description": "Versatile injection moulding machine with tie-bar-less technology, supporting large moulds and multi-cavity production for automotive and packaging applications.",
-            "image": "/images/moulding-machines/engel-victory.png",
-            "detail": "/products/engel-victory",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Shibaura ECSXIII",
-            "tag": "All-Electric Precision",
-            "description": "High-performance all-electric machine with servo control for accurate motion, ideal for cleanroom medical device manufacturing and consumer electronics.",
-            "image": "/images/moulding-machines/shibaura-ecsxiii.png",
-            "detail": "/products/shibaura-ecsxiii",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Windsor Sprint",
-            "tag": "High-Speed Production",
-            "description": "Hydro-mechanical moulding machine optimized for fast cycle times, suitable for mass production of packaging components and household goods.",
-            "image": "/images/moulding-machines/windsor-sprint.png",
-            "detail": "/products/windsor-sprint",
-            "delay": 0.3
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "ENGEL Victory",
-            "description": "Tie-bar-less injection moulding machine with clamping forces from 280 to 5000 kN, offering flexibility for large moulds and high-precision parts in automotive and packaging sectors.",
-            "image": "/images/moulding-machines/engel-victory.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Shibaura ECSXIII",
-            "description": "All-electric injection moulding machine with advanced servo technology, providing energy-efficient and precise production for medical devices and intricate consumer goods.",
-            "image": "/images/moulding-machines/shibaura-ecsxiii.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "engel-victory", "name": "ENGEL Victory" },
-          { "id": "shibaura-ecsxiii", "name": "Shibaura ECSXIII" },
-          { "id": "windsor-sprint", "name": "Windsor Sprint" }
-        ]
+          })),
+        subCategories: products
+          .filter((p) => p.categorySlug === "moulding-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "Grinding and Polishing Machines",
-        "slug": "grinding-polishing-machines",
-        "heroImage": "/images/grinding-polishing-machines/grinding-polishing-machines.png",
-        "intro": {
-          "title": "Superior Surface Finishing Solutions",
-          "description": "Our Grinding and Polishing Machines deliver exceptional surface quality for metallographic, materialographic, and industrial applications. From semi-automatic grinders to fully automated polishing systems, our machines ensure precision, consistency, and efficiency for laboratory and production environments.",
-          "categoryLabel": "Explore our grinding and polishing solutions",
-          "buttons": [
-            { "text": "Discover Grinding & Polishing Machines", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+        name: "Grinding and Polishing Machines",
+        slug: "grinding-polishing-machines",
+        heroImage: "/images/grinding-polishing-machines/grinding-polishing-machines.png",
+        intro: {
+          title: "Superior Surface Finishing Solutions",
+          description: "Our Grinding and Polishing Machines deliver exceptional surface quality for metallographic, materialographic, and industrial applications. From semi-automatic grinders to fully automated polishing systems, our machines ensure precision, consistency, and efficiency for laboratory and production environments.",
+          categoryLabel: "Explore our grinding and polishing solutions",
+          buttons: [
+            { text: "Discover Grinding & Polishing Machines", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
           ]
         },
-        "semiAutomaticSection": {
-          "title": "Grinding and Polishing Machines",
-          "description": "Achieve high-quality surface finishes with our range of grinding and polishing machines, designed for both manual and automated processes. Ideal for preparing samples for analysis or finishing industrial components with precision.",
-          "label": "Our Grinding & Polishing Products"
+        semiAutomaticSection: {
+          title: "Grinding and Polishing Machines",
+          description: "Achieve high-quality surface finishes with our range of grinding and polishing machines, designed for both manual and automated processes. Ideal for preparing samples for analysis or finishing industrial components with precision.",
+          label: "Our Grinding & Polishing Products"
         },
-        "specialtySection": {
-          "title": "Specialty Grinding and Polishing Solutions",
-          "description": "For applications requiring ultra-fine finishes, complex geometries, or high-throughput production, our specialty grinding and polishing machines offer customized performance to meet the most demanding specifications.",
-          "label": "Advanced Surface Finishing Solutions"
+        specialtySection: {
+          title: "Specialty Grinding and Polishing Solutions",
+          description: "For applications requiring ultra-fine finishes, complex geometries, or high-throughput production, our specialty grinding and polishing machines offer customized performance to meet the most demanding specifications.",
+          label: "Advanced Surface Finishing Solutions"
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Grinding and Polishing Solutions",
-          "description": "Explore our Solutions section for technical insights, recommended preparation methods, and industry-specific applications to optimize your surface finishing processes.",
-          "image": "/productsListing/Grinding_Polishing_Solutions.png",
-          "label": "Tailored Finishing Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
+        solutionsBanner: {
+          title: "Comprehensive Grinding and Polishing Solutions",
+          description: "Explore our Solutions section for technical insights, recommended preparation methods, and industry-specific applications to optimize your surface finishing processes.",
+          image: "/productsListing/Grinding_Polishing_Solutions.png",
+          label: "Tailored Finishing Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" }
           ]
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "grinding-polishing-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Grinding and Polishing Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "grinding-polishing-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/grinding-polishing-machines/tegramin.png",
-            "alt": "Tegramin Grinding and Polishing Machine",
-            "category": "Grinding and Polishing Machines",
-            "title": "Tegramin",
-            "description": "Fully automatic system for precise grinding and polishing, ideal for high-quality metallographic sample preparation with consistent results.",
-            "reviews": 16,
-            "rating": 4.8
-          },
-          {
-            "id": 2,
-            "image": "/images/grinding-polishing-machines/ecopol-6.png",
-            "alt": "EcoPol-6 Grinding and Polishing Machine",
-            "category": "Grinding and Polishing Machines",
-            "title": "EcoPol-6",
-            "description": "Dual-spindle machine for efficient grinding and polishing, designed for both laboratory and industrial applications with variable speed control.",
-            "reviews": 12,
-            "rating": 4.7
-          },
-          {
-            "id": 3,
-            "image": "/images/grinding-polishing-machines/labopol-30.png",
-            "alt": "LaboPol-30 Grinding and Polishing Machine",
-            "category": "Grinding and Polishing Machines",
-            "title": "LaboPol-30",
-            "description": "Vers年齢 machine for manual and semi-automatic grinding and polishing, suitable for a wide range of materials and sample sizes.",
-            "reviews": 10,
-            "rating": 4.6
+            id: 1,
+            name: "Grinding and Polishing Machines",
+            color: "rgba(80, 120, 200, 0.1)",
+            bgColor: "rgba(80, 120, 200, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "grinding-polishing-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           }
         ],
-        "products": [
-          { "name": "Tegramin", "image": "/images/grinding-polishing-machines/tegramin.png" },
-          { "name": "EcoPol-6", "image": "/images/grinding-polishing-machines/ecopol-6.png" },
-          { "name": "LaboPol-30", "image": "/images/grinding-polishing-machines/labopol-30.png" }
-        ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Grinding and Polishing Machines",
-            "color": "rgba(80, 120, 200, 0.1)",
-            "bgColor": "rgba(80, 120, 200, 0.1)",
-            "subItems": [
-              { "name": "Tegramin", "apiCall": "/api/products/tegramin" },
-              { "name": "EcoPol-6", "apiCall": "/api/products/ecopol-6" },
-              { "name": "LaboPol-30", "apiCall": "/api/products/labopol-30" }
+        productCards: products
+          .filter((p) => p.categorySlug === "grinding-polishing-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: products
+          .filter((p) => p.categorySlug === "grinding-polishing-machines" && p.tag === "Specialty")
+          .slice(0, 2)
+          .map((p, index) => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            image: p.image,
+            delay: 0.1 * (index + 1),
+            animationX: index % 2 === 0 ? -50 : 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" }
             ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Tegramin",
-            "tag": "Automated Precision",
-            "description": "Fully automatic grinding and polishing system with advanced dosing and force control, perfect for metallographic and materialographic sample preparation.",
-            "image": "/images/grinding-polishing-machines/tegramin.png",
-            "detail": "/products/tegramin",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "EcoPol-6",
-            "tag": "Dual-Spindle Efficiency",
-            "description": "Dual-spindle machine with variable speed and robust design, ideal for high-throughput grinding and polishing in laboratory and industrial settings.",
-            "image": "/images/grinding-polishing-machines/ecopol-6.png",
-            "detail": "/products/ecopol-6",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "LaboPol-30",
-            "tag": "Versatile Finishing",
-            "description": "Flexible machine for manual and semi-automatic grinding and polishing, supporting a wide range of materials and sample sizes with ease.",
-            "image": "/images/grinding-polishing-machines/labopol-30.png",
-            "detail": "/products/labopol-30",
-            "delay": 0.3
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Tegramin",
-            "description": "Fully automatic grinding and polishing system with precise dosing and force control, designed for high-quality metallographic sample preparation in advanced laboratories.",
-            "image": "/images/grinding-polishing-machines/tegramin.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "EcoPol-6",
-            "description": "Dual-spindle grinding and polishing machine with variable speed control, offering efficient processing for both laboratory research and industrial production.",
-            "image": "/images/grinding-polishing-machines/ecopol-6.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "tegramin", "name": "Tegramin" },
-          { "id": "ecopol-6", "name": "EcoPol-6" },
-          { "id": "labopol-30", "name": "LaboPol-30" }
-        ]
+          })),
+        subCategories: products
+          .filter((p) => p.categorySlug === "grinding-polishing-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "Automatic Spectro Sample Grinding Machines",
-        "slug": "automatic-spectro-sample-grinding-machines",
-        "heroImage": "/images/automatic-spectro-sample-grinding-machines/automatic-spectro-sample-grinding-machines.png",
-        "intro": {
-          "title": "Precision Grinding for Spectroscopic Analysis",
-          "description": "Our Automatic Spectro Sample Grinding Machines are designed for high-precision preparation of metallic samples for spectroscopic analysis. These machines ensure flat, uniform surfaces with minimal operator intervention, ideal for metallurgical labs and quality control in steel and metal industries.",
-          "categoryLabel": "Explore our spectro grinding solutions",
-          "buttons": [
-            { "text": "Discover Spectro Grinding Machines", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+        name: "Automatic Spectro Sample Grinding Machines",
+        slug: "automatic-spectro-sample-grinding-machines",
+        heroImage: "/images/automatic-spectro-sample-grinding-machines/automatic-spectro-sample-grinding-machines.png",
+        intro: {
+          title: "Precision Grinding for Spectroscopic Analysis",
+          description: "Our Automatic Spectro Sample Grinding Machines are designed for high-precision preparation of metallic samples for spectroscopic analysis. These machines ensure flat, uniform surfaces with minimal operator intervention, ideal for metallurgical labs and quality control in steel and metal industries.",
+          categoryLabel: "Explore our spectro grinding solutions",
+          buttons: [
+            { text: "Discover Spectro Grinding Machines", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
           ]
         },
-        "semiAutomaticSection": {
-          "title": "Automatic Spectro Sample Grinding Machines",
-          "description": "Automate the grinding process for spectroscopic samples with our advanced machines, delivering consistent surface finishes and high throughput for demanding laboratory and industrial applications.",
-          "label": "Our Spectro Grinding Products"
+        semiAutomaticSection: {
+          title: "Automatic Spectro Sample Grinding Machines",
+          description: "Automate the grinding process for spectroscopic samples with our advanced machines, delivering consistent surface finishes and high throughput for demanding laboratory and industrial applications.",
+          label: "Our Spectro Grinding Products"
         },
-        "specialtySection": {
-          "title": "Specialty Spectro Grinding Solutions",
-          "description": "For unique sample sizes, shapes, or stringent surface quality requirements, our specialty spectro grinding machines provide tailored solutions for optimal spectroscopic analysis.",
-          "label": "Advanced Spectro Grinding Solutions"
+        specialtySection: {
+          title: "Specialty Spectro Grinding Solutions",
+          description: "For unique sample sizes, shapes, or stringent surface quality requirements, our specialty spectro grinding machines provide tailored solutions for optimal spectroscopic analysis.",
+          label: "Advanced Spectro Grinding Solutions"
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Spectro Grinding Solutions",
-          "description": "Visit our Solutions section for technical guides, recommended grinding techniques, and industry-specific applications to enhance your spectroscopic sample preparation.",
-          "image": "/productsListing/Spectro_Grinding_Solutions.png",
-          "label": "Tailored Spectro Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
+        solutionsBanner: {
+          title: "Comprehensive Spectro Grinding Solutions",
+          description: "Visit our Solutions section for technical guides, recommended grinding techniques, and industry-specific applications to enhance your spectroscopic sample preparation.",
+          image: "/productsListing/Spectro_Grinding_Solutions.png",
+          label: "Tailored Spectro Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" }
           ]
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Spectro Sample Grinding Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/automatic-spectro-sample-grinding-machines/spectrogrind-200.png",
-            "alt": "SpectroGrind 200 Automatic Grinding Machine",
-            "category": "Spectro Sample Grinding Machines",
-            "title": "SpectroGrind 200",
-            "description": "Fully automatic grinding machine for spectroscopic samples, featuring programmable cycles and high-precision surface finishing.",
-            "reviews": 14,
-            "rating": 4.8
-          },
-          {
-            "id": 2,
-            "image": "/images/automatic-spectro-sample-grinding-machines/spectromax.png",
-            "alt": "SpectroMax Automatic Grinding Machine",
-            "category": "Spectro Sample Grinding Machines",
-            "title": "SpectroMax",
-            "description": "High-throughput machine with dual grinding stations for rapid preparation of metallic samples for OES and XRF analysis.",
-            "reviews": 10,
-            "rating": 4.7
-          },
-          {
-            "id": 3,
-            "image": "/images/automatic-spectro-sample-grinding-machines/spectroprep-300.png",
-            "alt": "SpectroPrep 300 Automatic Grinding Machine",
-            "category": "Spectro Sample Grinding Machines",
-            "title": "SpectroPrep 300",
-            "description": "Versatile automatic grinder with customizable settings for various sample sizes and materials, ideal for metallurgical labs.",
-            "reviews": 8,
-            "rating": 4.6
+            id: 1,
+            name: "Automatic Spectro Sample Grinding Machines",
+            color: "rgba(40, 140, 90, 0.1)",
+            bgColor: "rgba(40, 140, 90, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           }
         ],
-        "products": [
-          { "name": "SpectroGrind 200", "image": "/images/automatic-spectro-sample-grinding-machines/spectrogrind-200.png" },
-          { "name": "SpectroMax", "image": "/images/automatic-spectro-sample-grinding-machines/spectromax.png" },
-          { "name": "SpectroPrep 300", "image": "/images/automatic-spectro-sample-grinding-machines/spectroprep-300.png" }
-        ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Automatic Spectro Sample Grinding Machines",
-            "color": "rgba(40, 140, 90, 0.1)",
-            "bgColor": "rgba(40, 140, 90, 0.1)",
-            "subItems": [
-              { "name": "SpectroGrind 200", "apiCall": "/api/products/spectrogrind-200" },
-              { "name": "SpectroMax", "apiCall": "/api/products/spectromax" },
-              { "name": "SpectroPrep 300", "apiCall": "/api/products/spectroprep-300" }
+        productCards: products
+          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: products
+          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines" && p.tag === "Specialty")
+          .slice(0, 2)
+          .map((p, index) => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            image: p.image,
+            delay: 0.1 * (index + 1),
+            animationX: index % 2 === 0 ? -50 : 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" }
             ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "SpectroGrind 200",
-            "tag": "Programmable Precision",
-            "description": "Fully automatic grinding machine with programmable cycles, ensuring consistent surface finishes for spectroscopic analysis in metallurgical labs.",
-            "image": "/images/automatic-spectro-sample-grinding-machines/spectrogrind-200.png",
-            "detail": "/products/spectrogrind-200",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "SpectroMax",
-            "tag": "High Throughput",
-            "description": "Dual-station automatic grinder designed for rapid preparation of samples for OES and XRF, with minimal operator intervention.",
-            "image": "/images/automatic-spectro-sample-grinding-machines/spectromax.png",
-            "detail": "/products/spectromax",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "SpectroPrep 300",
-            "tag": "Versatile Grinding",
-            "description": "Automatic grinder with customizable settings for various sample sizes and materials, optimized for metallurgical and quality control applications.",
-            "image": "/images/automatic-spectro-sample-grinding-machines/spectroprep-300.png",
-            "detail": "/products/spectroprep-300",
-            "delay": 0.3
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "SpectroGrind 200",
-            "description": "Fully automatic spectro sample grinding machine with programmable cycles and advanced force control, ideal for high-precision metallurgical sample preparation.",
-            "image": "/images/automatic-spectro-sample-grinding-machines/spectrogrind-200.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "SpectroMax",
-            "description": "High-throughput automatic grinder with dual stations, designed for rapid and consistent preparation of metallic samples for spectroscopic analysis.",
-            "image": "/images/automatic-spectro-sample-grinding-machines/spectromax.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "spectrogrind-200", "name": "SpectroGrind 200" },
-          { "id": "spectromax", "name": "SpectroMax" },
-          { "id": "spectroprep-300", "name": "SpectroPrep 300" }
-        ]
+          })),
+        subCategories: products
+          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "Semi Automatic Grinding Polishing Machines",
-        "slug": "semi-automatic-grinding-polishing-machines",
-        "heroImage": "/images/semi-automatic-grinding-polishing-machines/semi-automatic-grinding-polishing-machines.png",
-        "intro": {
-          "title": "Flexible Grinding and Polishing Solutions",
-          "description": "Our Semi Automatic Grinding Polishing Machines combine operator control with automated precision, delivering high-quality surface finishes for metallographic, materialographic, and industrial applications. Perfect for labs and workshops requiring flexibility and consistency.",
-          "categoryLabel": "Explore our semi-automatic solutions",
-          "buttons": [
-            { "text": "Discover Semi-Automatic Machines", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+        name: "Semi Automatic Grinding Polishing Machines",
+        slug: "semi-automatic-grinding-polishing-machines",
+        heroImage: "/images/semi-automatic-grinding-polishing-machines/semi-automatic-grinding-polishing-machines.png",
+        intro: {
+          title: "Flexible Grinding and Polishing Solutions",
+          description: "Our Semi Automatic Grinding Polishing Machines combine operator control with automated precision, delivering high-quality surface finishes for metallographic, materialographic, and industrial applications. Perfect for labs and workshops requiring flexibility and consistency.",
+          categoryLabel: "Explore our semi-automatic solutions",
+          buttons: [
+            { text: "Discover Semi-Automatic Machines", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
           ]
         },
-        "semiAutomaticSection": {
-          "title": "Semi Automatic Grinding Polishing Machines",
-          "description": "Enhance productivity with semi-automatic machines that offer user-friendly controls and automated grinding/polishing cycles, ensuring repeatable results for diverse materials and sample types.",
-          "label": "Our Semi-Automatic Products"
+        semiAutomaticSection: {
+          title: "Semi Automatic Grinding Polishing Machines",
+          description: "Enhance productivity with semi-automatic machines that offer user-friendly controls and automated grinding/polishing cycles, ensuring repeatable results for diverse materials and sample types.",
+          label: "Our Semi-Automatic Products"
         },
-        "specialtySection": {
-          "title": "Specialty Semi-Automatic Solutions",
-          "description": "For applications requiring tailored processes or specific surface finishes, our specialty semi-automatic machines provide flexible solutions for complex grinding and polishing tasks.",
-          "label": "Advanced Semi-Automatic Solutions"
+        specialtySection: {
+          title: "Specialty Semi-Automatic Solutions",
+          description: "For applications requiring tailored processes or specific surface finishes, our specialty semi-automatic machines provide flexible solutions for complex grinding and polishing tasks.",
+          label: "Advanced Semi-Automatic Solutions"
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Semi-Automatic Solutions",
-          "description": "Browse our Solutions section for technical resources, preparation techniques, and industry-specific applications to optimize your grinding and polishing workflows.",
-          "image": "/productsListing/Semi_Automatic_Solutions.png",
-          "label": "Tailored Finishing Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
+        solutionsBanner: {
+          title: "Comprehensive Semi-Automatic Solutions",
+          description: "Browse our Solutions section for technical resources, preparation techniques, and industry-specific applications to optimize your grinding and polishing workflows.",
+          image: "/productsListing/Semi_Automatic_Solutions.png",
+          label: "Tailored Finishing Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" }
           ]
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Semi-Automatic Grinding Polishing Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/semi-automatic-grinding-polishing-machines/labopol-60.png",
-            "alt": "LaboPol-60 Semi-Automatic Grinding Polishing Machine",
-            "category": "Semi-Automatic Grinding Polishing Machines",
-            "title": "LaboPol-60",
-            "description": "Versatile semi-automatic machine with variable speed control, ideal for grinding and polishing a wide range of materials in laboratory settings.",
-            "reviews": 12,
-            "rating": 4.7
-          },
-          {
-            "id": 2,
-            "image": "/images/semi-automatic-grinding-polishing-machines/metapol-2.png",
-            "alt": "MetaPol-2 Semi-Automatic Grinding Polishing Machine",
-            "category": "Semi-Automatic Grinding Polishing Machines",
-            "title": "MetaPol-2",
-            "description": "Dual-spindle semi-automatic machine for efficient grinding and polishing, designed for metallographic and industrial applications.",
-            "reviews": 10,
-            "rating": 4.6
-          },
-          {
-            "id": 3,
-            "image": "/images/semi-automatic-grinding-polishing-machines/grindmaster-50.png",
-            "alt": "GrindMaster-50 Semi-Automatic Grinding Polishing Machine",
-            "category": "Semi-Automatic Grinding Polishing Machines",
-            "title": "GrindMaster-50",
-            "description": "Compact semi-automatic machine with intuitive controls, perfect for small labs needing reliable grinding and polishing performance.",
-            "reviews": 8,
-            "rating": 4.5
+            id: 1,
+            name: "Semi Automatic Grinding Polishing Machines",
+            color: "rgba(100, 60, 180, 0.1)",
+            bgColor: "rgba(100, 60, 180, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           }
         ],
-        "products": [
-          { "name": "LaboPol-60", "image": "/images/semi-automatic-grinding-polishing-machines/labopol-60.png" },
-          { "name": "MetaPol-2", "image": "/images/semi-automatic-grinding-polishing-machines/metapol-2.png" },
-          { "name": "GrindMaster-50", "image": "/images/semi-automatic-grinding-polishing-machines/grindmaster-50.png" }
-        ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Semi Automatic Grinding Polishing Machines",
-            "color": "rgba(100, 60, 180, 0.1)",
-            "bgColor": "rgba(100, 60, 180, 0.1)",
-            "subItems": [
-              { "name": "LaboPol-60", "apiCall": "/api/products/labopol-60" },
-              { "name": "MetaPol-2", "apiCall": "/api/products/metapol-2" },
-              { "name": "GrindMaster-50", "apiCall": "/api/products/grindmaster-50" }
+        productCards: products
+          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: products
+          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines" && p.tag === "Specialty")
+          .slice(0, 2)
+          .map((p, index) => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            image: p.image,
+            delay: 0.1 * (index + 1),
+            animationX: index % 2 === 0 ? -50 : 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" }
             ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "LaboPol-60",
-            "tag": "Versatile Performance",
-            "description": "Semi-automatic grinding and polishing machine with variable speed and user-friendly controls, ideal for metallographic and materialographic labs.",
-            "image": "/images/semi-automatic-grinding-polishing-machines/labopol-60.png",
-            "detail": "/products/labopol-60",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "MetaPol-2",
-            "tag": "Dual-Spindle Efficiency",
-            "description": "Dual-spindle semi-automatic machine for high-throughput grinding and polishing, suitable for both laboratory and industrial applications.",
-            "image": "/images/semi-automatic-grinding-polishing-machines/metapol-2.png",
-            "detail": "/products/metapol-2",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "GrindMaster-50",
-            "tag": "Compact Design",
-            "description": "Compact semi-automatic machine with intuitive controls, designed for small labs requiring reliable and precise surface finishing.",
-            "image": "/images/semi-automatic-grinding-polishing-machines/grindmaster-50.png",
-            "detail": "/products/grindmaster-50",
-            "delay": 0.3
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "LaboPol-60",
-            "description": "Versatile semi-automatic grinding and polishing machine with variable speed control, perfect for preparing a wide range of materials in laboratory settings.",
-            "image": "/images/semi-automatic-grinding-polishing-machines/labopol-60.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "MetaPol-2",
-            "description": "Dual-spindle semi-automatic machine with robust design, offering efficient grinding and polishing for metallographic and industrial applications.",
-            "image": "/images/semi-automatic-grinding-polishing-machines/metapol-2.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "labopol-60", "name": "LaboPol-60" },
-          { "id": "metapol-2", "name": "MetaPol-2" },
-          { "id": "grindmaster-50", "name": "GrindMaster-50" }
-        ]
+          })),
+        subCategories: products
+          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
         "name": "Multi-specimen Grinding Polishing Machines",
@@ -3632,85 +4859,50 @@ export const mainCategories = [
             { "text": "Solutions by Material", "variant": "secondary" }
           ]
         },
-        "slides": [
-          {
-            "id": 1,
-            "image": "/images/multi-specimen-grinding-polishing-machines/hexamatic.png",
-            "alt": "Hexamatic Multi-Specimen Grinding Polishing Machine",
-            "category": "Multi-Specimen Grinding Polishing Machines",
-            "title": "Hexamatic",
-            "description": "Fully automatic system for simultaneous grinding and polishing of up to 12 specimens, ideal for high-volume metallographic labs.",
-            "reviews": 18,
-            "rating": 4.9
-          },
-          {
-            "id": 2,
-            "image": "/images/multi-specimen-grinding-polishing-machines/multiprep-8.png",
-            "alt": "MultiPrep-8 Multi-Specimen Grinding Polishing Machine",
-            "category": "Multi-Specimen Grinding Polishing Machines",
-            "title": "MultiPrep-8",
-            "description": "Semi-automatic machine for processing up to 8 specimens, with programmable settings for consistent surface finishes.",
-            "reviews": 14,
-            "rating": 4.7
-          },
-          {
-            "id": 3,
-            "image": "/images/multi-specimen-grinding-polishing-machines/polymatic.png",
-            "alt": "PolyMatic Multi-Specimen Grinding Polishing Machine",
-            "category": "Multi-Specimen Grinding Polishing Machines",
-            "title": "PolyMatic",
-            "description": "Automated machine for up to 6 specimens, designed for high-throughput applications with minimal operator intervention.",
-            "reviews": 10,
-            "rating": 4.6
-          }
-        ],
-        "products": [
-          { "name": "Hexamatic", "image": "/images/multi-specimen-grinding-polishing-machines/hexamatic.png" },
-          { "name": "MultiPrep-8", "image": "/images/multi-specimen-grinding-polishing-machines/multiprep-8.png" },
-          { "name": "PolyMatic", "image": "/images/multi-specimen-grinding-polishing-machines/polymatic.png" }
-        ],
+        "slides": products
+          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Grinding & Polishing Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        "products": products
+          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
         "items": [
           {
             "id": 1,
             "name": "Multi-specimen Grinding Polishing Machines",
             "color": "rgba(150, 80, 50, 0.1)",
             "bgColor": "rgba(150, 80, 50, 0.1)",
-            "subItems": [
-              { "name": "Hexamatic", "apiCall": "/api/products/hexamatic" },
-              { "name": "MultiPrep-8", "apiCall": "/api/products/multiprep-8" },
-              { "name": "PolyMatic", "apiCall": "/api/products/polymatic" }
-            ]
+            "subItems": products
+              .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           }
         ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Hexamatic",
-            "tag": "High-Volume Automation",
-            "description": "Fully automatic system for simultaneous grinding and polishing of up to 12 specimens, perfect for high-volume metallographic and materialographic labs.",
-            "image": "/images/multi-specimen-grinding-polishing-machines/hexamatic.png",
-            "detail": "/products/hexamatic",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "MultiPrep-8",
-            "tag": "Programmable Efficiency",
-            "description": "Semi-automatic machine for processing up to 8 specimens, with programmable settings for consistent and repeatable surface finishes.",
-            "image": "/images/multi-specimen-grinding-polishing-machines/multiprep-8.png",
-            "detail": "/products/multiprep-8",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "PolyMatic",
-            "tag": "Compact Automation",
-            "description": "Automated machine for up to 6 specimens, designed for high-throughput applications with user-friendly controls and minimal maintenance.",
-            "image": "/images/multi-specimen-grinding-polishing-machines/polymatic.png",
-            "detail": "/products/polymatic",
-            "delay": 0.3
-          }
-        ],
+        "productCards": products
+          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
         "specialtyProducts": [
           {
             "id": 1,
@@ -3737,71 +4929,292 @@ export const mainCategories = [
             ]
           }
         ],
-        "subCategories": [
-          { "id": "hexamatic", "name": "Hexamatic" },
-          { "id": "multiprep-8", "name": "MultiPrep-8" },
-          { "id": "polymatic", "name": "PolyMatic" }
-        ]
+        "subCategories": products
+          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        "name": "Belt Grinders",
+        "slug": "belt-grinders",
+        "heroImage": "/images/belt-grinders/belt-grinders.png",
+        "intro": {
+          "title": "High-Performance Belt Grinder Solutions",
+          "description": "Belt Grinders, including MBG I and MBG II, deliver precision grinding, sharpening, and finishing for metalworking, knifemaking, and fabrication. Compliant with ASTM B368, they feature variable speed control, robust steel construction, and compatibility with 2x72-inch abrasive belts. Ideal for bladesmithing, automotive, and aerospace industries, these grinders excel in deburring, shaping, and polishing applications.",
+          "categoryLabel": "Explore our belt grinder solutions",
+          "buttons": [
+            { "text": "Discover Belt Grinders", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Belt Grinders",
+          "description": "Designed for durability and versatility, the MBG I and MBG II belt grinders offer variable speeds (100-3500 ft/min), heavy-duty steel chassis, and quick-release belt systems. Compatible with ceramic, zirconia, and aluminum oxide belts, they handle ferrous/non-ferrous metals, wood, and composites, ensuring precise material removal and surface finishing in workshops and industrial settings.",
+          "label": "Grinding Features"
+        },
+        "specialtySection": {
+          "title": "Specialty Grinding Solutions",
+          "description": "Optimized for demanding tasks like knife profiling, convex grinding, and micro-finishing, these grinders support modular tooling arms, articulating work rests, and horizontal/vertical configurations. Built for heavy use, they ensure consistent performance for custom metalwork, blacksmithing, and high-volume production.",
+          "label": "Advanced Grinding Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Grinding Solutions",
+          "description": "Explore our Solutions section for ASTM B368-compliant protocols, guides for abrasive belt selection, and industry-specific applications to optimize your belt grinder workflows.",
+          "image": "/productsListing/Belt_Grinders_Solutions.png",
+          "label": "Tailored Grinding Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": products
+          .filter((p) => p.categorySlug === "belt-grinders")
+          .slice(0, 3)
+          .map((p) => ({
+            "id": p.id,
+            "image": p.image,
+            "alt": p.alt,
+            "category": "Belt Grinders",
+            "title": p.name,
+            "description": p.description,
+            "reviews": p.reviews,
+            "rating": p.rating
+          })),
+        "products": products
+          .filter((p) => p.categorySlug === "belt-grinders")
+          .map((p) => ({
+            "name": p.name,
+            "image": p.image
+          })),
+        "items": [
+          {
+            "id": 1,
+            "name": "Belt Grinders",
+            "color": "rgba(70, 110, 150, 0.1)",
+            "bgColor": "rgba(70, 110, 150, 0.1)",
+            "subItems": products
+              .filter((p) => p.categorySlug === "belt-grinders")
+              .map((p) => ({
+                "name": p.name,
+                "apiCall": p.apiCall
+              }))
+          }
+        ],
+        "productCards": products
+          .filter((p) => p.categorySlug === "belt-grinders")
+          .map((p) => ({
+            "id": p.id,
+            "name": p.name,
+            "tag": p.tag,
+            "description": p.description,
+            "image": p.image,
+            "detail": p.detail,
+            "delay": 0.1 * (p.id - 1)
+          })),
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "MBG I",
+            "description": "Compact 2x72-inch belt grinder with 1.5 HP variable-speed motor and quick-release belt system, optimized for knifemaking and small workshop tasks, compliant with ASTM B368.",
+            "image": "/images/belt-grinders/mbg-i.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "MBG II",
+            "description": "Heavy-duty 2x72-inch belt grinder with 3 HP motor, tilting chassis, and horizontal/vertical configurations, designed for industrial fabrication and high-volume metalwork.",
+            "image": "/images/belt-grinders/mbg-ii.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": products
+          .filter((p) => p.categorySlug === "belt-grinders")
+          .map((p) => ({
+            "id": p.slug,
+            "name": p.name
+          }))
+      },
+      {
+        "name": "Heavy Duty Belt Grinder",
+        "slug": "heavy-duty-belt-grinder",
+        "heroImage": "/images/heavy-duty-belt-grinder/heavy-duty-belt-grinder.png",
+        "intro": {
+          "title": "Robust Heavy Duty Belt Grinder Solutions",
+          "description": "The Heavy Duty Belt Grinder delivers unmatched performance for high-volume grinding, sharpening, and finishing in metalworking, bladesmithing, and fabrication. Compliant with ASTM B368, it features a powerful 3 HP motor, variable speed control (100-4000 ft/min), and compatibility with 2x72-inch abrasive belts, making it ideal for automotive, aerospace, and knifemaking industries.",
+          "categoryLabel": "Explore our heavy duty belt grinder solutions",
+          "buttons": [
+            { "text": "Discover Heavy Duty Belt Grinder", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Heavy Duty Belt Grinder",
+          "description": "Built for industrial demands, this grinder features a 3 HP motor, tilting steel chassis, and variable speed control for precise grinding. Compatible with ceramic, zirconia, and aluminum oxide belts, it handles tough materials like stainless steel, titanium, and composites, offering quick belt changes and horizontal/vertical configurations for versatility.",
+          "label": "Grinding Features"
+        },
+        "specialtySection": {
+          "title": "Specialty Grinding Solutions",
+          "description": "Engineered for heavy-duty tasks like knife profiling, convex grinding, and surface finishing, the grinder supports modular attachments, articulating work rests, and robust contact wheels. Its durable design ensures consistent performance in high-throughput environments, from custom metalwork to large-scale fabrication.",
+          "label": "Advanced Grinding Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Grinding Solutions",
+          "description": "Explore our Solutions section for ASTM B368-compliant protocols, abrasive belt selection guides, and industry-specific applications to optimize your heavy duty belt grinder workflows.",
+          "image": "/productsListing/Heavy_Duty_Belt_Grinder_Solutions.png",
+          "label": "Tailored Grinding Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": products
+          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
+          .slice(0, 3)
+          .map((p) => ({
+            "id": p.id,
+            "image": p.image,
+            "alt": p.alt,
+            "category": "Heavy Duty Belt Grinder",
+            "title": p.name,
+            "description": p.description,
+            "reviews": p.reviews,
+            "rating": p.rating
+          })),
+        "products": products
+          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
+          .map((p) => ({
+            "name": p.name,
+            "image": p.image
+          })),
+        "items": [
+          {
+            "id": 1,
+            "name": "Heavy Duty Belt Grinder",
+            "color": "rgba(80, 120, 150, 0.1)",
+            "bgColor": "rgba(80, 120, 150, 0.1)",
+            "subItems": products
+              .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
+              .map((p) => ({
+                "name": p.name,
+                "apiCall": p.apiCall
+              }))
+          }
+        ],
+        "productCards": products
+          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
+          .map((p) => ({
+            "id": p.id,
+            "name": p.name,
+            "tag": p.tag,
+            "description": p.description,
+            "image": p.image,
+            "detail": p.detail,
+            "delay": 0.1 * (p.id - 1)
+          })),
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Standard Model",
+            "description": "Powerful 3 HP belt grinder with 2x72-inch belt, variable speed (100-4000 ft/min), and tilting chassis, optimized for high-volume grinding in industrial metalworking and knifemaking.",
+            "image": "/images/heavy-duty-belt-grinder/standard-model.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Vertical/Horizontal Model",
+            "description": "Versatile 3 HP belt grinder with dual horizontal/vertical configurations, ideal for complex grinding tasks like blade profiling and large-scale fabrication in heavy-duty environments.",
+            "image": "/images/heavy-duty-belt-grinder/vertical-horizontal-model.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": products
+          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
+          .map((p) => ({
+            "id": p.slug,
+            "name": p.name
+          }))
       },
     ]
   },
 
-  // mainCategory: "Microscope and Image Analyzer"
+  // mainCategory: "Micro Hardness Tester"
   {
-    mainCategory: "Microscope and Image Analyzer",
+    mainCategory: "Micro Hardness Tester",
     categories: [
       {
-        name: "Microscope and Image Analyzer",
-        slug: "microscope-and-image-analyzer",
-        heroImage: "/images/microscope-and-image-analyzer/microscope-and-image-analyzer.png",
+        name: "Automatic Micro Hardness Tester",
+        slug: "automatic-micro-hardness-tester",
+        heroImage: "/images/automatic-micro-hardness-tester/automatic-micro-hardness-tester.png",
         intro: {
-          title: "Advanced Imaging for Precision Analysis",
+          title: "Precision Automatic Micro Hardness Testing",
           description:
-            "Our Microscope and Image Analyzer systems provide cutting-edge solutions for detailed material characterization and quantitative analysis. From inverted and upright microscopes to advanced image analysis software, explore tools designed for metallography, biomedical research, and quality control.",
-          categoryLabel: "Browse our imaging solutions",
+            "The Automatic Micro Hardness Tester delivers precise Vickers, Knoop, and Brinell hardness measurements for thin materials, coatings, and small components. Fully compliant with ASTM E384 and ISO 4545, it features automated XY stage, auto-focus, and advanced software for high-throughput testing in automotive, aerospace, and metallurgical applications.",
+          categoryLabel: "Explore our micro hardness testing solutions",
           buttons: [
-            { text: "Explore Microscopes", variant: "primary" },
-            { text: "Contact Experts", variant: "secondary", link: "/contact" },
+            { text: "Discover Micro Hardness Tester", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
           ],
         },
         semiAutomaticSection: {
-          title: "Microscopes",
+          title: "Automatic Micro Hardness Tester",
           description:
-            "High-resolution microscopes for precise imaging of microstructures, equipped with advanced optics and digital cameras for seamless integration with image analysis software.",
-          label: "Our Products",
+            "Equipped with a motorized turret, CCD camera, and intuitive software, this tester automates load application, indentation measurement, and data analysis. With load ranges from 0.01 gf to 2 kgf, it ensures accurate, repeatable results for micro hardness testing of metals, ceramics, and coatings.",
+          label: "Testing Features",
         },
         specialtySection: {
-          title: "Image Analysis Software",
+          title: "Specialty Hardness Testing Solutions",
           description:
-            "Powerful software solutions for quantitative analysis, including grain size measurement, phase analysis, and 3D reconstruction, tailored for research and industrial applications.",
-          label: "Advanced Solutions",
+            "For complex test patterns, case depth analysis, or high-volume production, the Automatic Micro Hardness Tester offers customizable templates, fully automated sequences, and integration with metallographic analysis tools.",
+          label: "Advanced Testing Solutions",
         },
         solutionsBanner: {
-          title: "Comprehensive Microscopy Solutions",
+          title: "Comprehensive Hardness Testing Solutions",
           description:
-            "Dive into our Solutions section for technical insights, application notes, and industry-specific microscopy and image analysis techniques.",
-          image: "/productsListing/Find_Your_Solutions.png",
-          label: "Comprehensive Solutions",
+            "Explore our Solutions section for ASTM E384-compliant protocols, technical guides, and industry-specific applications to optimize your micro hardness testing workflows.",
+          image: "/productsListing/Hardness_Testing_Solutions.png",
+          label: "Tailored Testing Solutions",
           buttons: [
             { text: "Solutions by Industry", variant: "primary" },
             { text: "Solutions by Material", variant: "secondary" },
           ],
         },
         slides: products
-          .filter((p) => p.categorySlug === "microscope-and-image-analyzer")
+          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
           .slice(0, 3)
           .map((p) => ({
             id: p.id,
             image: p.image,
             alt: p.alt,
-            category: "Microscopes",
+            category: "Automatic Micro Hardness Tester",
             title: p.name,
             description: p.description,
             reviews: p.reviews,
             rating: p.rating,
           })),
         products: products
-          .filter((p) => p.categorySlug === "microscope-and-image-analyzer")
+          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
           .map((p) => ({
             name: p.name,
             image: p.image,
@@ -3809,22 +5222,11 @@ export const mainCategories = [
         items: [
           {
             id: 1,
-            name: "Microscopes",
-            color: "rgba(15, 125, 183, 0.1)",
-            bgColor: "rgba(15, 125, 183, 0.1)",
+            name: "Automatic Micro Hardness Tester",
+            color: "rgba(90, 110, 140, 0.1)",
+            bgColor: "rgba(90, 110, 140, 0.1)",
             subItems: products
-              .filter((p) => p.categorySlug === "microscope-and-image-analyzer" && p.tag !== "Image Analysis" && p.tag !== "Specialized")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          },
-          {
-            id: 2,
-            name: "Image Analyzers",
-            bgColor: "rgba(15, 125, 183, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "microscope-and-image-analyzer" && (p.tag === "Image Analysis" || p.tag === "Specialized"))
+              .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
               .map((p) => ({
                 name: p.name,
                 apiCall: p.apiCall,
@@ -3832,7 +5234,7 @@ export const mainCategories = [
           },
         ],
         productCards: products
-          .filter((p) => p.categorySlug === "microscope-and-image-analyzer")
+          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
           .map((p) => ({
             id: p.id,
             name: p.name,
@@ -3840,15 +5242,15 @@ export const mainCategories = [
             description: p.description,
             image: p.image,
             detail: p.detail,
-            delay: 0.1 * (p.id - 9),
+            delay: 0.1 * (p.id - 1),
           })),
         specialtyProducts: [
           {
             id: 1,
-            name: "Confocal Microscope",
+            name: "Vickers Testing",
             description:
-              "Advanced confocal microscope for high-resolution 3D imaging and quantitative analysis in research and industrial applications.",
-            image: "/images/microscope-and-image-analyzer/confocal-microscope.png",
+              "Automates Vickers hardness testing with a diamond pyramid indenter, delivering precise measurements for thin materials and coatings, compliant with ASTM E384.",
+            image: "/images/automatic-micro-hardness-tester/vickers-testing.png",
             delay: 0.1,
             animationX: -50,
             buttons: [
@@ -3858,385 +5260,731 @@ export const mainCategories = [
           },
           {
             id: 2,
-            name: "More Solutions",
+            name: "Knoop Testing",
             description:
-              "Explore our full range of microscopy and image analysis solutions for unique research challenges.",
-            image: null,
+              "Performs Knoop hardness testing with a rhombic diamond indenter, optimized for brittle materials and thin layers, per ISO 4545.",
+            image: "/images/automatic-micro-hardness-tester/knoop-testing.png",
             delay: 0.2,
             animationX: 50,
-            buttons: [{ text: "Explore All", variant: "primary" }],
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
           },
         ],
         subCategories: products
-          .filter((p) => p.categorySlug === "microscope-and-image-analyzer")
+          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
           .map((p) => ({
             id: p.slug,
             name: p.name,
           })),
       },
       {
-        "name": "Particle Size Analysis Systems",
-        "slug": "particle-size-analysis-systems",
-        "heroImage": "/images/particle-size-analysis-systems/particle-size-analysis-systems.png",
-        "intro": {
-          "title": "Precision Particle Size Analysis Solutions",
-          "description": "Our Particle Size Analysis Systems provide advanced stereo and metallurgical microscopy solutions for precise particle analysis, fully compliant with ISO 16232. Featuring automated filter scanning, classification of metallic, non-metallic, and fiber particles, motorized stages, and customizable reporting, these systems cater to automotive, aerospace, metallurgical, and industrial applications.",
-          "categoryLabel": "Explore our particle analysis solutions",
-          "buttons": [
-            { "text": "Discover Particle Analysis Systems", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
+        name: "Micro/Macro Hardness Tester (Load Cell Based)",
+        slug: "micro-macro-hardness-tester-load-cell",
+        heroImage: "/images/micro-macro-hardness-tester/micro-macro-hardness-tester.png",
+        intro: {
+          title: "Advanced Load Cell Based Hardness Testing",
+          description:
+            "The Micro/Macro Hardness Tester with load cell technology offers precise Vickers, Knoop, and Brinell testing across micro (0.01 gf to 1 kgf) and macro (1 kgf to 62.5 kgf) ranges. Compliant with ASTM E384, ISO 6507, and ASTM E10, it features closed-loop load control, automated XY stage, and intuitive software for high-throughput testing in metallurgical, automotive, and aerospace applications.",
+          categoryLabel: "Explore our load cell hardness testing solutions",
+          buttons: [
+            { text: "Discover Hardness Tester", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
         },
-        "semiAutomaticSection": {
-          "title": "Particle Size Analysis Systems",
-          "description": "Our systems include Stereo models for particles >10 microns and Metallurgical models for particles >3 microns, both with automated filter scanning and ISO 16232-compliant classification. Metallurgical systems add particle height measurement and dual microscopy options for enhanced precision.",
-          "label": "Our Particle Analysis Products"
+        semiAutomaticSection: {
+          title: "Micro/Macro Hardness Tester",
+          description:
+            "Utilizing closed-loop load cell technology, this tester ensures accurate force application for Vickers, Knoop, and Brinell tests. With automated turret, CCD imaging, and touch-screen interface, it delivers repeatable results for micro and macro hardness testing of metals, ceramics, and coatings.",
+          label: "Testing Features",
         },
-        "specialtySection": {
-          "title": "Specialty Particle Analysis Solutions",
-          "description": "For high-resolution, complex, or high-throughput applications, our specialty systems offer tailored automation, advanced microscopy, and custom reporting to meet stringent industry standards.",
-          "label": "Advanced Particle Analysis Solutions"
+        specialtySection: {
+          title: "Specialty Hardness Testing Solutions",
+          description:
+            "For advanced applications like case depth analysis, hardness mapping, or high-volume production, this tester offers customizable test patterns, fully automated sequences, and integration with image analysis software for comprehensive material characterization.",
+          label: "Advanced Testing Solutions",
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Particle Analysis Solutions",
-          "description": "Explore our Solutions section for ISO 16232-compliant methods, technical guides, and industry-specific applications to optimize your particle size analysis workflows.",
-          "image": "/productsListing/Particle_Analysis_Solutions.png",
-          "label": "Tailored Analysis Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
+        solutionsBanner: {
+          title: "Comprehensive Hardness Testing Solutions",
+          description:
+            "Explore our Solutions section for ASTM E384 and ISO 6507-compliant protocols, technical guides, and industry-specific applications to optimize your hardness testing workflows.",
+          image: "/productsListing/Hardness_Testing_Solutions.png",
+          label: "Tailored Testing Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Micro/Macro Hardness Tester",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/particle-size-analysis-systems/cleanview-100.png",
-            "alt": "CleanView 100 Stereo Particle Analysis System",
-            "category": "Particle Size Analysis Systems",
-            "title": "CleanView 100 (Stereo)",
-            "description": "Fully automatic stereo system with motorized stage for ISO 16232-compliant analysis of particles >10 microns, featuring fast filter scanning and particle classification.",
-            "reviews": 15,
-            "rating": 4.8
+            id: 1,
+            name: "Micro/Macro Hardness Tester",
+            color: "rgba(100, 120, 160, 0.1)",
+            bgColor: "rgba(100, 120, 160, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           },
-          {
-            "id": 2,
-            "image": "/images/particle-size-analysis-systems/metalscan-300.png",
-            "alt": "MetalScan 300 Metallurgical Particle Analysis System",
-            "category": "Particle Size Analysis Systems",
-            "title": "MetalScan 300 (Metallurgical)",
-            "description": "Advanced system with stereo and metallurgical microscopes, motorized stage, and particle height measurement for ISO 16232-compliant analysis of particles >3 microns.",
-            "reviews": 18,
-            "rating": 4.9
-          },
-          {
-            "id": 3,
-            "image": "/images/particle-size-analysis-systems/partiscan-200.png",
-            "alt": "PartiScan 200 Stereo Particle Analysis System",
-            "category": "Particle Size Analysis Systems",
-            "title": "PartiScan 200 (Stereo)",
-            "description": "High-throughput stereo system with polarization for metallic/non-metallic particle differentiation and ISO 16232-compliant reporting.",
-            "reviews": 12,
-            "rating": 4.7
-          }
         ],
-        "products": [
-          { "name": "CleanView 100 (Stereo)", "image": "/images/particle-size-analysis-systems/cleanview-100.png" },
-          { "name": "MetalScan 300 (Metallurgical)", "image": "/images/particle-size-analysis-systems/metalscan-300.png" },
-          { "name": "PartiScan 200 (Stereo)", "image": "/images/particle-size-analysis-systems/partiscan-200.png" },
-          { "name": "PreciScope 500 (Metallurgical)", "image": "/images/particle-size-analysis-systems/preciscope-500.png" }
-        ],
-        "items": [
+        productCards: products
+          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
           {
-            "id": 1,
-            "name": "Particle Size Analysis Systems",
-            "color": "rgba(70, 110, 160, 0.1)",
-            "bgColor": "rgba(70, 110, 160, 0.1)",
-            "subItems": [
-              { "name": "CleanView 100 (Stereo)", "apiCall": "/api/products/cleanview-100" },
-              { "name": "MetalScan 300 (Metallurgical)", "apiCall": "/api/products/metalscan-300" },
-              { "name": "PartiScan 200 (Stereo)", "apiCall": "/api/products/partiscan-200" },
-              { "name": "PreciScope 500 (Metallurgical)", "apiCall": "/api/products/preciscope-500" }
-            ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "CleanView 100 (Stereo)",
-            "tag": "High-Precision Stereo",
-            "description": "ISO 16232-compliant stereo system with motorized stage, automated filter scanning, and classification of metallic, non-metallic, and fiber particles >10 microns.",
-            "image": "/images/particle-size-analysis-systems/cleanview-100.png",
-            "detail": "/products/cleanview-100",
-            "delay": 0.1
+            id: 1,
+            name: "Vickers Testing",
+            description:
+              "Performs Vickers testing across micro (0.01 gf) to macro (62.5 kgf) ranges with a diamond pyramid indenter, ensuring ASTM E384 and ISO 6507 compliance.",
+            image: "/images/micro-macro-hardness-tester/vickers-testing.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
           },
           {
-            "id": 2,
-            "name": "MetalScan 300 (Metallurgical)",
-            "tag": "Dual Microscopy Precision",
-            "description": "ISO 16232-compliant system with stereo and metallurgical microscopes, motorized stage, and particle height measurement for particles >3 microns.",
-            "image": "/images/particle-size-analysis-systems/metalscan-300.png",
-            "detail": "/products/metalscan-300",
-            "delay": 0.2
+            id: 2,
+            name: "Closed-Loop Load Cell",
+            description:
+              "Employs advanced closed-loop load cell technology for precise force application, supporting a wide range of Vickers, Knoop, and Brinell tests.",
+            image: "/images/micro-macro-hardness-tester/load-cell-system.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
           },
-          {
-            "id": 3,
-            "name": "PartiScan 200 (Stereo)",
-            "tag": "Advanced Polarization",
-            "description": "High-throughput stereo system with optical polarization for accurate metallic/non-metallic particle differentiation and customizable ISO 16232 reports.",
-            "image": "/images/particle-size-analysis-systems/partiscan-200.png",
-            "detail": "/products/partiscan-200",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "PreciScope 500 (Metallurgical)",
-            "tag": "High-Resolution Analysis",
-            "description": "Advanced metallurgical system with dual microscopy options, automated filter scanning, and precise particle classification with height measurement.",
-            "image": "/images/particle-size-analysis-systems/preciscope-500.png",
-            "detail": "/products/preciscope-500",
-            "delay": 0.4
-          }
         ],
-        "specialtyProducts": [
+        subCategories: products
+          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+    ],
+  },
+
+  // mainCategory: "Microscope and Image Analyzer"
+
+  {
+    mainCategory: "Microscope and Image Analyzer",
+    categories: [
+      {
+        name: "Inverted Microscope",
+        slug: "inverted-microscope",
+        heroImage: "/images/inverted-microscope/inverted-microscope.png",
+        intro: {
+          title: "Precision Inverted Microscope Solutions",
+          description:
+            "Inverted Microscopes, including Metagraph-I and Metagraph-SPL, offer advanced imaging for metallurgical and biological applications. Compliant with ASTM E45 and ISO 4967, they feature high-magnification optics and inverted designs for large metal samples, polished surfaces, and live cell cultures. Ideal for metallurgy, materials science, and life sciences, these microscopes ensure precision and durability in quality control, research, and industrial inspection.",
+          categoryLabel: "Explore our inverted microscope solutions",
+          buttons: [
+            { text: "Discover Inverted Microscopes", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
+        },
+        semiAutomaticSection: {
+          title: "Inverted Microscope",
+          description:
+            "Designed for large, heavy samples and live cell observation, our inverted microscopes feature objective lenses below the stage, brightfield and phase contrast illumination, and magnifications up to 1000x. The Metagraph-I and Metagraph-SPL models support metallographic analysis, grain sizing, and cell culture imaging, with robust stages and long working distance objectives for versatile applications.",
+          label: "Microscopy Features",
+        },
+        specialtySection: {
+          title: "Specialty Microscopy Solutions",
+          description:
+            "Optimized for microstructural analysis, surface defect inspection, and live cell imaging, these microscopes offer digital imaging integration, fluorescence capabilities, and customizable optics. Their inverted design accommodates bulky samples and ensures sterility in cell culture applications, meeting the demands of advanced research and industrial labs.",
+          label: "Advanced Microscopy Solutions",
+        },
+        solutionsBanner: {
+          title: "Comprehensive Microscopy Solutions",
+          description:
+            "Explore our Solutions section for ASTM E45 and ISO 4967-compliant protocols, guides for metallographic and cell culture imaging, and industry-specific applications to optimize your inverted microscope workflows.",
+          image: "/productsListing/Inverted_Microscope_Solutions.png",
+          label: "Tailored Microscopy Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Application", variant: "secondary" },
+          ],
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "inverted-microscope")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Inverted Microscope",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "inverted-microscope")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "name": "CleanView 100 (Stereo)",
-            "description": "Fully automatic stereo system with motorized stage, compliant with ISO 16232, featuring fast filter paper scanning and precise classification of particles >10 microns for cleanliness testing.",
-            "image": "/images/particle-size-analysis-systems/cleanview-100.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
+            id: 1,
+            name: "Inverted Microscope",
+            color: "rgba(80, 130, 160, 0.1)",
+            bgColor: "rgba(80, 130, 160, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "inverted-microscope")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          },
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "inverted-microscope")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Metagraph-I",
+            description:
+              "Robust inverted microscope with 50x-1000x magnification and brightfield illumination, optimized for metallographic analysis of large metal samples and polished surfaces, compliant with ASTM E45.",
+            image: "/images/inverted-microscope/metagraph-i.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
           },
           {
-            "id": 2,
-            "name": "MetalScan 300 (Metallurgical)",
-            "description": "Fully automatic metallurgical system with stereo and metallurgical microscopes, motorized stage, and particle height measurement, compliant with ISO 16232 for particles >3 microns.",
-            "image": "/images/particle-size-analysis-systems/metalscan-300.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
+            id: 2,
+            name: "Metagraph-SPL",
+            description:
+              "Versatile inverted microscope with phase contrast and optional fluorescence capabilities, ideal for live cell imaging and advanced materials inspection, per ISO 4967.",
+            image: "/images/inverted-microscope/metagraph-spl.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
         ],
-        "subCategories": [
-          { "id": "cleanview-100", "name": "CleanView 100 (Stereo)" },
-          { "id": "metalscan-300", "name": "MetalScan 300 (Metallurgical)" },
-          { "id": "partiscan-200", "name": "PartiScan 200 (Stereo)" },
-          { "id": "preciscope-500", "name": "PreciScope 500 (Metallurgical)" }
-        ]
+        subCategories: products
+          .filter((p) => p.categorySlug === "inverted-microscope")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "Millipore Fluid Contamination Analysis Kit",
-        "slug": "millipore-fluid-contamination-analysis-kit",
-        "heroImage": "/images/millipore-fluid-contamination-analysis-kit/millipore-fluid-contamination-analysis-kit.png",
-        "intro": {
-          "title": "Comprehensive Fluid Contamination Analysis",
-          "description": "The Millipore Fluid Contamination Analysis Kit is a complete solution for analyzing particulate contamination in hydraulic fluids, lubricants, fuels, and water, compliant with ISO 16232 and other industry standards. Equipped with a vacuum/pressure pump, dispensing pressure vessel, filter paper, filter flask, solvent dispensers, petri slides, and dispensing bottles, this kit ensures accurate, reliable results for automotive, aerospace, and industrial quality control.",
-          "categoryLabel": "Explore our contamination analysis solutions",
-          "buttons": [
-            { "text": "Discover the Millipore Kit", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
+        name: "Upright Microscope",
+        slug: "upright-microscope",
+        heroImage: "/images/upright-microscope/upright-microscope.png",
+        intro: {
+          title: "Precision Upright Microscope Solutions",
+          description:
+            "The Upright Microscope, featuring the Metagraph (UP), delivers high-resolution imaging for metallurgical and materials science applications. Compliant with ASTM E45, ASTM E112, and ISO 4967, it is ideal for analyzing polished metal surfaces, inclusions, and microstructures. With advanced optics and robust design, the Metagraph (UP) serves quality control, failure analysis, and research in metallurgy, automotive, and aerospace industries.",
+          categoryLabel: "Explore our upright microscope solutions",
+          buttons: [
+            { text: "Discover Metagraph (UP)", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
         },
-        "semiAutomaticSection": {
-          "title": "Millipore Fluid Contamination Analysis Kit",
-          "description": "Designed for field and laboratory use, this kit includes all necessary components for sampling, filtering, and analyzing fluid contamination. From vacuum filtration to precise solvent dispensing, the kit supports gravimetric, microscopic, and colorimetric analysis to ensure clean parts and fluids in critical applications.",
-          "label": "Kit Components"
+        semiAutomaticSection: {
+          title: "Upright Microscope",
+          description:
+            "The Metagraph (UP) upright microscope offers magnifications from 50x to 1000x, with brightfield, darkfield, and polarized light capabilities. Its ergonomic design, large mechanical stage, and high-resolution objectives support precise grain size analysis, inclusion rating, and microstructural examination, making it a reliable choice for lab-based metallographic studies.",
+          label: "Microscopy Features",
         },
-        "specialtySection": {
-          "title": "Specialty Contamination Analysis Solutions",
-          "description": "For advanced applications requiring high-volume filtration, custom solvent handling, or specialized storage, the Millipore kit offers robust components and accessories to meet stringent quality control requirements in industries like automotive and aerospace.",
-          "label": "Advanced Contamination Solutions"
+        specialtySection: {
+          title: "Specialty Microscopy Solutions",
+          description:
+            "Tailored for advanced metallographic and materials analysis, the Metagraph (UP) supports digital imaging, differential interference contrast (DIC), and customizable optics. Its robust construction accommodates a wide range of sample sizes, ensuring accurate results for failure analysis, phase identification, and quality assurance in industrial and research settings.",
+          label: "Advanced Microscopy Solutions",
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Contamination Analysis Solutions",
-          "description": "Browse our Solutions section for technical guides, ISO 16232-compliant protocols, and industry-specific applications to optimize your fluid contamination analysis processes.",
-          "image": "/productsListing/Contamination_Analysis_Solutions.png",
-          "label": "Tailored Analysis Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
+        solutionsBanner: {
+          title: "Comprehensive Microscopy Solutions",
+          description:
+            "Explore our Solutions section for ASTM E45 and ISO 4967-compliant protocols, technical guides for grain sizing and inclusion analysis, and industry-specific applications to optimize your upright microscope workflows.",
+          image: "/productsListing/Upright_Microscope_Solutions.png",
+          label: "Tailored Microscopy Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Application", variant: "secondary" },
+          ],
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "upright-microscope")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Upright Microscope",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "upright-microscope")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/millipore-fluid-contamination-analysis-kit/vacuum-pressure-pump.png",
-            "alt": "Vacuum/Pressure Pump for Fluid Contamination Analysis",
-            "category": "Millipore Fluid Contamination Analysis Kit",
-            "title": "Vacuum/Pressure Pump",
-            "description": "Portable pump with 25 L/min flow rate and 35 PSIG pressure, ideal for vacuum filtration in remote or lab settings, with thermal overload protection.",
-            "reviews": 12,
-            "rating": 4.8
+            id: 1,
+            name: "Upright Microscope",
+            color: "rgba(90, 120, 170, 0.1)",
+            bgColor: "rgba(90, 120, 170, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "upright-microscope")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           },
-          {
-            "id": 2,
-            "image": "/images/millipore-fluid-contamination-analysis-kit/dispensing-pressure-vessel.png",
-            "alt": "Dispensing Pressure Vessel for Fluid Contamination Analysis",
-            "category": "Millipore Fluid Contamination Analysis Kit",
-            "title": "Dispensing Pressure Vessel",
-            "description": "Stainless steel vessel (5-20 L) for filtration through pressure-operated filter holders, ASME-UM compliant with autoclavable design.",
-            "reviews": 10,
-            "rating": 4.7
-          },
-          {
-            "id": 3,
-            "image": "/images/millipore-fluid-contamination-analysis-kit/filter-jet-solvent-dispenser.png",
-            "alt": "Filter Jet Solvent Dispenser for Fluid Contamination Analysis",
-            "category": "Millipore Fluid Contamination Analysis Kit",
-            "title": "Filter Jet Solvent Dispenser",
-            "description": "Hand-operated dispenser with stainless steel filter holder for spraying ultra-clean solvent jets to clean surfaces, compatible with 25 mm filters.",
-            "reviews": 8,
-            "rating": 4.6
-          }
         ],
-        "products": [
-          { "name": "Vacuum/Pressure Pump", "image": "/images/millipore-fluid-contamination-analysis-kit/vacuum-pressure-pump.png" },
-          { "name": "Dispensing Pressure Vessel", "image": "/images/millipore-fluid-contamination-analysis-kit/dispensing-pressure-vessel.png" },
-          { "name": "Filter Paper", "image": "/images/millipore-fluid-contamination-analysis-kit/filter-paper.png" },
-          { "name": "Filter Flask", "image": "/images/millipore-fluid-contamination-analysis-kit/filter-flask.png" },
-          { "name": "Filter Jet Solvent Dispenser", "image": "/images/millipore-fluid-contamination-analysis-kit/filter-jet-solvent-dispenser.png" },
-          { "name": "Solvent Filtering Dispenser", "image": "/images/millipore-fluid-contamination-analysis-kit/solvent-filtering-dispenser.png" },
-          { "name": "Petri Slides", "image": "/images/millipore-fluid-contamination-analysis-kit/petri-slides.png" },
-          { "name": "Dispensing Bottles", "image": "/images/millipore-fluid-contamination-analysis-kit/dispensing-bottles.png" }
+        productCards: products
+          .filter((p) => p.categorySlug === "upright-microscope")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Metagraph (UP)",
+            description:
+              "High-performance upright microscope with 50x-1000x magnification, brightfield, darkfield, and polarized light capabilities, optimized for precise metallographic analysis of polished metal surfaces, compliant with ASTM E45 and ISO 4967.",
+            image: "/images/upright-microscope/metagraph-up.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Digital Imaging System",
+            description:
+              "Integrated high-resolution camera and software for capturing, analyzing, and documenting metallographic images, enhancing efficiency in quality control and research applications.",
+            image: "/images/upright-microscope/digital-imaging.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
         ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Millipore Fluid Contamination Analysis Kit",
-            "color": "rgba(50, 140, 120, 0.1)",
-            "bgColor": "rgba(50, 140, 120, 0.1)",
-            "subItems": [
-              { "name": "Vacuum/Pressure Pump", "apiCall": "/api/products/vacuum-pressure-pump" },
-              { "name": "Dispensing Pressure Vessel", "apiCall": "/api/products/dispensing-pressure-vessel" },
-              { "name": "Filter Paper", "apiCall": "/api/products/filter-paper" },
-              { "name": "Filter Flask", "apiCall": "/api/products/filter-flask" },
-              { "name": "Filter Jet Solvent Dispenser", "apiCall": "/api/products/filter-jet-solvent-dispenser" },
-              { "name": "Solvent Filtering Dispenser", "apiCall": "/api/products/solvent-filtering-dispenser" },
-              { "name": "Petri Slides", "apiCall": "/api/products/petri-slides" },
-              { "name": "Dispensing Bottles", "apiCall": "/api/products/dispensing-bottles" }
-            ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Vacuum/Pressure Pump",
-            "tag": "Portable Filtration",
-            "description": "Compact pump with 25 L/min flow and 35 PSIG pressure, featuring a permanently lubricated motor and thermal overload protection for reliable vacuum filtration.",
-            "image": "/images/millipore-fluid-contamination-analysis-kit/vacuum-pressure-pump.png",
-            "detail": "/products/vacuum-pressure-pump",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Dispensing Pressure Vessel",
-            "tag": "High-Volume Filtration",
-            "description": "ASME-UM compliant stainless steel vessel (5-20 L) for pressure-driven filtration, autoclavable with cam-lock closure and fluoroelastomer gaskets.",
-            "image": "/images/millipore-fluid-contamination-analysis-kit/dispensing-pressure-vessel.png",
-            "detail": "/products/dispensing-pressure-vessel",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Filter Paper",
-            "tag": "Precision Filtration",
-            "description": "Mixed cellulose ester membranes (47 mm, 5.0 µm) for capturing particulate contaminants, ensuring compatibility with solvents and ISO 16232 standards.",
-            "image": "/images/millipore-fluid-contamination-analysis-kit/filter-paper.png",
-            "detail": "/products/filter-paper",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "Filter Flask",
-            "tag": "Robust Collection",
-            "description": "Borosilicate glass flask (1 L) with silicone stopper and stainless steel filter holder, designed for vacuum filtration of contaminated fluids.",
-            "image": "/images/millipore-fluid-contamination-analysis-kit/filter-flask.png",
-            "detail": "/products/filter-flask",
-            "delay": 0.4
-          },
-          {
-            "id": 5,
-            "name": "Filter Jet Solvent Dispenser",
-            "tag": "Targeted Cleaning",
-            "description": "Hand-operated dispenser with stainless steel holder for 25 mm filters, delivering ultra-clean solvent jets for surface cleaning.",
-            "image": "/images/millipore-fluid-contamination-analysis-kit/filter-jet-solvent-dispenser.png",
-            "detail": "/products/filter-jet-solvent-dispenser",
-            "delay": 0.5
-          },
-          {
-            "id": 6,
-            "name": "Solvent Filtering Dispenser",
-            "tag": "Squeeze-Bottle Action",
-            "description": "Hand-pressure dispenser with filter holder and delivery tube for ultra-clean solvent dispensing, compatible with 25 mm membrane filters.",
-            "image": "/images/millipore-fluid-contamination-analysis-kit/solvent-filtering-dispenser.png",
-            "detail": "/products/solvent-filtering-dispenser",
-            "delay": 0.6
-          },
-          {
-            "id": 7,
-            "name": "Petri Slides",
-            "tag": "Secure Storage",
-            "description": "Transparent petri slides for 47 mm membrane filter storage, allowing microscopic examination without removal, with rounded corners for microscope compatibility.",
-            "image": "/images/millipore-fluid-contamination-analysis-kit/petri-slides.png",
-            "detail": "/products/petri-slides",
-            "delay": 0.7
-          },
-          {
-            "id": 8,
-            "name": "Dispensing Bottles",
-            "tag": "Convenient Dispensing",
-            "description": "Squeeze-action bottles for precise dispensing of ultra-clean solvents or rinse solutions, integrated with filter holders for contamination-free handling.",
-            "image": "/images/millipore-fluid-contamination-analysis-kit/dispensing-bottles.png",
-            "detail": "/products/dispensing-bottles",
-            "delay": 0.8
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Vacuum/Pressure Pump",
-            "description": "Portable vacuum/pressure pump with 25 L/min flow rate and 35 PSIG pressure, designed for field or lab filtration, featuring a thermal overload switch for reliability.",
-            "image": "/images/millipore-fluid-contamination-analysis-kit/vacuum-pressure-pump.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Dispensing Pressure Vessel",
-            "description": "Autoclavable stainless steel vessel (5-20 L) meeting ASME-UM standards, ideal for high-volume filtration with pressure-operated filter holders, featuring cam-lock closure.",
-            "image": "/images/millipore-fluid-contamination-analysis-kit/dispensing-pressure-vessel.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "vacuum-pressure-pump", "name": "Vacuum/Pressure Pump" },
-          { "id": "dispensing-pressure-vessel", "name": "Dispensing Pressure Vessel" },
-          { "id": "filter-paper", "name": "Filter Paper" },
-          { "id": "filter-flask", "name": "Filter Flask" },
-          { "id": "filter-jet-solvent-dispenser", "name": "Filter Jet Solvent Dispenser" },
-          { "id": "solvent-filtering-dispenser", "name": "Solvent Filtering Dispenser" },
-          { "id": "petri-slides", "name": "Petri Slides" },
-          { "id": "dispensing-bottles", "name": "Dispensing Bottles" }
-        ]
+        subCategories: products
+          .filter((p) => p.categorySlug === "upright-microscope")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
-      // Image Analyzers
       {
-        "name": "Image Analyzers",
+        name: "Stereo Microscope",
+        slug: "stereo-microscope",
+        heroImage: "/images/stereo-microscope/stereo-microscope.png",
+        intro: {
+          title: "Advanced Stereo Microscope Solutions",
+          description:
+            "The Stereo Microscope, featuring the Metagraph (ST), delivers high-quality 3D imaging for metallurgy, electronics, and biological applications. Compliant with ASTM E45, it offers low-magnification zoom (5x-80x), dual optical paths for depth perception, and ergonomic design. Ideal for quality control, circuit board inspection, and dissection in manufacturing, research, and education.",
+          categoryLabel: "Explore our stereo microscope solutions",
+          buttons: [
+            { text: "Discover Metagraph (ST)", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
+        },
+        semiAutomaticSection: {
+          title: "Stereo Microscope",
+          description:
+            "The Metagraph (ST) stereo microscope provides zoom magnification from 5x to 80x, with brightfield and reflected LED illumination. Its dual optical paths ensure true 3D visualization, ideal for inspecting opaque samples like metal surfaces, circuit boards, and biological specimens. Ergonomic features and a large working distance support prolonged, fatigue-free operation.",
+          label: "Microscopy Features",
+        },
+        specialtySection: {
+          title: "Specialty Microscopy Solutions",
+          description:
+            "Designed for precision tasks, the Metagraph (ST) supports digital imaging, fluorescence, and modular accessories like boom stands and auxiliary lenses. Its Greenough optical design ensures high depth of field, making it perfect for intricate dissections, microelectronics assembly, and detailed surface analysis in advanced research and industrial settings.",
+          label: "Advanced Microscopy Solutions",
+        },
+        solutionsBanner: {
+          title: "Comprehensive Microscopy Solutions",
+          description:
+            "Explore our Solutions section for ASTM E45-compliant protocols, guides for 3D imaging and surface inspection, and industry-specific applications to optimize your stereo microscope workflows.",
+          image: "/productsListing/Stereo_Microscope_Solutions.png",
+          label: "Tailored Microscopy Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Application", variant: "secondary" },
+          ],
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "stereo-microscope")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Stereo Microscope",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "stereo-microscope")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Stereo Microscope",
+            color: "rgba(80, 140, 160, 0.1)",
+            bgColor: "rgba(80, 140, 160, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "stereo-microscope")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          },
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "stereo-microscope")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Metagraph (ST)",
+            description:
+              "Advanced stereo microscope with 5x-80x zoom, Greenough optics, and LED illumination, optimized for 3D inspection of metallographic samples and electronics, compliant with ASTM E45.",
+            image: "/images/stereo-microscope/metagraph-st.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Digital Imaging Module",
+            description:
+              "Trinocular system with high-resolution camera for capturing and analyzing 3D images, streamlining documentation in quality control and research applications.",
+            image: "/images/stereo-microscope/digital-imaging.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+        ],
+        subCategories: products
+          .filter((p) => p.categorySlug === "stereo-microscope")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        name: "Particle Size Analysis Systems",
+        slug: "particle-size-analysis-systems",
+        heroImage: "/images/particle-size-analysis-systems/particle-size-analysis-systems.png",
+        intro: {
+          title: "Precision Particle Size Analysis Solutions",
+          description:
+            "Our Particle Size Analysis Systems provide advanced stereo and metallurgical microscopy solutions for precise particle analysis, fully compliant with ISO 16232. Featuring automated filter scanning, classification of metallic, non-metallic, and fiber particles, motorized stages, and customizable reporting, these systems cater to automotive, aerospace, metallurgical, and industrial applications.",
+          categoryLabel: "Explore our particle analysis solutions",
+          buttons: [
+            { text: "Discover Particle Analysis Systems", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
+        },
+        semiAutomaticSection: {
+          title: "Particle Size Analysis Systems",
+          description:
+            "Our systems include Stereo models for particles >10 microns and Metallurgical models for particles >3 microns, both with automated filter scanning and ISO 16232-compliant classification. Metallurgical systems add particle height measurement and dual microscopy options for enhanced precision.",
+          label: "Our Particle Analysis Products",
+        },
+        specialtySection: {
+          title: "Specialty Particle Analysis Solutions",
+          description:
+            "For high-resolution, complex, or high-throughput applications, our specialty systems offer tailored automation, advanced microscopy, and custom reporting to meet stringent industry standards.",
+          label: "Advanced Particle Analysis Solutions",
+        },
+        solutionsBanner: {
+          title: "Comprehensive Particle Analysis Solutions",
+          description:
+            "Explore our Solutions section for ISO 16232-compliant methods, technical guides, and industry-specific applications to optimize your particle size analysis workflows.",
+          image: "/productsListing/Particle_Analysis_Solutions.png",
+          label: "Tailored Analysis Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Particle Size Analysis Systems",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Particle Size Analysis Systems",
+            color: "rgba(70, 110, 160, 0.1)",
+            bgColor: "rgba(70, 110, 160, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "particle-size-analysis-systems")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          },
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "CleanView 100 (Stereo)",
+            description:
+              "Fully automatic stereo system with motorized stage, compliant with ISO 16232, featuring fast filter paper scanning and precise classification of particles >10 microns for cleanliness testing.",
+            image: "/images/particle-size-analysis-systems/cleanview-100.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "MetalScan 300 (Metallurgical)",
+            description:
+              "Fully automatic metallurgical system with stereo and metallurgical microscopes, motorized stage, and particle height measurement, compliant with ISO 16232 for particles >3 microns.",
+            image: "/images/particle-size-analysis-systems/metalscan-300.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+        ],
+        subCategories: products
+          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        name: "Millipore Fluid Contamination Analysis Kit",
+        slug: "millipore-fluid-contamination-analysis-kit",
+        heroImage: "/images/millipore-fluid-contamination-analysis-kit/millipore-fluid-contamination-analysis-kit.png",
+        intro: {
+          title: "Comprehensive Fluid Contamination Analysis",
+          description:
+            "The Millipore Fluid Contamination Analysis Kit is a complete solution for analyzing particulate contamination in hydraulic fluids, lubricants, fuels, and water, compliant with ISO 16232 and other industry standards. Equipped with a vacuum/pressure pump, dispensing pressure vessel, filter paper, filter flask, solvent dispensers, petri slides, and dispensing bottles, this kit ensures accurate, reliable results for automotive, aerospace, and industrial quality control.",
+          categoryLabel: "Explore our contamination analysis solutions",
+          buttons: [
+            { text: "Discover the Millipore Kit", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
+        },
+        semiAutomaticSection: {
+          title: "Millipore Fluid Contamination Analysis Kit",
+          description:
+            "Designed for field and laboratory use, this kit includes all necessary components for sampling, filtering, and analyzing fluid contamination. From vacuum filtration to precise solvent dispensing, the kit supports gravimetric, microscopic, and colorimetric analysis to ensure clean parts and fluids in critical applications.",
+          label: "Kit Components",
+        },
+        specialtySection: {
+          title: "Specialty Contamination Analysis Solutions",
+          description:
+            "For advanced applications requiring high-volume filtration, custom solvent handling, or specialized storage, the Millipore kit offers robust components and accessories to meet stringent quality control requirements in industries like automotive and aerospace.",
+          label: "Advanced Contamination Solutions",
+        },
+        solutionsBanner: {
+          title: "Comprehensive Contamination Analysis Solutions",
+          description:
+            "Browse our Solutions section for technical guides, ISO 16232-compliant protocols, and industry-specific applications to optimize your fluid contamination analysis processes.",
+          image: "/productsListing/Contamination_Analysis_Solutions.png",
+          label: "Tailored Analysis Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Millipore Fluid Contamination Analysis Kit",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Millipore Fluid Contamination Analysis Kit",
+            color: "rgba(50, 140, 120, 0.1)",
+            bgColor: "rgba(50, 140, 120, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          },
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Vacuum/Pressure Pump",
+            description:
+              "Portable vacuum/pressure pump with 25 L/min flow rate and 35 PSIG pressure, designed for field or lab filtration, featuring a thermal overload switch for reliability.",
+            image: "/images/millipore-fluid-contamination-analysis-kit/vacuum-pressure-pump.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Dispensing Pressure Vessel",
+            description:
+              "Autoclavable stainless steel vessel (5-20 L) meeting ASME-UM standards, ideal for high-volume filtration with pressure-operated filter holders, featuring cam-lock closure.",
+            image: "/images/millipore-fluid-contamination-analysis-kit/dispensing-pressure-vessel.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+        ],
+        subCategories: products
+          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        "name": "Image Analyzer",
         "slug": "image-analyzer",
         "heroImage": "/images/image-analyzer/image-analyzer.png",
         "intro": {
@@ -4268,195 +6016,50 @@ export const mainCategories = [
             { "text": "Solutions by Material", "variant": "secondary" }
           ]
         },
-        "slides": [
-          {
-            "id": 1,
-            "image": "/images/image-analyzer/grain-analysis-intercept.png",
-            "alt": "Grain Analysis Intercept Method",
+        "slides": products
+          .filter((p) => p.categorySlug === "image-analyzer")
+          .slice(0, 3)
+          .map((p) => ({
+            "id": p.id,
+            "image": p.image,
+            "alt": p.alt,
             "category": "Image Analyzer",
-            "title": "Grain Analysis (Intercept Method)",
-            "description": "Automates grain size measurement by counting grain boundary intersections with test lines, compliant with ASTM E112, ideal for elongated grains.",
-            "reviews": 15,
-            "rating": 4.8
-          },
-          {
-            "id": 2,
-            "image": "/images/image-analyzer/planimetry-method.png",
-            "alt": "Planimetry Method",
-            "category": "Image Analyzer",
-            "title": "Planimetry Method",
-            "description": "Counts grains within a known area for precise ASTM E112-compliant grain size determination, achieving ±0.25 grain size unit precision.",
-            "reviews": 12,
-            "rating": 4.7
-          },
-          {
-            "id": 3,
-            "image": "/images/image-analyzer/phase-analysis.png",
-            "alt": "Phase Analysis",
-            "category": "Image Analyzer",
-            "title": "Phase Analysis",
-            "description": "Quantifies phase fractions in multiphase materials using automated detection and point counting, supporting custom reporting.",
-            "reviews": 10,
-            "rating": 4.6
-          }
-        ],
-        "products": [
-          { "name": "Grain Analysis (Intercept Method)", "image": "/images/image-analyzer/grain-analysis-intercept.png" },
-          { "name": "Planimetry Method", "image": "/images/image-analyzer/planimetry-method.png" },
-          { "name": "Grain Size Distribution", "image": "/images/image-analyzer/grain-size-distribution.png" },
-          { "name": "Phase Analysis", "image": "/images/image-analyzer/phase-analysis.png" },
-          { "name": "Nodularity Analysis", "image": "/images/image-analyzer/nodularity-analysis.png" },
-          { "name": "Graphite", "image": "/images/image-analyzer/graphite.png" },
-          { "name": "B Type Flake Separation", "image": "/images/image-analyzer/b-type-flake-separation.png" },
-          { "name": "Point Counter", "image": "/images/image-analyzer/point-counter.png" },
-          { "name": "Linear Measurement", "image": "/images/image-analyzer/linear-measurement.png" },
-          { "name": "Inclusion", "image": "/images/image-analyzer/inclusion.png" },
-          { "name": "Welding Analysis Setup", "image": "/images/image-analyzer/welding-analysis-setup.png" },
-          { "name": "Porosity Estimation", "image": "/images/image-analyzer/porosity-estimation.png" },
-          { "name": "Annotation", "image": "/images/image-analyzer/annotation.png" }
-        ],
+            "title": p.name,
+            "description": p.description,
+            "reviews": p.reviews,
+            "rating": p.rating
+          })),
+        "products": products
+          .filter((p) => p.categorySlug === "image-analyzer")
+          .map((p) => ({
+            "name": p.name,
+            "image": p.image
+          })),
         "items": [
           {
             "id": 1,
             "name": "Image Analyzer",
             "color": "rgba(80, 120, 150, 0.1)",
             "bgColor": "rgba(80, 120, 150, 0.1)",
-            "subItems": [
-              { "name": "Grain Analysis (Intercept Method)", "apiCall": "/api/products/grain-analysis-intercept" },
-              { "name": "Planimetry Method", "apiCall": "/api/products/planimetry-method" },
-              { "name": "Grain Size Distribution", "apiCall": "/api/products/grain-size-distribution" },
-              { "name": "Phase Analysis", "apiCall": "/api/products/phase-analysis" },
-              { "name": "Nodularity Analysis", "apiCall": "/api/products/nodularity-analysis" },
-              { "name": "Graphite", "apiCall": "/api/products/graphite" },
-              { "name": "B Type Flake Separation", "apiCall": "/api/products/b-type-flake-separation" },
-              { "name": "Point Counter", "apiCall": "/api/products/point-counter" },
-              { "name": "Linear Measurement", "apiCall": "/api/products/linear-measurement" },
-              { "name": "Inclusion", "apiCall": "/api/products/inclusion" },
-              { "name": "Welding Analysis Setup", "apiCall": "/api/products/welding-analysis-setup" },
-              { "name": "Porosity Estimation", "apiCall": "/api/products/porosity-estimation" },
-              { "name": "Annotation", "apiCall": "/api/products/annotation" }
-            ]
+            "subItems": products
+              .filter((p) => p.categorySlug === "image-analyzer")
+              .map((p) => ({
+                "name": p.name,
+                "apiCall": p.apiCall
+              }))
           }
         ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Grain Analysis (Intercept Method)",
-            "tag": "High Accuracy",
-            "description": "Automates ASTM E112-compliant intercept method, counting grain boundary intersections for grain size measurement, ideal for elongated grains.",
-            "image": "/images/image-analyzer/grain-analysis-intercept.png",
-            "detail": "/products/grain-analysis-intercept",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Planimetry Method",
-            "tag": "Precision Counting",
-            "description": "Counts grains in a known area per ASTM E112, offering ±0.25 grain size unit precision for equiaxed grains, with automated marking.",
-            "image": "/images/image-analyzer/planimetry-method.png",
-            "detail": "/products/planimetry-method",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Grain Size Distribution",
-            "tag": "Statistical Analysis",
-            "description": "Generates log-normal grain size distributions, analyzing areas, diameters, or intercept lengths for unimodal structures per ASTM E112.",
-            "image": "/images/image-analyzer/grain-size-distribution.png",
-            "detail": "/products/grain-size-distribution",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "Phase Analysis",
-            "tag": "Multiphase Quantification",
-            "description": "Quantifies phase fractions in multiphase materials using automated detection and point counting, with exportable phase reports.",
-            "image": "/images/image-analyzer/phase-analysis.png",
-            "detail": "/products/phase-analysis",
-            "delay": 0.4
-          },
-          {
-            "id": 5,
-            "name": "Nodularity Analysis",
-            "tag": "Cast Iron Evaluation",
-            "description": "Measures nodularity by count, area, and density in cast iron, grouping nodules by size (1-8) with automated detection.",
-            "image": "/images/image-analyzer/nodularity-analysis.png",
-            "detail": "/products/nodularity-analysis",
-            "delay": 0.5
-          },
-          {
-            "id": 6,
-            "name": "Graphite",
-            "tag": "Graphite Characterization",
-            "description": "Evaluates graphite content and morphology in cast iron, supporting automated spheroidal graphite segmentation and reporting.",
-            "image": "/images/image-analyzer/graphite.png",
-            "detail": "/products/graphite",
-            "delay": 0.6
-          },
-          {
-            "id": 7,
-            "name": "B Type Flake Separation",
-            "tag": "Specialized Graphite",
-            "description": "Isolates B-type graphite flakes in cast iron, enabling precise morphological analysis and classification.",
-            "image": "/images/image-analyzer/b-type-flake-separation.png",
-            "detail": "/products/b-type-flake-separation",
-            "delay": 0.7
-          },
-          {
-            "id": 8,
-            "name": "Point Counter",
-            "tag": "Manual Quantification",
-            "description": "Facilitates manual point counting for phase or feature quantification, supporting ASTM E112-compliant phase analysis.",
-            "image": "/images/image-analyzer/point-counter.png",
-            "detail": "/products/point-counter",
-            "delay": 0.8
-          },
-          {
-            "id": 9,
-            "name": "Linear Measurement",
-            "tag": "Dimension Analysis",
-            "description": "Performs precise linear measurements of microstructural features, such as lamella spacing or grain boundaries.",
-            "image": "/images/image-analyzer/linear-measurement.png",
-            "detail": "/products/linear-measurement",
-            "delay": 0.9
-          },
-          {
-            "id": 10,
-            "name": "Inclusion",
-            "tag": "Defect Detection",
-            "description": "Detects and classifies inclusions (A, B, C, D, thin/thick) per ASTM standards, identifying oversized inclusions.",
-            "image": "/images/image-analyzer/inclusion.png",
-            "detail": "/products/inclusion",
-            "delay": 1.0
-          },
-          {
-            "id": 11,
-            "name": "Welding Analysis Setup",
-            "tag": "Weld Imperfection",
-            "description": "Analyzes weld imperfections, measuring geometry, inclusions, and porosity in weld zones with customizable setups.",
-            "image": "/images/image-analyzer/welding-analysis-setup.png",
-            "detail": "/products/welding-analysis-setup",
-            "delay": 1.1
-          },
-          {
-            "id": 12,
-            "name": "Porosity Estimation",
-            "tag": "Void Analysis",
-            "description": "Quantifies porosity in 2D/3D, distinguishing gas pores, shrinkage cavities, and cracks, compliant with BDG P 203.",
-            "image": "/images/image-analyzer/porosity-estimation.png",
-            "detail": "/products/porosity-estimation",
-            "delay": 1.2
-          },
-          {
-            "id": 13,
-            "name": "Annotation",
-            "tag": "Custom Labeling",
-            "description": "Enables manual or automated annotation of microstructural features for documentation and reporting purposes.",
-            "image": "/images/image-analyzer/annotation.png",
-            "detail": "/products/annotation",
-            "delay": 1.3
-          }
-        ],
+        "productCards": products
+          .filter((p) => p.categorySlug === "image-analyzer")
+          .map((p) => ({
+            "id": p.id,
+            "name": p.name,
+            "tag": p.tag,
+            "description": p.description,
+            "image": p.image,
+            "detail": p.detail,
+            "delay": 0.1 * (p.id - 1)
+          })),
         "specialtyProducts": [
           {
             "id": 1,
@@ -4483,486 +6086,14 @@ export const mainCategories = [
             ]
           }
         ],
-        "subCategories": [
-          { "id": "grain-analysis-intercept", "name": "Grain Analysis (Intercept Method)" },
-          { "id": "planimetry-method", "name": "Planimetry Method" },
-          { "id": "grain-size-distribution", "name": "Grain Size Distribution" },
-          { "id": "phase-analysis", "name": "Phase Analysis" },
-          { "id": "nodularity-analysis", "name": "Nodularity Analysis" },
-          { "id": "graphite", "name": "Graphite" },
-          { "id": "b-type-flake-separation", "name": "B Type Flake Separation" },
-          { "id": "point-counter", "name": "Point Counter" },
-          { "id": "linear-measurement", "name": "Linear Measurement" },
-          { "id": "inclusion", "name": "Inclusion" },
-          { "id": "welding-analysis-setup", "name": "Welding Analysis Setup" },
-          { "id": "porosity-estimation", "name": "Porosity Estimation" },
-          { "id": "annotation", "name": "Annotation" }
-        ]
+        "subCategories": products
+          .filter((p) => p.categorySlug === "image-analyzer")
+          .map((p) => ({
+            "id": p.slug,
+            "name": p.name
+          }))
       },
-    ]
-  },
-
-  // maincategory: "Micro Hardness Tester"
-  {
-    mainCategory: "Micro Hardness Tester",
-    categories: [
-      {
-        "name": "Automatic Micro Hardness Tester",
-        "slug": "automatic-micro-hardness-tester",
-        "heroImage": "/images/automatic-micro-hardness-tester/automatic-micro-hardness-tester.png",
-        "intro": {
-          "title": "Precision Automatic Micro Hardness Testing",
-          "description": "The Automatic Micro Hardness Tester delivers precise Vickers, Knoop, and Brinell hardness measurements for thin materials, coatings, and small components. Fully compliant with ASTM E384 and ISO 4545, it features automated XY stage, auto-focus, and advanced software for high-throughput testing in automotive, aerospace, and metallurgical applications.",
-          "categoryLabel": "Explore our micro hardness testing solutions",
-          "buttons": [
-            { "text": "Discover Micro Hardness Tester", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
-        },
-        "semiAutomaticSection": {
-          "title": "Automatic Micro Hardness Tester",
-          "description": "Equipped with a motorized turret, CCD camera, and intuitive software, this tester automates load application, indentation measurement, and data analysis. With load ranges from 0.01 gf to 2 kgf, it ensures accurate, repeatable results for micro hardness testing of metals, ceramics, and coatings.",
-          "label": "Testing Features"
-        },
-        "specialtySection": {
-          "title": "Specialty Hardness Testing Solutions",
-          "description": "For complex test patterns, case depth analysis, or high-volume production, the Automatic Micro Hardness Tester offers customizable templates, fully automated sequences, and integration with metallographic analysis tools.",
-          "label": "Advanced Testing Solutions"
-        },
-        "solutionsBanner": {
-          "title": "Comprehensive Hardness Testing Solutions",
-          "description": "Explore our Solutions section for ASTM E384-compliant protocols, technical guides, and industry-specific applications to optimize your micro hardness testing workflows.",
-          "image": "/productsListing/Hardness_Testing_Solutions.png",
-          "label": "Tailored Testing Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
-        },
-        "slides": [
-          {
-            "id": 1,
-            "image": "/images/automatic-micro-hardness-tester/vickers-testing.png",
-            "alt": "Vickers Hardness Testing",
-            "category": "Automatic Micro Hardness Tester",
-            "title": "Vickers Testing",
-            "description": "Automates Vickers hardness testing with a diamond pyramid indenter, ideal for thin materials and coatings, compliant with ASTM E384.",
-            "reviews": 18,
-            "rating": 4.9
-          },
-          {
-            "id": 2,
-            "image": "/images/automatic-micro-hardness-tester/knoop-testing.png",
-            "alt": "Knoop Hardness Testing",
-            "category": "Automatic Micro Hardness Tester",
-            "title": "Knoop Testing",
-            "description": "Performs Knoop hardness testing with a rhombic diamond indenter, perfect for brittle materials and thin layers, per ISO 4545.",
-            "reviews": 15,
-            "rating": 4.8
-          },
-          {
-            "id": 3,
-            "image": "/images/automatic-micro-hardness-tester/auto-focus-system.png",
-            "alt": "Auto-Focus System",
-            "category": "Automatic Micro Hardness Tester",
-            "title": "Auto-Focus System",
-            "description": "Ensures sharp indentation images with automated focus and fast image optimization for repeatable, accurate measurements.",
-            "reviews": 12,
-            "rating": 4.7
-          }
-        ],
-        "products": [
-          { "name": "Vickers Testing", "image": "/images/automatic-micro-hardness-tester/vickers-testing.png" },
-          { "name": "Knoop Testing", "image": "/images/automatic-micro-hardness-tester/knoop-testing.png" },
-          { "name": "Brinell Testing", "image": "/images/automatic-micro-hardness-tester/brinell-testing.png" },
-          { "name": "Auto-Focus System", "image": "/images/automatic-micro-hardness-tester/auto-focus-system.png" },
-          { "name": "Motorized XY Stage", "image": "/images/automatic-micro-hardness-tester/motorized-xy-stage.png" },
-          { "name": "Automated Turret", "image": "/images/automatic-micro-hardness-tester/automated-turret.png" },
-          { "name": "CCD Image Acquisition", "image": "/images/automatic-micro-hardness-tester/ccd-image-acquisition.png" },
-          { "name": "Hardness Mapping", "image": "/images/automatic-micro-hardness-tester/hardness-mapping.png" },
-          { "name": "Case Depth Analysis", "image": "/images/automatic-micro-hardness-tester/case-depth-analysis.png" },
-          { "name": "Data Export & Reporting", "image": "/images/automatic-micro-hardness-tester/data-export-reporting.png" }
-        ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Automatic Micro Hardness Tester",
-            "color": "rgba(90, 110, 140, 0.1)",
-            "bgColor": "rgba(90, 110, 140, 0.1)",
-            "subItems": [
-              { "name": "Vickers Testing", "apiCall": "/api/products/vickers-testing" },
-              { "name": "Knoop Testing", "apiCall": "/api/products/knoop-testing" },
-              { "name": "Brinell Testing", "apiCall": "/api/products/brinell-testing" },
-              { "name": "Auto-Focus System", "apiCall": "/api/products/auto-focus-system" },
-              { "name": "Motorized XY Stage", "apiCall": "/api/products/motorized-xy-stage" },
-              { "name": "Automated Turret", "apiCall": "/api/products/automated-turret" },
-              { "name": "CCD Image Acquisition", "apiCall": "/api/products/ccd-image-acquisition" },
-              { "name": "Hardness Mapping", "apiCall": "/api/products/hardness-mapping" },
-              { "name": "Case Depth Analysis", "apiCall": "/api/products/case-depth-analysis" },
-              { "name": "Data Export & Reporting", "apiCall": "/api/products/data-export-reporting" }
-            ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Vickers Testing",
-            "tag": "High Precision",
-            "description": "Automates Vickers hardness testing with a diamond pyramid indenter, ideal for thin materials and coatings, compliant with ASTM E384.",
-            "image": "/images/automatic-micro-hardness-tester/vickers-testing.png",
-            "detail": "/products/vickers-testing",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Knoop Testing",
-            "tag": "Brittle Materials",
-            "description": "Performs Knoop hardness testing with a rhombic diamond indenter, suited for brittle materials and thin layers, per ISO 4545.",
-            "image": "/images/automatic-micro-hardness-tester/knoop-testing.png",
-            "detail": "/products/knoop-testing",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Brinell Testing",
-            "tag": "Small Load Range",
-            "description": "Supports Brinell hardness testing in the micro range (up to 62.5 kgf), ideal for softer materials and small components.",
-            "image": "/images/automatic-micro-hardness-tester/brinell-testing.png",
-            "detail": "/products/brinell-testing",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "Auto-Focus System",
-            "tag": "Image Clarity",
-            "description": "Ensures sharp indentation images with automated focus and fast image optimization, reducing operator error.",
-            "image": "/images/automatic-micro-hardness-tester/auto-focus-system.png",
-            "detail": "/products/auto-focus-system",
-            "delay": 0.4
-          },
-          {
-            "id": 5,
-            "name": "Motorized XY Stage",
-            "tag": "Precise Positioning",
-            "description": "Automates sample positioning with high-precision motorized XY stage for complex test patterns and high-throughput testing.",
-            "image": "/images/automatic-micro-hardness-tester/motorized-xy-stage.png",
-            "detail": "/products/motorized-xy-stage",
-            "delay": 0.5
-          },
-          {
-            "id": 6,
-            "name": "Automated Turret",
-            "tag": "Efficient Workflow",
-            "description": "Features a 6-position automated turret for quick switching between indenters and lenses, streamlining test sequences.",
-            "image": "/images/automatic-micro-hardness-tester/automated-turret.png",
-            "detail": "/products/automated-turret",
-            "delay": 0.6
-          },
-          {
-            "id": 7,
-            "name": "CCD Image Acquisition",
-            "tag": "Advanced Imaging",
-            "description": "Captures high-resolution indentation images via CCD camera, enabling automated measurement and analysis.",
-            "image": "/images/automatic-micro-hardness-tester/ccd-image-acquisition.png",
-            "detail": "/products/ccd-image-acquisition",
-            "delay": 0.7
-          },
-          {
-            "id": 8,
-            "name": "Hardness Mapping",
-            "tag": "Surface Profiling",
-            "description": "Generates detailed hardness maps across sample surfaces, ideal for analyzing heat-treated zones and coatings.",
-            "image": "/images/automatic-micro-hardness-tester/hardness-mapping.png",
-            "detail": "/products/hardness-mapping",
-            "delay": 0.8
-          },
-          {
-            "id": 9,
-            "name": "Case Depth Analysis",
-            "tag": "Depth Profiling",
-            "description": "Automates case hardness depth (CHD) testing, measuring hardness gradients in heat-treated components.",
-            "image": "/images/automatic-micro-hardness-tester/case-depth-analysis.png",
-            "detail": "/products/case-depth-analysis",
-            "delay": 0.9
-          },
-          {
-            "id": 10,
-            "name": "Data Export & Reporting",
-            "tag": "Custom Reporting",
-            "description": "Exports test results in customizable formats with statistical analysis, supporting USB, VGA, and LAN interfaces.",
-            "image": "/images/automatic-micro-hardness-tester/data-export-reporting.png",
-            "detail": "/products/data-export-reporting",
-            "delay": 1.0
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Vickers Testing",
-            "description": "Automates Vickers hardness testing with a diamond pyramid indenter, delivering precise measurements for thin materials and coatings, compliant with ASTM E384.",
-            "image": "/images/automatic-micro-hardness-tester/vickers-testing.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Knoop Testing",
-            "description": "Performs Knoop hardness testing with a rhombic diamond indenter, optimized for brittle materials and thin layers, per ISO 4545.",
-            "image": "/images/automatic-micro-hardness-tester/knoop-testing.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "vickers-testing", "name": "Vickers Testing" },
-          { "id": "knoop-testing", "name": "Knoop Testing" },
-          { "id": "brinell-testing", "name": "Brinell Testing" },
-          { "id": "auto-focus-system", "name": "Auto-Focus System" },
-          { "id": "motorized-xy-stage", "name": "Motorized XY Stage" },
-          { "id": "automated-turret", "name": "Automated Turret" },
-          { "id": "ccd-image-acquisition", "name": "CCD Image Acquisition" },
-          { "id": "hardness-mapping", "name": "Hardness Mapping" },
-          { "id": "case-depth-analysis", "name": "Case Depth Analysis" },
-          { "id": "data-export-reporting", "name": "Data Export & Reporting" }
-        ]
-      },
-      {
-        "name": "Micro/Macro Hardness Tester (Load Cell Based)",
-        "slug": "micro-macro-hardness-tester-load-cell",
-        "heroImage": "/images/micro-macro-hardness-tester/micro-macro-hardness-tester.png",
-        "intro": {
-          "title": "Advanced Load Cell Based Hardness Testing",
-          "description": "The Micro/Macro Hardness Tester with load cell technology offers precise Vickers, Knoop, and Brinell testing across micro (0.01 gf to 1 kgf) and macro (1 kgf to 62.5 kgf) ranges. Compliant with ASTM E384, ISO 6507, and ASTM E10, it features closed-loop load control, automated XY stage, and intuitive software for high-throughput testing in metallurgical, automotive, and aerospace applications.",
-          "categoryLabel": "Explore our load cell hardness testing solutions",
-          "buttons": [
-            { "text": "Discover Hardness Tester", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
-        },
-        "semiAutomaticSection": {
-          "title": "Micro/Macro Hardness Tester",
-          "description": "Utilizing closed-loop load cell technology, this tester ensures accurate force application for Vickers, Knoop, and Brinell tests. With automated turret, CCD imaging, and touch-screen interface, it delivers repeatable results for micro and macro hardness testing of metals, ceramics, and coatings.",
-          "label": "Testing Features"
-        },
-        "specialtySection": {
-          "title": "Specialty Hardness Testing Solutions",
-          "description": "For advanced applications like case depth analysis, hardness mapping, or high-volume production, this tester offers customizable test patterns, fully automated sequences, and integration with image analysis software for comprehensive material characterization.",
-          "label": "Advanced Testing Solutions"
-        },
-        "solutionsBanner": {
-          "title": "Comprehensive Hardness Testing Solutions",
-          "description": "Explore our Solutions section for ASTM E384 and ISO 6507-compliant protocols, technical guides, and industry-specific applications to optimize your hardness testing workflows.",
-          "image": "/productsListing/Hardness_Testing_Solutions.png",
-          "label": "Tailored Testing Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
-        },
-        "slides": [
-          {
-            "id": 1,
-            "image": "/images/micro-macro-hardness-tester/vickers-testing.png",
-            "alt": "Vickers Hardness Testing",
-            "category": "Micro/Macro Hardness Tester",
-            "title": "Vickers Testing",
-            "description": "Performs Vickers testing with loads from 0.01 gf to 62.5 kgf using a diamond pyramid indenter, compliant with ASTM E384 and ISO 6507.",
-            "reviews": 20,
-            "rating": 4.9
-          },
-          {
-            "id": 2,
-            "image": "/images/micro-macro-hardness-tester/knoop-testing.png",
-            "alt": "Knoop Hardness Testing",
-            "category": "Micro/Macro Hardness Tester",
-            "title": "Knoop Testing",
-            "description": "Conducts Knoop testing for brittle materials and thin coatings with loads up to 2 kgf, per ISO 4545, using a rhombic indenter.",
-            "reviews": 16,
-            "rating": 4.8
-          },
-          {
-            "id": 3,
-            "image": "/images/micro-macro-hardness-tester/load-cell-system.png",
-            "alt": "Closed-Loop Load Cell System",
-            "category": "Micro/Macro Hardness Tester",
-            "title": "Closed-Loop Load Cell",
-            "description": "Ensures precise force application across micro and macro ranges with closed-loop control, minimizing operator error.",
-            "reviews": 14,
-            "rating": 4.7
-          }
-        ],
-        "products": [
-          { "name": "Vickers Testing", "image": "/images/micro-macro-hardness-tester/vickers-testing.png" },
-          { "name": "Knoop Testing", "image": "/images/micro-macro-hardness-tester/knoop-testing.png" },
-          { "name": "Brinell Testing", "image": "/images/micro-macro-hardness-tester/brinell-testing.png" },
-          { "name": "Closed-Loop Load Cell", "image": "/images/micro-macro-hardness-tester/load-cell-system.png" },
-          { "name": "Auto-Focus System", "image": "/images/micro-macro-hardness-tester/auto-focus-system.png" },
-          { "name": "Motorized XY Stage", "image": "/images/micro-macro-hardness-tester/motorized-xy-stage.png" },
-          { "name": "Automated Turret", "image": "/images/micro-macro-hardness-tester/automated-turret.png" },
-          { "name": "CCD Image Acquisition", "image": "/images/micro-macro-hardness-tester/ccd-image-acquisition.png" },
-          { "name": "Hardness Mapping", "image": "/images/micro-macro-hardness-tester/hardness-mapping.png" },
-          { "name": "Data Export & Reporting", "image": "/images/micro-macro-hardness-tester/data-export-reporting.png" }
-        ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Micro/Macro Hardness Tester",
-            "color": "rgba(100, 120, 160, 0.1)",
-            "bgColor": "rgba(100, 120, 160, 0.1)",
-            "subItems": [
-              { "name": "Vickers Testing", "apiCall": "/api/products/vickers-testing" },
-              { "name": "Knoop Testing", "apiCall": "/api/products/knoop-testing" },
-              { "name": "Brinell Testing", "apiCall": "/api/products/brinell-testing" },
-              { "name": "Closed-Loop Load Cell", "apiCall": "/api/products/closed-loop-load-cell" },
-              { "name": "Auto-Focus System", "apiCall": "/api/products/auto-focus-system" },
-              { "name": "Motorized XY Stage", "apiCall": "/api/products/motorized-xy-stage" },
-              { "name": "Automated Turret", "apiCall": "/api/products/automated-turret" },
-              { "name": "CCD Image Acquisition", "apiCall": "/api/products/ccd-image-acquisition" },
-              { "name": "Hardness Mapping", "apiCall": "/api/products/hardness-mapping" },
-              { "name": "Data Export & Reporting", "apiCall": "/api/products/data-export-reporting" }
-            ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Vickers Testing",
-            "tag": "Versatile Precision",
-            "description": "Supports Vickers testing with loads from 0.01 gf to 62.5 kgf, ideal for micro and macro applications, compliant with ASTM E384 and ISO 6507.",
-            "image": "/images/micro-macro-hardness-tester/vickers-testing.png",
-            "detail": "/products/vickers-testing",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Knoop Testing",
-            "tag": "Thin Layer Analysis",
-            "description": "Performs Knoop testing with loads up to 2 kgf, optimized for brittle materials and thin coatings, per ISO 4545.",
-            "image": "/images/micro-macro-hardness-tester/knoop-testing.png",
-            "detail": "/products/knoop-testing",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Brinell Testing",
-            "tag": "Light Load Range",
-            "description": "Conducts Brinell testing with loads up to 62.5 kgf, suitable for softer materials and small components, per ASTM E10.",
-            "image": "/images/micro-macro-hardness-tester/brinell-testing.png",
-            "detail": "/products/brinell-testing",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "Closed-Loop Load Cell",
-            "tag": "Accurate Force",
-            "description": "Utilizes closed-loop load cell technology for precise force application across micro and macro ranges, reducing variability.",
-            "image": "/images/micro-macro-hardness-tester/load-cell-system.png",
-            "detail": "/products/closed-loop-load-cell",
-            "delay": 0.4
-          },
-          {
-            "id": 5,
-            "name": "Auto-Focus System",
-            "tag": "Image Clarity",
-            "description": "Automates focus for sharp indentation images, enhancing measurement accuracy and repeatability.",
-            "image": "/images/micro-macro-hardness-tester/auto-focus-system.png",
-            "detail": "/products/auto-focus-system",
-            "delay": 0.5
-          },
-          {
-            "id": 6,
-            "name": "Motorized XY Stage",
-            "tag": "High Throughput",
-            "description": "Enables precise sample positioning for complex test patterns and automated multi-point testing.",
-            "image": "/images/micro-macro-hardness-tester/motorized-xy-stage.png",
-            "detail": "/products/motorized-xy-stage",
-            "delay": 0.6
-          },
-          {
-            "id": 7,
-            "name": "Automated Turret",
-            "tag": "Streamlined Operation",
-            "description": "Features a 6-position auto turret for seamless switching between indenters and objectives, boosting efficiency.",
-            "image": "/images/micro-macro-hardness-tester/automated-turret.png",
-            "detail": "/products/automated-turret",
-            "delay": 0.7
-          },
-          {
-            "id": 8,
-            "name": "CCD Image Acquisition",
-            "tag": "High-Resolution Imaging",
-            "description": "Captures high-resolution indentation images for automated measurement and analysis via CCD camera.",
-            "image": "/images/micro-macro-hardness-tester/ccd-image-acquisition.png",
-            "detail": "/products/ccd-image-acquisition",
-            "delay": 0.8
-          },
-          {
-            "id": 9,
-            "name": "Hardness Mapping",
-            "tag": "Surface Analysis",
-            "description": "Generates detailed hardness maps for heat-treated zones, coatings, and welds, enhancing material characterization.",
-            "image": "/images/micro-macro-hardness-tester/hardness-mapping.png",
-            "detail": "/products/hardness-mapping",
-            "delay": 0.9
-          },
-          {
-            "id": 10,
-            "name": "Data Export & Reporting",
-            "tag": "Customizable Output",
-            "description": "Exports test results with statistical analysis in customizable formats, supporting USB, LAN, and thermal printing.",
-            "image": "/images/micro-macro-hardness-tester/data-export-reporting.png",
-            "detail": "/products/data-export-reporting",
-            "delay": 1.0
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Vickers Testing",
-            "description": "Performs Vickers testing across micro (0.01 gf) to macro (62.5 kgf) ranges with a diamond pyramid indenter, ensuring ASTM E384 and ISO 6507 compliance.",
-            "image": "/images/micro-macro-hardness-tester/vickers-testing.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Closed-Loop Load Cell",
-            "description": "Employs advanced closed-loop load cell technology for precise force application, supporting a wide range of Vickers, Knoop, and Brinell tests.",
-            "image": "/images/micro-macro-hardness-tester/load-cell-system.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "vickers-testing", "name": "Vickers Testing" },
-          { "id": "knoop-testing", "name": "Knoop Testing" },
-          { "id": "brinell-testing", "name": "Brinell Testing" },
-          { "id": "closed-loop-load-cell", "name": "Closed-Loop Load Cell" },
-          { "id": "auto-focus-system", "name": "Auto-Focus System" },
-          { "id": "motorized-xy-stage", "name": "Motorized XY Stage" },
-          { "id": "automated-turret", "name": "Automated Turret" },
-          { "id": "ccd-image-acquisition", "name": "CCD Image Acquisition" },
-          { "id": "hardness-mapping", "name": "Hardness Mapping" },
-          { "id": "data-export-reporting", "name": "Data Export & Reporting" }
-        ]
-      },
-    ]
+    ],
   },
 
   // mainCategory: "Other Machines"
@@ -4970,1363 +6101,819 @@ export const mainCategories = [
     mainCategory: "Other Machines",
     categories: [
       {
-        "name": "Electro Polishing Machine",
-        "slug": "electro-polishing-machine",
-        "heroImage": "/images/electro-polishing-machine/electro-polishing-machine.png",
-        "intro": {
-          "title": "Precision Electro Polishing Solutions",
-          "description": "The Electro Polishing Machine, featuring the Electropol system, delivers mirror-like, corrosion-resistant finishes on stainless steel, gold, silver, copper, and other metals. Compliant with ASTM B912 and ISO 13485, it offers automated, high-throughput polishing for medical devices, aerospace components, jewelry, and industrial parts, ensuring repeatable micro-tolerance surface roughness finishing.",
-          "categoryLabel": "Explore our electro polishing solutions",
-          "buttons": [
-            { "text": "Discover Electropol", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
+        name: "Electro Polishing Machine",
+        slug: "electro-polishing-machine",
+        heroImage: "/images/electro-polishing-machine/electro-polishing-machine.png",
+        intro: {
+          title: "Precision Electro Polishing Solutions",
+          description:
+            "The Electro Polishing Machine, featuring the Electropol system, delivers mirror-like, corrosion-resistant finishes on stainless steel, gold, silver, copper, and other metals. Compliant with ASTM B912 and ISO 13485, it offers automated, high-throughput polishing for medical devices, aerospace components, jewelry, and industrial parts, ensuring repeatable micro-tolerance surface roughness finishing.",
+          categoryLabel: "Explore our electro polishing solutions",
+          buttons: [
+            { text: "Discover Electropol", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
         },
-        "semiAutomaticSection": {
-          "title": "Electro Polishing Machine",
-          "description": "The Electropol system automates electrochemical polishing with advanced rectifiers (24V/48V), digital timers, and temperature controls. It removes micro-peaks and impurities, enhancing corrosion resistance and surface smoothness for complex geometries in medical, aerospace, and jewelry applications.",
-          "label": "Polishing Features"
+        semiAutomaticSection: {
+          title: "Electro Polishing Machine",
+          description:
+            "The Electropol system automates electrochemical polishing with advanced rectifiers (24V/48V), digital timers, and temperature controls. It removes micro-peaks and impurities, enhancing corrosion resistance and surface smoothness for complex geometries in medical, aerospace, and jewelry applications.",
+          label: "Polishing Features",
         },
-        "specialtySection": {
-          "title": "Specialty Electro Polishing Solutions",
-          "description": "For intricate parts, high-volume production, or delicate materials, the Electropol system offers customizable fixtures, no-dead-angle polishing, and environmentally friendly processes, reducing chemical waste and ensuring high-quality finishes.",
-          "label": "Advanced Polishing Solutions"
+        specialtySection: {
+          title: "Specialty Electro Polishing Solutions",
+          description:
+            "For intricate parts, high-volume production, or delicate materials, the Electropol system offers customizable fixtures, no-dead-angle polishing, and environmentally friendly processes, reducing chemical waste and ensuring high-quality finishes.",
+          label: "Advanced Polishing Solutions",
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Electro Polishing Solutions",
-          "description": "Explore our Solutions section for ASTM B912-compliant protocols, technical guides, and industry-specific applications to optimize your electro polishing workflows.",
-          "image": "/productsListing/Electro_Polishing_Solutions.png",
-          "label": "Tailored Polishing Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
+        solutionsBanner: {
+          title: "Comprehensive Electro Polishing Solutions",
+          description:
+            "Explore our Solutions section for ASTM B912-compliant protocols, technical guides, and industry-specific applications to optimize your electro polishing workflows.",
+          image: "/productsListing/Electro_Polishing_Solutions.png",
+          label: "Tailored Polishing Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "electro-polishing-machine")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Electro Polishing Machine",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "electro-polishing-machine")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/electro-polishing-machine/electropol-tabletop.png",
-            "alt": "Electropol Tabletop System",
-            "category": "Electro Polishing Machine",
-            "title": "Electropol Tabletop",
-            "description": "Compact 0.5-15 gallon system for prototyping and small-scale production, ideal for medical devices and jewelry, with 24V/48V rectifiers.",
-            "reviews": 15,
-            "rating": 4.8
+            id: 1,
+            name: "Electro Polishing Machine",
+            color: "rgba(70, 130, 180, 0.1)",
+            bgColor: "rgba(70, 130, 180, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "electro-polishing-machine")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           },
-          {
-            "id": 2,
-            "image": "/images/electro-polishing-machine/electropol-wet-bench.png",
-            "alt": "Electropol Wet Bench",
-            "category": "Electro Polishing Machine",
-            "title": "Electropol Wet Bench",
-            "description": "All-in-one console integrating washing, rinsing, polishing, and drying, designed for high-throughput industrial applications.",
-            "reviews": 12,
-            "rating": 4.7
-          },
-          {
-            "id": 3,
-            "image": "/images/electro-polishing-machine/electropol-large-scale.png",
-            "alt": "Electropol Large-Scale System",
-            "category": "Electro Polishing Machine",
-            "title": "Electropol Large-Scale",
-            "description": "Custom-designed system with overhead hoist for large parts, suited for aerospace and industrial stainless steel polishing.",
-            "reviews": 10,
-            "rating": 4.6
-          }
         ],
-        "products": [
-          { "name": "Electropol Tabletop", "image": "/images/electro-polishing-machine/electropol-tabletop.png" },
-          { "name": "Electropol Wet Bench", "image": "/images/electro-polishing-machine/electropol-wet-bench.png" },
-          { "name": "Electropol Large-Scale", "image": "/images/electro-polishing-machine/electropol-large-scale.png" },
-          { "name": "Automated Rectifier Control", "image": "/images/electro-polishing-machine/automated-rectifier-control.png" },
-          { "name": "No-Dead-Angle Polishing", "image": "/images/electro-polishing-machine/no-dead-angle-polishing.png" },
-          { "name": "Electrolyte Recovery System", "image": "/images/electro-polishing-machine/electrolyte-recovery-system.png" },
-          { "name": "Custom Fixtures", "image": "/images/electro-polishing-machine/custom-fixtures.png" },
-          { "name": "Digital Process Monitoring", "image": "/images/electro-polishing-machine/digital-process-monitoring.png" }
+        productCards: products
+          .filter((p) => p.categorySlug === "electro-polishing-machine")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Electropol Tabletop",
+            description:
+              "Compact and portable 0.5-15 gallon system for small-scale electro polishing, perfect for medical device prototyping and jewelry finishing with 24V/48V rectifiers.",
+            image: "/images/electro-polishing-machine/electropol-tabletop.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Electropol Large-Scale",
+            description:
+              "Custom-designed system with overhead hoist for polishing large parts, optimized for aerospace and industrial stainless steel applications with high-throughput.",
+            image: "/images/electro-polishing-machine/electropol-large-scale.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
         ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Electro Polishing Machine",
-            "color": "rgba(70, 130, 180, 0.1)",
-            "bgColor": "rgba(70, 130, 180, 0.1)",
-            "subItems": [
-              { "name": "Electropol Tabletop", "apiCall": "/api/products/electropol-tabletop" },
-              { "name": "Electropol Wet Bench", "apiCall": "/api/products/electropol-wet-bench" },
-              { "name": "Electropol Large-Scale", "apiCall": "/api/products/electropol-large-scale" },
-              { "name": "Automated Rectifier Control", "apiCall": "/api/products/automated-rectifier-control" },
-              { "name": "No-Dead-Angle Polishing", "apiCall": "/api/products/no-dead-angle-polishing" },
-              { "name": "Electrolyte Recovery System", "apiCall": "/api/products/electrolyte-recovery-system" },
-              { "name": "Custom Fixtures", "apiCall": "/api/products/custom-fixtures" },
-              { "name": "Digital Process Monitoring", "apiCall": "/api/products/digital-process-monitoring" }
-            ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Electropol Tabletop",
-            "tag": "Compact Precision",
-            "description": "Portable 0.5-15 gallon system for small to medium parts, ideal for laboratory prototyping and jewelry polishing, with 24V/48V rectifiers.",
-            "image": "/images/electro-polishing-machine/electropol-tabletop.png",
-            "detail": "/products/electropol-tabletop",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Electropol Wet Bench",
-            "tag": "Integrated Efficiency",
-            "description": "Multi-tank console combining washing, rinsing, polishing, and drying, constructed with polypropylene tanks and stainless steel frames.",
-            "image": "/images/electro-polishing-machine/electropol-wet-bench.png",
-            "detail": "/products/electropol-wet-bench",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Electropol Large-Scale",
-            "tag": "High-Volume Production",
-            "description": "Custom system with overhead hoist or jib crane for large parts, optimized for aerospace and industrial stainless steel applications.",
-            "image": "/images/electro-polishing-machine/electropol-large-scale.png",
-            "detail": "/products/electropol-large-scale",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "Automated Rectifier Control",
-            "tag": "Precise Current Delivery",
-            "description": "Features 24V/48V rectifiers with digital timers and temperature controls for consistent polishing results across metals.",
-            "image": "/images/electro-polishing-machine/automated-rectifier-control.png",
-            "detail": "/products/automated-rectifier-control",
-            "delay": 0.4
-          },
-          {
-            "id": 5,
-            "name": "No-Dead-Angle Polishing",
-            "tag": "Complex Geometries",
-            "description": "Ensures uniform polishing of intricate parts, ideal for jewelry and medical devices, without compromising sharp edges.",
-            "image": "/images/electro-polishing-machine/no-dead-angle-polishing.png",
-            "detail": "/products/no-dead-angle-polishing",
-            "delay": 0.5
-          },
-          {
-            "id": 6,
-            "name": "Electrolyte Recovery System",
-            "tag": "Sustainable Processing",
-            "description": "Recovers 95-98% of dissolved metal from electrolyte, reducing waste and operational costs in high-volume polishing.",
-            "image": "/images/electro-polishing-machine/electrolyte-recovery-system.png",
-            "detail": "/products/electrolyte-recovery-system",
-            "delay": 0.6
-          },
-          {
-            "id": 7,
-            "name": "Custom Fixtures",
-            "tag": "Tailored Handling",
-            "description": "Designed to securely hold complex or delicate parts, ensuring precise polishing without damage to intricate geometries.",
-            "image": "/images/electro-polishing-machine/custom-fixtures.png",
-            "detail": "/products/custom-fixtures",
-            "delay": 0.7
-          },
-          {
-            "id": 8,
-            "name": "Digital Process Monitoring",
-            "tag": "Real-Time Control",
-            "description": "HMI panel for intuitive monitoring of current, temperature, and process duration, ensuring repeatable, high-quality finishes.",
-            "image": "/images/electro-polishing-machine/digital-process-monitoring.png",
-            "detail": "/products/digital-process-monitoring",
-            "delay": 0.8
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Electropol Tabletop",
-            "description": "Compact and portable 0.5-15 gallon system for small-scale electro polishing, perfect for medical device prototyping and jewelry finishing with 24V/48V rectifiers.",
-            "image": "/images/electro-polishing-machine/electropol-tabletop.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Electropol Large-Scale",
-            "description": "Custom-designed system with overhead hoist for polishing large parts, optimized for aerospace and industrial stainless steel applications with high-throughput.",
-            "image": "/images/electro-polishing-machine/electropol-large-scale.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "electropol-tabletop", "name": "Electropol Tabletop" },
-          { "id": "electropol-wet-bench", "name": "Electropol Wet Bench" },
-          { "id": "electropol-large-scale", "name": "Electropol Large-Scale" },
-          { "id": "automated-rectifier-control", "name": "Automated Rectifier Control" },
-          { "id": "no-dead-angle-polishing", "name": "No-Dead-Angle Polishing" },
-          { "id": "electrolyte-recovery-system", "name": "Electrolyte Recovery System" },
-          { "id": "custom-fixtures", "name": "Custom Fixtures" },
-          { "id": "digital-process-monitoring", "name": "Digital Process Monitoring" }
-        ]
+        subCategories: products
+          .filter((p) => p.categorySlug === "electro-polishing-machine")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "In-situ Metallography Kit",
-        "slug": "in-situ-metallography-kit",
-        "heroImage": "/images/in-situ-metallography-kit/in-situ-metallography-kit.png",
-        "intro": {
-          "title": "Portable In-situ Metallography Solutions",
-          "description": "The In-situ Metallography Kit enables non-destructive, on-site microstructural analysis for large or in-service components. Compliant with ASTM E1351 and ISO 643, it includes a Portable Microscope, Image Analyzer, Replica materials, Portpol Electro Polisher, and Portgrinder Grinder, ideal for power plants, pipelines, and weld inspections in automotive, aerospace, and industrial applications.",
-          "categoryLabel": "Explore our in-situ metallography solutions",
-          "buttons": [
-            { "text": "Discover In-situ Kit", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
+        name: "In-situ Metallography Kit",
+        slug: "in-situ-metallography-kit",
+        heroImage: "/images/in-situ-metallography-kit/in-situ-metallography-kit.png",
+        intro: {
+          title: "Portable In-situ Metallography Solutions",
+          description:
+            "The In-situ Metallography Kit enables non-destructive, on-site microstructural analysis for large or in-service components. Compliant with ASTM E1351 and ISO 643, it includes a Portable Microscope, Image Analyzer, Replica materials, Portpol Electro Polisher, and Portgrinder Grinder, ideal for power plants, pipelines, and weld inspections in automotive, aerospace, and industrial applications.",
+          categoryLabel: "Explore our in-situ metallography solutions",
+          buttons: [
+            { text: "Discover In-situ Kit", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
         },
-        "semiAutomaticSection": {
-          "title": "In-situ Metallography Kit",
-          "description": "Designed for field use, this kit combines a high-magnification portable microscope, real-time image analysis, replication media, and portable polishing/grinding tools. It supports on-site microstructure observation, failure analysis, and weld quality checks without damaging components, with battery-powered operation for remote locations.",
-          "label": "Kit Components"
+        semiAutomaticSection: {
+          title: "In-situ Metallography Kit",
+          description:
+            "Designed for field use, this kit combines a high-magnification portable microscope, real-time image analysis, replication media, and portable polishing/grinding tools. It supports on-site microstructure observation, failure analysis, and weld quality checks without damaging components, with battery-powered operation for remote locations.",
+          label: "Kit Components",
         },
-        "specialtySection": {
-          "title": "Specialty In-situ Metallography Solutions",
-          "description": "For challenging field conditions or complex alloys, the kit offers advanced replication techniques, high-resolution imaging, and custom polishing probes, ensuring accurate microstructure analysis and condition monitoring in critical applications.",
-          "label": "Advanced Metallography Solutions"
+        specialtySection: {
+          title: "Specialty In-situ Metallography Solutions",
+          description:
+            "For challenging field conditions or complex alloys, the kit offers advanced replication techniques, high-resolution imaging, and custom polishing probes, ensuring accurate microstructure analysis and condition monitoring in critical applications.",
+          label: "Advanced Metallography Solutions",
         },
-        "solutionsBanner": {
-          "title": "Comprehensive In-situ Metallography Solutions",
-          "description": "Explore our Solutions section for ASTM E1351-compliant protocols, technical guides, and industry-specific applications to optimize your on-site metallographic analysis workflows.",
-          "image": "/productsListing/In-situ_Metallography_Solutions.png",
-          "label": "Tailored Metallography Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
+        solutionsBanner: {
+          title: "Comprehensive In-situ Metallography Solutions",
+          description:
+            "Explore our Solutions section for ASTM E1351-compliant protocols, technical guides, and industry-specific applications to optimize your on-site metallographic analysis workflows.",
+          image: "/productsListing/In-situ_Metallography_Solutions.png",
+          label: "Tailored Metallography Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "in-situ-metallography-kit")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "In-situ Metallography Kit",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "in-situ-metallography-kit")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/in-situ-metallography-kit/portable-microscope.png",
-            "alt": "Portable Microscope for In-situ Metallography",
-            "category": "In-situ Metallography Kit",
-            "title": "Portable Microscope",
-            "description": "Battery-powered microscope with up to 800x magnification, featuring X-Y stage scanning and CMOS camera for on-site microstructure analysis.",
-            "reviews": 18,
-            "rating": 4.9
+            id: 1,
+            name: "In-situ Metallography Kit",
+            color: "rgba(60, 140, 170, 0.1)",
+            bgColor: "rgba(60, 140, 170, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "in-situ-metallography-kit")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           },
-          {
-            "id": 2,
-            "image": "/images/in-situ-metallography-kit/image-analyzer.png",
-            "alt": "Image Analyzer for In-situ Metallography",
-            "category": "In-situ Metallography Kit",
-            "title": "Image Analyzer",
-            "description": "Laptop-based software with high-resolution USB camera for real-time image capture, analysis, and database generation, enabling on-site reporting.",
-            "reviews": 15,
-            "rating": 4.8
-          },
-          {
-            "id": 3,
-            "image": "/images/in-situ-metallography-kit/portgrinder.png",
-            "alt": "Portgrinder Portable Grinder",
-            "category": "In-situ Metallography Kit",
-            "title": "Portgrinder",
-            "description": "Variable-speed, high-torque grinder with 38 mm PSA discs and flexible shaft, powered by 230V AC for field surface preparation.",
-            "reviews": 12,
-            "rating": 4.7
-          }
         ],
-        "products": [
-          { "name": "Portable Microscope", "image": "/images/in-situ-metallography-kit/portable-microscope.png" },
-          { "name": "Image Analyzer", "image": "/images/in-situ-metallography-kit/image-analyzer.png" },
-          { "name": "Replica", "image": "/images/in-situ-metallography-kit/replica.png" },
-          { "name": "Portpol Electro Polisher", "image": "/images/in-situ-metallography-kit/portpol.png" },
-          { "name": "Portgrinder Grinder", "image": "/images/in-situ-metallography-kit/portgrinder.png" }
+        productCards: products
+          .filter((p) => p.categorySlug === "in-situ-metallography-kit")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Portable Microscope",
+            description:
+              "Battery-powered, portable microscope with 100x-800x magnification, X-Y stage scanning, and 3MP CMOS camera, ideal for on-site microstructure analysis of in-service components.",
+            image: "/images/in-situ-metallography-kit/portable-microscope.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Replica",
+            description:
+              "Non-destructive replication using cellulose acetate film and SiliKem compound, providing 0.1μm accuracy for 3D surface replicas of flat or curved components.",
+            image: "/images/in-situ-metallography-kit/replica.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
         ],
-        "items": [
-          {
-            "id": 1,
-            "name": "In-situ Metallography Kit",
-            "color": "rgba(60, 140, 170, 0.1)",
-            "bgColor": "rgba(60, 140, 170, 0.1)",
-            "subItems": [
-              { "name": "Portable Microscope", "apiCall": "/api/products/portable-microscope" },
-              { "name": "Image Analyzer", "apiCall": "/api/products/image-analyzer" },
-              { "name": "Replica", "apiCall": "/api/products/replica" },
-              { "name": "Portpol Electro Polisher", "apiCall": "/api/products/portpol" },
-              { "name": "Portgrinder Grinder", "apiCall": "/api/products/portgrinder" }
-            ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Portable Microscope",
-            "tag": "High Magnification",
-            "description": "Lightweight, battery-powered microscope with 100x-800x magnification, X-Y stage, and 3MP CMOS camera for on-site metallographic inspection.",
-            "image": "/images/in-situ-metallography-kit/portable-microscope.png",
-            "detail": "/products/portable-microscope",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Image Analyzer",
-            "tag": "Real-Time Analysis",
-            "description": "Laptop-integrated software with USB camera for image capture, microstructure analysis, and data export, streamlining on-site reporting.",
-            "image": "/images/in-situ-metallography-kit/image-analyzer.png",
-            "detail": "/products/image-analyzer",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Replica",
-            "tag": "Non-Destructive",
-            "description": "Cellulose acetate and SiliKem replication media for 3D surface replicas, offering 0.1μm accuracy for flat and curved surfaces.",
-            "image": "/images/in-situ-metallography-kit/replica.png",
-            "detail": "/products/replica",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "Portpol Electro Polisher",
-            "tag": "Portable Polishing",
-            "description": "Pen-type probe with 0.5L electrolyte reservoir and 25W pump, offering up to 60V for polishing and etching in the field.",
-            "image": "/images/in-situ-metallography-kit/portpol.png",
-            "detail": "/products/portpol",
-            "delay": 0.4
-          },
-          {
-            "id": 5,
-            "name": "Portgrinder Grinder",
-            "tag": "Field Grinding",
-            "description": "High-torque, variable-speed grinder with 38 mm PSA discs, 90-degree handle, and 230V AC supply for on-site surface prep.",
-            "image": "/images/in-situ-metallography-kit/portgrinder.png",
-            "detail": "/products/portgrinder",
-            "delay": 0.5
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Portable Microscope",
-            "description": "Battery-powered, portable microscope with 100x-800x magnification, X-Y stage scanning, and 3MP CMOS camera, ideal for on-site microstructure analysis of in-service components.",
-            "image": "/images/in-situ-metallography-kit/portable-microscope.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Replica",
-            "description": "Non-destructive replication using cellulose acetate film and SiliKem compound, providing 0.1μm accuracy for 3D surface replicas of flat or curved components.",
-            "image": "/images/in-situ-metallography-kit/replica.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "portable-microscope", "name": "Portable Microscope" },
-          { "id": "image-analyzer", "name": "Image Analyzer" },
-          { "id": "replica", "name": "Replica" },
-          { "id": "portpol", "name": "Portpol Electro Polisher" },
-          { "id": "portgrinder", "name": "Portgrinder Grinder" }
-        ]
+        subCategories: products
+          .filter((p) => p.categorySlug === "in-situ-metallography-kit")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "Jominy End Quench Hardenability Set-up",
-        "slug": "jominy-end-quench-hardenability-setup",
-        "heroImage": "/images/jominy-end-quench/jominy-end-quench-setup.png",
-        "intro": {
-          "title": "Precision Jominy End Quench Hardenability Testing",
-          "description": "The Jominy End Quench Hardenability Set-up, featuring an advanced Hardness Fixture and Chiller, delivers precise hardenability testing per ASTM A255 and ISO 642. With a motorized fixture for successive hardness indentations and a fully automatic hardness tester with a motorized programmable stage, it ensures accurate, repeatable results for steel mills, metallurgical labs, and quality control in automotive and aerospace industries.",
-          "categoryLabel": "Explore our Jominy hardenability solutions",
-          "buttons": [
-            { "text": "Discover Jominy Set-up", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
+        name: "Jominy End Quench Hardenability Set-up",
+        slug: "jominy-end-quench-hardenability-setup",
+        heroImage: "/images/jominy-end-quench/jominy-end-quench-setup.png",
+        intro: {
+          title: "Precision Jominy End Quench Hardenability Testing",
+          description:
+            "The Jominy End Quench Hardenability Set-up, featuring an advanced Hardness Fixture and Chiller, delivers precise hardenability testing per ASTM A255 and ISO 642. With a motorized fixture for successive hardness indentations and a fully automatic hardness tester with a motorized programmable stage, it ensures accurate, repeatable results for steel mills, metallurgical labs, and quality control in automotive and aerospace industries.",
+          categoryLabel: "Explore our Jominy hardenability solutions",
+          buttons: [
+            { text: "Discover Jominy Set-up", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
         },
-        "semiAutomaticSection": {
-          "title": "Jominy End Quench Hardenability Set-up",
-          "description": "This set-up automates the Jominy test with a motorized hardness fixture for precise indentation spacing (1.5 mm or 1/16 in.) and a chiller for consistent 24°C water quenching. The fully automatic hardness tester with a motorized programmable stage performs direct Rockwell (HRC) or Vickers (HV) measurements, plotting hardenability curves for alloy selection and heat treatment optimization.",
-          "label": "Testing Features"
+        semiAutomaticSection: {
+          title: "Jominy End Quench Hardenability Set-up",
+          description:
+            "This set-up automates the Jominy test with a motorized hardness fixture for precise indentation spacing (1.5 mm or 1/16 in.) and a chiller for consistent 24°C water quenching. The fully automatic hardness tester with a motorized programmable stage performs direct Rockwell (HRC) or Vickers (HV) measurements, plotting hardenability curves for alloy selection and heat treatment optimization.",
+          label: "Testing Features",
         },
-        "specialtySection": {
-          "title": "Specialty Hardenability Testing Solutions",
-          "description": "Designed for low to medium hardenability steels (D1 = 1-6 in.), the set-up offers programmable test sequences, digital micrometer indexing, and integration with metallographic analysis software for comprehensive microstructure and hardness profiling.",
-          "label": "Advanced Testing Solutions"
+        specialtySection: {
+          title: "Specialty Hardenability Testing Solutions",
+          description:
+            "Designed for low to medium hardenability steels (D1 = 1-6 in.), the set-up offers programmable test sequences, digital micrometer indexing, and integration with metallographic analysis software for comprehensive microstructure and hardness profiling.",
+          label: "Advanced Testing Solutions",
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Hardenability Testing Solutions",
-          "description": "Explore our Solutions section for ASTM A255-compliant protocols, Lamont charts for hardness correlation, and industry-specific applications to optimize your Jominy testing workflows.",
-          "image": "/productsListing/Hardenability_Testing_Solutions.png",
-          "label": "Tailored Testing Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Alloy", "variant": "secondary" }
-          ]
+        solutionsBanner: {
+          title: "Comprehensive Hardenability Testing Solutions",
+          description:
+            "Explore our Solutions section for ASTM A255-compliant protocols, Lamont charts for hardness correlation, and industry-specific applications to optimize your Jominy testing workflows.",
+          image: "/productsListing/Hardenability_Testing_Solutions.png",
+          label: "Tailored Testing Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Alloy", variant: "secondary" },
+          ],
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "jominy-end-quench-hardenability-setup")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Jominy End Quench Hardenability Set-up",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "jominy-end-quench-hardenability-setup")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/jominy-end-quench/hardness-fixture.png",
-            "alt": "Motorized Hardness Fixture",
-            "category": "Jominy End Quench Set-up",
-            "title": "Hardness Fixture",
-            "description": "Motorized fixture with digital micrometer for precise 1.5 mm indentation spacing, ensuring accurate hardness measurements along Jominy specimen.",
-            "reviews": 20,
-            "rating": 4.9
+            id: 1,
+            name: "Jominy End Quench Hardenability Set-up",
+            color: "rgba(80, 120, 150, 0.1)",
+            bgColor: "rgba(80, 120, 150, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "jominy-end-quench-hardenability-setup")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           },
-          {
-            "id": 2,
-            "image": "/images/jominy-end-quench/chiller-system.png",
-            "alt": "Chiller System",
-            "category": "Jominy End Quench Set-up",
-            "title": "Chiller System",
-            "description": "Maintains 24°C water temperature with ±0.5°C accuracy for consistent quenching, compliant with ASTM A255 standards.",
-            "reviews": 18,
-            "rating": 4.8
-          },
-          {
-            "id": 3,
-            "image": "/images/jominy-end-quench/automatic-hardness-tester.png",
-            "alt": "Automatic Hardness Tester",
-            "category": "Jominy End Quench Set-up",
-            "title": "Automatic Hardness Tester",
-            "description": "Fully automatic tester with motorized programmable stage for direct Rockwell or Vickers hardness testing, streamlining Jominy curve generation.",
-            "reviews": 15,
-            "rating": 4.7
-          }
         ],
-        "products": [
-          { "name": "Hardness Fixture", "image": "/images/jominy-end-quench/hardness-fixture.png" },
-          { "name": "Chiller System", "image": "/images/jominy-end-quench/chiller-system.png" },
-          { "name": "Automatic Hardness Tester", "image": "/images/jominy-end-quench/automatic-hardness-tester.png" },
-          { "name": "Motorized Programmable Stage", "image": "/images/jominy-end-quench/motorized-stage.png" },
-          { "name": "Digital Micrometer Indexing", "image": "/images/jominy-end-quench/digital-micrometer.png" },
-          { "name": "Quenching Jet System", "image": "/images/jominy-end-quench/quenching-jet.png" },
-          { "name": "Specimen Holder", "image": "/images/jominy-end-quench/specimen-holder.png" },
-          { "name": "Hardenability Software", "image": "/images/jominy-end-quench/hardenability-software.png" }
+        productCards: products
+          .filter((p) => p.categorySlug === "jominy-end-quench-hardenability-setup")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Hardness Fixture",
+            description:
+              "Motorized fixture with digital micrometer indexing for precise, successive hardness indentations at 1.5 mm or 1/16 in. intervals, ensuring accurate Jominy hardenability testing per ASTM A255.",
+            image: "/images/jominy-end-quench/hardness-fixture.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Automatic Hardness Tester",
+            description:
+              "Fully automatic hardness tester with a motorized programmable stage, enabling direct Rockwell or Vickers testing for rapid, reliable Jominy hardenability curve generation.",
+            image: "/images/jominy-end-quench/automatic-hardness-tester.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
         ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Jominy End Quench Hardenability Set-up",
-            "color": "rgba(80, 120, 150, 0.1)",
-            "bgColor": "rgba(80, 120, 150, 0.1)",
-            "subItems": [
-              { "name": "Hardness Fixture", "apiCall": "/api/products/hardness-fixture" },
-              { "name": "Chiller System", "apiCall": "/api/products/chiller-system" },
-              { "name": "Automatic Hardness Tester", "apiCall": "/api/products/automatic-hardness-tester" },
-              { "name": "Motorized Programmable Stage", "apiCall": "/api/products/motorized-stage" },
-              { "name": "Digital Micrometer Indexing", "apiCall": "/api/products/digital-micrometer" },
-              { "name": "Quenching Jet System", "apiCall": "/api/products/quenching-jet" },
-              { "name": "Specimen Holder", "apiCall": "/api/products/specimen-holder" },
-              { "name": "Hardenability Software", "apiCall": "/api/products/hardenability-software" }
-            ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Hardness Fixture",
-            "tag": "Precision Indentation",
-            "description": "Motorized fixture with digital micrometer for successive 1.5 mm or 1/16 in. indentations, ensuring precise positioning on Jominy specimens.",
-            "image": "/images/jominy-end-quench/hardness-fixture.png",
-            "detail": "/products/hardness-fixture",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Chiller System",
-            "tag": "Consistent Quenching",
-            "description": "Maintains water at 24°C ±0.5°C with a 13 mm orifice jet, meeting ASTM A255 quenching requirements for reproducible hardenability results.",
-            "image": "/images/jominy-end-quench/chiller-system.png",
-            "detail": "/products/chiller-system",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Automatic Hardness Tester",
-            "tag": "Fully Automated",
-            "description": "Performs direct Rockwell (HRC) or Vickers (HV) tests with a motorized programmable stage, automating Jominy hardness curve generation.",
-            "image": "/images/jominy-end-quench/automatic-hardness-tester.png",
-            "detail": "/products/automatic-hardness-tester",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "Motorized Programmable Stage",
-            "tag": "High Accuracy",
-            "description": "Enables precise movement for automated hardness testing at specified intervals, supporting 1.5 mm or 1/16 in. spacing per ISO 642.",
-            "image": "/images/jominy-end-quench/motorized-stage.png",
-            "detail": "/products/motorized-stage",
-            "delay": 0.4
-          },
-          {
-            "id": 5,
-            "name": "Digital Micrometer Indexing",
-            "tag": "Accurate Spacing",
-            "description": "Provides digital indexing for precise indentation positioning, reducing operator error during hardness measurements.",
-            "image": "/images/jominy-end-quench/digital-micrometer.png",
-            "detail": "/products/digital-micrometer",
-            "delay": 0.5
-          },
-          {
-            "id": 6,
-            "name": "Quenching Jet System",
-            "tag": "Controlled Cooling",
-            "description": "Delivers a 12.5 mm ±0.5 mm water jet for rapid quenching, ensuring consistent cooling rates along the Jominy specimen.",
-            "image": "/images/jominy-end-quench/quenching-jet.png",
-            "detail": "/products/quenching-jet",
-            "delay": 0.6
-          },
-          {
-            "id": 7,
-            "name": "Specimen Holder",
-            "tag": "Secure Positioning",
-            "description": "Automatically centers 25 mm x 100 mm Jominy specimens, ensuring alignment with the water jet for accurate quenching.",
-            "image": "/images/jominy-end-quench/specimen-holder.png",
-            "detail": "/products/specimen-holder",
-            "delay": 0.7
-          },
-          {
-            "id": 8,
-            "name": "Hardenability Software",
-            "tag": "Data Analysis",
-            "description": "Plots hardenability curves, integrates with Lamont charts, and exports data for alloy selection and quality control reporting.",
-            "image": "/images/jominy-end-quench/hardenability-software.png",
-            "detail": "/products/hardenability-software",
-            "delay": 0.8
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Hardness Fixture",
-            "description": "Motorized fixture with digital micrometer indexing for precise, successive hardness indentations at 1.5 mm or 1/16 in. intervals, ensuring accurate Jominy hardenability testing per ASTM A255.",
-            "image": "/images/jominy-end-quench/hardness-fixture.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Automatic Hardness Tester",
-            "description": "Fully automatic hardness tester with a motorized programmable stage, enabling direct Rockwell or Vickers testing for rapid, reliable Jominy hardenability curve generation.",
-            "image": "/images/jominy-end-quench/automatic-hardness-tester.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "hardness-fixture", "name": "Hardness Fixture" },
-          { "id": "chiller-system", "name": "Chiller System" },
-          { "id": "automatic-hardness-tester", "name": "Automatic Hardness Tester" },
-          { "id": "motorized-stage", "name": "Motorized Programmable Stage" },
-          { "id": "digital-micrometer", "name": "Digital Micrometer Indexing" },
-          { "id": "quenching-jet", "name": "Quenching Jet System" },
-          { "id": "specimen-holder", "name": "Specimen Holder" },
-          { "id": "hardenability-software", "name": "Hardenability Software" }
-        ]
+        subCategories: products
+          .filter((p) => p.categorySlug === "jominy-end-quench-hardenability-setup")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "CNC Tensile Sample Preparation Machines",
-        "slug": "cnc-tensile-sample-preparation-machines",
-        "heroImage": "/images/cnc-tensile-sample-preparation/cnc-tensile-sample-preparation.png",
-        "intro": {
-          "title": "Advanced CNC Tensile Sample Preparation",
-          "description": "CNC Tensile Sample Preparation Machines deliver precision milling for flat and round tensile specimens, ensuring repeatability and compliance with ASTM E8, ISO 6892, and ASTM A255 for Jominy testing. Featuring threading capabilities, floor and tabletop models, and powerful CNC programs, these machines minimize production time for high-throughput labs in aerospace, automotive, and steel industries.",
-          "categoryLabel": "Explore our tensile sample preparation solutions",
-          "buttons": [
-            { "text": "Discover CNC Machines", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
+        name: "CNC Tensile Sample Preparation Machines",
+        slug: "cnc-tensile-sample-preparation-machines",
+        heroImage: "/images/cnc-tensile-sample-preparation/cnc-tensile-sample-preparation.png",
+        intro: {
+          title: "Advanced CNC Tensile Sample Preparation",
+          description:
+            "CNC Tensile Sample Preparation Machines deliver precision milling for flat and round tensile specimens, ensuring repeatability and compliance with ASTM E8, ISO 6892, and ASTM A255 for Jominy testing. Featuring threading capabilities, floor and tabletop models, and powerful CNC programs, these machines minimize production time for high-throughput labs in aerospace, automotive, and steel industries.",
+          categoryLabel: "Explore our tensile sample preparation solutions",
+          buttons: [
+            { text: "Discover CNC Machines", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
         },
-        "semiAutomaticSection": {
-          "title": "CNC Tensile Sample Preparation Machines",
-          "description": "Equipped with high-precision servo motors, intuitive TensileSoft™ software, and triple clamping fixtures, these machines offer 0.0003” accuracy for tensile and Jominy sample preparation. Automated threading, rapid milling, and preloaded ASTM/ISO standards ensure repeatable results with minimal operator effort, suitable for soft aluminum to hard Inconel materials.",
-          "label": "Preparation Features"
+        semiAutomaticSection: {
+          title: "CNC Tensile Sample Preparation Machines",
+          description:
+            "Equipped with high-precision servo motors, intuitive TensileSoft™ software, and triple clamping fixtures, these machines offer 0.0003” accuracy for tensile and Jominy sample preparation. Automated threading, rapid milling, and preloaded ASTM/ISO standards ensure repeatable results with minimal operator effort, suitable for soft aluminum to hard Inconel materials.",
+          label: "Preparation Features",
         },
-        "specialtySection": {
-          "title": "Specialty Sample Preparation Solutions",
-          "description": "Designed for diverse applications, these machines support custom fixturing, Jominy specimen preparation, and advanced CNC machining for complex geometries. Floor and tabletop models cater to labs of all sizes, with optional upgrades for impact testing and threading for button-head or threaded tensile bars.",
-          "label": "Advanced Preparation Solutions"
+        specialtySection: {
+          title: "Specialty Sample Preparation Solutions",
+          description:
+            "Designed for diverse applications, these machines support custom fixturing, Jominy specimen preparation, and advanced CNC machining for complex geometries. Floor and tabletop models cater to labs of all sizes, with optional upgrades for impact testing and threading for button-head or threaded tensile bars.",
+          label: "Advanced Preparation Solutions",
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Sample Preparation Solutions",
-          "description": "Explore our Solutions section for ASTM E8 and ISO 6892-compliant protocols, Jominy test guides, and industry-specific applications to optimize your tensile sample preparation workflows.",
-          "image": "/productsListing/Tensile_Sample_Preparation_Solutions.png",
-          "label": "Tailored Preparation Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
+        solutionsBanner: {
+          title: "Comprehensive Sample Preparation Solutions",
+          description:
+            "Explore our Solutions section for ASTM E8 and ISO 6892-compliant protocols, Jominy test guides, and industry-specific applications to optimize your tensile sample preparation workflows.",
+          image: "/productsListing/Tensile_Sample_Preparation_Solutions.png",
+          label: "Tailored Preparation Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "cnc-tensile-sample-preparation-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "CNC Tensile Sample Preparation Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "cnc-tensile-sample-preparation-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/cnc-tensile-sample-preparation/flat-tensile-preparation.png",
-            "alt": "Flat Tensile Sample Preparation",
-            "category": "CNC Tensile Sample Preparation",
-            "title": "Flat Tensile Preparation",
-            "description": "Mills flat tensile specimens up to 14” long, 2” wide, and 0.5” thick with 0.0003” accuracy, meeting ASTM E8 and ISO 6892 standards.",
-            "reviews": 22,
-            "rating": 4.9
+            id: 1,
+            name: "CNC Tensile Sample Preparation Machines",
+            color: "rgba(90, 130, 160, 0.1)",
+            bgColor: "rgba(90, 130, 160, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "cnc-tensile-sample-preparation-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           },
-          {
-            "id": 2,
-            "image": "/images/cnc-tensile-sample-preparation/round-tensile-preparation.png",
-            "alt": "Round Tensile Sample Preparation",
-            "category": "CNC Tensile Sample Preparation",
-            "title": "Round Tensile Preparation",
-            "description": "Prepares round tensile specimens up to 4” diameter and 12” length, including threaded and button-head bars, compliant with ASTM E8.",
-            "reviews": 18,
-            "rating": 4.8
-          },
-          {
-            "id": 3,
-            "image": "/images/cnc-tensile-sample-preparation/jominy-sample-preparation.png",
-            "alt": "Jominy Sample Preparation",
-            "category": "CNC Tensile Sample Preparation",
-            "title": "Jominy Sample Preparation",
-            "description": "Supports Jominy specimen preparation (25 mm x 100 mm) with precise grinding and milling for hardenability testing per ASTM A255.",
-            "reviews": 15,
-            "rating": 4.7
-          }
         ],
-        "products": [
-          { "name": "Flat Tensile Preparation", "image": "/images/cnc-tensile-sample-preparation/flat-tensile-preparation.png" },
-          { "name": "Round Tensile Preparation", "image": "/images/cnc-tensile-sample-preparation/round-tensile-preparation.png" },
-          { "name": "Jominy Sample Preparation", "image": "/images/cnc-tensile-sample-preparation/jominy-sample-preparation.png" },
-          { "name": "Threading Facility", "image": "/images/cnc-tensile-sample-preparation/threading-facility.png" },
-          { "name": "Tabletop Model", "image": "/images/cnc-tensile-sample-preparation/tabletop-model.png" },
-          { "name": "Floor Model", "image": "/images/cnc-tensile-sample-preparation/floor-model.png" },
-          { "name": "TensileSoft™ Software", "image": "/images/cnc-tensile-sample-preparation/tensilesoft-software.png" },
-          { "name": "Auto Tool Changer", "image": "/images/cnc-tensile-sample-preparation/auto-tool-changer.png" }
+        productCards: products
+          .filter((p) => p.categorySlug === "cnc-tensile-sample-preparation-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Tabletop Model",
+            description:
+              "Compact CNC machine with a 47” x 47” x 5” footprint, delivering 0.0003” precision for tensile and Jominy sample preparation, ideal for small labs with limited space.",
+            image: "/images/cnc-tensile-sample-preparation/tabletop-model.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Jominy Sample Preparation",
+            description:
+              "Customizable milling and grinding for 25 mm x 100 mm Jominy specimens, ensuring precise surface finish and compliance with ASTM A255 for hardenability testing.",
+            image: "/images/cnc-tensile-sample-preparation/jominy-sample-preparation.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
         ],
-        "items": [
-          {
-            "id": 1,
-            "name": "CNC Tensile Sample Preparation Machines",
-            "color": "rgba(90, 130, 160, 0.1)",
-            "bgColor": "rgba(90, 130, 160, 0.1)",
-            "subItems": [
-              { "name": "Flat Tensile Preparation", "apiCall": "/api/products/flat-tensile-preparation" },
-              { "name": "Round Tensile Preparation", "apiCall": "/api/products/round-tensile-preparation" },
-              { "name": "Jominy Sample Preparation", "apiCall": "/api/products/jominy-sample-preparation" },
-              { "name": "Threading Facility", "apiCall": "/api/products/threading-facility" },
-              { "name": "Tabletop Model", "apiCall": "/api/products/tabletop-model" },
-              { "name": "Floor Model", "apiCall": "/api/products/floor-model" },
-              { "name": "TensileSoft™ Software", "apiCall": "/api/products/tensilesoft-software" },
-              { "name": "Auto Tool Changer", "apiCall": "/api/products/auto-tool-changer" }
-            ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Flat Tensile Preparation",
-            "tag": "High Precision",
-            "description": "Mills flat tensile specimens with 0.0003” accuracy, supporting ASTM E8 and ISO 6892, with triple clamping for up to three 1.0” thick stacks.",
-            "image": "/images/cnc-tensile-sample-preparation/flat-tensile-preparation.png",
-            "detail": "/products/flat-tensile-preparation",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Round Tensile Preparation",
-            "tag": "Versatile Machining",
-            "description": "Prepares round specimens up to 4” diameter, including threaded and button-head bars, with high-speed milling for ASTM E8 compliance.",
-            "image": "/images/cnc-tensile-sample-preparation/round-tensile-preparation.png",
-            "detail": "/products/round-tensile-preparation",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Jominy Sample Preparation",
-            "tag": "Hardenability Testing",
-            "description": "Mills and grinds 25 mm x 100 mm Jominy specimens with precise surface finish for ASTM A255 hardenability testing, with custom fixturing options.",
-            "image": "/images/cnc-tensile-sample-preparation/jominy-sample-preparation.png",
-            "detail": "/products/jominy-sample-preparation",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "Threading Facility",
-            "tag": "Advanced Capability",
-            "description": "Automates threading for tensile bars and button-head specimens, ensuring precise thread geometry with minimal operator intervention.",
-            "image": "/images/cnc-tensile-sample-preparation/threading-facility.png",
-            "detail": "/products/threading-facility",
-            "delay": 0.4
-          },
-          {
-            "id": 5,
-            "name": "Tabletop Model",
-            "tag": "Compact Design",
-            "description": "Compact CNC machine with 47” x 47” x 5” footprint, ideal for small labs, offering precision milling for tensile and Jominy samples.",
-            "image": "/images/cnc-tensile-sample-preparation/tabletop-model.png",
-            "detail": "/products/tabletop-model",
-            "delay": 0.5
-          },
-          {
-            "id": 6,
-            "name": "Floor Model",
-            "tag": "High Volume",
-            "description": "Robust floor model with extended table (31.5” x 9.4”) for high-volume tensile and Jominy sample preparation, handling tougher materials.",
-            "image": "/images/cnc-tensile-sample-preparation/floor-model.png",
-            "detail": "/products/floor-model",
-            "delay": 0.6
-          },
-          {
-            "id": 7,
-            "name": "TensileSoft™ Software",
-            "tag": "User-Friendly",
-            "description": "Intuitive software with touch-screen interface and preloaded ASTM/ISO standards, enabling rapid setup and repeatable milling results.",
-            "image": "/images/cnc-tensile-sample-preparation/tensilesoft-software.png",
-            "detail": "/products/tensilesoft-software",
-            "delay": 0.7
-          },
-          {
-            "id": 8,
-            "name": "Auto Tool Changer",
-            "tag": "Time-Saving",
-            "description": "Enhances efficiency with automatic tool changes, supporting complex milling tasks for tensile, Jominy, and custom specimens.",
-            "image": "/images/cnc-tensile-sample-preparation/auto-tool-changer.png",
-            "detail": "/products/auto-tool-changer",
-            "delay": 0.8
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Tabletop Model",
-            "description": "Compact CNC machine with a 47” x 47” x 5” footprint, delivering 0.0003” precision for tensile and Jominy sample preparation, ideal for small labs with limited space.",
-            "image": "/images/cnc-tensile-sample-preparation/tabletop-model.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Jominy Sample Preparation",
-            "description": "Customizable milling and grinding for 25 mm x 100 mm Jominy specimens, ensuring precise surface finish and compliance with ASTM A255 for hardenability testing.",
-            "image": "/images/cnc-tensile-sample-preparation/jominy-sample-preparation.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "flat-tensile-preparation", "name": "Flat Tensile Preparation" },
-          { "id": "round-tensile-preparation", "name": "Round Tensile Preparation" },
-          { "id": "jominy-sample-preparation", "name": "Jominy Sample Preparation" },
-          { "id": "threading-facility", "name": "Threading Facility" },
-          { "id": "tabletop-model", "name": "Tabletop Model" },
-          { "id": "floor-model", "name": "Floor Model" },
-          { "id": "tensilesoft-software", "name": "TensileSoft™ Software" },
-          { "id": "auto-tool-changer", "name": "Auto Tool Changer" }
-        ]
+        subCategories: products
+          .filter((p) => p.categorySlug === "cnc-tensile-sample-preparation-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "Hardness Testers",
-        "slug": "hardness-testers",
-        "heroImage": "/images/hardness-testers/hardness-testers.png",
-        "intro": {
-          "title": "Precision Hardness Testing Solutions",
-          "description": "Hardness Testers measure a material’s resistance to indentation without residual deformation, critical for assessing the quality of metals and parts in automotive, aerospace, and manufacturing. Compliant with ASTM E18, ISO 6506, ISO 6507, and ISO 6508, our testers include Superficial Rockwell, Portable Leeb, Portable Brinell, Rockwell, and Portable Vickers models, suitable for ferrous metals, alloy steel, carbides, treated surfaces, cast iron, non-ferrous metals, and non-metallic materials like hard plastics and Bakelite.",
-          "categoryLabel": "Explore our hardness testing solutions",
-          "buttons": [
-            { "text": "Discover Hardness Testers", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
+        name: "Hardness Testers",
+        slug: "hardness-testers",
+        heroImage: "/images/hardness-testers/hardness-testers.png",
+        intro: {
+          title: "Precision Hardness Testing Solutions",
+          description:
+            "Hardness Testers measure a material’s resistance to indentation without residual deformation, critical for assessing the quality of metals and parts in automotive, aerospace, and manufacturing. Compliant with ASTM E18, ISO 6506, ISO 6507, and ISO 6508, our testers include Superficial Rockwell, Portable Leeb, Portable Brinell, Rockwell, and Portable Vickers models, suitable for ferrous metals, alloy steel, carbides, treated surfaces, cast iron, non-ferrous metals, and non-metallic materials like hard plastics and Bakelite.",
+          categoryLabel: "Explore our hardness testing solutions",
+          buttons: [
+            { text: "Discover Hardness Testers", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
         },
-        "semiAutomaticSection": {
-          "title": "Hardness Testers",
-          "description": "Designed for precision and versatility, our hardness testers evaluate material hardness for quality control. From Superficial Rockwell for treated surfaces and parallel planes to portable Leeb and Vickers for field testing, these systems support cast iron, steel, non-ferrous metals, and hard plastics, delivering accurate, repeatable results across lab and on-site applications.",
-          "label": "Testing Solutions"
+        semiAutomaticSection: {
+          title: "Hardness Testers",
+          description:
+            "Designed for precision and versatility, our hardness testers evaluate material hardness for quality control. From Superficial Rockwell for treated surfaces and parallel planes to portable Leeb and Vickers for field testing, these systems support cast iron, steel, non-ferrous metals, and hard plastics, delivering accurate, repeatable results across lab and on-site applications.",
+          label: "Testing Solutions",
         },
-        "specialtySection": {
-          "title": "Specialty Hardness Testing Solutions",
-          "description": "For demanding applications like carburized surfaces, large castings, or field inspections, our testers offer advanced features like digital displays, portable designs, and automated data logging, ensuring compliance with ASTM and ISO standards for diverse materials and geometries.",
-          "label": "Advanced Testing Solutions"
+        specialtySection: {
+          title: "Specialty Hardness Testing Solutions",
+          description:
+            "For demanding applications like carburized surfaces, large castings, or field inspections, our testers offer advanced features like digital displays, portable designs, and automated data logging, ensuring compliance with ASTM and ISO standards for diverse materials and geometries.",
+          label: "Advanced Testing Solutions",
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Hardness Testing Solutions",
-          "description": "Explore our Solutions section for ASTM E18 and ISO 6508-compliant protocols, technical guides, and industry-specific applications to optimize your hardness testing workflows.",
-          "image": "/productsListing/Hardness_Testing_Solutions.png",
-          "label": "Tailored Testing Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
+        solutionsBanner: {
+          title: "Comprehensive Hardness Testing Solutions",
+          description:
+            "Explore our Solutions section for ASTM E18 and ISO 6508-compliant protocols, technical guides, and industry-specific applications to optimize your hardness testing workflows.",
+          image: "/productsListing/Hardness_Testing_Solutions.png",
+          label: "Tailored Testing Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "hardness-testers")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Hardness Testers",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "hardness-testers")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/hardness-testers/superficial-rockwell.png",
-            "alt": "Superficial Rockwell Hardness Tester",
-            "category": "Hardness Testers",
-            "title": "Superficial Rockwell Hardness Tester",
-            "description": "Precision tester for superficial Rockwell scales (HR15N, HR30T), ideal for treated surfaces and parallel planes, compliant with ASTM E18.",
-            "reviews": 20,
-            "rating": 4.9
+            id: 1,
+            name: "Hardness Testers",
+            color: "rgba(70, 110, 150, 0.1)",
+            bgColor: "rgba(70, 110, 150, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "hardness-testers")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           },
-          {
-            "id": 2,
-            "image": "/images/hardness-testers/portable-leeb.png",
-            "alt": "Portable Leeb Hardness Tester",
-            "category": "Hardness Testers",
-            "title": "Portable Leeb Hardness Tester",
-            "description": "Handheld tester for on-site hardness measurement using rebound method, suitable for large metal parts, per ISO 16859.",
-            "reviews": 18,
-            "rating": 4.8
-          },
-          {
-            "id": 3,
-            "image": "/images/hardness-testers/rockwell.png",
-            "alt": "Rockwell Hardness Tester",
-            "category": "Hardness Testers",
-            "title": "Rockwell Hardness Tester",
-            "description": "Versatile tester for HRC, HRB scales, designed for cast iron, steel, and non-ferrous metals, compliant with ISO 6508.",
-            "reviews": 16,
-            "rating": 4.7
-          }
         ],
-        "products": [
-          { "name": "Superficial Rockwell Hardness Tester", "image": "/images/hardness-testers/superficial-rockwell.png" },
-          { "name": "Portable Leeb Hardness Tester", "image": "/images/hardness-testers/portable-leeb.png" },
-          { "name": "Portable Brinell Hardness Tester", "image": "/images/hardness-testers/portable-brinell.png" },
-          { "name": "Rockwell Hardness Tester", "image": "/images/hardness-testers/rockwell.png" },
-          { "name": "Portable Vickers Hardness Tester", "image": "/images/hardness-testers/portable-vickers.png" }
+        productCards: products
+          .filter((p) => p.categorySlug === "hardness-testers")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Superficial Rockwell Hardness Tester",
+            description:
+              "Precision tester for superficial Rockwell scales (HR15N, HR30T), optimized for carburized, nitrided, and plated surfaces, with high repeatability for parallel planes, compliant with ASTM E18.",
+            image: "/images/hardness-testers/superficial-rockwell.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Portable Leeb Hardness Tester",
+            description:
+              "Lightweight, handheld tester for on-site hardness measurement of large metal components, supporting multiple scales (HL, HB, HV, HRC) with data logging, per ISO 16859.",
+            image: "/images/hardness-testers/portable-leeb.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
         ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Hardness Testers",
-            "color": "rgba(70, 110, 150, 0.1)",
-            "bgColor": "rgba(70, 110, 150, 0.1)",
-            "subItems": [
-              { "name": "Superficial Rockwell Hardness Tester", "apiCall": "/api/products/superficial-rockwell" },
-              { "name": "Portable Leeb Hardness Tester", "apiCall": "/api/products/portable-leeb" },
-              { "name": "Portable Brinell Hardness Tester", "apiCall": "/api/products/portable-brinell" },
-              { "name": "Rockwell Hardness Tester", "apiCall": "/api/products/rockwell" },
-              { "name": "Portable Vickers Hardness Tester", "apiCall": "/api/products/portable-vickers" }
-            ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Superficial Rockwell Hardness Tester",
-            "tag": "Precision Measurement",
-            "description": "Measures superficial Rockwell hardness (HR15N, HR30T) for ferrous metals, alloy steel, and treated surfaces, with high accuracy for parallel planes, per ASTM E18.",
-            "image": "/images/hardness-testers/superficial-rockwell.png",
-            "detail": "/products/superficial-rockwell",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Portable Leeb Hardness Tester",
-            "tag": "Field Testing",
-            "description": "Handheld device using rebound method for on-site testing of large metal parts, supporting multiple scales (HL, HB, HV), compliant with ISO 16859.",
-            "image": "/images/hardness-testers/portable-leeb.png",
-            "detail": "/products/portable-leeb",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Portable Brinell Hardness Tester",
-            "tag": "On-Site Versatility",
-            "description": "Portable tester for Brinell hardness (HB) of soft alloys and castings, with hydraulic or ultrasonic methods, compliant with ISO 6506.",
-            "image": "/images/hardness-testers/portable-brinell.png",
-            "detail": "/products/portable-brinell",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "Rockwell Hardness Tester",
-            "tag": "Broad Material Range",
-            "description": "Tests Rockwell hardness (HRC, HRB) for cast iron, steel, and non-ferrous metals, with digital display and auto-load, per ISO 6508.",
-            "image": "/images/hardness-testers/rockwell.png",
-            "detail": "/products/rockwell",
-            "delay": 0.4
-          },
-          {
-            "id": 5,
-            "name": "Portable Vickers Hardness Tester",
-            "tag": "Micro Hardness",
-            "description": "Portable tester for Vickers hardness (HV) of thin coatings and small parts, with digital imaging and lightweight design, compliant with ISO 6507.",
-            "image": "/images/hardness-testers/portable-vickers.png",
-            "detail": "/products/portable-vickers",
-            "delay": 0.5
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Superficial Rockwell Hardness Tester",
-            "description": "Precision tester for superficial Rockwell scales (HR15N, HR30T), optimized for carburized, nitrided, and plated surfaces, with high repeatability for parallel planes, compliant with ASTM E18.",
-            "image": "/images/hardness-testers/superficial-rockwell.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Portable Leeb Hardness Tester",
-            "description": "Lightweight, handheld tester for on-site hardness measurement of large metal components, supporting multiple scales (HL, HB, HV, HRC) with data logging, per ISO 16859.",
-            "image": "/images/hardness-testers/portable-leeb.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "superficial-rockwell", "name": "Superficial Rockwell Hardness Tester" },
-          { "id": "portable-leeb", "name": "Portable Leeb Hardness Tester" },
-          { "id": "portable-brinell", "name": "Portable Brinell Hardness Tester" },
-          { "id": "rockwell", "name": "Rockwell Hardness Tester" },
-          { "id": "portable-vickers", "name": "Portable Vickers Hardness Tester" }
-        ]
+        subCategories: products
+          .filter((p) => p.categorySlug === "hardness-testers")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "Vertical Band Saw",
-        "slug": "vertical-band-saw",
-        "heroImage": "/images/vertical-band-saw/vertical-band-saw.png",
-        "intro": {
-          "title": "Precision Vertical Band Saw Solutions",
-          "description": "The Vertical Band Saw delivers high-precision cutting for metals, plastics, and composites, ideal for metallurgical sample preparation, fabrication, and manufacturing. Compliant with ASTM E8 for tensile sample cutting, it features variable speed control, robust construction, and versatility for complex shapes, serving automotive, aerospace, and steel industries with reliable, high-throughput performance.",
-          "categoryLabel": "Explore our vertical band saw solutions",
-          "buttons": [
-            { "text": "Discover Vertical Band Saw", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
+        name: "Vertical Band Saw",
+        slug: "vertical-band-saw",
+        heroImage: "/images/vertical-band-saw/vertical-band-saw.png",
+        intro: {
+          title: "Precision Vertical Band Saw Solutions",
+          description:
+            "The Vertical Band Saw delivers high-precision cutting for metals, plastics, and composites, ideal for metallurgical sample preparation, fabrication, and manufacturing. Compliant with ASTM E8 for tensile sample cutting, it features variable speed control, robust construction, and versatility for complex shapes, serving automotive, aerospace, and steel industries with reliable, high-throughput performance.",
+          categoryLabel: "Explore our vertical band saw solutions",
+          buttons: [
+            { text: "Discover Vertical Band Saw", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
         },
-        "semiAutomaticSection": {
-          "title": "Vertical Band Saw",
-          "description": "Designed for precision and durability, the Vertical Band Saw offers variable blade speeds (40-10,000 fpm), a tilting worktable (up to 45°), and heavy-duty steel frames. With blade widths from 1/8” to 1” and digital speed indicators, it ensures clean, accurate cuts for materials like stainless steel, aluminum, and hard plastics in lab and production environments.",
-          "label": "Cutting Features"
+        semiAutomaticSection: {
+          title: "Vertical Band Saw",
+          description:
+            "Designed for precision and durability, the Vertical Band Saw offers variable blade speeds (40-10,000 fpm), a tilting worktable (up to 45°), and heavy-duty steel frames. With blade widths from 1/8” to 1” and digital speed indicators, it ensures clean, accurate cuts for materials like stainless steel, aluminum, and hard plastics in lab and production environments.",
+          label: "Cutting Features",
         },
-        "specialtySection": {
-          "title": "Specialty Cutting Solutions",
-          "description": "For intricate contours, large workpieces, or high-volume production, the Vertical Band Saw provides advanced features like hydraulic table feeds, mist coolant systems, and programmable speed settings, ensuring efficiency and precision in demanding applications.",
-          "label": "Advanced Cutting Solutions"
+        specialtySection: {
+          title: "Specialty Cutting Solutions",
+          description:
+            "For intricate contours, large workpieces, or high-volume production, the Vertical Band Saw provides advanced features like hydraulic table feeds, mist coolant systems, and programmable speed settings, ensuring efficiency and precision in demanding applications.",
+          label: "Advanced Cutting Solutions",
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Cutting Solutions",
-          "description": "Explore our Solutions section for ASTM E8-compliant cutting protocols, technical guides, and industry-specific applications to optimize your Vertical Band Saw workflows.",
-          "image": "/productsListing/Vertical_Band_Saw_Solutions.png",
-          "label": "Tailored Cutting Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
+        solutionsBanner: {
+          title: "Comprehensive Cutting Solutions",
+          description:
+            "Explore our Solutions section for ASTM E8-compliant cutting protocols, technical guides, and industry-specific applications to optimize your Vertical Band Saw workflows.",
+          image: "/productsListing/Vertical_Band_Saw_Solutions.png",
+          label: "Tailored Cutting Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "vertical-band-saw")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Vertical Band Saw",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "vertical-band-saw")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/vertical-band-saw/standard-model.png",
-            "alt": "Standard Vertical Band Saw",
-            "category": "Vertical Band Saw",
-            "title": "Standard Model",
-            "description": "Versatile saw with 20” throat depth, 12” work height, and variable speeds (40-5,000 fpm), ideal for general-purpose cutting of metals and plastics.",
-            "reviews": 25,
-            "rating": 4.9
+            id: 1,
+            name: "Vertical Band Saw",
+            color: "rgba(80, 120, 160, 0.1)",
+            bgColor: "rgba(80, 120, 160, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "vertical-band-saw")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           },
-          {
-            "id": 2,
-            "image": "/images/vertical-band-saw/heavy-duty-model.png",
-            "alt": "Heavy-Duty Vertical Band Saw",
-            "category": "Vertical Band Saw",
-            "title": "Heavy-Duty Model",
-            "description": "Robust saw with 26” throat depth, hydraulic table feed, and high-speed blades (up to 10,000 fpm) for cutting tough alloys and large workpieces.",
-            "reviews": 20,
-            "rating": 4.8
-          },
-          {
-            "id": 3,
-            "image": "/images/vertical-band-saw/compact-model.png",
-            "alt": "Compact Vertical Band Saw",
-            "category": "Vertical Band Saw",
-            "title": "Compact Model",
-            "description": "Space-saving saw with 14” throat depth and digital controls, designed for small labs and precision cutting of tensile samples.",
-            "reviews": 18,
-            "rating": 4.7
-          }
         ],
-        "products": [
-          { "name": "Standard Model", "image": "/images/vertical-band-saw/standard-model.png" },
-          { "name": "Heavy-Duty Model", "image": "/images/vertical-band-saw/heavy-duty-model.png" },
-          { "name": "Compact Model", "image": "/images/vertical-band-saw/compact-model.png" },
-          { "name": "Variable Speed Control", "image": "/images/vertical-band-saw/variable-speed-control.png" },
-          { "name": "Tilting Worktable", "image": "/images/vertical-band-saw/tilting-worktable.png" },
-          { "name": "Mist Coolant System", "image": "/images/vertical-band-saw/mist-coolant-system.png" },
-          { "name": "Digital Speed Indicator", "image": "/images/vertical-band-saw/digital-speed-indicator.png" },
-          { "name": "Blade Tensioning System", "image": "/images/vertical-band-saw/blade-tensioning-system.png" }
+        productCards: products
+          .filter((p) => p.categorySlug === "vertical-band-saw")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Heavy-Duty Model",
+            description:
+              "Robust Vertical Band Saw with 26” throat depth, hydraulic table feed, and high-speed blades (up to 10,000 fpm), optimized for cutting tough alloys and large workpieces in high-volume production.",
+            image: "/images/vertical-band-saw/heavy-duty-model.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Compact Model",
+            description:
+              "Space-saving Vertical Band Saw with 14” throat depth and digital controls, designed for precision cutting of tensile samples and small components in metallurgical labs.",
+            image: "/images/vertical-band-saw/compact-model.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
         ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Vertical Band Saw",
-            "color": "rgba(80, 120, 160, 0.1)",
-            "bgColor": "rgba(80, 120, 160, 0.1)",
-            "subItems": [
-              { "name": "Standard Model", "apiCall": "/api/products/standard-model" },
-              { "name": "Heavy-Duty Model", "apiCall": "/api/products/heavy-duty-model" },
-              { "name": "Compact Model", "apiCall": "/api/products/compact-model" },
-              { "name": "Variable Speed Control", "apiCall": "/api/products/variable-speed-control" },
-              { "name": "Tilting Worktable", "apiCall": "/api/products/tilting-worktable" },
-              { "name": "Mist Coolant System", "apiCall": "/api/products/mist-coolant-system" },
-              { "name": "Digital Speed Indicator", "apiCall": "/api/products/digital-speed-indicator" },
-              { "name": "Blade Tensioning System", "apiCall": "/api/products/blade-tensioning-system" }
-            ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Standard Model",
-            "tag": "Versatile Cutting",
-            "description": "Features 20” throat depth, 12” work height, and variable speeds (40-5,000 fpm) for precise cutting of metals, plastics, and composites.",
-            "image": "/images/vertical-band-saw/standard-model.png",
-            "detail": "/products/standard-model",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "Heavy-Duty Model",
-            "tag": "High Capacity",
-            "description": "Equipped with 26” throat depth, hydraulic table feed, and high-speed blades (up to 10,000 fpm) for tough alloys and large workpieces.",
-            "image": "/images/vertical-band-saw/heavy-duty-model.png",
-            "detail": "/products/heavy-duty-model",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Compact Model",
-            "tag": "Space-Saving",
-            "description": "Designed for small labs with 14” throat depth, digital controls, and precision cutting for tensile samples and small components.",
-            "image": "/images/vertical-band-saw/compact-model.png",
-            "detail": "/products/compact-model",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "Variable Speed Control",
-            "tag": "Flexible Performance",
-            "description": "Adjustable blade speeds (40-10,000 fpm) via digital controls, optimizing cutting for soft plastics to hard stainless steel.",
-            "image": "/images/vertical-band-saw/variable-speed-control.png",
-            "detail": "/products/variable-speed-control",
-            "delay": 0.4
-          },
-          {
-            "id": 5,
-            "name": "Tilting Worktable",
-            "tag": "Angled Cutting",
-            "description": "Tilts up to 45° for bevel and contour cuts, enhancing versatility for complex shapes and metallurgical samples.",
-            "image": "/images/vertical-band-saw/tilting-worktable.png",
-            "detail": "/products/tilting-worktable",
-            "delay": 0.5
-          },
-          {
-            "id": 6,
-            "name": "Mist Coolant System",
-            "tag": "Enhanced Cutting",
-            "description": "Reduces heat and extends blade life with mist coolant, ideal for high-speed cutting of tough materials.",
-            "image": "/images/vertical-band-saw/mist-coolant-system.png",
-            "detail": "/products/mist-coolant-system",
-            "delay": 0.6
-          },
-          {
-            "id": 7,
-            "name": "Digital Speed Indicator",
-            "tag": "User-Friendly",
-            "description": "Displays real-time blade speed for precise adjustments, ensuring optimal performance across various materials.",
-            "image": "/images/vertical-band-saw/digital-speed-indicator.png",
-            "detail": "/products/digital-speed-indicator",
-            "delay": 0.7
-          },
-          {
-            "id": 8,
-            "name": "Blade Tensioning System",
-            "tag": "Reliable Operation",
-            "description": "Ensures consistent blade tension with hydraulic or manual controls, minimizing blade wear and improving cut accuracy.",
-            "image": "/images/vertical-band-saw/blade-tensioning-system.png",
-            "detail": "/products/blade-tensioning-system",
-            "delay": 0.8
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Heavy-Duty Model",
-            "description": "Robust Vertical Band Saw with 26” throat depth, hydraulic table feed, and high-speed blades (up to 10,000 fpm), optimized for cutting tough alloys and large workpieces in high-volume production.",
-            "image": "/images/vertical-band-saw/heavy-duty-model.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Compact Model",
-            "description": "Space-saving Vertical Band Saw with 14” throat depth and digital controls, designed for precision cutting of tensile samples and small components in metallurgical labs.",
-            "image": "/images/vertical-band-saw/compact-model.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "standard-model", "name": "Standard Model" },
-          { "id": "heavy-duty-model", "name": "Heavy-Duty Model" },
-          { "id": "compact-model", "name": "Compact Model" },
-          { "id": "variable-speed-control", "name": "Variable Speed Control" },
-          { "id": "tilting-worktable", "name": "Tilting Worktable" },
-          { "id": "mist-coolant-system", "name": "Mist Coolant System" },
-          { "id": "digital-speed-indicator", "name": "Digital Speed Indicator" },
-          { "id": "blade-tensioning-system", "name": "Blade Tensioning System" }
-        ]
+        subCategories: products
+          .filter((p) => p.categorySlug === "vertical-band-saw")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
       {
-        "name": "Transparent Mould Making System - Transmount",
-        "slug": "transparent-mould-making-system-transmount",
-        "heroImage": "/images/transmount/transmount-system.png",
-        "intro": {
-          "title": "Transmount Transparent Mould Making Solutions",
-          "description": "The Transmount Transparent Mould Making System revolutionizes mould creation with high-clarity silicone rubber, enabling precise monitoring of casting processes. Compliant with ASTM D412, it offers a 1:1 mixing ratio, bubble-free casting, and durability for resins, silicones, and low-melting-point metals, ideal for prototyping, jewelry, and industrial design in automotive, aerospace, and artisanal applications.",
-          "categoryLabel": "Explore our transparent mould making solutions",
-          "buttons": [
-            { "text": "Discover Transmount System", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
+        name: "Transparent Mould Making System",
+        slug: "transparent-mould-making-system",
+        heroImage: "/images/transmount/transmount-system.png",
+        intro: {
+          title: "Transmount Transparent Mould Making Solutions",
+          description:
+            "The Transmount Transparent Mould Making System revolutionizes mould creation with high-clarity silicone rubber, enabling precise monitoring of casting processes. Compliant with ASTM D412, it offers a 1:1 mixing ratio, bubble-free casting, and durability for resins, silicones, and low-melting-point metals, ideal for prototyping, jewelry, and industrial design in automotive, aerospace, and artisanal applications.",
+          categoryLabel: "Explore our transparent mould making solutions",
+          buttons: [
+            { text: "Discover Transmount System", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
         },
-        "semiAutomaticSection": {
-          "title": "Transmount Transparent Mould Making System",
-          "description": "The Transmount system uses translucent silicone rubber (Shore A 22-50) for moulds with excellent tear resistance and transparency, allowing real-time monitoring of resin flow and part formation. Features include a 1:1 mixing ratio, heat resistance up to 250°C, and compatibility with epoxy, polyurethane, and tin/lead casting, ensuring precision and repeatability for complex geometries.",
-          "label": "Mould Making Features"
+        semiAutomaticSection: {
+          title: "Transmount Transparent Mould Making System",
+          description:
+            "The Transmount system uses translucent silicone rubber (Shore A 22-50) for moulds with excellent tear resistance and transparency, allowing real-time monitoring of resin flow and part formation. Features include a 1:1 mixing ratio, heat resistance up to 250°C, and compatibility with epoxy, polyurethane, and tin/lead casting, ensuring precision and repeatability for complex geometries.",
+          label: "Mould Making Features",
         },
-        "specialtySection": {
-          "title": "Specialty Mould Making Solutions",
-          "description": "Optimized for intricate designs and high-detail replication, Transmount supports custom pigmentation, rapid-curing options, and food-grade applications. Its transparent nature aids in cutting partial seams for block moulds, making it perfect for one-off prototypes and high-volume production in demanding environments.",
-          "label": "Advanced Mould Making Solutions"
+        specialtySection: {
+          title: "Specialty Mould Making Solutions",
+          description:
+            "Optimized for intricate designs and high-detail replication, Transmount supports custom pigmentation, rapid-curing options, and food-grade applications. Its transparent nature aids in cutting partial seams for block moulds, making it perfect for one-off prototypes and high-volume production in demanding environments.",
+          label: "Advanced Mould Making Solutions",
         },
-        "solutionsBanner": {
-          "title": "Comprehensive Mould Making Solutions",
-          "description": "Explore our Solutions section for ASTM D412-compliant protocols, technical guides for silicone mould making, and industry-specific applications to optimize your Transmount workflows.",
-          "image": "/productsListing/Transmount_Solutions.png",
-          "label": "Tailored Mould Making Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
+        solutionsBanner: {
+          title: "Comprehensive Mould Making Solutions",
+          description:
+            "Explore our Solutions section for ASTM D412-compliant protocols, technical guides for silicone mould making, and industry-specific applications to optimize your Transmount workflows.",
+          image: "/productsListing/Transmount_Solutions.png",
+          label: "Tailored Mould Making Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
         },
-        "slides": [
+        slides: products
+          .filter((p) => p.categorySlug === "transparent-mould-making-system")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Transmount Transparent Mould Making System",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "transparent-mould-making-system")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
           {
-            "id": 1,
-            "image": "/images/transmount/standard-kit.png",
-            "alt": "Transmount Standard Kit",
-            "category": "Transmount System",
-            "title": "Standard Kit",
-            "description": "1kg translucent silicone kit with 1:1 mixing ratio, ideal for small-scale prototyping and jewelry casting with bubble-free results.",
-            "reviews": 22,
-            "rating": 4.9
+            id: 1,
+            name: "Transmount Transparent Mould Making System",
+            color: "rgba(90, 140, 170, 0.1)",
+            bgColor: "rgba(90, 140, 170, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "transparent-mould-making-system")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
           },
-          {
-            "id": 2,
-            "image": "/images/transmount/high-temp-kit.png",
-            "alt": "Transmount High-Temperature Kit",
-            "category": "Transmount System",
-            "title": "High-Temperature Kit",
-            "description": "2kg kit with heat-resistant silicone (up to 250°C), designed for casting low-melting-point metals like tin and lead.",
-            "reviews": 18,
-            "rating": 4.8
-          },
-          {
-            "id": 3,
-            "image": "/images/transmount/rapid-cure-kit.png",
-            "alt": "Transmount Rapid-Cure Kit",
-            "category": "Transmount System",
-            "title": "Rapid-Cure Kit",
-            "description": "500g fast-curing silicone kit for quick turnaround, perfect for high-detail moulds in time-sensitive projects.",
-            "reviews": 15,
-            "rating": 4.7
-          }
         ],
-        "products": [
-          { "name": "Standard Kit", "image": "/images/transmount/standard-kit.png" },
-          { "name": "High-Temperature Kit", "image": "/images/transmount/high-temp-kit.png" },
-          { "name": "Rapid-Cure Kit", "image": "/images/transmount/rapid-cure-kit.png" },
-          { "name": "Silicone Pigments", "image": "/images/transmount/silicone-pigments.png" },
-          { "name": "Release Agent", "image": "/images/transmount/release-agent.png" },
-          { "name": "Mixing Tools", "image": "/images/transmount/mixing-tools.png" },
-          { "name": "Vacuum Degassing Chamber", "image": "/images/transmount/vacuum-degassing-chamber.png" },
-          { "name": "Mould Box System", "image": "/images/transmount/mould-box-system.png" }
+        productCards: products
+          .filter((p) => p.categorySlug === "transparent-mould-making-system")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "High-Temperature Kit",
+            description:
+              "2kg transparent silicone kit with heat resistance up to 250°C, optimized for casting low-melting-point metals and high-detail industrial prototypes.",
+            image: "/images/transmount/high-temp-kit.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Rapid-Cure Kit",
+            description:
+              "500g fast-curing translucent silicone kit, designed for rapid mould production with high tear resistance and clarity for artisanal and prototyping needs.",
+            image: "/images/transmount/rapid-cure-kit.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
         ],
-        "items": [
-          {
-            "id": 1,
-            "name": "Transmount Transparent Mould Making System",
-            "color": "rgba(90, 140, 170, 0.1)",
-            "bgColor": "rgba(90, 140, 170, 0.1)",
-            "subItems": [
-              { "name": "Standard Kit", "apiCall": "/api/products/standard-kit" },
-              { "name": "High-Temperature Kit", "apiCall": "/api/products/high-temp-kit" },
-              { "name": "Rapid-Cure Kit", "apiCall": "/api/products/rapid-cure-kit" },
-              { "name": "Silicone Pigments", "apiCall": "/api/products/silicone-pigments" },
-              { "name": "Release Agent", "apiCall": "/api/products/release-agent" },
-              { "name": "Mixing Tools", "apiCall": "/api/products/mixing-tools" },
-              { "name": "Vacuum Degassing Chamber", "apiCall": "/api/products/vacuum-degassing-chamber" },
-              { "name": "Mould Box System", "apiCall": "/api/products/mould-box-system" }
-            ]
-          }
-        ],
-        "productCards": [
-          {
-            "id": 1,
-            "name": "Standard Kit",
-            "tag": "Versatile Casting",
-            "description": "1kg translucent silicone with 1:1 mixing ratio, perfect for resin and polyurethane casting with minimal bubbles and high detail.",
-            "image": "/images/transmount/standard-kit.png",
-            "detail": "/products/standard-kit",
-            "delay": 0.1
-          },
-          {
-            "id": 2,
-            "name": "High-Temperature Kit",
-            "tag": "Heat Resistant",
-            "description": "2kg silicone kit resistant up to 250°C, ideal for casting low-melting-point metals like tin and lead in industrial applications.",
-            "image": "/images/transmount/high-temp-kit.png",
-            "detail": "/products/high-temp-kit",
-            "delay": 0.2
-          },
-          {
-            "id": 3,
-            "name": "Rapid-Cure Kit",
-            "tag": "Fast Turnaround",
-            "description": "500g fast-curing silicone for quick mould production, ensuring high-detail replication in time-sensitive projects.",
-            "image": "/images/transmount/rapid-cure-kit.png",
-            "detail": "/products/rapid-cure-kit",
-            "delay": 0.3
-          },
-          {
-            "id": 4,
-            "name": "Silicone Pigments",
-            "tag": "Customizable Color",
-            "description": "Specialized pigments for coloring transparent silicone, enabling vibrant, elastic moulds with precise detail reproduction.",
-            "image": "/images/transmount/silicone-pigments.png",
-            "detail": "/products/silicone-pigments",
-            "delay": 0.4
-          },
-          {
-            "id": 5,
-            "name": "Release Agent",
-            "tag": "Easy Demoulding",
-            "description": "Non-stick agent ensures smooth mould release, preserving intricate details and extending mould lifespan.",
-            "image": "/images/transmount/release-agent.png",
-            "detail": "/products/release-agent",
-            "delay": 0.5
-          },
-          {
-            "id": 6,
-            "name": "Mixing Tools",
-            "tag": "Precision Mixing",
-            "description": "Includes cups, stirrers, and spatulas for accurate 1:1 silicone mixing, reducing waste and ensuring uniformity.",
-            "image": "/images/transmount/mixing-tools.png",
-            "detail": "/products/mixing-tools",
-            "delay": 0.6
-          },
-          {
-            "id": 7,
-            "name": "Vacuum Degassing Chamber",
-            "tag": "Bubble-Free Casting",
-            "description": "Removes air bubbles from silicone before pouring, ensuring flawless, transparent moulds with high clarity.",
-            "image": "/images/transmount/vacuum-degassing-chamber.png",
-            "detail": "/products/vacuum-degassing-chamber",
-            "delay": 0.7
-          },
-          {
-            "id": 8,
-            "name": "Mould Box System",
-            "tag": "Stable Moulding",
-            "description": "Reusable mould boxes for secure silicone pouring, accommodating various part sizes and complex geometries.",
-            "image": "/images/transmount/mould-box-system.png",
-            "detail": "/products/mould-box-system",
-            "delay": 0.8
-          }
-        ],
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "High-Temperature Kit",
-            "description": "2kg transparent silicone kit with heat resistance up to 250°C, optimized for casting low-melting-point metals and high-detail industrial prototypes.",
-            "image": "/images/transmount/high-temp-kit.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Rapid-Cure Kit",
-            "description": "500g fast-curing translucent silicone kit, designed for rapid mould production with high tear resistance and clarity for artisanal and prototyping needs.",
-            "image": "/images/transmount/rapid-cure-kit.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": [
-          { "id": "standard-kit", "name": "Standard Kit" },
-          { "id": "high-temp-kit", "name": "High-Temperature Kit" },
-          { "id": "rapid-cure-kit", "name": "Rapid-Cure Kit" },
-          { "id": "silicone-pigments", "name": "Silicone Pigments" },
-          { "id": "release-agent", "name": "Release Agent" },
-          { "id": "mixing-tools", "name": "Mixing Tools" },
-          { "id": "vacuum-degassing-chamber", "name": "Vacuum Degassing Chamber" },
-          { "id": "mould-box-system", "name": "Mould Box System" }
-        ]
+        subCategories: products
+          .filter((p) => p.categorySlug === "transparent-mould-making-system")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
       },
-    ]
-  }
+    ],
+  },
 ];
 
 export const getCategoryBySlug = (slug) => {
