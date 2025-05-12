@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
-import { FaTools, FaChalkboardTeacher, FaInfoCircle, FaEnvelope, FaUserCircle } from 'react-icons/fa';
+import { FaTools, FaChalkboardTeacher, FaInfoCircle, FaTrophy , FaEnvelope, FaUserCircle } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter, useParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -73,6 +73,7 @@ const Header = () => {
 
   // Navigation items (excluding Home and Products which are handled separately)
   const navItems = [
+    { name: 'Accolade', path: '/accolade', icon: <FaTrophy  /> },
     { name: 'Courses', path: '/courses', icon: <FaChalkboardTeacher /> },
     { name: 'About', path: '/about', icon: <FaInfoCircle /> },
     { name: 'Contact', path: '/contact', icon: <FaEnvelope /> },
