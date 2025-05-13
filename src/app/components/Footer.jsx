@@ -108,7 +108,7 @@ const Footer = () => {
                                 <img src="/images/metatech_logo.png" alt="Metatech Logo" className="w-56" />
                             </div>
                         </motion.a>
-                        <div className="bg-[#0f7db7]/10 backdrop-blur-sm p-6 rounded-xl border border-[#0f7db7]/20 shadow-xl shadow-blue-900/20">
+                        {/* <div className="bg-[#0f7db7]/10 backdrop-blur-sm p-6 rounded-xl border border-[#0f7db7]/20 shadow-xl shadow-blue-900/20">
                             <h4 className="text-lg font-bold text-white mb-3 flex items-center">
                                 <span className="w-10 h-1 bg-[#0f7db7] rounded-full mr-3"></span>
                                 Why Choose Us?
@@ -116,7 +116,7 @@ const Footer = () => {
                             <p className="text-gray-300 leading-relaxed">
                                 With decades of expertise, cutting-edge technology, and unparalleled customer service, Metatech Industries is your trusted partner.
                             </p>
-                        </div>
+                        </div> */}
                     </motion.div>
 
                     {/* Our Products Section */}

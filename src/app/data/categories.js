@@ -6,7 +6,7 @@ const products = [
     name: "AutoCut",
     slug: "autocut",
     description: "The AutoCut is a high-precision automatic cutting machine designed for metallographic and materialographic sample preparation. It features motorized XYZ motions and automatic serial cutting for efficient and accurate sectioning.",
-    image: "/images/automatic-cutting-machines/autocut.png",
+    image: "/cutting/automatic-cutting-machines/autocut.png",
     alt: "AutoCut Precision Cutting Machine",
     rating: 4.7,
     reviews: 38,
@@ -28,10 +28,10 @@ const products = [
       "Robust construction for long-term durability"
     ],
     images: [
-      "/product/AutoCut1.jpg",
-      "/product/AutoCut2.jpg",
-      "/product/AutoCut3.jpg",
-      "/product/AutoCut4.jpg"
+      "/cutting/automatic-cutting-machines/autocut.png",
+      "/cutting/automatic-cutting-machines/autocut1.png",
+      "/cutting/automatic-cutting-machines/autocut4.png",
+      "/cutting/automatic-cutting-machines/autocut3.png",
     ],
     video: "/product/AutoCut.mp4",
     specifications: [
@@ -52,37 +52,25 @@ const products = [
       {
         title: "Cutting Wheels",
         subtitle: "250mm and 300mm abrasive wheels",
-        image: "/product/cuttingWheels.png"
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-wheel.png"
       },
       {
-        title: "Coolant Fluid",
+        title: "Cutting Fluid",
         subtitle: "For precision cutting",
-        image: "/product/coolantFluid.png"
-      },
-      {
-        title: "Strainer Kit",
-        subtitle: "For small cut sections and sludge collection",
-        image: "/product/strainerKit.png"
-      },
-      {
-        title: "Anti-Splash Guard",
-        subtitle: "For operator safety",
-        image: "/product/antiSplashGuard.png"
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-fluid.png"
       }
     ],
     literature: [
-      { title: "AutoCut User Manual", image: "/product/autocut-manual.png" },
-      { title: "AutoCut Brochure", image: "/product/autocut-brochure.png" },
-      { title: "Precision Cutting Guide", image: "/product/cutting-guide.png" }
+      { title: "AutoCut User Manual", image: "/cutting/automatic-cutting-machines/autocut.png" }
     ]
   },
   {
-    id: 3,
+    id: 2,
     categorySlug: "automatic-cutting-machines",
     name: "MetaCut SACT 50/80",
     slug: "metacut-sact-50-80",
     description: "The MetaCut SACT 50/80 is a versatile cutting machine designed for precision sectioning of hardened materials. With options for 50mm or 80mm cutting capacity and advanced features like laser marking and hydraulic automation, it is ideal for metallographic analysis.",
-    image: "/images/automatic-cutting-machines/metacut-sact-50-80.png",
+    image: "/cutting/automatic-cutting-machines/metacut1.png",
     alt: "MetaCut SACT 50/80 Precision Cutting Machine",
     rating: 4.6,
     reviews: 32,
@@ -104,10 +92,10 @@ const products = [
       "Optimized for large work volume processing"
     ],
     images: [
-      "/product/MetaCut1.jpg",
-      "/product/MetaCut2.jpg",
-      "/product/MetaCut3.jpg",
-      "/product/MetaCut4.jpg"
+      "/cutting/automatic-cutting-machines/metacut1.png",
+      "/cutting/automatic-cutting-machines/metacut2.png",
+      "/cutting/automatic-cutting-machines/metacut3.png",
+      "/cutting/automatic-cutting-machines/metacut4.png",
     ],
     video: "/product/MetaCut_SACT_50_80.mp4",
     specifications: [
@@ -127,32 +115,25 @@ const products = [
       {
         title: "Abrasive Cutting Wheels",
         subtitle: "For 50mm and 80mm cutting",
-        image: "/product/abrasiveWheels.png"
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-wheel.png"
       },
       {
         title: "Cutting Fluid",
         subtitle: "For hardened material cutting",
-        image: "/product/cuttingFluid.png"
-      },
-      {
-        title: "Sample Holders",
-        subtitle: "For secure sample positioning",
-        image: "/product/sampleHolders.png"
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-fluid.png"
       }
     ],
     literature: [
-      { title: "MetaCut SACT 50/80 User Manual", image: "/product/metacut-manual.png" },
-      { title: "MetaCut SACT Brochure", image: "/product/metacut-brochure.png" },
-      { title: "Hardened Material Cutting Guide", image: "/product/hardened-cutting-guide.png" }
+      { title: "MetaCut SACT 50/80 User Manual", image: "/cutting/automatic-cutting-machines/metacut1.png" },
     ]
   },
   {
-    id: 12,
+    id: 3,
     categorySlug: "automatic-cutting-machines",
     name: "Metacut",
     slug: "metacut",
     description: "The Metacut is a compact and efficient cutting machine designed for precision sectioning of materials with a cutting capacity of 40mm diameter. Powered by a 3 HP motor, it is ideal for metallographic sample preparation.",
-    image: "/images/automatic-cutting-machines/metacut.png",
+    image: "/cutting/automatic-cutting-machines/metacut_1.png",
     alt: "Metacut Precision Cutting Machine",
     rating: 4.5,
     reviews: 28,
@@ -172,10 +153,7 @@ const products = [
       "Low maintenance requirements"
     ],
     images: [
-      "/product/Metacut1.jpg",
-      "/product/Metacut2.jpg",
-      "/product/Metacut3.jpg",
-      "/product/Metacut4.jpg"
+      "/cutting/automatic-cutting-machines/metacut_2.png",
     ],
     video: "/product/Metacut.mp4",
     specifications: [
@@ -189,33 +167,26 @@ const products = [
     consumables: [
       {
         title: "Abrasive Cutting Wheels",
-        subtitle: "For 40mm cutting",
-        image: "/product/abrasiveWheelsMetacut.png"
+        subtitle: "For 50mm and 80mm cutting",
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-wheel.png"
       },
       {
-        title: "Coolant Fluid",
-        subtitle: "For precision cutting",
-        image: "/product/coolantFluidMetacut.png"
-      },
-      {
-        title: "Sample Clamps",
-        subtitle: "For secure sample holding",
-        image: "/product/sampleClamps.png"
+        title: "Cutting Fluid",
+        subtitle: "For hardened material cutting",
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-fluid.png"
       }
     ],
     literature: [
-      { title: "Metacut User Manual", image: "/product/metacut-manual.png" },
-      { title: "Metacut Brochure", image: "/product/metacut-brochure.png" },
-      { title: "Precision Cutting Guide", image: "/product/precision-cutting-guide.png" }
+      { title: "MetaCut User Manual", image: "/cutting/automatic-cutting-machines/metacut_2.png" },
     ]
   },
   {
-    id: 13,
+    id: 4,
     categorySlug: "automatic-cutting-machines",
     name: "Metacut-I Auto",
     slug: "metacut-i-auto",
     description: "The Metacut-I Auto is an advanced automatic cutting machine with PLC-controlled programming and a 200mm cutting stroke. It features auto cutting in the Y direction and precise motor positioning, making it ideal for automated metallographic sample preparation.",
-    image: "/images/automatic-cutting-machines/metacut-i-auto.png",
+    image: "/cutting/automatic-cutting-machines/metacut_1.png",
     alt: "Metacut-I Auto Precision Cutting Machine",
     rating: 4.7,
     reviews: 35,
@@ -237,10 +208,8 @@ const products = [
       "Integrated safety features for operator protection"
     ],
     images: [
-      "/product/MetacutIAuto1.jpg",
-      "/product/MetacutIAuto2.jpg",
-      "/product/MetacutIAuto3.jpg",
-      "/product/MetacutIAuto4.jpg"
+      "/cutting/automatic-cutting-machines/metacut_1.png",
+      "/cutting/automatic-cutting-machines/metacut_3.png",
     ],
     video: "/product/Metacut_I_Auto.mp4",
     specifications: [
@@ -258,34 +227,27 @@ const products = [
     consumables: [
       {
         title: "Abrasive Cutting Wheels",
-        subtitle: "For 40mm cutting",
-        image: "/product/abrasiveWheelsMetacutIAuto.png"
+        subtitle: "For 50mm and 80mm cutting",
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-wheel.png"
       },
       {
-        title: "Coolant Fluid",
-        subtitle: "For automated cutting",
-        image: "/product/coolantFluidMetacutIAuto.png"
-      },
-      {
-        title: "Sample Holders",
-        subtitle: "For secure sample positioning",
-        image: "/product/sampleHoldersMetacutIAuto.png"
+        title: "Cutting Fluid",
+        subtitle: "For hardened material cutting",
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-fluid.png"
       }
     ],
     literature: [
-      { title: "Metacut-I Auto User Manual", image: "/product/metacut-i-auto-manual.png" },
-      { title: "Metacut-I Auto Brochure", image: "/product/metacut-i-auto-brochure.png" },
-      { title: "Automated Cutting Guide", image: "/product/automated-cutting-guide.png" }
+      { title: "MetaCut-I Auto User Manual", image: "/cutting/automatic-cutting-machines/metacut_1.png" },
     ]
   },
   // Oscillating Abrasive Cut-off Machine
   {
-    id: 9,
+    id: 5,
     categorySlug: "oscillating-abrasive-cut-off-machines",
     name: "Oscicut",
     slug: "oscicut",
     description: "The Oscicut is a robust oscillating abrasive cut-off machine designed for large cross-section cutting. With a capacity of 120mm to 160mm and a 15 HP motor, it utilizes a cam-based oscillation technology for minimal burn and precise cuts, ideal for large components.",
-    image: "/images/oscillating-abrasive-cut-off-machines/oscicut.png",
+    image: "/cutting/oscillating-abrasive-cut-off-machine/oscicut1.png",
     alt: "Oscicut Oscillating Abrasive Cut-Off Machine",
     rating: 4.9,
     reviews: 40,
@@ -307,10 +269,12 @@ const products = [
       "Enhanced coolant system for effective heat dissipation"
     ],
     images: [
-      "/product/Oscicut1.jpg",
-      "/product/Oscicut2.jpg",
-      "/product/Oscicut3.jpg",
-      "/product/Oscicut4.jpg"
+      "/cutting/oscillating-abrasive-cut-off-machine/oscicut1.png",
+      "/cutting/oscillating-abrasive-cut-off-machine/oscicut2.png",
+      "/cutting/oscillating-abrasive-cut-off-machine/oscicut3.png",
+      "/cutting/oscillating-abrasive-cut-off-machine/oscicut4.png",
+      "/cutting/oscillating-abrasive-cut-off-machine/oscicut5.png",
+      "/cutting/oscillating-abrasive-cut-off-machine/oscicut6.png",
     ],
     video: "/product/Oscicut.mp4",
     specifications: [
@@ -331,33 +295,26 @@ const products = [
       {
         title: "Abrasive Cutting Wheels",
         subtitle: "For large cross-section cutting",
-        image: "/product/abrasiveWheelsOscicut.png"
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-wheel.png"
       },
       {
         title: "Coolant Fluid",
         subtitle: "For minimal burn cutting",
-        image: "/product/coolantFluidOscicut.png"
-      },
-      {
-        title: "Vice Inserts",
-        subtitle: "For double parallel vice",
-        image: "/product/viceInserts.png"
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-fluid.png"
       }
     ],
     literature: [
-      { title: "Oscicut User Manual", image: "/product/oscicut-manual.png" },
-      { title: "Oscicut Brochure", image: "/product/oscicut-brochure.png" },
-      { title: "Large Section Cutting Guide", image: "/product/large-section-cutting-guide.png" }
+      { title: "Oscicut User Manual", image: "/cutting/oscillating-abrasive-cut-off-machine/oscicut1.png" },
     ]
   },
   // Large Component Cutting Machine
   {
-    id: 14,
+    id: 6,
     categorySlug: "large-component-cutting-machines",
     name: "Metacut L 10 / L 15",
     slug: "metacut-l-10-15",
     description: "The Metacut L series (L 10 and L 15) is designed for heavy-duty cutting of large components, offering manual and automatic modes for cross-sectional or longitudinal cutting of hardened materials. With robust 10 HP or 15 HP motors and smart cutting features, it ensures precision and efficiency.",
-    image: "/images/large-component-cutting-machines/metacut-l-10-15.png",
+    image: "/cutting/large-component-cutting-machines/metacut-l-10-15_1.png",
     alt: "Metacut L 10 / L 15 Large Component Cutting Machine",
     rating: 4.8,
     reviews: 42,
@@ -382,10 +339,10 @@ const products = [
       "Ergonomic design for operator comfort during manual operation"
     ],
     images: [
-      "/product/MetacutL1.jpg",
-      "/product/MetacutL2.jpg",
-      "/product/MetacutL3.jpg",
-      "/product/MetacutL4.jpg"
+      "/cutting/large-component-cutting-machines/metacut-l-10-15_1.png",
+      "/cutting/large-component-cutting-machines/metacut-l-10-15_2.png",
+      "/cutting/large-component-cutting-machines/metacut-l-10-15_3.png",
+      "/cutting/large-component-cutting-machines/metacut-l-10-15_4.png"
     ],
     video: "/product/Metacut_L_10_15.mp4",
     specifications: [
@@ -411,38 +368,26 @@ const products = [
       {
         title: "Abrasive Cutting Wheels",
         subtitle: "For 100mm and 120mm cutting",
-        image: "/product/abrasiveWheelsMetacutL.png"
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-wheel.png"
       },
       {
         title: "Coolant Fluid",
         subtitle: "For heavy-duty cutting",
-        image: "/product/coolantFluidMetacutL.png"
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-fluid.png"
       },
-      {
-        title: "T-Slot Clamps",
-        subtitle: "For securing large components",
-        image: "/product/tSlotClamps.png"
-      },
-      {
-        title: "Pulse Cutting Kit",
-        subtitle: "For hardness variation cutting",
-        image: "/product/pulseCuttingKit.png"
-      }
     ],
     literature: [
-      { title: "Metacut L Series User Manual", image: "/product/metacut-l-manual.png" },
-      { title: "Metacut L Series Brochure", image: "/product/metacut-l-brochure.png" },
-      { title: "Large Component Cutting Guide", image: "/product/large-component-cutting-guide.png" }
+      { title: "Metacut L Series User Manual", image: "/cutting/large-component-cutting-machines/metacut-l-10-15_1.png" },
     ]
   },
   // Diamond Cutting Machine
   {
-    id: 15,
+    id: 7,
     categorySlug: "diamond-cutting-machines",
     name: "DCM",
     slug: "dcm",
     description: "The DCM is a precision diamond cutting machine engineered for sectioning hard samples, including those with nitriding layers and aluminum, while preserving material integrity for retained austenite estimation. Equipped with a 0.3mm thick diamond wheel and variable speed control from 200 to 500 rpm, it ensures minimal damage and high accuracy.",
-    image: "/images/diamond-cutting-machines/dcm.png",
+    image: "/cutting/dcm/dcm1.png",
     alt: "DCM Diamond Cutting Machine",
     rating: 4.7,
     reviews: 36,
@@ -465,10 +410,9 @@ const products = [
       "Safety features including splash shield and emergency stop"
     ],
     images: [
-      "/product/DCM1.jpg",
-      "/product/DCM2.jpg",
-      "/product/DCM3.jpg",
-      "/product/DCM4.jpg"
+      "/cutting/dcm/dcm1.png",
+      "/cutting/dcm/dcm2.png",
+      "/cutting/dcm/dcm3.png",
     ],
     video: "/product/DCM.mp4",
     specifications: [
@@ -486,33 +430,26 @@ const products = [
       {
         title: "Diamond Cutting Wheels",
         subtitle: "0.3mm thickness for precision cutting",
-        image: "/product/diamondWheelsDCM.png"
+        image: "/cutting/dcm/dcm_cutting_wheel.png"
       },
       {
-        title: "Coolant Fluid",
-        subtitle: "For low-temperature cutting",
-        image: "/product/coolantFluidDCM.png"
+        title: "Coolant Oil",
+        subtitle: "For heavy-duty cutting",
+        image: "/cutting/automatic-cutting-machines/consumables/cutting-fluid.png"
       },
-      {
-        title: "Sample Holders",
-        subtitle: "For hard and nitrided samples",
-        image: "/product/sampleHoldersDCM.png"
-      }
     ],
     literature: [
-      { title: "DCM User Manual", image: "/product/dcm-manual.png" },
-      { title: "DCM Brochure", image: "/product/dcm-brochure.png" },
-      { title: "Diamond Cutting Guide", image: "/product/diamond-cutting-guide.png" }
+      { title: "DCM User Manual", image: "/cutting/dcm/dcm1.png" },
     ]
   },
   // Moulding Machines
   {
-    id: 16,
+    id: 8,
     categorySlug: "moulding-machines",
     name: "Automount Pneumatic Press",
     slug: "automount-pneumatic-press",
     description: "The Automount Pneumatic Press is a high-efficiency mounting press designed for metallographic sample preparation. Utilizing pneumatic pressure, it offers rapid and reliable sample encapsulation, ideal for high-volume laboratories.",
-    image: "/images/moulding-machines/automount-pneumatic.png",
+    image: "/moulding-grinding-polishing/moulding-machines/pneumatic-press.png",
     alt: "Automount Pneumatic Press",
     rating: 4.6,
     reviews: 30,
@@ -533,10 +470,7 @@ const products = [
       "Safety solenoid valve for operator protection"
     ],
     images: [
-      "/product/AutomountPneumatic1.jpg",
-      "/product/AutomountPneumatic2.jpg",
-      "/product/AutomountPneumatic3.jpg",
-      "/product/AutomountPneumatic4.jpg"
+      "/moulding-grinding-polishing/moulding-machines/pneumatic-press.png",
     ],
     video: "/product/Automount_Pneumatic.mp4",
     specifications: [
@@ -552,34 +486,22 @@ const products = [
     ],
     consumables: [
       {
-        title: "Phenolic Mounting Compound",
+        title: "Bakelite / Phenolic Hot Moulding Powder",
         subtitle: "For pneumatic mounting",
-        image: "/product/phenolicCompound.png"
+        image: "/moulding-grinding-polishing/moulding-machines/mountingCompoundE.png"
       },
-      {
-        title: "Release Agent",
-        subtitle: "For easy mould release",
-        image: "/product/releaseAgentPneumatic.png"
-      },
-      {
-        title: "Mould Sleeves",
-        subtitle: "Interchangeable mould sizes",
-        image: "/product/mouldSleeves.png"
-      }
     ],
     literature: [
-      { title: "Automount Pneumatic Press User Manual", image: "/product/automount-pneumatic-manual.png" },
-      { title: "Automount Pneumatic Brochure", image: "/product/automount-pneumatic-brochure.png" },
-      { title: "Metallographic Mounting Guide", image: "/product/mounting-guide.png" }
+      { title: "Automount Pneumatic Press User Manual", image: "/moulding-grinding-polishing/moulding-machines/pneumatic-press.png" },
     ]
   },
   {
-    id: 17,
+    id: 9,
     categorySlug: "moulding-machines",
     name: "Automount E Electro Press",
     slug: "automount-e-electro-press",
     description: "The Automount E Electro Press is a fully electromechanical mounting press designed for precise metallographic sample preparation. Its complete electromechanical operation ensures consistent pressure and temperature control, making it ideal for laboratories requiring high precision.",
-    image: "/images/moulding-machines/automount-e-electro.png",
+    image: "/moulding-grinding-polishing/moulding-machines/electro-press.png",
     alt: "Automount E Electro Press",
     rating: 4.8,
     reviews: 38,
@@ -600,10 +522,7 @@ const products = [
       "Integrated safety features for operator protection"
     ],
     images: [
-      "/product/AutomountE1.jpg",
-      "/product/AutomountE2.jpg",
-      "/product/AutomountE3.jpg",
-      "/product/AutomountE4.jpg"
+      "/moulding-grinding-polishing/moulding-machines/electro-press.png",
     ],
     video: "/product/Automount_E_Electro.mp4",
     specifications: [
@@ -619,34 +538,22 @@ const products = [
     ],
     consumables: [
       {
-        title: "Mounting Compound",
+        title: "Bakelite / Phenolic Hot Moulding Powder",
         subtitle: "For electromechanical mounting",
-        image: "/product/mountingCompoundE.png"
+        image: "/moulding-grinding-polishing/moulding-machines/mountingCompoundE.png"
       },
-      {
-        title: "Release Agent",
-        subtitle: "For easy mould release",
-        image: "/product/releaseAgentE.png"
-      },
-      {
-        title: "Mould Sleeves",
-        subtitle: "Interchangeable mould sizes",
-        image: "/product/mouldSleevesE.png"
-      }
     ],
     literature: [
-      { title: "Automount E Electro Press User Manual", image: "/product/automount-e-manual.png" },
-      { title: "Automount E Electro Brochure", image: "/product/automount-e-brochure.png" },
-      { title: "Metallographic Mounting Guide", image: "/product/mounting-guide.png" }
+      { title: "Automount E Electro Press User Manual", image: "/moulding-grinding-polishing/moulding-machines/electro-press.png" },
     ]
   },
   {
-    id: 18,
+    id: 10,
     categorySlug: "moulding-machines",
     name: "Automount EH Electro Hydraulic Press",
     slug: "automount-eh-electro-hydraulic",
     description: "The Automount EH Electro Hydraulic Press is a high-throughput mounting press with four-mould capability and dual mould cylinders, delivering up to 300 bar pressure. Designed for simultaneous mounting of four samples, it is optimized for integration with auto grinder polishers in metallographic laboratories.",
-    image: "/images/moulding-machines/automount-eh-electro-hydraulic.png",
+    image: "/moulding-grinding-polishing/moulding-machines/electro-hydraulic-press.png",
     alt: "Automount EH Electro Hydraulic Press",
     rating: 4.9,
     reviews: 45,
@@ -669,10 +576,7 @@ const products = [
       "Eco-function for reduced water consumption"
     ],
     images: [
-      "/product/AutomountEH1.jpg",
-      "/product/AutomountEH2.jpg",
-      "/product/AutomountEH3.jpg",
-      "/product/AutomountEH4.jpg"
+      "/moulding-grinding-polishing/moulding-machines/electro-hydraulic-press.png",
     ],
     video: "/product/Automount_EH_Electro_Hydraulic.mp4",
     specifications: [
@@ -690,35 +594,23 @@ const products = [
     ],
     consumables: [
       {
-        title: "Mounting Compound",
-        subtitle: "For high-pressure mounting",
-        image: "/product/mountingCompoundEH.png"
+        title: "Bakelite / Phenolic Hot Moulding Powder",
+        subtitle: "For pneumatic mounting",
+        image: "/moulding-grinding-polishing/moulding-machines/mountingCompoundE.png"
       },
-      {
-        title: "Release Agent",
-        subtitle: "For four-mould release",
-        image: "/product/releaseAgentEH.png"
-      },
-      {
-        title: "Mould Sleeves",
-        subtitle: "Interchangeable four-mould sizes",
-        image: "/product/mouldSleevesEH.png"
-      }
     ],
     literature: [
-      { title: "Automount EH Electro Hydraulic Press User Manual", image: "/product/automount-eh-manual.png" },
-      { title: "Automount EH Electro Hydraulic Brochure", image: "/product/automount-eh-brochure.png" },
-      { title: "Metallographic Mounting Guide", image: "/product/mounting-guide.png" }
+      { title: "Automount Pneumatic Press User Manual", image: "/moulding-grinding-polishing/moulding-machines/electro-hydraulic-press.png" },
     ]
   },
   // Grinding, Polishing Machine
   {
-    id: 19,
+    id: 11,
     categorySlug: "grinding-polishing-machines",
     name: "Metapol DC II",
     slug: "metapol-dc-ii",
     description: "The Metapol DC II is a manual grinding and polishing machine designed for metallographic sample preparation. With disc diameters of 200mm or 250mm and optional magnetic fixation, it offers flexibility and precision for laboratory applications.",
-    image: "/images/grinding-polishing-machines/metapol-dc-ii.png",
+    image: "/moulding-grinding-polishing/grinding-polishing-machine/metapol_dc_ii_1.png",
     alt: "Metapol DC II Manual Grinding Polishing Machine",
     rating: 4.6,
     reviews: 34,
@@ -739,10 +631,9 @@ const products = [
       "Anti-corrosive FRP top for enhanced durability"
     ],
     images: [
-      "/product/MetapolDCII1.jpg",
-      "/product/MetapolDCII2.jpg",
-      "/product/MetapolDCII3.jpg",
-      "/product/MetapolDCII4.jpg"
+      "/moulding-grinding-polishing/grinding-polishing-machine/metapol_dc_ii_1.png",
+      "/moulding-grinding-polishing/grinding-polishing-machine/metapol_dc_ii_2.png",
+      "/moulding-grinding-polishing/grinding-polishing-machine/metapol_dc_ii_3.png",
     ],
     video: "/product/Metapol_DC_II.mp4",
     specifications: [
@@ -761,33 +652,21 @@ const products = [
       {
         title: "Grinding Discs",
         subtitle: "For 200mm and 250mm diameters",
-        image: "/product/grindingDiscsMetapol.png"
+        image: "/moulding-grinding-polishing/grinding-polishing-machine/metapol_dc_ii_2.png"
       },
-      {
-        title: "Polishing Cloths",
-        subtitle: "Self-adhesive, for fine polishing",
-        image: "/product/polishingClothsMetapol.png"
-      },
-      {
-        title: "Diamond Suspensions",
-        subtitle: "For precision polishing",
-        image: "/product/diamondSuspensions.png"
-      }
     ],
     literature: [
-      { title: "Metapol DC II User Manual", image: "/product/metapol-dc-ii-manual.png" },
-      { title: "Metapol DC II Brochure", image: "/product/metapol-dc-ii-brochure.png" },
-      { title: "Metallographic Grinding Polishing Guide", image: "/product/grinding-polishing-guide.png" }
+      { title: "Metapol DC II User Manual", image: "/moulding-grinding-polishing/grinding-polishing-machine/metapol_dc_ii_1.png" },
     ]
   },
   // Belt Grinder
   {
-    id: 20,
+    id: 12,
     categorySlug: "belt-grinders",
     name: "MBG I / MBG II",
     slug: "mbg-i-ii",
     description: "The MBG I and MBG II are compact belt grinders designed for initial rough grinding in metallographic preparation. Featuring a 4x9 inch belt size, 1/2 HP motor, and dry operation, they offer easy belt replacement and an optional suction arrangement for dust control.",
-    image: "/images/belt-grinders/mbg-i-ii.png",
+    image: "/moulding-grinding-polishing/belt-grienders/mbg-1.png",
     alt: "MBG I / MBG II Belt Grinder",
     rating: 4.5,
     reviews: 29,
@@ -808,10 +687,8 @@ const products = [
       "User-friendly design for quick setup and operation"
     ],
     images: [
-      "/product/MBG1.jpg",
-      "/product/MBG2.jpg",
-      "/product/MBG3.jpg",
-      "/product/MBG4.jpg"
+      "/moulding-grinding-polishing/belt-grienders/mbg-1.png",
+      "/moulding-grinding-polishing/belt-grienders/mbg-2.png",
     ],
     video: "/product/MBG_I_II.mp4",
     specifications: [
@@ -828,35 +705,23 @@ const products = [
     ],
     consumables: [
       {
-        title: "Abrasive Belts",
+        title: "Abrasive Grinding Belts",
         subtitle: "4x9 inch for rough grinding",
-        image: "/product/abrasiveBeltsMBG.png"
+        image: "/moulding-grinding-polishing/belt-grienders/abrasive-grinding-belts.png"
       },
-      {
-        title: "Suction Filters",
-        subtitle: "For optional dust suction system",
-        image: "/product/suctionFiltersMBG.png"
-      },
-      {
-        title: "Belt Tensioning Kit",
-        subtitle: "For belt replacement and adjustment",
-        image: "/product/beltTensioningKit.png"
-      }
     ],
     literature: [
-      { title: "MBG I / MBG II User Manual", image: "/product/mbg-i-ii-manual.png" },
-      { title: "MBG I / MBG II Brochure", image: "/product/mbg-i-ii-brochure.png" },
-      { title: "Belt Grinding Guide", image: "/product/belt-grinding-guide.png" }
+      { title: "MBG I / MBG II User Manual", image: "/moulding-grinding-polishing/belt-grienders/mbg-1.png" },
     ]
   },
   // Heavy Duty Belt Grinder
   {
-    id: 21,
+    id: 13,
     categorySlug: "heavy-duty-belt-grinder",
     name: "Heavy Duty Belt Grinder",
     slug: "heavy-duty-belt-grinder",
     description: "The Heavy Duty Belt Grinder is a robust machine designed for industrial metallographic and material preparation. With a 150x2000mm belt, 3 HP motor, and twin RPM settings (1800/2400), it features V-belt drive, suction facility, guards, starter, and a belt tracking and tensioning system for optimal performance.",
-    image: "/images/heavy-duty-belt-grinders/heavy-duty-belt-grinder.png",
+    image: "/moulding-grinding-polishing/heavy-duty-belt-grinder/heavy-duty-belt-grinder.png",
     alt: "Heavy Duty Belt Grinder",
     rating: 4.8,
     reviews: 41,
@@ -879,10 +744,9 @@ const products = [
       "Compatible with various abrasive belts for different materials"
     ],
     images: [
-      "/product/HeavyDutyBeltGrinder1.jpg",
-      "/product/HeavyDutyBeltGrinder2.jpg",
-      "/product/HeavyDutyBeltGrinder3.jpg",
-      "/product/HeavyDutyBeltGrinder4.jpg"
+      "/moulding-grinding-polishing/heavy-duty-belt-grinder/heavy-duty-belt-grinder.png",
+      "/moulding-grinding-polishing/heavy-duty-belt-grinder/heavy-duty.png",
+      "/moulding-grinding-polishing/heavy-duty-belt-grinder/light-duty.png",
     ],
     video: "/product/Heavy_Duty_Belt_Grinder.mp4",
     specifications: [
@@ -915,19 +779,17 @@ const products = [
       }
     ],
     literature: [
-      { title: "Heavy Duty Belt Grinder User Manual", image: "/product/heavy-duty-belt-grinder-manual.png" },
-      { title: "Heavy Duty Belt Grinder Brochure", image: "/product/heavy-duty-belt-grinder-brochure.png" },
-      { title: "Industrial Grinding Guide", image: "/product/industrial-grinding-guide.png" }
+      { title: "Heavy Duty Belt Grinder User Manual", image: "/moulding-grinding-polishing/heavy-duty-belt-grinder/heavy-duty-belt-grinder.png" },
     ]
   },
   // Automatic Spectro Sample Grinding Machine
   {
-    id: 22,
+    id: 14,
     categorySlug: "automatic-spectro-sample-grinding-machines",
     name: "Spectro Pol Auto",
     slug: "spectro-pol-auto",
     description: "The Spectro Pol Auto is an advanced automatic spectro sample grinding machine designed for high-precision preparation of three samples simultaneously. Featuring a 200x2000mm belt, pneumatic grinding force, electromagnetic sample attachment, and an HMI/PLC operation panel, it ensures consistent and efficient sample preparation for spectrographic analysis.",
-    image: "/images/automatic-spectro-sample-grinding-machines/spectro-pol-auto.png",
+    image: "/moulding-grinding-polishing/automatic-spectro-sample-grinding-machines/spectro-pol-auto.png",
     alt: "Spectro Pol Auto Spectro Sample Grinding Machine",
     rating: 4.7,
     reviews: 37,
@@ -950,10 +812,9 @@ const products = [
       "Safety features including emergency stop and guards"
     ],
     images: [
-      "/product/SpectroPolAuto1.jpg",
-      "/product/SpectroPolAuto2.jpg",
-      "/product/SpectroPolAuto3.jpg",
-      "/product/SpectroPolAuto4.jpg"
+      "/moulding-grinding-polishing/automatic-spectro-sample-grinding-machines/spectro-pol-auto.png",
+      "/moulding-grinding-polishing/automatic-spectro-sample-grinding-machines/spectro-pol-auto-1.png",
+      "/moulding-grinding-polishing/automatic-spectro-sample-grinding-machines/spectro-pol-auto-2.png",
     ],
     video: "/product/Spectro_Pol_Auto.mp4",
     specifications: [
@@ -973,33 +834,21 @@ const products = [
       {
         title: "Abrasive Belts",
         subtitle: "200x2000mm for spectrographic grinding",
-        image: "/product/abrasiveBeltsSpectroPol.png"
+        image: "/moulding-grinding-polishing/automatic-spectro-sample-grinding-machines/abrasive-grinding-belts.png"
       },
-      {
-        title: "Suction Filters",
-        subtitle: "For dust suction system",
-        image: "/product/suctionFiltersSpectroPol.png"
-      },
-      {
-        title: "Sample Holders",
-        subtitle: "For electromagnetic attachment",
-        image: "/product/sampleHoldersSpectroPol.png"
-      }
     ],
     literature: [
-      { title: "Spectro Pol Auto User Manual", image: "/product/spectro-pol-auto-manual.png" },
-      { title: "Spectro Pol Auto Brochure", image: "/product/spectro-pol-auto-brochure.png" },
-      { title: "Spectrographic Grinding Guide", image: "/product/spectro-grinding-guide.png" }
+      { title: "Spectro Pol Auto User Manual", image: "/moulding-grinding-polishing/automatic-spectro-sample-grinding-machines/spectro-pol-auto.png" },
     ]
   },
   // Semi Automatic Grinding Polishing Machine
   {
-    id: 23,
+    id: 15,
     categorySlug: "semi-automatic-grinding-polishing-machines",
     name: "Autopol",
     slug: "autopol",
     description: "The Autopol is a semi-automatic grinding and polishing machine designed for metallographic sample preparation. With independent force application and the ability to process six specimens simultaneously, it offers flexibility and precision through pneumatic or electrical operation and a PLC-based programmable operation panel.",
-    image: "/images/semi-automatic-grinding-polishing-machines/autopol.png",
+    image: "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol1.png",
     alt: "Autopol Semi Automatic Grinding Polishing Machine",
     rating: 4.8,
     reviews: 40,
@@ -1022,10 +871,10 @@ const products = [
       "Safety features including emergency stop and splash guard"
     ],
     images: [
-      "/product/Autopol1.jpg",
-      "/product/Autopol2.jpg",
-      "/product/Autopol3.jpg",
-      "/product/Autopol4.jpg"
+      "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol1.png",
+      "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol3.png",
+      "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol4.png",
+      "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol5.png",
     ],
     video: "/product/Autopol.mp4",
     specifications: [
@@ -1043,34 +892,27 @@ const products = [
     ],
     consumables: [
       {
-        title: "Grinding Discs",
-        subtitle: "For 200mm, 250mm, 300mm diameters",
-        image: "/product/grindingDiscsAutopol.png"
+        title: "Polishing Cloths",
+        subtitle: "Magnetic-backed for fine polishing",
+        image: "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/polishing-cloths.png"
       },
       {
         title: "Polishing Cloths",
         subtitle: "Magnetic-backed for fine polishing",
-        image: "/product/polishingClothsAutopol.png"
+        image: "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/polishing-cloths-2.png"
       },
-      {
-        title: "Diamond Suspensions",
-        subtitle: "For precision polishing",
-        image: "/product/diamondSuspensionsAutopol.png"
-      }
     ],
     literature: [
-      { title: "Autopol User Manual", image: "/product/autopol-manual.png" },
-      { title: "Autopol Brochure", image: "/product/autopol-brochure.png" },
-      { title: "Metallographic Grinding Polishing Guide", image: "/product/grinding-polishing-guide.png" }
+      { title: "Autopol User Manual", image: "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol1.png" },
     ]
   },
   {
-    id: 24,
+    id: 16,
     categorySlug: "semi-automatic-grinding-polishing-machines",
     name: "Autopol Dual",
     slug: "autopol-dual",
     description: "The Autopol Dual is a semi-automatic dual-disc grinding and polishing machine for metallographic sample preparation. It supports independent force application for six specimens, with pneumatic or electrical operation and a PLC-based programmable operation panel, ensuring high precision and throughput.",
-    image: "/images/semi-automatic-grinding-polishing-machines/autopol-dual.png",
+    image: "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol2.png",
     alt: "Autopol Dual Semi Automatic Grinding Polishing Machine",
     rating: 4.9,
     reviews: 42,
@@ -1093,10 +935,10 @@ const products = [
       "Safety features including splash guard and emergency stop"
     ],
     images: [
-      "/product/AutopolDual1.jpg",
-      "/product/AutopolDual2.jpg",
-      "/product/AutopolDual3.jpg",
-      "/product/AutopolDual4.jpg"
+      "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol2.png",
+      "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol3.png",
+      "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol4.png",
+      "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol5.png",
     ],
     video: "/product/Autopol_Dual.mp4",
     specifications: [
@@ -1114,25 +956,18 @@ const products = [
     ],
     consumables: [
       {
-        title: "Grinding Discs",
-        subtitle: "For 200mm, 250mm, 300mm diameters",
-        image: "/product/grindingDiscsAutopolDual.png"
+        title: "Polishing Cloths",
+        subtitle: "Magnetic-backed for fine polishing",
+        image: "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/polishing-cloths.png"
       },
       {
         title: "Polishing Cloths",
         subtitle: "Magnetic-backed for fine polishing",
-        image: "/product/polishingClothsAutopolDual.png"
+        image: "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/polishing-cloths-2.png"
       },
-      {
-        title: "Diamond Suspensions",
-        subtitle: "For precision polishing",
-        image: "/product/diamondSuspensionsAutopolDual.png"
-      }
     ],
     literature: [
-      { title: "Autopol Dual User Manual", image: "/product/autopol-dual-manual.png" },
-      { title: "Autopol Dual Brochure", image: "/product/autopol-dual-brochure.png" },
-      { title: "Metallographic Grinding Polishing Guide", image: "/product/grinding-polishing-guide.png" }
+      { title: "Autopol Dual User Manual", image: "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/autopol2.png" },
     ]
   },
   // Multi-specimen Grinding / Polishing Machine

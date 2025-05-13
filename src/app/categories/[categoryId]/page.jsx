@@ -142,7 +142,7 @@ export default function CategoryPage() {
 
         {/* Enhanced Sidebar - Responsive */}
         <motion.div
-          className={`${sidebarOpen ? 'fixed inset-0 z-30 bg-black bg-opacity-50' : 'hidden'
+          className={`${sidebarOpen ? 'fixed inset-0 z-30 bg-white bg-opacity-50' : 'hidden'
             } lg:bg-transparent lg:relative lg:block`}
           onClick={(e) => {
             if (e.target === e.currentTarget) {

@@ -27,7 +27,7 @@ export default function LoginPage() {
         {/* Left Side - Decorative Image Section */}
         <div className="hidden lg:block lg:w-1/2 relative overflow-hidden">
           <div className="absolute inset-0 bg-cover bg-center z-0" 
-               style={{backgroundImage: "url('/login/img2.jpg')"}}></div>
+               style={{backgroundImage: "url('/images/login_image.jpg')"}}></div>
         </div>
 
         {/* Right Side - Login Form */}

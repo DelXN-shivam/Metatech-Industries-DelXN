@@ -98,7 +98,7 @@ const Sidebar = () => {
                     )}
                 </div>
             </div>
-            <div className="p-4 mt-8">
+            <div className="p-4">
             <h2 className="text-xl font-bold p-4 bg-sky-100 text-sky-700">Consumables</h2>
                 <div className="grid grid-cols-1 gap-y-2">
                     {consumables.map((consumable) => (
