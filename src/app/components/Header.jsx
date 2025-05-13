@@ -167,7 +167,7 @@ const Header = () => {
                 </li>
 
                 {/* Products Mega Menu */}
-                <li className="relative">
+                 <li className="relative">
                   <button
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg text-[15px] font-medium transition-all duration-200 ${productsDropdown
                       ? scrollProgress > 0.5
@@ -211,50 +211,67 @@ const Header = () => {
                             stiffness: 300, 
                             damping: 20 
                           }}
-                          className="container mx-auto bg-white backdrop-blur-lg bg-opacity-95 rounded-xl shadow-2xl border border-sky-100"
+                          className="container mx-auto bg-white/95 backdrop-blur-xl rounded-xl shadow-2xl border border-sky-100 overflow-hidden"
                           style={{
-                            boxShadow: "0 10px 25px -5px rgba(0, 124, 186, 0.1), 0 8px 10px -6px rgba(0, 124, 186, 0.08)"
+                            boxShadow: "0 10px 35px -5px rgba(0, 124, 186, 0.15), 0 10px 20px -6px rgba(0, 124, 186, 0.12)"
                           }}
                         >
-                          <div className="flex p-6 gap-6">
+                          {/* Top decorative bar */}
+                          <div className="h-1.5 w-full bg-gradient-to-r from-sky-400 via-sky-500 to-blue-600"></div>
+                          
+                          <div className="flex p-6 gap-8">
                             <div className="w-full">
                               <div className="grid grid-cols-[1.5fr_0.5fr] gap-8">
                                 {/* Product Categories - Left Side */}
-                                <div>
-                                  <div className="flex items-center gap-3 mb-4">
-                                    <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-600 rounded-lg flex items-center justify-center text-white shadow-md">
-                                      <FaTools className="text-lg" />
+                                <div className="bg-gradient-to-br from-sky-50/50 to-white rounded-xl p-5 shadow-sm border border-sky-100/50">
+                                  <div className="flex items-center gap-4 mb-5">
+                                    <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg transform rotate-3">
+                                      <FaTools className="text-xl" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-800 relative">
-                                      Product Categories
-                                      <span className="absolute -bottom-1 left-0 w-12 h-1 bg-sky-500 rounded-full"></span>
-                                    </h3>
+                                    <div>
+                                      <h3 className="text-2xl font-bold text-gray-800 relative">
+                                        Product Categories
+                                        <span className="absolute -bottom-1 left-0 w-16 h-1 bg-sky-500 rounded-full"></span>
+                                      </h3>
+                                      <p className="text-sm text-sky-600">Find the perfect equipment for your needs</p>
+                                    </div>
                                   </div>
 
-                                  <div className="max-h-[65vh] overflow-y-auto pr-2 custom-scrollbar">
-                                    <div className="grid grid-cols-3 gap-x-4 gap-y-2">
+                                  <div className="max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+                                    <div className="grid grid-cols-3 gap-x-6 gap-y-3">
                                       {mainCategories && mainCategories.length > 0 ? mainCategories.map((mainCat, idx) => (
-                                        <div key={mainCat.mainCategory} className="mb-4">
-                                          <div className="font-semibold text-xl text-sky-700 mb-2 relative pl-3 py-1 border-l-4 border-sky-300 rounded-sm bg-sky-50/50">
+                                        <div key={mainCat.mainCategory} className="mb-5 relative group">
+                                          <div className="font-semibold text-xl text-sky-700 mb-3 relative py-2 px-4 rounded-lg bg-gradient-to-r from-sky-100/70 to-sky-50/40 border-l-4 border-sky-400 shadow-sm">
                                             {mainCat.mainCategory}
+                                            <motion.div 
+                                              className="absolute inset-0 bg-sky-200/20 rounded-lg -z-10"
+                                              initial={{ opacity: 0 }}
+                                              whileHover={{ opacity: 1 }}
+                                              transition={{ duration: 0.2 }}
+                                            />
                                           </div>
                                           {mainCat.categories && mainCat.categories.map((category) => (
-                                            <div key={category.slug} className="mb-2">
-                                              <div className="flex items-center gap-1 group">
+                                            <div key={category.slug} className="mb-3 relative">
+                                              <div className="flex items-center gap-1.5 group/item">
                                                 {category.subCategories && category.subCategories.length > 0 && (
                                                   <button
                                                     onClick={() => toggleCategory(category.slug)}
-                                                    className="text-gray-400 group-hover:text-sky-600 transition-colors w-5 h-5 flex items-center justify-center rounded"
+                                                    className="text-sky-400 group-hover/item:text-sky-600 transition-colors w-5 h-5 flex items-center justify-center rounded hover:bg-sky-50"
                                                     aria-label={expandedCategories[category.slug] ? 'Collapse' : 'Expand'}
                                                   >
-                                                    <svg
-                                                      className={`w-3.5 h-3.5 transition-transform duration-300 ${expandedCategories[category.slug] ? 'rotate-90' : ''}`}
+                                                    <motion.svg
+                                                      className="w-3.5 h-3.5"
+                                                      animate={{ 
+                                                        rotate: expandedCategories[category.slug] ? 90 : 0,
+                                                        scale: expandedCategories[category.slug] ? 1.1 : 1
+                                                      }}
+                                                      transition={{ type: "spring", stiffness: 300, damping: 15 }}
                                                       fill="none"
                                                       stroke="currentColor"
                                                       viewBox="0 0 24 24"
                                                     >
                                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                                    </svg>
+                                                    </motion.svg>
                                                   </button>
                                                 )}
                                                 <Link
@@ -264,32 +281,62 @@ const Header = () => {
                                                     setActiveSubCategory(null);
                                                     setProductsDropdown(false);
                                                   }}
-                                                  className={`flex items-center gap-2 py-2 px-2 rounded-lg transition-all duration-200 flex-1 group-hover:bg-sky-50/80 ${activeCategory === category.slug
-                                                    ? 'text-sky-700 font-bold bg-sky-50 shadow-sm'
-                                                    : 'text-gray-700 font-bold hover:text-sky-600'
-                                                    }`}
+                                                  className={`flex items-center gap-2 py-2 px-3 rounded-lg transition-all duration-200 flex-1 
+                                                    relative overflow-hidden ${activeCategory === category.slug
+                                                    ? 'text-white font-medium shadow-md z-10'
+                                                    : 'text-gray-700 font-medium hover:text-sky-700'
+                                                  }`}
                                                 >
-                                                  <span
-                                                    className={`relative flex items-center justify-center ${activeCategory === category.slug ? '' : ''}`}
-                                                  >
-                                                    <span className={`
-                                                      w-1.5 h-1.5 rounded-full transition-all duration-300 
-                                                      ${activeCategory === category.slug ? 'bg-sky-500 scale-125' : 'bg-gray-400 group-hover:bg-sky-400'}
-                                                    `} />
+                                                  {/* Background effect for active/hover */}
+                                                  {activeCategory === category.slug ? (
+                                                    <motion.div 
+                                                      className="absolute inset-0 bg-gradient-to-r from-sky-500 to-blue-600 -z-10"
+                                                      layoutId={`bg-${category.slug}`}
+                                                      initial={{ opacity: 0 }}
+                                                      animate={{ opacity: 1 }}
+                                                      exit={{ opacity: 0 }}
+                                                    />
+                                                  ) : (
+                                                    <motion.div 
+                                                      className="absolute inset-0 bg-sky-50 opacity-0 -z-10"
+                                                      whileHover={{ opacity: 1 }}
+                                                      transition={{ duration: 0.2 }}
+                                                    />
+                                                  )}
+                                                  
+                                                  {/* Category icon/dot */}
+                                                  <span className={`flex items-center justify-center`}>
+                                                    <motion.span 
+                                                      className={`w-2 h-2 rounded-full transition-all duration-300 
+                                                        ${activeCategory === category.slug 
+                                                          ? 'bg-white' 
+                                                          : 'bg-sky-400 group-hover/item:bg-sky-500'
+                                                        }`}
+                                                      whileHover={{ scale: 1.3 }}
+                                                      animate={{ 
+                                                        scale: activeCategory === category.slug ? 1.5 : 1
+                                                      }}
+                                                    />
                                                   </span>
-                                                  {category.name}
+                                                  
+                                                  {/* Category name */}
+                                                  <span className="truncate">{category.name}</span>
+                                                  
+                                                  {/* Active badge */}
                                                   {activeCategory === category.slug && (
                                                     <motion.span 
-                                                      className="ml-1 text-xs bg-sky-100 text-sky-700 px-1.5 py-0.5 rounded-full"
+                                                      className="ml-1 text-xs bg-white text-sky-600 px-1.5 py-0.5 rounded-full font-bold shadow-sm"
                                                       initial={{ opacity: 0, scale: 0.8 }}
                                                       animate={{ opacity: 1, scale: 1 }}
-                                                      transition={{ duration: 0.2 }}
+                                                      transition={{ duration: 0.3, type: "spring" }}
                                                     >
                                                       active
                                                     </motion.span>
                                                   )}
                                                 </Link>
                                               </div>
+
+                                              {/* Subcategories dropdown */}
                                               {category.subCategories && category.subCategories.length > 0 && (
                                                 <AnimatePresence>
                                                   {(expandedCategories[category.slug] || activeCategory === category.slug) && (
@@ -297,8 +344,8 @@ const Header = () => {
                                                       initial={{ height: 0, opacity: 0 }}
                                                       animate={{ height: 'auto', opacity: 1 }}
                                                       exit={{ height: 0, opacity: 0 }}
-                                                      transition={{ duration: 0.25, ease: "easeInOut" }}
-                                                      className="ml-6 mt-1 space-y-1 overflow-hidden border-l border-sky-100 pl-2"
+                                                      transition={{ duration: 0.3, ease: "anticipate" }}
+                                                      className="ml-6 mt-1 space-y-1 overflow-hidden border-l-2 border-sky-200 pl-3"
                                                     >
                                                       {category.subCategories.map((subCategory) => (
                                                         <Link
@@ -309,21 +356,44 @@ const Header = () => {
                                                             setActiveSubCategory(subCategory.id);
                                                             setProductsDropdown(false);
                                                           }}
-                                                          className={`block px-3 py-2 rounded-md text-sm transition-all duration-200 group ${activeCategory === category.slug && activeSubCategory === subCategory.id
-                                                            ? 'text-sky-700 font-medium bg-sky-100 shadow-sm'
-                                                            : 'text-gray-600 hover:text-sky-600 hover:bg-sky-50'
-                                                            }`}
+                                                          className="block relative group/sub"
                                                         >
-                                                          <div className="flex items-center gap-2">
-                                                            <span className={`text-xs transition-transform duration-200 
+                                                          <motion.div 
+                                                            className={`px-3 py-2 rounded-md text-sm transition-all duration-200 flex items-center gap-2
                                                               ${activeCategory === category.slug && activeSubCategory === subCategory.id
-                                                                ? 'text-sky-500 rotate-0'
-                                                                : 'text-gray-300 -rotate-90 group-hover:rotate-0 group-hover:text-sky-400'
-                                                              }`}>
+                                                                ? 'text-sky-700 font-medium bg-sky-100 shadow-sm'
+                                                                : 'text-gray-600 hover:text-sky-600 hover:bg-sky-50'
+                                                              }`}
+                                                            whileHover={{ x: 3 }}
+                                                            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                                                          >
+                                                            <motion.span 
+                                                              className={`text-xs block
+                                                                ${activeCategory === category.slug && activeSubCategory === subCategory.id
+                                                                  ? 'text-sky-500'
+                                                                  : 'text-gray-400 group-hover/sub:text-sky-500'
+                                                                }`}
+                                                              animate={{ 
+                                                                rotate: activeCategory === category.slug && activeSubCategory === subCategory.id ? 90 : 0,
+                                                                opacity: activeCategory === category.slug && activeSubCategory === subCategory.id ? 1 : 0.7,
+                                                              }}
+                                                              whileHover={{ rotate: 90, opacity: 1 }}
+                                                            >
                                                               ▶
-                                                            </span>
+                                                            </motion.span>
                                                             {subCategory.name}
-                                                          </div>
+                                                            
+                                                            {/* Active indicator */}
+                                                            {activeCategory === category.slug && activeSubCategory === subCategory.id && (
+                                                              <motion.div 
+                                                                className="ml-auto h-1.5 w-1.5 rounded-full bg-sky-500"
+                                                                layoutId={`active-dot-${category.slug}`}
+                                                                initial={{ scale: 0 }}
+                                                                animate={{ scale: 1 }}
+                                                                exit={{ scale: 0 }}
+                                                              />
+                                                            )}
+                                                          </motion.div>
                                                         </Link>
                                                       ))}
                                                     </motion.div>
@@ -339,7 +409,6 @@ const Header = () => {
                                     </div>
                                   </div>
                                 </div>
-
                                 {/* Consumables Section - Right Side */}
                                 <div>
                                   <div className="flex items-center gap-3 mb-4">
