@@ -2,8 +2,6 @@
 
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import VisionMission from '../components/VisionAndCoreValues';
 import { motion, useAnimation, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -147,7 +145,7 @@ const AboutUsPage = () => {
         <motion.div
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: "url('/images/aboutus_bg.jpg')",
+            backgroundImage: "url('/images/about-us-bg-1.png')",
             y: heroBackgroundY
           }}
         />

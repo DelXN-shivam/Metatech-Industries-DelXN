@@ -972,12 +972,12 @@ const products = [
   },
   // Multi-specimen Grinding / Polishing Machine
   {
-    id: 25,
+    id: 17,
     categorySlug: "multi-specimen-grinding-polishing-machines",
     name: "Autopol-II",
     slug: "autopol-ii",
     description: "The Autopol-II is a multi-specimen grinding and polishing machine with an auto grinding arm mounted on a dual-pillar structure for superior flatness. Capable of processing six specimens simultaneously with combined force, it supports disc sizes of 200mm, 250mm, or 300mm and offers excellent edge retention, including for unmounted specimens (feasibility study required).",
-    image: "/images/multi-specimen-grinding-polishing-machines/autopol-ii.png",
+    image: "/moulding-grinding-polishing/multi-specimen-grinding-polishing-machines/autopol-ii.png",
     alt: "Autopol-II Multi-specimen Grinding Polishing Machine",
     rating: 4.9,
     reviews: 45,
@@ -1000,10 +1000,8 @@ const products = [
       "Safety features including splash guard and emergency stop"
     ],
     images: [
-      "/product/AutopolII1.jpg",
-      "/product/AutopolII2.jpg",
-      "/product/AutopolII3.jpg",
-      "/product/AutopolII4.jpg"
+      "/moulding-grinding-polishing/multi-specimen-grinding-polishing-machines/autopol-ii.png",
+      "/moulding-grinding-polishing/multi-specimen-grinding-polishing-machines/autopol-ii-1.png",
     ],
     video: "/product/Autopol_II.mp4",
     specifications: [
@@ -1023,35 +1021,28 @@ const products = [
     ],
     consumables: [
       {
-        title: "Grinding Discs",
-        subtitle: "For 200mm, 250mm, 300mm diameters",
-        image: "/product/grindingDiscsAutopolII.png"
+        title: "Polishing Cloths",
+        subtitle: "Magnetic-backed for fine polishing",
+        image: "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/polishing-cloths.png"
       },
       {
         title: "Polishing Cloths",
         subtitle: "Magnetic-backed for fine polishing",
-        image: "/product/polishingClothsAutopolII.png"
+        image: "/moulding-grinding-polishing/semi-automatic-grinding-polishing-machines/polishing-cloths-2.png"
       },
-      {
-        title: "Diamond Suspensions",
-        subtitle: "For precision polishing",
-        image: "/product/diamondSuspensionsAutopolII.png"
-      }
     ],
     literature: [
-      { title: "Autopol-II User Manual", image: "/product/autopol-ii-manual.png" },
-      { title: "Autopol-II Brochure", image: "/product/autopol-ii-brochure.png" },
-      { title: "Metallographic Grinding Polishing Guide", image: "/product/grinding-polishing-guide.png" }
+      { title: "Autopol-II User Manual", image: "/moulding-grinding-polishing/multi-specimen-grinding-polishing-machines/autopol-ii.png" },
     ]
   },
   // Microscope and Image Analyzer
   {
-    id: 41,
+    id: 18,
     categorySlug: "inverted-microscope",
     name: "Metagraph - I",
     slug: "metagraph-i",
     description: "The Metagraph - I is a professional-grade inverted metallurgical microscope designed for routine microstructural analysis of metals, alloys, and solid materials. Offering up to 1000X magnification with infinity-corrected plan achromatic objectives and a trinocular head, it is ideal for industrial quality control, materials science, and educational applications. Optional 20X eyepieces enable 2000X magnification for specialized tasks.",
-    image: "/images/inverted-microscope/metagraph-i.png",
+    image: "/microscope-and-image-analyzer/inverted-microscope/metagraph-I.png",
     alt: "Metagraph - I Inverted Metallurgical Microscope",
     rating: 4.7,
     reviews: 38,
@@ -1075,10 +1066,7 @@ const products = [
       "Rugged construction for industrial environments"
     ],
     images: [
-      "/product/MetagraphI1.jpg",
-      "/product/MetagraphI2.jpg",
-      "/product/MetagraphI3.jpg",
-      "/product/MetagraphI4.jpg"
+      "/microscope-and-image-analyzer/inverted-microscope/metagraph-I.png",
     ],
     video: "/product/Metagraph_I.mp4",
     specifications: [
@@ -1097,35 +1085,19 @@ const products = [
       { part: "240-3511-100", config: "Metagraph - I with 10X Eyepieces", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "LWD Plan Achromatic Objectives",
-        subtitle: "5X, 10X, 20X, 50X, 100X replacements",
-        image: "/product/lwdObjectivesMetagraph.png"
-      },
-      {
-        title: "WF 20X Eyepieces",
-        subtitle: "For optional 2000X magnification",
-        image: "/product/wf20xEyepieces.png"
-      },
-      {
-        title: "Halogen Lamp",
-        subtitle: "6V 20W replacement",
-        image: "/product/halogenLamp6V20W.png"
-      }
+
     ],
     literature: [
-      { title: "Metagraph - I User Manual", image: "/product/metagraph-i-manual.png" },
-      { title: "Metagraph - I Brochure", image: "/product/metagraph-i-brochure.png" },
-      { title: "Metallographic Microscopy Guide", image: "/product/metallographic-microscopy-guide.png" }
+      { title: "Metagraph - I User Manual", image: "/microscope-and-image-analyzer/inverted-microscope/metagraph-I.png" },
     ]
   },
   {
-    id: 42,
+    id: 19,
     categorySlug: "inverted-microscope",
     name: "Metagraph - SPL",
     slug: "metagraph-spl",
     description: "The Metagraph - SPL is an advanced inverted metallurgical microscope with enhanced imaging capabilities, offering up to 1000X magnification for detailed microstructural analysis. Equipped with polarized light, DIC options, and a digital imaging port, it supports grain size determination, defect inspection, and material composition analysis. Optional 20X eyepieces enable 2000X magnification for specialized applications in materials science and industrial quality control.",
-    image: "/images/inverted-microscope/metagraph-spl.png",
+    image: "/microscope-and-image-analyzer/inverted-microscope/metagraph-spl.png",
     alt: "Metagraph - SPL Advanced Inverted Metallurgical Microscope",
     rating: 4.9,
     reviews: 45,
@@ -1149,10 +1121,7 @@ const products = [
       "Optional LED illumination upgrade for energy efficiency"
     ],
     images: [
-      "/product/MetagraphSPL1.jpg",
-      "/product/MetagraphSPL2.jpg",
-      "/product/MetagraphSPL3.jpg",
-      "/product/MetagraphSPL4.jpg"
+      "/microscope-and-image-analyzer/inverted-microscope/metagraph-spl.png",
     ],
     video: "/product/Metagraph_SPL.mp4",
     specifications: [
@@ -1171,40 +1140,19 @@ const products = [
       { part: "240-3511-200", config: "Metagraph - SPL with Polarized Light and DIC", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "LWD Plan Achromatic Objectives",
-        subtitle: "5X, 10X, 20X, 50X, 100X replacements",
-        image: "/product/lwdObjectivesMetagraph.png"
-      },
-      {
-        title: "WF 20X Eyepieces",
-        subtitle: "For optional 2000X magnification",
-        image: "/product/wf20xEyepieces.png"
-      },
-      {
-        title: "Halogen Lamp",
-        subtitle: "12V 50W replacement",
-        image: "/product/halogenLamp12V50W.png"
-      },
-      {
-        title: "DIC Slider",
-        subtitle: "For enhanced contrast imaging",
-        image: "/product/dicSliderMetagraph.png"
-      }
+     
     ],
     literature: [
-      { title: "Metagraph - SPL User Manual", image: "/product/metagraph-spl-manual.png" },
-      { title: "Metagraph - SPL Brochure", image: "/product/metagraph-spl-brochure.png" },
-      { title: "Metallographic Microscopy Guide", image: "/product/metallographic-microscopy-guide.png" }
+      { title: "Metagraph - SPL User Manual", image: "/microscope-and-image-analyzer/inverted-microscope/metagraph-spl.png" },
     ]
   },
   {
-    id: 43,
+    id: 20,
     categorySlug: "upright-microscope",
     name: "Metagraph (UP)",
     slug: "metagraph-up",
     description: "The Metagraph (UP) is a high-performance upright metallurgical microscope designed for detailed microstructural analysis of metals, alloys, and opaque materials. Offering up to 1000X magnification with infinity-corrected plan achromatic objectives, it features both reflected and transmitted illumination for versatile sample analysis. Equipped with a trinocular head and polarization capabilities, it is ideal for materials science, quality control, and industrial research applications. Optional 20X eyepieces enable 2000X magnification for specialized tasks.",
-    image: "/images/upright-microscope/metagraph-up.png",
+    image: "/microscope-and-image-analyzer/upright-microscope/metagraph-up.png",
     alt: "Metagraph (UP) Upright Metallurgical Microscope",
     rating: 4.8,
     reviews: 40,
@@ -1228,10 +1176,7 @@ const products = [
       "Software for image capture, grain size, and phase analysis"
     ],
     images: [
-      "/product/MetagraphUP1.jpg",
-      "/product/MetagraphUP2.jpg",
-      "/product/MetagraphUP3.jpg",
-      "/product/MetagraphUP4.jpg"
+      "/microscope-and-image-analyzer/upright-microscope/metagraph-up.png",
     ],
     video: "/product/Metagraph_UP.mp4",
     specifications: [
@@ -1250,40 +1195,19 @@ const products = [
       { part: "250-3611-100", config: "Metagraph (UP) with Polarization", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "Plan Achromatic Objectives",
-        subtitle: "5X, 10X, 20X, 50X, 100X replacements",
-        image: "/product/planObjectivesMetagraph.png"
-      },
-      {
-        title: "WF 20X Eyepieces",
-        subtitle: "For optional 2000X magnification",
-        image: "/product/wf20xEyepieces.png"
-      },
-      {
-        title: "Halogen Lamp",
-        subtitle: "6V 30W replacement",
-        image: "/product/halogenLamp6V30W.png"
-      },
-      {
-        title: "Polarization Filter Set",
-        subtitle: "Replacement polarizer and analyzer",
-        image: "/product/polarizationFilterSet.png"
-      }
+
     ],
     literature: [
-      { title: "Metagraph (UP) User Manual", image: "/product/metagraph-up-manual.png" },
-      { title: "Metagraph (UP) Brochure", image: "/product/metagraph-up-brochure.png" },
-      { title: "Metallographic Microscopy Guide", image: "/product/metallographic-microscopy-guide.png" }
+      { title: "Metagraph (UP) User Manual", image: "/microscope-and-image-analyzer/upright-microscope/metagraph-up.png" },
     ]
   },
   {
-    "id": 71,
+    "id": 21,
     "categorySlug": "stereo-microscope",
     "name": "Stereo Microscope",
     "slug": "stereo-microscope",
     "description": "The Stereo Microscope is a versatile, zoom-style optical microscope designed for low-magnification, three-dimensional observation of solid specimens. With a 0.7x–4.5x zoom range and ergonomic features, it supports metallographic inspection, biological dissection, and industrial quality control, delivering high-resolution images with excellent depth of field.",
-    "image": "/images/stereo-microscope/stereo-microscope.png",
+    "image": "/microscope-and-image-analyzer/stereo-microscope/stereo-microscope.png",
     "alt": "Stereo Microscope for 3D Observation",
     "rating": 4.8,
     "reviews": 55,
@@ -1307,10 +1231,7 @@ const products = [
       "Rugged, all-metal body for durability in industrial environments"
     ],
     "images": [
-      "/product/StereoMicroscope1.jpg",
-      "/product/StereoMicroscope2.jpg",
-      "/product/StereoMicroscope3.jpg",
-      "/product/StereoMicroscope4.jpg"
+      "/microscope-and-image-analyzer/stereo-microscope/stereo-microscope.png",
     ],
     "video": "/product/Stereo_Microscope.mp4",
     "specifications": [
@@ -1328,35 +1249,19 @@ const products = [
       { "part": "290-3811-500", "config": "Stereo Microscope, Trinocular Zoom, LED Base", "voltage": "110-240V AC" }
     ],
     "consumables": [
-      {
-        "title": "Auxiliary Barlow Lens",
-        "subtitle": "0.5x and 2x for extended magnification",
-        "image": "/product/barlowLens.png"
-      },
-      {
-        "title": "LED Replacement Bulb",
-        "subtitle": "For incident/transmitted illumination",
-        "image": "/product/ledBulb.png"
-      },
-      {
-        "title": "Eyepieces",
-        "subtitle": "10x, 15x, 20x, wide-field",
-        "image": "/product/eyepieces.png"
-      }
+
     ],
     "literature": [
-      { "title": "Stereo Microscope User Manual", "image": "/product/stereo-microscope-manual.png" },
-      { "title": "Microscopy Solutions Brochure", "image": "/product/microscopy-brochure.png" },
-      { "title": "Metallographic Analysis Guide", "image": "/product/metallographic-analysis-guide.png" }
+      { "title": "Stereo Microscope User Manual", "image": "/microscope-and-image-analyzer/stereo-microscope/stereo-microscope.png" },
     ]
   },
   {
-    id: 44,
+    id: 22,
     categorySlug: "particle-size-analysis-systems",
     name: "CLEAN-EST (Stereo)",
     slug: "clean-est-stereo",
     description: "The CLEAN-EST (Stereo) is an automated particle size analysis system designed for cleanliness testing of automotive and industrial components. Fully compliant with ISO 16232 and VDA 19.1, it features complete filter paper scanning to classify non-metallic, metallic, and fiber particles larger than 10 microns. With a motorized stage and particle height measurement, it offers easy operation and rapid report generation tailored to user requirements, ideal for quality control in manufacturing environments.",
-    image: "/images/particle-size-analysis/clean-est-stereo.png",
+    image: "/microscope-and-image-analyzer/particle-size-analysis-systems/clean-est-stereo.png",
     alt: "CLEAN-EST (Stereo) Particle Size Analysis System",
     rating: 4.8,
     reviews: 42,
@@ -1380,10 +1285,7 @@ const products = [
       "Automatic focus compensation for clear imaging across the filter"
     ],
     images: [
-      "/product/CleanEstStereo1.jpg",
-      "/product/CleanEstStereo2.jpg",
-      "/product/CleanEstStereo3.jpg",
-      "/product/CleanEstStereo4.jpg"
+      "/microscope-and-image-analyzer/particle-size-analysis-systems/clean-est-stereo.png",
     ],
     video: "/product/CleanEst_Stereo.mp4",
     specifications: [
@@ -1403,35 +1305,19 @@ const products = [
       { part: "260-3711-100", config: "CLEAN-EST (Stereo) with Motorized Stage", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "47mm Filter Membranes",
-        subtitle: "5 micron polyester, ISO 16232 compliant",
-        image: "/product/filterMembranes47mm.png"
-      },
-      {
-        title: "Calibration Standard",
-        subtitle: "For particle size verification",
-        image: "/product/calibrationStandard.png"
-      },
-      {
-        title: "Polarization Filter",
-        subtitle: "Replacement for metallic particle detection",
-        image: "/product/polarizationFilter.png"
-      }
+
     ],
     literature: [
-      { title: "CLEAN-EST (Stereo) User Manual", image: "/product/clean-est-stereo-manual.png" },
-      { title: "CLEAN-EST (Stereo) Brochure", image: "/product/clean-est-stereo-brochure.png" },
-      { title: "Cleanliness Testing Guide", image: "/product/cleanliness-testing-guide.png" }
+      { title: "CLEAN-EST (Stereo) User Manual", image: "/microscope-and-image-analyzer/particle-size-analysis-systems/clean-est-stereo.png" },
     ]
   },
   {
-    id: 45,
+    id: 23,
     categorySlug: "particle-size-analysis-systems",
     name: "CLEAN-EST (Metallurgical)",
     slug: "clean-est-metallurgical",
     description: "The CLEAN-EST (Metallurgical) is a high-precision particle size analysis system for advanced cleanliness testing in automotive, aerospace, and metallurgical industries. Fully compliant with ISO 16232 and VDA 19.1, it provides automated filter paper scanning to classify non-metallic, metallic, and fiber particles larger than 3 microns. Featuring a motorized stage, particle height measurement, and metallurgical microscopy, it ensures ease of use and rapid, customizable report generation for stringent quality control requirements.",
-    image: "/images/particle-size-analysis/clean-est-metallurgical.png",
+    image: "/microscope-and-image-analyzer/particle-size-analysis-systems/clean-est-metallurgical.png",
     alt: "CLEAN-EST (Metallurgical) Particle Size Analysis System",
     rating: 4.9,
     reviews: 48,
@@ -1455,10 +1341,7 @@ const products = [
       "Seamless image stitching for comprehensive filter analysis"
     ],
     images: [
-      "/product/CleanEstMetallurgical1.jpg",
-      "/product/CleanEstMetallurgical2.jpg",
-      "/product/CleanEstMetallurgical3.jpg",
-      "/product/CleanEstMetallurgical4.jpg"
+      "/microscope-and-image-analyzer/particle-size-analysis-systems/clean-est-metallurgical.png",
     ],
     video: "/product/CleanEst_Metallurgical.mp4",
     specifications: [
@@ -1478,37 +1361,21 @@ const products = [
       { part: "260-3711-200", config: "CLEAN-EST (Metallurgical) with Motorized Stage", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "47mm Filter Membranes",
-        subtitle: "1 micron polyester, ISO 16232 compliant",
-        image: "/product/filterMembranes47mm.png"
-      },
-      {
-        title: "Calibration Standard",
-        subtitle: "For particle size verification",
-        image: "/product/calibrationStandard.png"
-      },
-      {
-        title: "Polarization Filter",
-        subtitle: "Replacement for metallic particle detection",
-        image: "/product/polarizationFilter.png"
-      }
+      
     ],
     literature: [
-      { title: "CLEAN-EST (Metallurgical) User Manual", image: "/product/clean-est-metallurgical-manual.png" },
-      { title: "CLEAN-EST (Metallurgical) Brochure", image: "/product/clean-est-metallurgical-brochure.png" },
-      { title: "Cleanliness Testing Guide", image: "/product/cleanliness-testing-guide.png" }
+      { title: "CLEAN-EST (Metallurgical) User Manual", image: "/microscope-and-image-analyzer/particle-size-analysis-systems/clean-est-metallurgical.png" },
     ]
   },
 
   // Millipore Fluid Contamination Analysis Kit
   {
-    id: 46,
+    id: 24,
     categorySlug: "millipore-fluid-contamination-analysis-kit",
     name: "Vacuum / Pressure Pump",
     slug: "vacuum-pressure-pump",
     description: "The Vacuum / Pressure Pump is a compact, dual-function unit designed for Millipore fluid contamination analysis kits. It provides reliable vacuum for filtration and pressure for solvent dispensing, ensuring efficient sample preparation for particulate and biological contamination testing. Equipped with a permanently lubricated motor and thermal overload protection, it is ideal for laboratory and field use in automotive and industrial quality control.",
-    image: "/images/fluid-contamination/vacuum-pressure-pump.png",
+    image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/vacuum-pressure-pump.png",
     alt: "Vacuum / Pressure Pump for Fluid Contamination Analysis",
     rating: 4.7,
     reviews: 35,
@@ -1532,10 +1399,7 @@ const products = [
       "Includes silicone tubing for connection to filter holders"
     ],
     images: [
-      "/product/VacuumPressurePump1.jpg",
-      "/product/VacuumPressurePump2.jpg",
-      "/product/VacuumPressurePump3.jpg",
-      "/product/VacuumPressurePump4.jpg"
+      "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/vacuum-pressure-pump.png",
     ],
     video: "/product/Vacuum_Pressure_Pump.mp4",
     specifications: [
@@ -1552,30 +1416,19 @@ const products = [
       { part: "270-3811-100", config: "Vacuum / Pressure Pump, 230V", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "Silicone Tubing",
-        subtitle: "For pump to filter holder connection",
-        image: "/product/siliconeTubing.png"
-      },
-      {
-        title: "Vacuum Trap Kit",
-        subtitle: "Prevents liquid ingress into pump",
-        image: "/product/vacuumTrapKit.png"
-      }
+ 
     ],
     literature: [
-      { title: "Vacuum / Pressure Pump User Manual", image: "/product/vacuum-pressure-pump-manual.png" },
-      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
-      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+      { title: "Vacuum / Pressure Pump User Manual", image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/vacuum-pressure-pump.png" },
     ]
   },
   {
-    id: 47,
+    id: 25,
     categorySlug: "millipore-fluid-contamination-analysis-kit",
     name: "Dispensing Pressure Vessel",
     slug: "dispensing-pressure-vessel",
     description: "The Dispensing Pressure Vessel is a robust, stainless-steel container for holding and dispensing liquids during Millipore fluid contamination analysis. Designed for filtration through pressure-operated filter holders, it ensures ultra-clean solvent delivery for sample preparation. ASME-UM code compliant, it is autoclavable and suitable for automotive, aerospace, and industrial applications.",
-    image: "/images/fluid-contamination/dispensing-pressure-vessel.png",
+    image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/dispensing-pressure-vessel.png",
     alt: "Dispensing Pressure Vessel for Fluid Contamination Analysis",
     rating: 4.8,
     reviews: 38,
@@ -1599,10 +1452,7 @@ const products = [
       "Easy disassembly for cleaning and maintenance"
     ],
     images: [
-      "/product/DispensingPressureVessel1.jpg",
-      "/product/DispensingPressureVessel2.jpg",
-      "/product/DispensingPressureVessel3.jpg",
-      "/product/DispensingPressureVessel4.jpg"
+      "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/dispensing-pressure-vessel.png"
     ],
     video: "/product/Dispensing_Pressure_Vessel.mp4",
     specifications: [
@@ -1618,30 +1468,19 @@ const products = [
       { part: "270-3811-200", config: "Dispensing Pressure Vessel, 10L", voltage: "None" }
     ],
     consumables: [
-      {
-        title: "Fluoroelastomer Gaskets",
-        subtitle: "Replacement for vessel sealing",
-        image: "/product/fluoroelastomerGaskets.png"
-      },
-      {
-        title: "Pressure Relief Valve",
-        subtitle: "For safety compliance",
-        image: "/product/pressureReliefValve.png"
-      }
+
     ],
     literature: [
-      { title: "Dispensing Pressure Vessel User Manual", image: "/product/dispensing-pressure-vessel-manual.png" },
-      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
-      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+      { title: "Dispensing Pressure Vessel User Manual", image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/dispensing-pressure-vessel.png" }
     ]
   },
   {
-    id: 48,
+    id: 26,
     categorySlug: "millipore-fluid-contamination-analysis-kit",
     name: "Filter Paper",
     slug: "filter-paper",
     description: "Millipore Filter Paper consists of mixed cellulose ester (MCE) membranes designed for fluid contamination analysis. With pore sizes ranging from 0.45 to 5.0 microns, these hydrophilic filters capture particulate and biological contaminants during vacuum filtration. Compatible with 47mm filter holders, they ensure reliable analysis of hydraulic fluids, fuels, and water in automotive and industrial applications.",
-    image: "/images/fluid-contamination/filter-paper.png",
+    image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/filter-paper.png",
     alt: "Filter Paper for Fluid Contamination Analysis",
     rating: 4.6,
     reviews: 40,
@@ -1665,10 +1504,7 @@ const products = [
       "Available in packs of 100 for high-throughput testing"
     ],
     images: [
-      "/product/FilterPaper1.jpg",
-      "/product/FilterPaper2.jpg",
-      "/product/FilterPaper3.jpg",
-      "/product/FilterPaper4.jpg"
+      "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/filter-paper.png",
     ],
     video: "/product/Filter_Paper.mp4",
     specifications: [
@@ -1684,30 +1520,19 @@ const products = [
       { part: "270-3811-300", config: "Filter Paper, 0.8 micron, 47mm, 100/pk", voltage: "None" }
     ],
     consumables: [
-      {
-        title: "MCE Filter Membranes",
-        subtitle: "0.45, 0.8, 1.2, 5.0 microns, 47mm",
-        image: "/product/mceFilterMembranes.png"
-      },
-      {
-        title: "Filter Storage Box",
-        subtitle: "For 47mm filter membranes",
-        image: "/product/filterStorageBox.png"
-      }
+
     ],
     literature: [
-      { title: "Filter Paper User Guide", image: "/product/filter-paper-guide.png" },
-      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
-      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+      { title: "Filter Paper User Guide", image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/filter-paper.png" },
     ]
   },
   {
-    id: 49,
+    id: 27,
     categorySlug: "millipore-fluid-contamination-analysis-kit",
     name: "Filter Flask",
     slug: "filter-flask",
     description: "The Filter Flask is a borosilicate glass vessel designed for vacuum filtration in Millipore fluid contamination analysis kits. With a 1000mL capacity and silicone stopper, it supports 47mm filter holders for particulate and biological contamination testing. Its robust construction ensures reliable collection of filtrates during analysis of hydraulic fluids, fuels, and water.",
-    image: "/images/fluid-contamination/filter-flask.png",
+    image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/filter-flask.png",
     alt: "Filter Flask for Fluid Contamination Analysis",
     rating: 4.7,
     reviews: 36,
@@ -1731,10 +1556,7 @@ const products = [
       "Dishwasher-safe for easy cleaning"
     ],
     images: [
-      "/product/FilterFlask1.jpg",
-      "/product/FilterFlask2.jpg",
-      "/product/FilterFlask3.jpg",
-      "/product/FilterFlask4.jpg"
+      "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/filter-flask.png"
     ],
     video: "/product/Filter_Flask.mp4",
     specifications: [
@@ -1750,30 +1572,19 @@ const products = [
       { part: "270-3811-400", config: "Filter Flask, 1000mL", voltage: "None" }
     ],
     consumables: [
-      {
-        title: "Silicone Stopper",
-        subtitle: "Replacement for filter flask",
-        image: "/product/siliconeStopper.png"
-      },
-      {
-        title: "Neoprene Bulb",
-        subtitle: "For manual vacuum initiation",
-        image: "/product/neopreneBulb.png"
-      }
+
     ],
     literature: [
-      { title: "Filter Flask User Guide", image: "/product/filter-flask-guide.png" },
-      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
-      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+      { title: "Filter Flask User Guide", image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/filter-flask.png" },
     ]
   },
   {
-    id: 50,
+    id: 28,
     categorySlug: "millipore-fluid-contamination-analysis-kit",
     name: "Filter Jet Solvent Dispenser",
     slug: "filter-jet-solvent-dispenser",
     description: "The Filter Jet Solvent Dispenser is a hand-pressure operated device for delivering ultra-clean solvent jets in Millipore fluid contamination analysis. Equipped with a 25mm stainless-steel filter holder, it directs filtered solvent or rinse solution onto surfaces for cleaning, ensuring precise sample preparation for contamination testing in automotive and industrial applications.",
-    image: "/images/fluid-contamination/filter-jet-solvent-dispenser.png",
+    image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/filter-jet-solvent-dispenser.png",
     alt: "Filter Jet Solvent Dispenser for Fluid Contamination Analysis",
     rating: 4.6,
     reviews: 33,
@@ -1797,10 +1608,7 @@ const products = [
       "Supports low surface tension solvents"
     ],
     images: [
-      "/product/FilterJetSolventDispenser1.jpg",
-      "/product/FilterJetSolventDispenser2.jpg",
-      "/product/FilterJetSolventDispenser3.jpg",
-      "/product/FilterJetSolventDispenser4.jpg"
+      "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/filter-jet-solvent-dispenser.png"
     ],
     video: "/product/Filter_Jet_Solvent_Dispenser.mp4",
     specifications: [
@@ -1815,30 +1623,19 @@ const products = [
       { part: "270-3811-500", config: "Filter Jet Solvent Dispenser, 25mm", voltage: "None" }
     ],
     consumables: [
-      {
-        title: "25mm MCE Membranes",
-        subtitle: "0.8 micron, for solvent filtration",
-        image: "/product/mceMembranes25mm.png"
-      },
-      {
-        title: "Teflon Gasket",
-        subtitle: "Replacement for filter holder",
-        image: "/product/teflonGasket.png"
-      }
+
     ],
     literature: [
-      { title: "Filter Jet Solvent Dispenser User Guide", image: "/product/filter-jet-solvent-dispenser-guide.png" },
-      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
-      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+      { title: "Filter Jet Solvent Dispenser User Guide", image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/filter-jet-solvent-dispenser.png" },
     ]
   },
   {
-    id: 51,
+    id: 29,
     categorySlug: "millipore-fluid-contamination-analysis-kit",
     name: "Solvent Filtering Dispenser",
     slug: "solvent-filtering-dispenser",
     description: "The Solvent Filtering Dispenser is a squeeze-bottle action device for ultra-clean solvent dispensing in Millipore fluid contamination analysis. Featuring a 25mm stainless-steel filter holder with a neoprene bulb, it filters and dispenses small volumes of solvent for sample preparation, ensuring contamination-free analysis of hydraulic fluids and fuels.",
-    image: "/images/fluid-contamination/solvent-filtering-dispenser.png",
+    image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/solvent-filtering-dispenser.png",
     alt: "Solvent Filtering Dispenser for Fluid Contamination Analysis",
     rating: 4.5,
     reviews: 32,
@@ -1862,10 +1659,7 @@ const products = [
       "Autoclavable components for sterilization"
     ],
     images: [
-      "/product/SolventFilteringDispenser1.jpg",
-      "/product/SolventFilteringDispenser2.jpg",
-      "/product/SolventFilteringDispenser3.jpg",
-      "/product/SolventFilteringDispenser4.jpg"
+      "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/solvent-filtering-dispenser.png"
     ],
     video: "/product/Solvent_Filtering_Dispenser.mp4",
     specifications: [
@@ -1880,30 +1674,19 @@ const products = [
       { part: "270-3811-600", config: "Solvent Filtering Dispenser, 25mm", voltage: "None" }
     ],
     consumables: [
-      {
-        title: "25mm MCE Membranes",
-        subtitle: "0.8 micron, for solvent filtration",
-        image: "/product/mceMembranes25mm.png"
-      },
-      {
-        title: "Neoprene Bulb",
-        subtitle: "Replacement for dispenser",
-        image: "/product/neopreneBulb.png"
-      }
+
     ],
     literature: [
-      { title: "Solvent Filtering Dispenser User Guide", image: "/product/solvent-filtering-dispenser-guide.png" },
-      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
-      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+      { title: "Solvent Filtering Dispenser User Guide", image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/solvent-filtering-dispenser.png" },
     ]
   },
   {
-    id: 52,
+    id: 30,
     categorySlug: "millipore-fluid-contamination-analysis-kit",
     name: "Petri Slides",
     slug: "petri-slides",
     description: "Petri Slides are specialized storage units for 47mm filter membranes used in Millipore fluid contamination analysis. With a transparent cover and rectangular base, they enable microscopic examination of filtered particles without removal. Designed for secure storage and analysis, they are ideal for automotive and industrial contamination testing.",
-    image: "/images/fluid-contamination/petri-slides.png",
+    image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/petri-slides.png",
     alt: "Petri Slides for Fluid Contamination Analysis",
     rating: 4.6,
     reviews: 30,
@@ -1927,10 +1710,7 @@ const products = [
       "Lightweight for easy handling"
     ],
     images: [
-      "/product/PetriSlides1.jpg",
-      "/product/PetriSlides2.jpg",
-      "/product/PetriSlides3.jpg",
-      "/product/PetriSlides4.jpg"
+      "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/petri-slides.png",
     ],
     video: "/product/Petri_Slides.mp4",
     specifications: [
@@ -1944,30 +1724,19 @@ const products = [
       { part: "270-3811-700", config: "Petri Slides, 47mm, 50/pk", voltage: "None" }
     ],
     consumables: [
-      {
-        title: "47mm MCE Membranes",
-        subtitle: "0.8 micron, for contamination analysis",
-        image: "/product/mceMembranes47mm.png"
-      },
-      {
-        title: "Filter Storage Box",
-        subtitle: "For Petri slide organization",
-        image: "/product/filterStorageBox.png"
-      }
+
     ],
     literature: [
-      { title: "Petri Slides User Guide", image: "/product/petri-slides-guide.png" },
-      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
-      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+      { title: "Petri Slides User Guide", image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/petri-slides.png" },
     ]
   },
   {
-    id: 53,
+    id: 31,
     categorySlug: "millipore-fluid-contamination-analysis-kit",
     name: "Dispensing Bottles",
     slug: "dispensing-bottles",
     description: "Dispensing Bottles are designed for controlled delivery of ultra-clean solvents and rinse solutions in Millipore fluid contamination analysis. With a 250mL capacity and screw-cap nozzle, they ensure precise application during sample preparation, minimizing contamination in automotive and industrial testing environments.",
-    image: "/images/fluid-contamination/dispensing-bottles.png",
+    image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/dispensing-bottles.png",
     alt: "Dispensing Bottles for Fluid Contamination Analysis",
     rating: 4.5,
     reviews: 28,
@@ -1991,10 +1760,7 @@ const products = [
       "Lightweight and durable for field applications"
     ],
     images: [
-      "/product/DispensingBottles1.jpg",
-      "/product/DispensingBottles2.jpg",
-      "/product/DispensingBottles3.jpg",
-      "/product/DispensingBottles4.jpg"
+      "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/dispensing-bottles.png",
     ],
     video: "/product/Dispensing_Bottles.mp4",
     specifications: [
@@ -2009,32 +1775,21 @@ const products = [
       { part: "270-3811-800", config: "Dispensing Bottles, 250mL, 10/pk", voltage: "None" }
     ],
     consumables: [
-      {
-        title: "Replacement Screw-Cap Nozzle",
-        subtitle: "For dispensing bottles",
-        image: "/product/screwCapNozzle.png"
-      },
-      {
-        title: "Isopropanol",
-        subtitle: "2.5L for solvent dispensing",
-        image: "/product/isopropanol.png"
-      }
+
     ],
     literature: [
-      { title: "Dispensing Bottles User Guide", image: "/product/dispensing-bottles-guide.png" },
-      { title: "Fluid Contamination Analysis Kit Brochure", image: "/product/fluid-contamination-kit-brochure.png" },
-      { title: "Contamination Testing Guide", image: "/product/contamination-testing-guide.png" }
+      { title: "Dispensing Bottles User Guide", image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/dispensing-bottles.png" },
     ]
   },
 
   //Image Analyzers
   {
-    id: 54,
+    id: 32,
     categorySlug: "image-analyzer",
     name: "Grain Analysis (Intercept Method)",
     slug: "grain-analysis-intercept-method",
     description: "The Grain Analysis (Intercept Method) module automates grain size measurement in metallic and non-metallic materials using the intercept method per ASTM E112 and EN ISO 643. It counts grain boundary intersections along test lines to calculate the mean lineal intercept length and ASTM grain size number (G), ideal for quality control in metallography and materials science.",
-    image: "/images/image-analyzer/grain-analysis-intercept.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/grain-analysis.png",
     alt: "Grain Analysis Intercept Method Module",
     rating: 4.8,
     reviews: 45,
@@ -2058,12 +1813,8 @@ const products = [
       "Automated image preprocessing for enhanced grain boundary clarity"
     ],
     images: [
-      "/product/GrainAnalysisIntercept1.jpg",
-      "/product/GrainAnalysisIntercept2.jpg",
-      "/product/GrainAnalysisIntercept3.jpg",
-      "/product/GrainAnalysisIntercept4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/grain-analysis.png",
     ],
-    video: "/product/Grain_Analysis_Intercept.mp4",
     specifications: [
       { param: "Standards", value: "ASTM E112, EN ISO 643" },
       { param: "Grain Size Range", value: "G 00 to G 10" },
@@ -2074,12 +1825,12 @@ const products = [
     ]
   },
   {
-    id: 55,
+    id: 33,
     categorySlug: "image-analyzer",
     name: "Planimetry Method",
     slug: "planimetry-method",
     description: "The Planimetry Method module provides precise grain size measurement by counting grains within a known area, per ASTM E112 (Jeffries method). It calculates the number of grains per unit area (NA) to determine the ASTM grain size number (G), offering high accuracy for quality control in metallurgical analysis.",
-    image: "/images/image-analyzer/planimetry-method.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/planimetry-method.png",
     alt: "Planimetry Method Module",
     rating: 4.9,
     reviews: 50,
@@ -2103,12 +1854,8 @@ const products = [
       "Supports multiple image formats (JPEG, BMP, PNG)"
     ],
     images: [
-      "/product/PlanimetryMethod1.jpg",
-      "/product/PlanimetryMethod2.jpg",
-      "/product/PlanimetryMethod3.jpg",
-      "/product/PlanimetryMethod4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/planimetry-method.png"
     ],
-    video: "/product/Planimetry_Method.mp4",
     specifications: [
       { param: "Standards", value: "ASTM E112" },
       { param: "Grain Size Range", value: "G 00 to G 10" },
@@ -2119,12 +1866,12 @@ const products = [
     ]
   },
   {
-    id: 56,
+    id: 34,
     categorySlug: "image-analyzer",
     name: "Grain Size Distribution",
     slug: "grain-size-distribution",
     description: "The Grain Size Distribution module analyzes the distribution of grain sizes in metallic materials, providing area-weighted and number-frequency histograms. Compliant with ASTM E112 and E1181, it characterizes unimodal and duplex grain structures for materials science and quality control applications.",
-    image: "/images/image-analyzer/grain-size-distribution.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/grain-size-distribution.png",
     alt: "Grain Size Distribution Module",
     rating: 4.7,
     reviews: 42,
@@ -2148,12 +1895,8 @@ const products = [
       "Supports multiple fields for statistical robustness"
     ],
     images: [
-      "/product/GrainSizeDistribution1.jpg",
-      "/product/GrainSizeDistribution2.jpg",
-      "/product/GrainSizeDistribution3.jpg",
-      "/product/GrainSizeDistribution4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/grain-size-distribution.png"
     ],
-    video: "/product/Grain_Size_Distribution.mp4",
     specifications: [
       { param: "Standards", value: "ASTM E112, ASTM E1181" },
       { param: "Grain Size Range", value: "0.5 μm to 500 μm" },
@@ -2163,12 +1906,12 @@ const products = [
     ]
   },
   {
-    id: 57,
+    id: 35,
     categorySlug: "image-analyzer",
     name: "Phase Analysis",
     slug: "phase-analysis",
     description: "The Phase Analysis module quantifies the volume fraction and distribution of phases in multiphase metallic materials, such as ferrite, pearlite, and austenite. Compliant with ASTM E562 and E1245, it supports automated phase segmentation and area ratio measurements for quality control and research.",
-    image: "/images/image-analyzer/phase-analysis.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/phase-analysis.png",
     alt: "Phase Analysis Module",
     rating: 4.8,
     reviews: 48,
@@ -2192,12 +1935,8 @@ const products = [
       "Integrates with 4K digital microscopes for high-resolution analysis"
     ],
     images: [
-      "/product/PhaseAnalysis1.jpg",
-      "/product/PhaseAnalysis2.jpg",
-      "/product/PhaseAnalysis3.jpg",
-      "/product/PhaseAnalysis4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/phase-analysis.png"
     ],
-    video: "/product/Phase_Analysis.mp4",
     specifications: [
       { param: "Standards", value: "ASTM E562, ASTM E1245" },
       { param: "Phase Types", value: "Ferrite, Pearlite, Austenite, Graphite, etc." },
@@ -2207,12 +1946,12 @@ const products = [
     ]
   },
   {
-    id: 58,
+    id: 36,
     categorySlug: "image-analyzer",
     name: "Nodularity Analysis",
     slug: "nodularity-analysis",
     description: "The Nodularity Analysis module evaluates graphite nodularity in cast iron per ASTM A247 and ISO 16112. It quantifies nodule count, area, and density, classifying nodules by size (1 to 8) for quality control in automotive and industrial castings.",
-    image: "/images/image-analyzer/nodularity-analysis.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/nodularity-analysis.png",
     alt: "Nodularity Analysis Module",
     rating: 4.7,
     reviews: 40,
@@ -2236,12 +1975,8 @@ const products = [
       "High-resolution imaging for accurate nodule detection"
     ],
     images: [
-      "/product/NodularityAnalysis1.jpg",
-      "/product/NodularityAnalysis2.jpg",
-      "/product/NodularityAnalysis3.jpg",
-      "/product/NodularityAnalysis4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/nodularity-analysis.png"
     ],
-    video: "/product/Nodularity_Analysis.mp4",
     specifications: [
       { param: "Standards", value: "ASTM A247, ISO 16112" },
       { param: "Nodule Size Range", value: "5 μm to 500 μm" },
@@ -2251,12 +1986,12 @@ const products = [
     ]
   },
   {
-    id: 59,
+    id: 37,
     categorySlug: "image-analyzer",
     name: "Graphite",
     slug: "graphite",
     description: "The Graphite module analyzes graphite morphology in cast iron, including flake, nodular, and vermicular forms, per ASTM A247 and ISO 16112. It measures shape, size, and distribution, supporting quality control in automotive and heavy machinery castings.",
-    image: "/images/image-analyzer/graphite.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/graphite.png",
     alt: "Graphite Morphology Analysis Module",
     rating: 4.8,
     reviews: 44,
@@ -2280,12 +2015,8 @@ const products = [
       "Live view for real-time morphology assessment"
     ],
     images: [
-      "/product/Graphite1.jpg",
-      "/product/Graphite2.jpg",
-      "/product/Graphite3.jpg",
-      "/product/Graphite4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/graphite.png"
     ],
-    video: "/product/Graphite.mp4",
     specifications: [
       { param: "Standards", value: "ASTM A247, ISO 16112" },
       { param: "Graphite Size Range", value: "5 μm to 500 μm" },
@@ -2295,56 +2026,12 @@ const products = [
     ]
   },
   {
-    id: 59,
-    categorySlug: "image-analyzer",
-    name: "Graphite",
-    slug: "graphite",
-    description: "The Graphite module analyzes graphite morphology in cast iron, including flake, nodular, and vermicular forms, per ASTM A247 and ISO 16112. It measures shape, size, and distribution, supporting quality control in automotive and heavy machinery castings.",
-    image: "/images/image-analyzer/graphite.png",
-    alt: "Graphite Morphology Analysis Module",
-    rating: 4.8,
-    reviews: 44,
-    tag: "Metallographic Analysis",
-    detail: "Comprehensive graphite morphology analysis",
-    apiCall: "/api/image-analyzer/graphite",
-    features: [
-      "Analyzes graphite morphology (flake, nodular, vermicular) per ASTM A247 and ISO 16112",
-      "Measures graphite size, shape, and distribution",
-      "Automated detection of graphite forms using image processing",
-      "Supports cast iron microstructure analysis",
-      "Generates detailed morphology reports with histograms",
-      "Compatible with 4K digital microscopes",
-      "Integrates with phase analysis for comprehensive reporting"
-    ],
-    additionalFeatures: [
-      "User-defined shape factor thresholds for graphite classification",
-      "Handles complex microstructures with multiple graphite forms",
-      "Exports data to spreadsheets and graphical formats",
-      "Supports multiple fields for statistical accuracy",
-      "Live view for real-time morphology assessment"
-    ],
-    images: [
-      "/product/Graphite1.jpg",
-      "/product/Graphite2.jpg",
-      "/product/Graphite3.jpg",
-      "/product/Graphite4.jpg"
-    ],
-    video: "/product/Graphite.mp4",
-    specifications: [
-      { param: "Standards", value: "ASTM A247, ISO 16112" },
-      { param: "Graphite Size Range", value: "5 μm to 500 μm" },
-      { param: "Resolution", value: "0.1 μm/pixel minimum" },
-      { param: "Output", value: "Size, Shape Factor, Distribution, Histograms" },
-      { param: "Image Formats", value: "JPEG, BMP, PNG" }
-    ]
-  },
-  {
-    id: 60,
+    id: 38,
     categorySlug: "image-analyzer",
     name: "B Type Flake Separation",
     slug: "b-type-flake-separation",
     description: "The B Type Flake Separation module identifies and quantifies Type B graphite flakes (rosette patterns) in cast iron per ASTM A247. It isolates B-type flakes from other graphite forms, measuring their size and distribution for quality control in cast iron production.",
-    image: "/images/image-analyzer/b-type-flake-separation.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/b-type-flake-separation.png",
     alt: "B Type Flake Separation Module",
     rating: 4.6,
     reviews: 38,
@@ -2368,12 +2055,8 @@ const products = [
       "High-resolution imaging for precise flake detection"
     ],
     images: [
-      "/product/BTypeFlakeSeparation1.jpg",
-      "/product/BTypeFlakeSeparation2.jpg",
-      "/product/BTypeFlakeSeparation3.jpg",
-      "/product/BTypeFlakeSeparation4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/b-type-flake-separation.png"
     ],
-    video: "/product/B_Type_Flake_Separation.mp4",
     specifications: [
       { param: "Standards", value: "ASTM A247" },
       { param: "Flake Size Range", value: "5 μm to 500 μm" },
@@ -2383,12 +2066,12 @@ const products = [
     ]
   },
   {
-    id: 61,
+    id: 39,
     categorySlug: "image-analyzer",
     name: "Point Counter",
     slug: "point-counter",
     description: "The Point Counter module performs manual and automated point counting for phase fraction and inclusion analysis per ASTM E562 and E45. It overlays a grid on microscopic images to quantify phase or inclusion content, ideal for metallographic quality control.",
-    image: "/images/image-analyzer/point-counter.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/point-counter.png",
     alt: "Point Counter Module",
     rating: 4.7,
     reviews: 36,
@@ -2412,12 +2095,8 @@ const products = [
       "Integrates with phase analysis for comprehensive reporting"
     ],
     images: [
-      "/product/PointCounter1.jpg",
-      "/product/PointCounter2.jpg",
-      "/product/PointCounter3.jpg",
-      "/product/PointCounter4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/point-counter.png"
     ],
-    video: "/product/Point_Counter.mp4",
     specifications: [
       { param: "Standards", value: "ASTM E562, ASTM E45" },
       { param: "Grid Size", value: "User-defined, 10x10 to 100x100 points" },
@@ -2427,12 +2106,12 @@ const products = [
     ]
   },
   {
-    id: 62,
+    id: 40,
     categorySlug: "image-analyzer",
     name: "Linear Measurement",
     slug: "linear-measurement",
     description: "The Linear Measurement module enables precise measurement of distances, lengths, and thicknesses in microscopic images. It supports manual and automated measurements for features like grain boundaries, cracks, and coatings, ideal for metallographic and defect analysis.",
-    image: "/images/image-analyzer/linear-measurement.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/linear-measurement.png",
     alt: "Linear Measurement Module",
     rating: 4.6,
     reviews: 34,
@@ -2456,12 +2135,8 @@ const products = [
       "Integrates with annotation for feature labeling"
     ],
     images: [
-      "/product/LinearMeasurement1.jpg",
-      "/product/LinearMeasurement2.jpg",
-      "/product/LinearMeasurement3.jpg",
-      "/product/LinearMeasurement4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/linear-measurement.png",
     ],
-    video: "/product/Linear_Measurement.mp4",
     specifications: [
       { param: "Standards", value: "ASTM E112, ASTM E45" },
       { param: "Measurement Range", value: "0.1 μm to 10 mm" },
@@ -2471,12 +2146,12 @@ const products = [
     ]
   },
   {
-    id: 63,
+    id: 41,
     categorySlug: "image-analyzer",
     name: "Inclusion",
     slug: "inclusion",
     description: "The Inclusion module detects and classifies non-metallic inclusions in steel per ASTM E45 and ISO 4967. It categorizes inclusions by type (A, B, C, D) and thickness (thin/thick), supporting quality control in steel production and automotive applications.",
-    image: "/images/image-analyzer/inclusion.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/inclusion.png",
     alt: "Inclusion Analysis Module",
     rating: 4.8,
     reviews: 46,
@@ -2500,12 +2175,8 @@ const products = [
       "Integrates with 4K digital microscopes for high-resolution imaging"
     ],
     images: [
-      "/product/Inclusion1.jpg",
-      "/product/Inclusion2.jpg",
-      "/product/Inclusion3.jpg",
-      "/product/Inclusion4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/linear-measurement.png"
     ],
-    video: "/product/Inclusion.mp4",
     specifications: [
       { param: "Standards", value: "ASTM E45, ISO 4967" },
       { param: "Inclusion Size Range", value: "1 μm to 500 μm" },
@@ -2515,12 +2186,12 @@ const products = [
     ]
   },
   {
-    id: 64,
+    id: 42,
     categorySlug: "image-analyzer",
     name: "Welding Analysis Setup",
     slug: "welding-analysis-setup",
     description: "The Welding Analysis Setup module evaluates weld imperfections, such as cracks, porosity, and inclusions, in metallic welds. Compliant with ISO 5817 and AWS D1.1, it quantifies weld quality for automotive, aerospace, and structural applications.",
-    image: "/images/image-analyzer/welding-analysis-setup.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/welding-analysis-setup.png",
     alt: "Welding Analysis Setup Module",
     rating: 4.7,
     reviews: 41,
@@ -2544,12 +2215,8 @@ const products = [
       "Integrates with porosity and inclusion modules"
     ],
     images: [
-      "/product/WeldingAnalysisSetup1.jpg",
-      "/product/WeldingAnalysisSetup2.jpg",
-      "/product/WeldingAnalysisSetup3.jpg",
-      "/product/WeldingAnalysisSetup4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/welding-analysis-setup.png"
     ],
-    video: "/product/Welding_Analysis_Setup.mp4",
     specifications: [
       { param: "Standards", value: "ISO 5817, AWS D1.1" },
       { param: "Defect Size Range", value: "1 μm to 10 mm" },
@@ -2559,12 +2226,12 @@ const products = [
     ]
   },
   {
-    id: 65,
+    id: 44,
     categorySlug: "image-analyzer",
     name: "Porosity Estimation",
     slug: "porosity-estimation",
     description: "The Porosity Estimation module detects and quantifies porosity in castings and welds per BDG P 203 and ASTM E1245. It measures pore size, count, and distribution, supporting quality control in automotive and aerospace manufacturing.",
-    image: "/images/image-analyzer/porosity-estimation.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/porosity-estimation.png",
     alt: "Porosity Estimation Module",
     rating: 4.8,
     reviews: 43,
@@ -2588,12 +2255,8 @@ const products = [
       "Integrates with welding analysis for comprehensive defect reporting"
     ],
     images: [
-      "/product/PorosityEstimation1.jpg",
-      "/product/PorosityEstimation2.jpg",
-      "/product/PorosityEstimation3.jpg",
-      "/product/PorosityEstimation4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/porosity-estimation.png"
     ],
-    video: "/product/Porosity_Estimation.mp4",
     specifications: [
       { param: "Standards", value: "BDG P 203, ASTM E1245" },
       { param: "Pore Size Range", value: "1 μm to 10 mm" },
@@ -2603,12 +2266,12 @@ const products = [
     ]
   },
   {
-    id: 66,
+    id: 45,
     categorySlug: "image-analyzer",
     name: "Annotation",
     slug: "annotation",
     description: "The Annotation module enables labeling and markup of microscopic images for documentation and reporting. It supports text, arrows, shapes, and measurements, enhancing communication of metallographic analysis results in quality control and research.",
-    image: "/images/image-analyzer/annotation.png",
+    image: "/microscope-and-image-analyzer/image-analyzer/annotation.png",
     alt: "Annotation Module",
     rating: 4.6,
     reviews: 39,
@@ -2632,12 +2295,8 @@ const products = [
       "Integrates with reporting tools for automated documentation"
     ],
     images: [
-      "/product/Annotation1.jpg",
-      "/product/Annotation2.jpg",
-      "/product/Annotation3.jpg",
-      "/product/Annotation4.jpg"
+      "/microscope-and-image-analyzer/image-analyzer/annotation.png"
     ],
-    video: "/product/Annotation.mp4",
     specifications: [
       { param: "Annotation Types", value: "Text, Arrows, Shapes, Measurements" },
       { param: "Resolution", value: "0.1 μm/pixel minimum" },
@@ -2649,12 +2308,12 @@ const products = [
 
   // Automatic Micro Hardness Tester
   {
-    id: 26,
+    id: 46,
     categorySlug: "automatic-micro-hardness-tester",
     name: "Fully Automatic MVH-V",
     slug: "fully-automatic-mvh-v",
     description: "The Fully Automatic MVH-V is a state-of-the-art micro Vickers hardness tester designed for precise and automated hardness testing. Featuring motorized X-Y and Z motion, autofocus, auto reading, and automatic effective case graph generation, it supports a load range of 1g to 2000g (3000g optional). With manual override for all automation and an optional overview camera for component imaging and hardness profile direction, it is ideal for metallographic laboratories and quality control.",
-    image: "/images/automatic-micro-hardness-tester/mvh-v.png",
+    image: "/micro-hardness-tester/mvh-v.png",
     alt: "Fully Automatic MVH-V Micro Hardness Tester",
     rating: 4.9,
     reviews: 48,
@@ -2679,10 +2338,11 @@ const products = [
       "High-precision motorized XY stage with 2 µm positioning accuracy"
     ],
     images: [
-      "/product/MVHV1.jpg",
-      "/product/MVHV2.jpg",
-      "/product/MVHV3.jpg",
-      "/product/MVHV4.jpg"
+      "/micro-hardness-tester/mvh-v.png",
+      "/micro-hardness-tester/mvh-1000.png",
+      "/micro-hardness-tester/degree-fixture-1.png",
+      "/micro-hardness-tester/degree-fixture-2.png",
+      "/micro-hardness-tester/degree-fixture-3.png",
     ],
     video: "/product/MVH_V.mp4",
     specifications: [
@@ -2704,37 +2364,21 @@ const products = [
       { part: "160-2711-102", load: "1g to 3000g with Overview Camera", voltage: "220V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "Vickers Indenter",
-        subtitle: "For micro hardness testing",
-        image: "/product/vickersIndenterMVHV.png"
-      },
-      {
-        title: "Knoop Indenter",
-        subtitle: "For specialized hardness testing",
-        image: "/product/knoopIndenterMVHV.png"
-      },
-      {
-        title: "Test Blocks",
-        subtitle: "700HV for calibration",
-        image: "/product/testBlocksMVHV.png"
-      }
+
     ],
     literature: [
-      { title: "Fully Automatic MVH-V User Manual", image: "/product/mvh-v-manual.png" },
-      { title: "Fully Automatic MVH-V Brochure", image: "/product/mvh-v-brochure.png" },
-      { title: "Micro Hardness Testing Guide", image: "/product/micro-hardness-guide.png" }
+      { title: "Fully Automatic MVH-V User Manual", image: "/micro-hardness-tester/mvh-v.png" },
     ]
   },
 
   //Micro / Macro Hardness Tester Load Cell Based
   {
-    id: 27,
+    id: 47,
     categorySlug: "micro-macro-hardness-tester-load-cell",
     name: "MVH-I C",
     slug: "mvh-i-c",
     description: "The MVH-I C is a versatile micro/macro hardness tester with load cell-based technology and closed-loop control, offering both manual and computerized operation. With a load range from 10gf to 30kgf, optional autofocus, and an optional auto XY stage, it is designed for precise Vickers and Knoop hardness testing in metallographic and quality control applications.",
-    image: "/images/micro-macro-hardness-tester-load-cell/mvh-i-c.png",
+    image: "/micro-hardness-tester/mvh-ic.png",
     alt: "MVH-I C Micro Macro Hardness Tester Load Cell Based",
     rating: 4.8,
     reviews: 42,
@@ -2759,10 +2403,10 @@ const products = [
       "Integrated safety features including overload protection"
     ],
     images: [
-      "/product/MVHIC1.jpg",
-      "/product/MVHIC2.jpg",
-      "/product/MVHIC3.jpg",
-      "/product/MVHIC4.jpg"
+      "/micro-hardness-tester/mvh-ic.png",
+      "/micro-hardness-tester/mvh-ic-setup.png",
+      "/micro-hardness-tester/mvh-ic-1.png",
+      "/micro-hardness-tester/mvh-ic-2.png",
     ],
     video: "/product/MVH_I_C.mp4",
     specifications: [
@@ -2783,37 +2427,21 @@ const products = [
       { part: "170-2811-202", config: "Computerized with Autofocus and Auto XY Stage", voltage: "220V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "Vickers Indenter",
-        subtitle: "For micro and macro hardness testing",
-        image: "/product/vickersIndenterMVHIC.png"
-      },
-      {
-        title: "Knoop Indenter",
-        subtitle: "For specialized hardness testing",
-        image: "/product/knoopIndenterMVHIC.png"
-      },
-      {
-        title: "Test Blocks",
-        subtitle: "700HV and 200HV for calibration",
-        image: "/product/testBlocksMVHIC.png"
-      }
+
     ],
     literature: [
-      { title: "MVH-I C User Manual", image: "/product/mvh-i-c-manual.png" },
-      { title: "MVH-I C Brochure", image: "/product/mvh-i-c-brochure.png" },
-      { title: "Micro and Macro Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+      { title: "MVH-I C User Manual", image: "/micro-hardness-tester/mvh-ic.png" },
     ]
   },
 
   //Other Machines
   {
-    id: 28,
+    id: 48,
     categorySlug: "electro-polishing-machine",
     name: "Electropol",
     slug: "electropol",
     description: "The Electropol is a high-efficiency electropolishing machine designed for rapid surface finishing, capable of polishing metal parts within 1 minute. Ideal for gold, silver, stainless steel, and other metals, it delivers a smooth, mirror-like finish with enhanced corrosion resistance and minimal material loss, perfect for jewelry, medical, and industrial applications.",
-    image: "/images/electro-polishing-machines/electropol.png",
+    image: "/other-machines/electro-polishing-machine/electropol.png",
     alt: "Electropol Electro Polishing Machine",
     rating: 4.7,
     reviews: 38,
@@ -2837,10 +2465,13 @@ const products = [
       "Optional racking system for complex geometries"
     ],
     images: [
-      "/product/Electropol1.jpg",
-      "/product/Electropol2.jpg",
-      "/product/Electropol3.jpg",
-      "/product/Electropol4.jpg"
+      "/other-machines/electro-polishing-machine/electropol.png",
+      "/other-machines/electro-polishing-machine/electropol1.png",
+      "/other-machines/electro-polishing-machine/electropol2.png",
+      "/other-machines/electro-polishing-machine/electropol3.png",
+      "/other-machines/electro-polishing-machine/electropol4.png",
+      "/other-machines/electro-polishing-machine/electropol5.png",
+      "/other-machines/electro-polishing-machine/electropol6.png",
     ],
     video: "/product/Electropol.mp4",
     specifications: [
@@ -2859,35 +2490,19 @@ const products = [
       { part: "180-2911-302", config: "Enhanced, 5L Electrolyte Tank with Racking System", voltage: "220V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "Electrolyte Solutions",
-        subtitle: "For gold, silver, stainless steel, and copper",
-        image: "/product/electrolyteSolutionsElectropol.png"
-      },
-      {
-        title: "Anode/Cathode Sets",
-        subtitle: "For precise electrochemical polishing",
-        image: "/product/anodeCathodeSetsElectropol.png"
-      },
-      {
-        title: "Polishing Racks",
-        subtitle: "For small and complex parts",
-        image: "/product/polishingRacksElectropol.png"
-      }
+
     ],
     literature: [
-      { title: "Electropol User Manual", image: "/product/electropol-manual.png" },
-      { title: "Electropol Brochure", image: "/product/electropol-brochure.png" },
-      { title: "Electropolishing Guide", image: "/product/electropolishing-guide.png" }
+      { title: "Electropol User Manual", image: "/other-machines/electro-polishing-machine/electropol.png" },
     ]
   },
   {
-    id: 29,
+    id: 49,
     categorySlug: "in-situ-metallography-kit",
     name: "Portpol",
     slug: "portpol",
     description: "The Portpol is a portable electro polisher designed for in-situ metallographic sample preparation in the field. Featuring a pen-type probe for precise polishing and etching, a compact 0.5L electrolyte reservoir, and battery-powered operation, it enables rapid surface preparation for microstructural analysis in applications such as power plants, pipelines, and weld inspections.",
-    image: "/images/in-situ-metallography-kits/portpol.png",
+    image: "/other-machines/in-situ-metallography-kit/portpol.png",
     alt: "Portpol Portable Electro Polisher",
     rating: 4.7,
     reviews: 35,
@@ -2911,10 +2526,7 @@ const products = [
       "Portable carrying case for field transport"
     ],
     images: [
-      "/product/Portpol1.jpg",
-      "/product/Portpol2.jpg",
-      "/product/Portpol3.jpg",
-      "/product/Portpol4.jpg"
+      "/other-machines/in-situ-metallography-kit/portpol.png",
     ],
     video: "/product/Portpol.mp4",
     specifications: [
@@ -2932,35 +2544,19 @@ const products = [
       { part: "190-3011-500", config: "Portpol with 0.5L Reservoir and Battery", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "Electrolyte Solutions",
-        subtitle: "For stainless steel, mild steel, and aluminum",
-        image: "/product/electrolyteSolutionsPortpol.png"
-      },
-      {
-        title: "Swabbing Pads",
-        subtitle: "For pen-type probe",
-        image: "/product/swabbingPadsPortpol.png"
-      },
-      {
-        title: "Replacement Probes",
-        subtitle: "For electropolishing and etching",
-        image: "/product/replacementProbesPortpol.png"
-      }
+
     ],
     literature: [
-      { title: "Portpol User Manual", image: "/product/portpol-manual.png" },
-      { title: "Portpol Brochure", image: "/product/portpol-brochure.png" },
-      { title: "In-situ Metallography Guide", image: "/product/in-situ-metallography-guide.png" }
+      { title: "Portpol User Manual", image: "/other-machines/in-situ-metallography-kit/portpol.png" },
     ]
   },
   {
-    id: 30,
+    id: 50,
     categorySlug: "in-situ-metallography-kit",
     name: "Portable Microscope Image Analyzer",
     slug: "portable-microscope-image-analyzer",
     description: "The Portable Microscope Image Analyzer is a compact, battery-powered device for in-situ metallographic analysis, offering up to 800x magnification and real-time image capture. Equipped with a 3.2MP CMOS camera and USB-connected image analysis software, it enables on-site microstructure examination for applications like power plants, pipelines, and weld inspections.",
-    image: "/images/in-situ-metallography-kits/portable-microscope.png",
+    image: "/other-machines/in-situ-metallography-kit/portable-microscope-image-analyzer.png",
     alt: "Portable Microscope Image Analyzer",
     rating: 4.8,
     reviews: 38,
@@ -2984,10 +2580,7 @@ const products = [
       "Anti-vibration base for stable field operation"
     ],
     images: [
-      "/product/PortableMicroscope1.jpg",
-      "/product/PortableMicroscope2.jpg",
-      "/product/PortableMicroscope3.jpg",
-      "/product/PortableMicroscope4.jpg"
+      "/other-machines/in-situ-metallography-kit/portable-microscope-image-analyzer.png"
     ],
     video: "/product/Portable_Microscope_Image_Analyzer.mp4",
     specifications: [
@@ -3004,35 +2597,19 @@ const products = [
       { part: "190-3011-600", config: "Portable Microscope with 3.2MP Camera", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "Objective Lenses",
-        subtitle: "10x, 20x, 40x for varying magnification",
-        image: "/product/objectiveLensesMicroscope.png"
-      },
-      {
-        title: "Calibration Slides",
-        subtitle: "For microscope calibration",
-        image: "/product/calibrationSlidesMicroscope.png"
-      },
-      {
-        title: "Cleaning Kit",
-        subtitle: "For lens and camera maintenance",
-        image: "/product/cleaningKitMicroscope.png"
-      }
+
     ],
     literature: [
-      { title: "Portable Microscope Image Analyzer User Manual", image: "/product/portable-microscope-manual.png" },
-      { title: "Portable Microscope Image Analyzer Brochure", image: "/product/portable-microscope-brochure.png" },
-      { title: "In-situ Metallography Guide", image: "/product/in-situ-metallography-guide.png" }
+      { title: "Portable Microscope Image Analyzer User Manual", image: "/other-machines/in-situ-metallography-kit/portable-microscope-image-analyzer.png" },
     ]
   },
   {
-    id: 31,
+    id: 51,
     categorySlug: "in-situ-metallography-kit",
     name: "Replica",
     slug: "replica",
     description: "The Replica is a non-destructive surface replication system for in-situ metallographic analysis, enabling high-precision 3D surface replication with 0.1µm accuracy. Using cellulose acetate films and SiliKem compound, it captures detailed microstructures for off-site analysis, ideal for power plants, pipelines, and weld inspections.",
-    image: "/images/in-situ-metallography-kits/replica.png",
+    image: "/other-machines/in-situ-metallography-kit/replica.png",
     alt: "Replica Surface Replication System",
     rating: 4.6,
     reviews: 32,
@@ -3056,10 +2633,7 @@ const products = [
       "Compliant with ASTM E1351 standards for replication"
     ],
     images: [
-      "/product/Replica1.jpg",
-      "/product/Replica2.jpg",
-      "/product/Replica3.jpg",
-      "/product/Replica4.jpg"
+      "/other-machines/in-situ-metallography-kit/replica.png",
     ],
     video: "/product/Replica.mp4",
     specifications: [
@@ -3075,35 +2649,19 @@ const products = [
       { part: "190-3011-700", config: "Replica Kit with Cellulose Acetate and SiliKem", voltage: "None" }
     ],
     consumables: [
-      {
-        title: "Cellulose Acetate Film",
-        subtitle: "35, 50, 75, 180 µm for surface replication",
-        image: "/product/celluloseAcetateFilm.png"
-      },
-      {
-        title: "SiliKem Replication Compound",
-        subtitle: "0.1µm accuracy for 3D replicas",
-        image: "/product/siliKemCompound.png"
-      },
-      {
-        title: "Backing Slides",
-        subtitle: "For replica mounting and storage",
-        image: "/product/backingSlidesReplica.png"
-      }
+
     ],
     literature: [
-      { title: "Replica User Manual", image: "/product/replica-manual.png" },
-      { title: "Replica Brochure", image: "/product/replica-brochure.png" },
-      { title: "In-situ Metallography Guide", image: "/product/in-situ-metallography-guide.png" }
+      { title: "Replica User Manual", image: "/other-machines/in-situ-metallography-kit/replica.png" },
     ]
   },
   {
-    id: 32,
+    id: 52,
     categorySlug: "in-situ-metallography-kit",
     name: "Portgrinder",
     slug: "portgrinder",
     description: "The Portgrinder is a portable grinding tool designed for in-situ metallographic sample preparation. Featuring a high-torque motor, variable speed from 1000 to 25,000 rpm, and 38mm PSA discs, it offers flexible and efficient grinding for field applications such as power plants, pipelines, and weld inspections.",
-    image: "/images/in-situ-metallography-kits/portgrinder.png",
+    image: "/other-machines/in-situ-metallography-kit/portgrinder.png",
     alt: "Portgrinder Portable Grinder",
     rating: 4.7,
     reviews: 36,
@@ -3127,10 +2685,7 @@ const products = [
       "Integrated dust collection port for cleaner operation"
     ],
     images: [
-      "/product/Portgrinder1.jpg",
-      "/product/Portgrinder2.jpg",
-      "/product/Portgrinder3.jpg",
-      "/product/Portgrinder4.jpg"
+      "/other-machines/in-situ-metallography-kit/portgrinder.png"
     ],
     video: "/product/Portgrinder.mp4",
     specifications: [
@@ -3146,35 +2701,19 @@ const products = [
       { part: "190-3011-800", config: "Portgrinder with 38mm PSA Discs and Battery", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "PSA Grinding Discs",
-        subtitle: "38mm for coarse and fine grinding",
-        image: "/product/psaGrindingDiscsPortgrinder.png"
-      },
-      {
-        title: "Polishing Pads",
-        subtitle: "38mm for intermediate polishing",
-        image: "/product/polishingPadsPortgrinder.png"
-      },
-      {
-        title: "Dust Collection Filters",
-        subtitle: "For cleaner operation",
-        image: "/product/dustCollectionFiltersPortgrinder.png"
-      }
+
     ],
     literature: [
-      { title: "Portgrinder User Manual", image: "/product/portgrinder-manual.png" },
-      { title: "Portgrinder Brochure", image: "/product/portgrinder-brochure.png" },
-      { title: "In-situ Metallography Guide", image: "/product/in-situ-metallography-guide.png" }
+      { title: "Portgrinder User Manual", image: "/other-machines/in-situ-metallography-kit/portgrinder.png" },
     ]
   },
   {
-    "id": 72,
+    "id": 53,
     "categorySlug": "jominy-end-quench-hardenability-setup",
     "name": "Hardness Fixture and Chiller",
     "slug": "hardness-fixture-and-chiller",
     "description": "The Hardness Fixture and Chiller is an advanced system for Jominy end quench hardenability testing, featuring a motorized fixture for successive hardness indentations and a fully automatic hardness tester with a programmable stage. Designed for ASTM A255 and ISO 642 compliance, it ensures precise positioning and rapid cooling for accurate hardenability evaluation of steels, ideal for metallurgical labs and steel mills.",
-    "image": "/images/jominy-end-quench/hardness-fixture-and-chiller.png",
+    "image": "/other-machines/jominy-end-quench-hardenability-setup/hardness-fixture-and-chiller.png",
     "alt": "Hardness Fixture and Chiller for Jominy End Quench Testing",
     "rating": 4.9,
     "reviews": 40,
@@ -3198,10 +2737,10 @@ const products = [
       "Anti-vibration base for stable hardness testing in industrial environments"
     ],
     "images": [
-      "/product/HardnessFixtureAndChiller1.jpg",
-      "/product/HardnessFixtureAndChiller2.jpg",
-      "/product/HardnessFixtureAndChiller3.jpg",
-      "/product/HardnessFixtureAndChiller4.jpg"
+      "/other-machines/jominy-end-quench-hardenability-setup/hardness-fixture-and-chiller.png",
+      "/other-machines/jominy-end-quench-hardenability-setup/hardness-fixture-and-chiller-1.png",
+      "/other-machines/jominy-end-quench-hardenability-setup/hardness-fixture-and-chiller-2.png",
+      "/other-machines/jominy-end-quench-hardenability-setup/hardness-fixture-and-chiller-3.png",
     ],
     "video": "/product/Hardness_Fixture_And_Chiller.mp4",
     "specifications": [
@@ -3220,35 +2759,19 @@ const products = [
       { "part": "290-3811-600", "config": "Hardness Fixture and Chiller, Automatic Jominy Tester", "voltage": "220-240V AC" }
     ],
     "consumables": [
-      {
-        "title": "Diamond Indenter",
-        "subtitle": "For Vickers hardness testing",
-        "image": "/product/diamondIndenter.png"
-      },
-      {
-        "title": "Rockwell C Indenter",
-        "subtitle": "120° diamond cone for HRC testing",
-        "image": "/product/rockwellIndenter.png"
-      },
-      {
-        "title": "Jominy Specimen Holder",
-        "subtitle": "For 25 mm x 100 mm bars",
-        "image": "/product/specimenHolder.png"
-      }
+
     ],
     "literature": [
-      { "title": "Hardness Fixture and Chiller User Manual", "image": "/product/hardness-fixture-manual.png" },
-      { "title": "Jominy End Quench Testing Guide", "image": "/product/jominy-testing-guide.png" },
-      { "title": "Hardenability Standards Brochure", "image": "/product/hardenability-brochure.png" }
+      { "title": "Hardness Fixture and Chiller User Manual", "image": "/other-machines/jominy-end-quench-hardenability-setup/hardness-fixture-and-chiller.png" },
     ]
   },
   {
-    "id": 73,
+    "id": 54,
     "categorySlug": "cnc-tensile-sample-preparation-machines",
     "name": "CNC Tensile Sample Preparation Machines",
     "slug": "cnc-tensile-sample-preparation-machines",
     "description": "The CNC Tensile Sample Preparation Machines are advanced, user-friendly systems designed for precise and repeatable preparation of flat and round tensile specimens, including threaded and Jominy samples. Featuring powerful CNC programs, high-speed milling, and a modular design, they support ASTM E8, ISO 6892, and ASTM A255 standards, offering both floor and tabletop models for metallurgical labs and high-volume manufacturing facilities.",
-    "image": "/images/cnc-tensile-sample-preparation/cnc-tensile-sample-preparation-machines.png",
+    "image": "/other-machines/cnc-tensile-sample-preparation-machines/cnc-tensile-sample-preparation-machines.png",
     "alt": "CNC Tensile Sample Preparation Machines for Tensile and Jominy Testing",
     "rating": 4.9,
     "reviews": 60,
@@ -3272,10 +2795,7 @@ const products = [
       "Vibration-dampening granite frame (floor model) or cast iron frame (tabletop) for stability"
     ],
     "images": [
-      "/product/CNCTensileSamplePreparation1.jpg",
-      "/product/CNCTensileSamplePreparation2.jpg",
-      "/product/CNCTensileSamplePreparation3.jpg",
-      "/product/CNCTensileSamplePreparation4.jpg"
+      "/other-machines/cnc-tensile-sample-preparation-machines/cnc-tensile-sample-preparation-machines.png",
     ],
     "video": "/product/CNC_Tensile_Sample_Preparation.mp4",
     "specifications": [
@@ -3297,35 +2817,19 @@ const products = [
       { "part": "290-3811-701", "config": "CNC Tensile Sample Preparation Machine, Floor Model with Jominy Module", "voltage": "220-240V AC" }
     ],
     "consumables": [
-      {
-        "title": "End Mills",
-        "subtitle": "Carbide end mills for tensile and Jominy samples",
-        "image": "/product/endMills.png"
-      },
-      {
-        "title": "Clamping Fixtures",
-        "subtitle": "Triple-stack and Jominy-specific fixtures",
-        "image": "/product/clampingFixtures.png"
-      },
-      {
-        "title": "Cutting Fluid",
-        "subtitle": "500 mL for spindle cooling and milling",
-        "image": "/product/cuttingFluid.png"
-      }
+
     ],
     "literature": [
-      { "title": "CNC Tensile Sample Preparation Machine User Manual", "image": "/product/cnc-tensile-manual.png" },
-      { "title": "Tensile and Jominy Testing Guide", "image": "/product/tensile-jominy-guide.png" },
-      { "title": "CNC Sample Preparation Brochure", "image": "/product/cnc-sample-preparation-brochure.png" }
+      { "title": "CNC Tensile Sample Preparation Machine User Manual", "image": "/other-machines/cnc-tensile-sample-preparation-machines/cnc-tensile-sample-preparation-machines.png" },
     ]
   },
   {
-    "id": 74,
+    "id": 55,
     "categorySlug": "transparent-mould-making-system",
     "name": "Transmount",
     "slug": "transmount",
     "description": "The Transmount is a high-performance, transparent silicone mould making system designed for precision casting of complex parts. Its platinum-based, translucent rubber with a 1:1 mixing ratio ensures bubble-free moulds with exceptional detail reproduction, ideal for resin, plaster, concrete, and low-melt metal casting in metallurgical, artistic, and industrial applications.",
-    "image": "/images/transparent-mould-making/transmount.png",
+    "image": "/other-machines/transparent-mould-making-system/transmount.png",
     "alt": "Transmount Transparent Silicone Mould Making System",
     "rating": 4.8,
     "reviews": 45,
@@ -3349,10 +2853,9 @@ const products = [
       "Integrated release agent compatibility for easy demoulding of complex shapes"
     ],
     "images": [
-      "/product/Transmount1.jpg",
-      "/product/Transmount2.jpg",
-      "/product/Transmount3.jpg",
-      "/product/Transmount4.jpg"
+      "/other-machines/transparent-mould-making-system/transmount.png",
+      "/other-machines/transparent-mould-making-system/transmount2.png",
+      "/other-machines/transparent-mould-making-system/transmount3.png",
     ],
     "video": "/product/Transmount.mp4",
     "specifications": [
@@ -3372,39 +2875,21 @@ const products = [
       { "part": "290-3811-801", "config": "Transmount with Food-Grade Option, 1kg", "voltage": "None" }
     ],
     "consumables": [
-      {
-        "title": "Silicone Pigments",
-        "subtitle": "8 colors, 10mL each for custom mould coloring",
-        "image": "/product/siliconePigments.png"
-      },
-      {
-        "title": "Release Agent",
-        "subtitle": "500mL for easy demoulding",
-        "image": "/product/releaseAgent.png"
-      },
-      {
-        "title": "Mixing Cups and Stirrers",
-        "subtitle": "Disposable, 100/pk for precise mixing",
-        "image": "/product/mixingCups.png"
-      }
+
     ],
     "literature": [
-      { "title": "Transmount User Manual", "image": "/product/transmount-manual.png" },
-      { "title": "Transparent Mould Making Guide", "image": "/product/mould-making-guide.png" },
-      { "title": "Silicone Casting Brochure", "image": "/product/silicone-casting-brochure.png" }
+      { "title": "Transmount User Manual", "image": "/other-machines/transparent-mould-making-system/transmount.png" },
     ]
   },
 
-
-
   // Hardness Testers
   {
-    id: 34,
+    id: 56,
     categorySlug: "hardness-testers",
     name: "Superficial Rockwell Hardness Tester",
     slug: "superficial-rockwell-hardness-tester",
     description: "The Superficial Rockwell Hardness Tester is designed for precise hardness testing of thin, soft, or surface-hardened materials using low test loads. Compliant with ASTM E18 and ISO 6508, it measures superficial Rockwell scales (HRN, HRT) with automatic load application, ideal for laboratory and quality control applications.",
-    image: "/images/hardness-testers/superficial-rockwell.png",
+    image: "/other-machines/hardness-testers/superficial-hardness-tester1.png",
     alt: "Superficial Rockwell Hardness Tester",
     rating: 4.8,
     reviews: 42,
@@ -3428,10 +2913,8 @@ const products = [
       "Safety interlocks for operator protection"
     ],
     images: [
-      "/product/SuperficialRockwell1.jpg",
-      "/product/SuperficialRockwell2.jpg",
-      "/product/SuperficialRockwell3.jpg",
-      "/product/SuperficialRockwell4.jpg"
+      "/other-machines/hardness-testers/superficial-hardness-tester1.png",
+      "/other-machines/hardness-testers/superficial-hardness-tester2.png",
     ],
     video: "/product/Superficial_Rockwell_Hardness_Tester.mp4",
     specifications: [
@@ -3449,35 +2932,19 @@ const products = [
       { part: "210-3211-100", config: "Superficial Rockwell with Motorized Z-axis", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "Diamond Cone Indenter",
-        subtitle: "For superficial Rockwell testing",
-        image: "/product/diamondConeIndenter.png"
-      },
-      {
-        title: "1/16-inch Steel Ball Indenter",
-        subtitle: "For HR15T, HR30T, HR45T scales",
-        image: "/product/steelBallIndenter.png"
-      },
-      {
-        title: "Superficial Rockwell Test Blocks",
-        subtitle: "HR30N, HR30T for calibration",
-        image: "/product/superficialTestBlocks.png"
-      }
+
     ],
     literature: [
-      { title: "Superficial Rockwell Hardness Tester User Manual", image: "/product/superficial-rockwell-manual.png" },
-      { title: "Superficial Rockwell Hardness Tester Brochure", image: "/product/superficial-rockwell-brochure.png" },
-      { title: "Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+      { title: "Superficial Rockwell Hardness Tester User Manual", image: "/other-machines/hardness-testers/superficial-hardness-tester1.png" },
     ]
   },
   {
-    id: 35,
+    id: 57,
     categorySlug: "hardness-testers",
     name: "Portable Leeb Hardness Tester",
     slug: "portable-leeb-hardness-tester",
     description: "The Portable Leeb Hardness Tester is a compact, non-destructive device for on-site hardness testing of large or complex metal parts. Using the Leeb rebound method, it measures hardness in multiple scales (HL, HRC, HRB, HB, HV) and complies with ASTM A956, ideal for field applications like pipelines and heavy machinery.",
-    image: "/images/hardness-testers/portable-leeb.png",
+    image: "/other-machines/hardness-testers/portable-leeb-hardness-tester.png",
     alt: "Portable Leeb Hardness Tester",
     rating: 4.7,
     reviews: 40,
@@ -3501,10 +2968,7 @@ const products = [
       "Calibration test block included for accuracy"
     ],
     images: [
-      "/product/PortableLeeb1.jpg",
-      "/product/PortableLeeb2.jpg",
-      "/product/PortableLeeb3.jpg",
-      "/product/PortableLeeb4.jpg"
+      "/other-machines/hardness-testers/portable-leeb-hardness-tester.png",
     ],
     video: "/product/Portable_Leeb_Hardness_Tester.mp4",
     specifications: [
@@ -3521,35 +2985,19 @@ const products = [
       { part: "210-3211-200", config: "Portable Leeb with D-type Probe", voltage: "Battery-powered" }
     ],
     consumables: [
-      {
-        title: "Leeb Test Block",
-        subtitle: "For calibration of D-type probe",
-        image: "/product/leebTestBlock.png"
-      },
-      {
-        title: "Replacement D-type Probe",
-        subtitle: "For Leeb hardness testing",
-        image: "/product/dTypeProbe.png"
-      },
-      {
-        title: "Coupling Gel",
-        subtitle: "For improved probe contact",
-        image: "/product/couplingGel.png"
-      }
+
     ],
     literature: [
-      { title: "Portable Leeb Hardness Tester User Manual", image: "/product/portable-leeb-manual.png" },
-      { title: "Portable Leeb Hardness Tester Brochure", image: "/product/portable-leeb-brochure.png" },
-      { title: "Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+      { title: "Portable Leeb Hardness Tester User Manual", image: "/other-machines/hardness-testers/portable-leeb-hardness-tester.png" },
     ]
   },
   {
-    id: 36,
+    id: 58,
     categorySlug: "hardness-testers",
     name: "Portable Brinell Hardness Tester",
     slug: "portable-brinell-hardness-tester",
     description: "The Portable Brinell Hardness Tester is a lightweight, user-friendly device for on-site testing of large or coarse-grained metal parts. Using a 3000kgf load and carbide ball indenter, it measures Brinell hardness (HB) with high reliability, compliant with ASTM E10 and ISO 6506, ideal for forgings and castings.",
-    image: "/images/hardness-testers/portable-brinell.png",
+    image: "/other-machines/hardness-testers/portable-brinell-hardness-tester.png",
     alt: "Portable Brinell Hardness Tester",
     rating: 4.6,
     reviews: 38,
@@ -3573,10 +3021,7 @@ const products = [
       "Minimal surface preparation required"
     ],
     images: [
-      "/product/PortableBrinell1.jpg",
-      "/product/PortableBrinell2.jpg",
-      "/product/PortableBrinell3.jpg",
-      "/product/PortableBrinell4.jpg"
+      "/other-machines/hardness-testers/portable-brinell-hardness-tester.png",
     ],
     video: "/product/Portable_Brinell_Hardness_Tester.mp4",
     specifications: [
@@ -3594,35 +3039,19 @@ const products = [
       { part: "210-3211-300", config: "Portable Brinell with 10mm Indenter", voltage: "None" }
     ],
     consumables: [
-      {
-        title: "Brinell Test Block",
-        subtitle: "HB 200-300 for calibration",
-        image: "/product/brinellTestBlock.png"
-      },
-      {
-        title: "10mm Carbide Ball",
-        subtitle: "Replacement indenter",
-        image: "/product/carbideBallIndenter.png"
-      },
-      {
-        title: "Digital Microscope",
-        subtitle: "For indentation measurement",
-        image: "/product/digitalMicroscopeBrinell.png"
-      }
+
     ],
     literature: [
-      { title: "Portable Brinell Hardness Tester User Manual", image: "/product/portable-brinell-manual.png" },
-      { title: "Portable Brinell Hardness Tester Brochure", image: "/product/portable-brinell-brochure.png" },
-      { title: "Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+      { title: "Portable Brinell Hardness Tester User Manual", image: "/other-machines/hardness-testers/portable-brinell-hardness-tester.png" },
     ]
   },
   {
-    id: 37,
+    id: 59,
     categorySlug: "hardness-testers",
     name: "Rockwell Hardness Tester",
     slug: "rockwell-hardness-tester",
     description: "The Rockwell Hardness Tester is a versatile benchtop system for precise hardness testing of metals using standard Rockwell scales (HRA, HRB, HRC). With fully automated load/unload procedures and digital readouts, it complies with ASTM E18 and ISO 6508, suitable for laboratories, workshops, and quality control.",
-    image: "/images/hardness-testers/rockwell.png",
+    image: "/other-machines/hardness-testers/rockwell-hardness-tester1.png",
     alt: "Rockwell Hardness Tester",
     rating: 4.9,
     reviews: 48,
@@ -3646,10 +3075,8 @@ const products = [
       "Safety cover for operator protection"
     ],
     images: [
-      "/product/Rockwell1.jpg",
-      "/product/Rockwell2.jpg",
-      "/product/Rockwell3.jpg",
-      "/product/Rockwell4.jpg"
+      "/other-machines/hardness-testers/rockwell-hardness-tester1.png",
+      "/other-machines/hardness-testers/rockwell-hardness-tester2.png",
     ],
     video: "/product/Rockwell_Hardness_Tester.mp4",
     specifications: [
@@ -3667,35 +3094,19 @@ const products = [
       { part: "210-3211-400", config: "Rockwell with Motorized Stage", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "Diamond Cone Indenter",
-        subtitle: "For HRA, HRC testing",
-        image: "/product/diamondConeIndenter.png"
-      },
-      {
-        title: "1/16-inch Steel Ball Indenter",
-        subtitle: "For HRB, HRE, HRF scales",
-        image: "/product/steelBallIndenter.png"
-      },
-      {
-        title: "Rockwell Test Blocks",
-        subtitle: "HRC 50, HRB 80 for calibration",
-        image: "/product/rockwellTestBlocks.png"
-      }
+
     ],
     literature: [
-      { title: "Rockwell Hardness Tester User Manual", image: "/product/rockwell-manual.png" },
-      { title: "Rockwell Hardness Tester Brochure", image: "/product/rockwell-brochure.png" },
-      { title: "Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+      { title: "Rockwell Hardness Tester User Manual", image: "/other-machines/hardness-testers/rockwell-hardness-tester1.png" },
     ]
   },
   {
-    id: 38,
+    id: 60,
     categorySlug: "hardness-testers",
     name: "Portable Vickers Hardness Tester",
     slug: "portable-vickers-hardness-tester",
     description: "The Portable Vickers Hardness Tester is a compact device for on-site micro and macro hardness testing of metals using the Vickers method. With test loads from 0.1 to 30kgf and a diamond indenter, it complies with ASTM E384 and ISO 6507, ideal for small parts, thin layers, and field applications.",
-    image: "/images/hardness-testers/portable-vickers.png",
+    image: "/other-machines/hardness-testers/portable-vickers-hardness-tester.png",
     alt: "Portable Vickers Hardness Tester",
     rating: 4.8,
     reviews: 39,
@@ -3719,10 +3130,7 @@ const products = [
       "Lightweight at 3kg for easy handling"
     ],
     images: [
-      "/product/PortableVickers1.jpg",
-      "/product/PortableVickers2.jpg",
-      "/product/PortableVickers3.jpg",
-      "/product/PortableVickers4.jpg"
+      "/other-machines/hardness-testers/portable-vickers-hardness-tester.png",
     ],
     video: "/product/Portable_Vickers_Hardness_Tester.mp4",
     specifications: [
@@ -3740,37 +3148,21 @@ const products = [
       { part: "210-3211-500", config: "Portable Vickers with Digital Camera", voltage: "Battery-powered" }
     ],
     consumables: [
-      {
-        title: "Vickers Diamond Indenter",
-        subtitle: "For micro and macro testing",
-        image: "/product/vickersDiamondIndenter.png"
-      },
-      {
-        title: "Vickers Test Block",
-        subtitle: "HV 500 for calibration",
-        image: "/product/vickersTestBlock.png"
-      },
-      {
-        title: "Replacement Camera Lens",
-        subtitle: "For indentation measurement",
-        image: "/product/cameraLensVickers.png"
-      }
+
     ],
     literature: [
-      { title: "Portable Vickers Hardness Tester User Manual", image: "/product/portable-vickers-manual.png" },
-      { title: "Portable Vickers Hardness Tester Brochure", image: "/product/portable-vickers-brochure.png" },
-      { title: "Hardness Testing Guide", image: "/product/hardness-testing-guide.png" }
+      { title: "Portable Vickers Hardness Tester User Manual", image: "/other-machines/hardness-testers/portable-vickers-hardness-tester.png" },
     ]
   },
 
   // Vertical Band Saw
   {
-    id: 39,
+    id: 61,
     categorySlug: "vertical-band-saw",
     name: "Vertical Band Saw",
     slug: "vertical-band-saw",
     description: "The Vertical Band Saw is a versatile, high-performance machine designed for precision cutting of metal, wood, and plastic. Featuring a robust welded steel frame, variable blade speeds, and a tilting table, it excels in contour cutting, straight cuts, and complex shapes, making it ideal for workshops, fabrication shops, and small-scale production environments.",
-    image: "/images/vertical-band-saw/vertical-band-saw.png",
+    image: "/other-machines/vertical-band-saw/vertical-band-saw.png",
     alt: "Vertical Band Saw for Metal and Wood Cutting",
     rating: 4.8,
     reviews: 50,
@@ -3796,10 +3188,7 @@ const products = [
       "Two-year maintenance spare kit included"
     ],
     images: [
-      "/product/VerticalBandSaw1.jpg",
-      "/product/VerticalBandSaw2.jpg",
-      "/product/VerticalBandSaw3.jpg",
-      "/product/VerticalBandSaw4.jpg"
+      "/other-machines/vertical-band-saw/vertical-band-saw.png",
     ],
     video: "/product/Vertical_Band_Saw.mp4",
     specifications: [
@@ -3819,26 +3208,10 @@ const products = [
       { part: "220-3311-100", config: "Vertical Band Saw with Hydraulic Tensioning", voltage: "440V, 50/60Hz" }
     ],
     consumables: [
-      {
-        title: "M42 Bimetal Blade",
-        subtitle: "162-inch, 0.75-inch width for metal cutting",
-        image: "/product/m42BimetalBlade.png"
-      },
-      {
-        title: "Wood Cutting Blade",
-        subtitle: "162-inch, 0.5-inch width for woodworking",
-        image: "/product/woodCuttingBlade.png"
-      },
-      {
-        title: "Tungsten Carbide Wear Pads",
-        subtitle: "For blade guide replacement",
-        image: "/product/tungstenCarbidePads.png"
-      }
+
     ],
     literature: [
-      { title: "Vertical Band Saw User Manual", image: "/product/vertical-band-saw-manual.png" },
-      { title: "Vertical Band Saw Brochure", image: "/product/vertical-band-saw-brochure.png" },
-      { title: "Band Saw Cutting Guide", image: "/product/band-saw-cutting-guide.png" }
+      { title: "Vertical Band Saw User Manual", image: "/other-machines/vertical-band-saw/vertical-band-saw.png" },
     ]
   },
 ];

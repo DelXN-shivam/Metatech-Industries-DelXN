@@ -112,7 +112,7 @@ const VisionMission = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-b from-slate-400 via-slate-100 to-slate-100 overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -156,7 +156,7 @@ const VisionMission = () => {
             <div className="inline-block px-4 py-1 rounded-full bg-blue-900/80 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6 backdrop-blur-sm">
               Our Purpose
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-8">
               Vision & Mission
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
@@ -230,7 +230,7 @@ const VisionMission = () => {
             <div className="inline-block px-4 py-1 rounded-full bg-blue-900/80 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6 backdrop-blur-sm">
               What Drives Us
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-8">
               Our Core Values
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
