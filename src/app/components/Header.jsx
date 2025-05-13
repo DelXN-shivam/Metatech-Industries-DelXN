@@ -413,7 +413,7 @@ const Header = () => {
                               Explore our complete product catalog for all your material science needs
                             </p>
                             <Link
-                              href="/all-products"
+                              href="/#"
                               onClick={() => setProductsDropdown(false)}
                               className="px-4 py-2 bg-gradient-to-r from-sky-500 to-sky-600 text-white rounded-lg hover:from-sky-600 hover:to-sky-700 transition-all duration-200 text-sm font-medium flex items-center gap-2 shadow-sm hover:shadow group"
                             >

@@ -3635,6 +3635,941 @@ export const mainCategories = [
       },
     ]
   },
+    // mainCategory: "Microscope and Image Analyzer"
+  {
+    mainCategory: "Microscope and Image Analyzer",
+    categories: [
+      {
+        name: "Inverted Microscope",
+        slug: "inverted-microscope",
+        heroImage: "/images/inverted-microscope/inverted-microscope.png",
+        intro: {
+          title: "Precision Inverted Microscope Solutions",
+          description:
+            "Inverted Microscopes, including Metagraph-I and Metagraph-SPL, offer advanced imaging for metallurgical and biological applications. Compliant with ASTM E45 and ISO 4967, they feature high-magnification optics and inverted designs for large metal samples, polished surfaces, and live cell cultures. Ideal for metallurgy, materials science, and life sciences, these microscopes ensure precision and durability in quality control, research, and industrial inspection.",
+          categoryLabel: "Explore our inverted microscope solutions",
+          buttons: [
+            { text: "Discover Inverted Microscopes", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
+        },
+        semiAutomaticSection: {
+          title: "Inverted Microscope",
+          description:
+            "Designed for large, heavy samples and live cell observation, our inverted microscopes feature objective lenses below the stage, brightfield and phase contrast illumination, and magnifications up to 1000x. The Metagraph-I and Metagraph-SPL models support metallographic analysis, grain sizing, and cell culture imaging, with robust stages and long working distance objectives for versatile applications.",
+          label: "Microscopy Features",
+        },
+        specialtySection: {
+          title: "Specialty Microscopy Solutions",
+          description:
+            "Optimized for microstructural analysis, surface defect inspection, and live cell imaging, these microscopes offer digital imaging integration, fluorescence capabilities, and customizable optics. Their inverted design accommodates bulky samples and ensures sterility in cell culture applications, meeting the demands of advanced research and industrial labs.",
+          label: "Advanced Microscopy Solutions",
+        },
+        solutionsBanner: {
+          title: "Comprehensive Microscopy Solutions",
+          description:
+            "Explore our Solutions section for ASTM E45 and ISO 4967-compliant protocols, guides for metallographic and cell culture imaging, and industry-specific applications to optimize your inverted microscope workflows.",
+          image: "/productsListing/Inverted_Microscope_Solutions.png",
+          label: "Tailored Microscopy Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Application", variant: "secondary" },
+          ],
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "inverted-microscope")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Inverted Microscope",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "inverted-microscope")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Inverted Microscope",
+            color: "rgba(80, 130, 160, 0.1)",
+            bgColor: "rgba(80, 130, 160, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "inverted-microscope")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          },
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "inverted-microscope")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Metagraph-I",
+            description:
+              "Robust inverted microscope with 50x-1000x magnification and brightfield illumination, optimized for metallographic analysis of large metal samples and polished surfaces, compliant with ASTM E45.",
+            image: "/images/inverted-microscope/metagraph-i.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Metagraph-SPL",
+            description:
+              "Versatile inverted microscope with phase contrast and optional fluorescence capabilities, ideal for live cell imaging and advanced materials inspection, per ISO 4967.",
+            image: "/images/inverted-microscope/metagraph-spl.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+        ],
+        subCategories: products
+          .filter((p) => p.categorySlug === "inverted-microscope")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        name: "Upright Microscope",
+        slug: "upright-microscope",
+        heroImage: "/images/upright-microscope/upright-microscope.png",
+        intro: {
+          title: "Precision Upright Microscope Solutions",
+          description:
+            "The Upright Microscope, featuring the Metagraph (UP), delivers high-resolution imaging for metallurgical and materials science applications. Compliant with ASTM E45, ASTM E112, and ISO 4967, it is ideal for analyzing polished metal surfaces, inclusions, and microstructures. With advanced optics and robust design, the Metagraph (UP) serves quality control, failure analysis, and research in metallurgy, automotive, and aerospace industries.",
+          categoryLabel: "Explore our upright microscope solutions",
+          buttons: [
+            { text: "Discover Metagraph (UP)", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
+        },
+        semiAutomaticSection: {
+          title: "Upright Microscope",
+          description:
+            "The Metagraph (UP) upright microscope offers magnifications from 50x to 1000x, with brightfield, darkfield, and polarized light capabilities. Its ergonomic design, large mechanical stage, and high-resolution objectives support precise grain size analysis, inclusion rating, and microstructural examination, making it a reliable choice for lab-based metallographic studies.",
+          label: "Microscopy Features",
+        },
+        specialtySection: {
+          title: "Specialty Microscopy Solutions",
+          description:
+            "Tailored for advanced metallographic and materials analysis, the Metagraph (UP) supports digital imaging, differential interference contrast (DIC), and customizable optics. Its robust construction accommodates a wide range of sample sizes, ensuring accurate results for failure analysis, phase identification, and quality assurance in industrial and research settings.",
+          label: "Advanced Microscopy Solutions",
+        },
+        solutionsBanner: {
+          title: "Comprehensive Microscopy Solutions",
+          description:
+            "Explore our Solutions section for ASTM E45 and ISO 4967-compliant protocols, technical guides for grain sizing and inclusion analysis, and industry-specific applications to optimize your upright microscope workflows.",
+          image: "/productsListing/Upright_Microscope_Solutions.png",
+          label: "Tailored Microscopy Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Application", variant: "secondary" },
+          ],
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "upright-microscope")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Upright Microscope",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "upright-microscope")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Upright Microscope",
+            color: "rgba(90, 120, 170, 0.1)",
+            bgColor: "rgba(90, 120, 170, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "upright-microscope")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          },
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "upright-microscope")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Metagraph (UP)",
+            description:
+              "High-performance upright microscope with 50x-1000x magnification, brightfield, darkfield, and polarized light capabilities, optimized for precise metallographic analysis of polished metal surfaces, compliant with ASTM E45 and ISO 4967.",
+            image: "/images/upright-microscope/metagraph-up.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Digital Imaging System",
+            description:
+              "Integrated high-resolution camera and software for capturing, analyzing, and documenting metallographic images, enhancing efficiency in quality control and research applications.",
+            image: "/images/upright-microscope/digital-imaging.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+        ],
+        subCategories: products
+          .filter((p) => p.categorySlug === "upright-microscope")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        name: "Stereo Microscope",
+        slug: "stereo-microscope",
+        heroImage: "/images/stereo-microscope/stereo-microscope.png",
+        intro: {
+          title: "Advanced Stereo Microscope Solutions",
+          description:
+            "The Stereo Microscope, featuring the Metagraph (ST), delivers high-quality 3D imaging for metallurgy, electronics, and biological applications. Compliant with ASTM E45, it offers low-magnification zoom (5x-80x), dual optical paths for depth perception, and ergonomic design. Ideal for quality control, circuit board inspection, and dissection in manufacturing, research, and education.",
+          categoryLabel: "Explore our stereo microscope solutions",
+          buttons: [
+            { text: "Discover Metagraph (ST)", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
+        },
+        semiAutomaticSection: {
+          title: "Stereo Microscope",
+          description:
+            "The Metagraph (ST) stereo microscope provides zoom magnification from 5x to 80x, with brightfield and reflected LED illumination. Its dual optical paths ensure true 3D visualization, ideal for inspecting opaque samples like metal surfaces, circuit boards, and biological specimens. Ergonomic features and a large working distance support prolonged, fatigue-free operation.",
+          label: "Microscopy Features",
+        },
+        specialtySection: {
+          title: "Specialty Microscopy Solutions",
+          description:
+            "Designed for precision tasks, the Metagraph (ST) supports digital imaging, fluorescence, and modular accessories like boom stands and auxiliary lenses. Its Greenough optical design ensures high depth of field, making it perfect for intricate dissections, microelectronics assembly, and detailed surface analysis in advanced research and industrial settings.",
+          label: "Advanced Microscopy Solutions",
+        },
+        solutionsBanner: {
+          title: "Comprehensive Microscopy Solutions",
+          description:
+            "Explore our Solutions section for ASTM E45-compliant protocols, guides for 3D imaging and surface inspection, and industry-specific applications to optimize your stereo microscope workflows.",
+          image: "/productsListing/Stereo_Microscope_Solutions.png",
+          label: "Tailored Microscopy Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Application", variant: "secondary" },
+          ],
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "stereo-microscope")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Stereo Microscope",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "stereo-microscope")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Stereo Microscope",
+            color: "rgba(80, 140, 160, 0.1)",
+            bgColor: "rgba(80, 140, 160, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "stereo-microscope")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          },
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "stereo-microscope")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Metagraph (ST)",
+            description:
+              "Advanced stereo microscope with 5x-80x zoom, Greenough optics, and LED illumination, optimized for 3D inspection of metallographic samples and electronics, compliant with ASTM E45.",
+            image: "/images/stereo-microscope/metagraph-st.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Digital Imaging Module",
+            description:
+              "Trinocular system with high-resolution camera for capturing and analyzing 3D images, streamlining documentation in quality control and research applications.",
+            image: "/images/stereo-microscope/digital-imaging.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+        ],
+        subCategories: products
+          .filter((p) => p.categorySlug === "stereo-microscope")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        name: "Particle Size Analysis Systems",
+        slug: "particle-size-analysis-systems",
+        heroImage: "/images/particle-size-analysis-systems/particle-size-analysis-systems.png",
+        intro: {
+          title: "Precision Particle Size Analysis Solutions",
+          description:
+            "Our Particle Size Analysis Systems provide advanced stereo and metallurgical microscopy solutions for precise particle analysis, fully compliant with ISO 16232. Featuring automated filter scanning, classification of metallic, non-metallic, and fiber particles, motorized stages, and customizable reporting, these systems cater to automotive, aerospace, metallurgical, and industrial applications.",
+          categoryLabel: "Explore our particle analysis solutions",
+          buttons: [
+            { text: "Discover Particle Analysis Systems", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
+        },
+        semiAutomaticSection: {
+          title: "Particle Size Analysis Systems",
+          description:
+            "Our systems include Stereo models for particles >10 microns and Metallurgical models for particles >3 microns, both with automated filter scanning and ISO 16232-compliant classification. Metallurgical systems add particle height measurement and dual microscopy options for enhanced precision.",
+          label: "Our Particle Analysis Products",
+        },
+        specialtySection: {
+          title: "Specialty Particle Analysis Solutions",
+          description:
+            "For high-resolution, complex, or high-throughput applications, our specialty systems offer tailored automation, advanced microscopy, and custom reporting to meet stringent industry standards.",
+          label: "Advanced Particle Analysis Solutions",
+        },
+        solutionsBanner: {
+          title: "Comprehensive Particle Analysis Solutions",
+          description:
+            "Explore our Solutions section for ISO 16232-compliant methods, technical guides, and industry-specific applications to optimize your particle size analysis workflows.",
+          image: "/productsListing/Particle_Analysis_Solutions.png",
+          label: "Tailored Analysis Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Particle Size Analysis Systems",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Particle Size Analysis Systems",
+            color: "rgba(70, 110, 160, 0.1)",
+            bgColor: "rgba(70, 110, 160, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "particle-size-analysis-systems")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          },
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "CleanView 100 (Stereo)",
+            description:
+              "Fully automatic stereo system with motorized stage, compliant with ISO 16232, featuring fast filter paper scanning and precise classification of particles >10 microns for cleanliness testing.",
+            image: "/images/particle-size-analysis-systems/cleanview-100.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "MetalScan 300 (Metallurgical)",
+            description:
+              "Fully automatic metallurgical system with stereo and metallurgical microscopes, motorized stage, and particle height measurement, compliant with ISO 16232 for particles >3 microns.",
+            image: "/images/particle-size-analysis-systems/metalscan-300.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+        ],
+        subCategories: products
+          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        name: "Millipore Fluid Contamination Analysis Kit",
+        slug: "millipore-fluid-contamination-analysis-kit",
+        heroImage: "/images/millipore-fluid-contamination-analysis-kit/millipore-fluid-contamination-analysis-kit.png",
+        intro: {
+          title: "Comprehensive Fluid Contamination Analysis",
+          description:
+            "The Millipore Fluid Contamination Analysis Kit is a complete solution for analyzing particulate contamination in hydraulic fluids, lubricants, fuels, and water, compliant with ISO 16232 and other industry standards. Equipped with a vacuum/pressure pump, dispensing pressure vessel, filter paper, filter flask, solvent dispensers, petri slides, and dispensing bottles, this kit ensures accurate, reliable results for automotive, aerospace, and industrial quality control.",
+          categoryLabel: "Explore our contamination analysis solutions",
+          buttons: [
+            { text: "Discover the Millipore Kit", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
+        },
+        semiAutomaticSection: {
+          title: "Millipore Fluid Contamination Analysis Kit",
+          description:
+            "Designed for field and laboratory use, this kit includes all necessary components for sampling, filtering, and analyzing fluid contamination. From vacuum filtration to precise solvent dispensing, the kit supports gravimetric, microscopic, and colorimetric analysis to ensure clean parts and fluids in critical applications.",
+          label: "Kit Components",
+        },
+        specialtySection: {
+          title: "Specialty Contamination Analysis Solutions",
+          description:
+            "For advanced applications requiring high-volume filtration, custom solvent handling, or specialized storage, the Millipore kit offers robust components and accessories to meet stringent quality control requirements in industries like automotive and aerospace.",
+          label: "Advanced Contamination Solutions",
+        },
+        solutionsBanner: {
+          title: "Comprehensive Contamination Analysis Solutions",
+          description:
+            "Browse our Solutions section for technical guides, ISO 16232-compliant protocols, and industry-specific applications to optimize your fluid contamination analysis processes.",
+          image: "/productsListing/Contamination_Analysis_Solutions.png",
+          label: "Tailored Analysis Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Millipore Fluid Contamination Analysis Kit",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Millipore Fluid Contamination Analysis Kit",
+            color: "rgba(50, 140, 120, 0.1)",
+            bgColor: "rgba(50, 140, 120, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          },
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Vacuum/Pressure Pump",
+            description:
+              "Portable vacuum/pressure pump with 25 L/min flow rate and 35 PSIG pressure, designed for field or lab filtration, featuring a thermal overload switch for reliability.",
+            image: "/images/millipore-fluid-contamination-analysis-kit/vacuum-pressure-pump.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Dispensing Pressure Vessel",
+            description:
+              "Autoclavable stainless steel vessel (5-20 L) meeting ASME-UM standards, ideal for high-volume filtration with pressure-operated filter holders, featuring cam-lock closure.",
+            image: "/images/millipore-fluid-contamination-analysis-kit/dispensing-pressure-vessel.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+        ],
+        subCategories: products
+          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        "name": "Image Analyzer",
+        "slug": "image-analyzer",
+        "heroImage": "/images/image-analyzer/image-analyzer.png",
+        "intro": {
+          "title": "Advanced Metallurgical Image Analysis",
+          "description": "The Image Analyzer is a comprehensive solution for metallurgical and materials science analysis, compliant with ASTM E112 and ISO 643 standards. Featuring tools for grain analysis, phase analysis, nodularity, inclusions, welding, porosity, and more, it delivers precise, automated measurements with customizable reporting for quality control in automotive, aerospace, and industrial applications.",
+          "categoryLabel": "Explore our image analysis solutions",
+          "buttons": [
+            { "text": "Discover Image Analyzer", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Image Analyzer",
+          "description": "Equipped with advanced image processing algorithms, the Image Analyzer automates grain size measurement, phase quantification, nodularity analysis, and defect evaluation. Tools like intercept and planimetric methods, point counting, and porosity estimation ensure accurate, repeatable results for metallographic analysis.",
+          "label": "Analysis Tools"
+        },
+        "specialtySection": {
+          "title": "Specialty Image Analysis Solutions",
+          "description": "For complex microstructures or specialized applications, the Image Analyzer offers tailored tools like B Type flake separation, welding analysis, and annotation, supporting detailed characterization and custom reporting.",
+          "label": "Advanced Analysis Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Image Analysis Solutions",
+          "description": "Browse our Solutions section for ASTM E112-compliant protocols, technical guides, and industry-specific applications to optimize your metallurgical analysis workflows.",
+          "image": "/productsListing/Image_Analysis_Solutions.png",
+          "label": "Tailored Analysis Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": products
+          .filter((p) => p.categorySlug === "image-analyzer")
+          .slice(0, 3)
+          .map((p) => ({
+            "id": p.id,
+            "image": p.image,
+            "alt": p.alt,
+            "category": "Image Analyzer",
+            "title": p.name,
+            "description": p.description,
+            "reviews": p.reviews,
+            "rating": p.rating
+          })),
+        "products": products
+          .filter((p) => p.categorySlug === "image-analyzer")
+          .map((p) => ({
+            "name": p.name,
+            "image": p.image
+          })),
+        "items": [
+          {
+            "id": 1,
+            "name": "Image Analyzer",
+            "color": "rgba(80, 120, 150, 0.1)",
+            "bgColor": "rgba(80, 120, 150, 0.1)",
+            "subItems": products
+              .filter((p) => p.categorySlug === "image-analyzer")
+              .map((p) => ({
+                "name": p.name,
+                "apiCall": p.apiCall
+              }))
+          }
+        ],
+        "productCards": products
+          .filter((p) => p.categorySlug === "image-analyzer")
+          .map((p) => ({
+            "id": p.id,
+            "name": p.name,
+            "tag": p.tag,
+            "description": p.description,
+            "image": p.image,
+            "detail": p.detail,
+            "delay": 0.1 * (p.id - 1)
+          })),
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Grain Analysis (Intercept Method)",
+            "description": "Automates ASTM E112-compliant intercept method, counting grain boundary intersections for precise grain size measurement, optimized for elongated grains.",
+            "image": "/images/image-analyzer/grain-analysis-intercept.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Planimetry Method",
+            "description": "Counts grains in a known area per ASTM E112, delivering ±0.25 grain size unit precision for equiaxed grains with automated marking and reporting.",
+            "image": "/images/image-analyzer/planimetry-method.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": products
+          .filter((p) => p.categorySlug === "image-analyzer")
+          .map((p) => ({
+            "id": p.slug,
+            "name": p.name
+          }))
+      },
+    ],
+  },
+  // mainCategory: "Micro Hardness Tester"
+  {
+    mainCategory: "Micro Hardness Tester",
+    categories: [
+      {
+        name: "Automatic Micro Hardness Tester",
+        slug: "automatic-micro-hardness-tester",
+        heroImage: "/images/automatic-micro-hardness-tester/automatic-micro-hardness-tester.png",
+        intro: {
+          title: "Precision Automatic Micro Hardness Testing",
+          description:
+            "The Automatic Micro Hardness Tester delivers precise Vickers, Knoop, and Brinell hardness measurements for thin materials, coatings, and small components. Fully compliant with ASTM E384 and ISO 4545, it features automated XY stage, auto-focus, and advanced software for high-throughput testing in automotive, aerospace, and metallurgical applications.",
+          categoryLabel: "Explore our micro hardness testing solutions",
+          buttons: [
+            { text: "Discover Micro Hardness Tester", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
+        },
+        semiAutomaticSection: {
+          title: "Automatic Micro Hardness Tester",
+          description:
+            "Equipped with a motorized turret, CCD camera, and intuitive software, this tester automates load application, indentation measurement, and data analysis. With load ranges from 0.01 gf to 2 kgf, it ensures accurate, repeatable results for micro hardness testing of metals, ceramics, and coatings.",
+          label: "Testing Features",
+        },
+        specialtySection: {
+          title: "Specialty Hardness Testing Solutions",
+          description:
+            "For complex test patterns, case depth analysis, or high-volume production, the Automatic Micro Hardness Tester offers customizable templates, fully automated sequences, and integration with metallographic analysis tools.",
+          label: "Advanced Testing Solutions",
+        },
+        solutionsBanner: {
+          title: "Comprehensive Hardness Testing Solutions",
+          description:
+            "Explore our Solutions section for ASTM E384-compliant protocols, technical guides, and industry-specific applications to optimize your micro hardness testing workflows.",
+          image: "/productsListing/Hardness_Testing_Solutions.png",
+          label: "Tailored Testing Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Automatic Micro Hardness Tester",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Automatic Micro Hardness Tester",
+            color: "rgba(90, 110, 140, 0.1)",
+            bgColor: "rgba(90, 110, 140, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          },
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Vickers Testing",
+            description:
+              "Automates Vickers hardness testing with a diamond pyramid indenter, delivering precise measurements for thin materials and coatings, compliant with ASTM E384.",
+            image: "/images/automatic-micro-hardness-tester/vickers-testing.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Knoop Testing",
+            description:
+              "Performs Knoop hardness testing with a rhombic diamond indenter, optimized for brittle materials and thin layers, per ISO 4545.",
+            image: "/images/automatic-micro-hardness-tester/knoop-testing.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+        ],
+        subCategories: products
+          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        name: "Micro/Macro Hardness Tester (Load Cell Based)",
+        slug: "micro-macro-hardness-tester-load-cell",
+        heroImage: "/images/micro-macro-hardness-tester/micro-macro-hardness-tester.png",
+        intro: {
+          title: "Advanced Load Cell Based Hardness Testing",
+          description:
+            "The Micro/Macro Hardness Tester with load cell technology offers precise Vickers, Knoop, and Brinell testing across micro (0.01 gf to 1 kgf) and macro (1 kgf to 62.5 kgf) ranges. Compliant with ASTM E384, ISO 6507, and ASTM E10, it features closed-loop load control, automated XY stage, and intuitive software for high-throughput testing in metallurgical, automotive, and aerospace applications.",
+          categoryLabel: "Explore our load cell hardness testing solutions",
+          buttons: [
+            { text: "Discover Hardness Tester", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
+          ],
+        },
+        semiAutomaticSection: {
+          title: "Micro/Macro Hardness Tester",
+          description:
+            "Utilizing closed-loop load cell technology, this tester ensures accurate force application for Vickers, Knoop, and Brinell tests. With automated turret, CCD imaging, and touch-screen interface, it delivers repeatable results for micro and macro hardness testing of metals, ceramics, and coatings.",
+          label: "Testing Features",
+        },
+        specialtySection: {
+          title: "Specialty Hardness Testing Solutions",
+          description:
+            "For advanced applications like case depth analysis, hardness mapping, or high-volume production, this tester offers customizable test patterns, fully automated sequences, and integration with image analysis software for comprehensive material characterization.",
+          label: "Advanced Testing Solutions",
+        },
+        solutionsBanner: {
+          title: "Comprehensive Hardness Testing Solutions",
+          description:
+            "Explore our Solutions section for ASTM E384 and ISO 6507-compliant protocols, technical guides, and industry-specific applications to optimize your hardness testing workflows.",
+          image: "/productsListing/Hardness_Testing_Solutions.png",
+          label: "Tailored Testing Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" },
+          ],
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Micro/Macro Hardness Tester",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Micro/Macro Hardness Tester",
+            color: "rgba(100, 120, 160, 0.1)",
+            bgColor: "rgba(100, 120, 160, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          },
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: [
+          {
+            id: 1,
+            name: "Vickers Testing",
+            description:
+              "Performs Vickers testing across micro (0.01 gf) to macro (62.5 kgf) ranges with a diamond pyramid indenter, ensuring ASTM E384 and ISO 6507 compliance.",
+            image: "/images/micro-macro-hardness-tester/vickers-testing.png",
+            delay: 0.1,
+            animationX: -50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Closed-Loop Load Cell",
+            description:
+              "Employs advanced closed-loop load cell technology for precise force application, supporting a wide range of Vickers, Knoop, and Brinell tests.",
+            image: "/images/micro-macro-hardness-tester/load-cell-system.png",
+            delay: 0.2,
+            animationX: 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" },
+            ],
+          },
+        ],
+        subCategories: products
+          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+    ],
+  },
+  // mainCategory: "Moulding / Grinding / Polishing"
   {
     mainCategory: "Moulding / Grinding / Polishing",
     categories: [
@@ -4366,943 +5301,7 @@ export const mainCategories = [
       },
     ]
   },
-
-  // mainCategory: "Micro Hardness Tester"
-  {
-    mainCategory: "Micro Hardness Tester",
-    categories: [
-      {
-        name: "Automatic Micro Hardness Tester",
-        slug: "automatic-micro-hardness-tester",
-        heroImage: "/images/automatic-micro-hardness-tester/automatic-micro-hardness-tester.png",
-        intro: {
-          title: "Precision Automatic Micro Hardness Testing",
-          description:
-            "The Automatic Micro Hardness Tester delivers precise Vickers, Knoop, and Brinell hardness measurements for thin materials, coatings, and small components. Fully compliant with ASTM E384 and ISO 4545, it features automated XY stage, auto-focus, and advanced software for high-throughput testing in automotive, aerospace, and metallurgical applications.",
-          categoryLabel: "Explore our micro hardness testing solutions",
-          buttons: [
-            { text: "Discover Micro Hardness Tester", variant: "primary" },
-            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
-          ],
-        },
-        semiAutomaticSection: {
-          title: "Automatic Micro Hardness Tester",
-          description:
-            "Equipped with a motorized turret, CCD camera, and intuitive software, this tester automates load application, indentation measurement, and data analysis. With load ranges from 0.01 gf to 2 kgf, it ensures accurate, repeatable results for micro hardness testing of metals, ceramics, and coatings.",
-          label: "Testing Features",
-        },
-        specialtySection: {
-          title: "Specialty Hardness Testing Solutions",
-          description:
-            "For complex test patterns, case depth analysis, or high-volume production, the Automatic Micro Hardness Tester offers customizable templates, fully automated sequences, and integration with metallographic analysis tools.",
-          label: "Advanced Testing Solutions",
-        },
-        solutionsBanner: {
-          title: "Comprehensive Hardness Testing Solutions",
-          description:
-            "Explore our Solutions section for ASTM E384-compliant protocols, technical guides, and industry-specific applications to optimize your micro hardness testing workflows.",
-          image: "/productsListing/Hardness_Testing_Solutions.png",
-          label: "Tailored Testing Solutions",
-          buttons: [
-            { text: "Solutions by Industry", variant: "primary" },
-            { text: "Solutions by Material", variant: "secondary" },
-          ],
-        },
-        slides: products
-          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Automatic Micro Hardness Tester",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        products: products
-          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        items: [
-          {
-            id: 1,
-            name: "Automatic Micro Hardness Tester",
-            color: "rgba(90, 110, 140, 0.1)",
-            bgColor: "rgba(90, 110, 140, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          },
-        ],
-        productCards: products
-          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        specialtyProducts: [
-          {
-            id: 1,
-            name: "Vickers Testing",
-            description:
-              "Automates Vickers hardness testing with a diamond pyramid indenter, delivering precise measurements for thin materials and coatings, compliant with ASTM E384.",
-            image: "/images/automatic-micro-hardness-tester/vickers-testing.png",
-            delay: 0.1,
-            animationX: -50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-          {
-            id: 2,
-            name: "Knoop Testing",
-            description:
-              "Performs Knoop hardness testing with a rhombic diamond indenter, optimized for brittle materials and thin layers, per ISO 4545.",
-            image: "/images/automatic-micro-hardness-tester/knoop-testing.png",
-            delay: 0.2,
-            animationX: 50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-        ],
-        subCategories: products
-          .filter((p) => p.categorySlug === "automatic-micro-hardness-tester")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-      {
-        name: "Micro/Macro Hardness Tester (Load Cell Based)",
-        slug: "micro-macro-hardness-tester-load-cell",
-        heroImage: "/images/micro-macro-hardness-tester/micro-macro-hardness-tester.png",
-        intro: {
-          title: "Advanced Load Cell Based Hardness Testing",
-          description:
-            "The Micro/Macro Hardness Tester with load cell technology offers precise Vickers, Knoop, and Brinell testing across micro (0.01 gf to 1 kgf) and macro (1 kgf to 62.5 kgf) ranges. Compliant with ASTM E384, ISO 6507, and ASTM E10, it features closed-loop load control, automated XY stage, and intuitive software for high-throughput testing in metallurgical, automotive, and aerospace applications.",
-          categoryLabel: "Explore our load cell hardness testing solutions",
-          buttons: [
-            { text: "Discover Hardness Tester", variant: "primary" },
-            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
-          ],
-        },
-        semiAutomaticSection: {
-          title: "Micro/Macro Hardness Tester",
-          description:
-            "Utilizing closed-loop load cell technology, this tester ensures accurate force application for Vickers, Knoop, and Brinell tests. With automated turret, CCD imaging, and touch-screen interface, it delivers repeatable results for micro and macro hardness testing of metals, ceramics, and coatings.",
-          label: "Testing Features",
-        },
-        specialtySection: {
-          title: "Specialty Hardness Testing Solutions",
-          description:
-            "For advanced applications like case depth analysis, hardness mapping, or high-volume production, this tester offers customizable test patterns, fully automated sequences, and integration with image analysis software for comprehensive material characterization.",
-          label: "Advanced Testing Solutions",
-        },
-        solutionsBanner: {
-          title: "Comprehensive Hardness Testing Solutions",
-          description:
-            "Explore our Solutions section for ASTM E384 and ISO 6507-compliant protocols, technical guides, and industry-specific applications to optimize your hardness testing workflows.",
-          image: "/productsListing/Hardness_Testing_Solutions.png",
-          label: "Tailored Testing Solutions",
-          buttons: [
-            { text: "Solutions by Industry", variant: "primary" },
-            { text: "Solutions by Material", variant: "secondary" },
-          ],
-        },
-        slides: products
-          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Micro/Macro Hardness Tester",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        products: products
-          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        items: [
-          {
-            id: 1,
-            name: "Micro/Macro Hardness Tester",
-            color: "rgba(100, 120, 160, 0.1)",
-            bgColor: "rgba(100, 120, 160, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          },
-        ],
-        productCards: products
-          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        specialtyProducts: [
-          {
-            id: 1,
-            name: "Vickers Testing",
-            description:
-              "Performs Vickers testing across micro (0.01 gf) to macro (62.5 kgf) ranges with a diamond pyramid indenter, ensuring ASTM E384 and ISO 6507 compliance.",
-            image: "/images/micro-macro-hardness-tester/vickers-testing.png",
-            delay: 0.1,
-            animationX: -50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-          {
-            id: 2,
-            name: "Closed-Loop Load Cell",
-            description:
-              "Employs advanced closed-loop load cell technology for precise force application, supporting a wide range of Vickers, Knoop, and Brinell tests.",
-            image: "/images/micro-macro-hardness-tester/load-cell-system.png",
-            delay: 0.2,
-            animationX: 50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-        ],
-        subCategories: products
-          .filter((p) => p.categorySlug === "micro-macro-hardness-tester-load-cell")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-    ],
-  },
-
-  // mainCategory: "Microscope and Image Analyzer"
-
-  {
-    mainCategory: "Microscope and Image Analyzer",
-    categories: [
-      {
-        name: "Inverted Microscope",
-        slug: "inverted-microscope",
-        heroImage: "/images/inverted-microscope/inverted-microscope.png",
-        intro: {
-          title: "Precision Inverted Microscope Solutions",
-          description:
-            "Inverted Microscopes, including Metagraph-I and Metagraph-SPL, offer advanced imaging for metallurgical and biological applications. Compliant with ASTM E45 and ISO 4967, they feature high-magnification optics and inverted designs for large metal samples, polished surfaces, and live cell cultures. Ideal for metallurgy, materials science, and life sciences, these microscopes ensure precision and durability in quality control, research, and industrial inspection.",
-          categoryLabel: "Explore our inverted microscope solutions",
-          buttons: [
-            { text: "Discover Inverted Microscopes", variant: "primary" },
-            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
-          ],
-        },
-        semiAutomaticSection: {
-          title: "Inverted Microscope",
-          description:
-            "Designed for large, heavy samples and live cell observation, our inverted microscopes feature objective lenses below the stage, brightfield and phase contrast illumination, and magnifications up to 1000x. The Metagraph-I and Metagraph-SPL models support metallographic analysis, grain sizing, and cell culture imaging, with robust stages and long working distance objectives for versatile applications.",
-          label: "Microscopy Features",
-        },
-        specialtySection: {
-          title: "Specialty Microscopy Solutions",
-          description:
-            "Optimized for microstructural analysis, surface defect inspection, and live cell imaging, these microscopes offer digital imaging integration, fluorescence capabilities, and customizable optics. Their inverted design accommodates bulky samples and ensures sterility in cell culture applications, meeting the demands of advanced research and industrial labs.",
-          label: "Advanced Microscopy Solutions",
-        },
-        solutionsBanner: {
-          title: "Comprehensive Microscopy Solutions",
-          description:
-            "Explore our Solutions section for ASTM E45 and ISO 4967-compliant protocols, guides for metallographic and cell culture imaging, and industry-specific applications to optimize your inverted microscope workflows.",
-          image: "/productsListing/Inverted_Microscope_Solutions.png",
-          label: "Tailored Microscopy Solutions",
-          buttons: [
-            { text: "Solutions by Industry", variant: "primary" },
-            { text: "Solutions by Application", variant: "secondary" },
-          ],
-        },
-        slides: products
-          .filter((p) => p.categorySlug === "inverted-microscope")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Inverted Microscope",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        products: products
-          .filter((p) => p.categorySlug === "inverted-microscope")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        items: [
-          {
-            id: 1,
-            name: "Inverted Microscope",
-            color: "rgba(80, 130, 160, 0.1)",
-            bgColor: "rgba(80, 130, 160, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "inverted-microscope")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          },
-        ],
-        productCards: products
-          .filter((p) => p.categorySlug === "inverted-microscope")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        specialtyProducts: [
-          {
-            id: 1,
-            name: "Metagraph-I",
-            description:
-              "Robust inverted microscope with 50x-1000x magnification and brightfield illumination, optimized for metallographic analysis of large metal samples and polished surfaces, compliant with ASTM E45.",
-            image: "/images/inverted-microscope/metagraph-i.png",
-            delay: 0.1,
-            animationX: -50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-          {
-            id: 2,
-            name: "Metagraph-SPL",
-            description:
-              "Versatile inverted microscope with phase contrast and optional fluorescence capabilities, ideal for live cell imaging and advanced materials inspection, per ISO 4967.",
-            image: "/images/inverted-microscope/metagraph-spl.png",
-            delay: 0.2,
-            animationX: 50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-        ],
-        subCategories: products
-          .filter((p) => p.categorySlug === "inverted-microscope")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-      {
-        name: "Upright Microscope",
-        slug: "upright-microscope",
-        heroImage: "/images/upright-microscope/upright-microscope.png",
-        intro: {
-          title: "Precision Upright Microscope Solutions",
-          description:
-            "The Upright Microscope, featuring the Metagraph (UP), delivers high-resolution imaging for metallurgical and materials science applications. Compliant with ASTM E45, ASTM E112, and ISO 4967, it is ideal for analyzing polished metal surfaces, inclusions, and microstructures. With advanced optics and robust design, the Metagraph (UP) serves quality control, failure analysis, and research in metallurgy, automotive, and aerospace industries.",
-          categoryLabel: "Explore our upright microscope solutions",
-          buttons: [
-            { text: "Discover Metagraph (UP)", variant: "primary" },
-            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
-          ],
-        },
-        semiAutomaticSection: {
-          title: "Upright Microscope",
-          description:
-            "The Metagraph (UP) upright microscope offers magnifications from 50x to 1000x, with brightfield, darkfield, and polarized light capabilities. Its ergonomic design, large mechanical stage, and high-resolution objectives support precise grain size analysis, inclusion rating, and microstructural examination, making it a reliable choice for lab-based metallographic studies.",
-          label: "Microscopy Features",
-        },
-        specialtySection: {
-          title: "Specialty Microscopy Solutions",
-          description:
-            "Tailored for advanced metallographic and materials analysis, the Metagraph (UP) supports digital imaging, differential interference contrast (DIC), and customizable optics. Its robust construction accommodates a wide range of sample sizes, ensuring accurate results for failure analysis, phase identification, and quality assurance in industrial and research settings.",
-          label: "Advanced Microscopy Solutions",
-        },
-        solutionsBanner: {
-          title: "Comprehensive Microscopy Solutions",
-          description:
-            "Explore our Solutions section for ASTM E45 and ISO 4967-compliant protocols, technical guides for grain sizing and inclusion analysis, and industry-specific applications to optimize your upright microscope workflows.",
-          image: "/productsListing/Upright_Microscope_Solutions.png",
-          label: "Tailored Microscopy Solutions",
-          buttons: [
-            { text: "Solutions by Industry", variant: "primary" },
-            { text: "Solutions by Application", variant: "secondary" },
-          ],
-        },
-        slides: products
-          .filter((p) => p.categorySlug === "upright-microscope")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Upright Microscope",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        products: products
-          .filter((p) => p.categorySlug === "upright-microscope")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        items: [
-          {
-            id: 1,
-            name: "Upright Microscope",
-            color: "rgba(90, 120, 170, 0.1)",
-            bgColor: "rgba(90, 120, 170, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "upright-microscope")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          },
-        ],
-        productCards: products
-          .filter((p) => p.categorySlug === "upright-microscope")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        specialtyProducts: [
-          {
-            id: 1,
-            name: "Metagraph (UP)",
-            description:
-              "High-performance upright microscope with 50x-1000x magnification, brightfield, darkfield, and polarized light capabilities, optimized for precise metallographic analysis of polished metal surfaces, compliant with ASTM E45 and ISO 4967.",
-            image: "/images/upright-microscope/metagraph-up.png",
-            delay: 0.1,
-            animationX: -50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-          {
-            id: 2,
-            name: "Digital Imaging System",
-            description:
-              "Integrated high-resolution camera and software for capturing, analyzing, and documenting metallographic images, enhancing efficiency in quality control and research applications.",
-            image: "/images/upright-microscope/digital-imaging.png",
-            delay: 0.2,
-            animationX: 50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-        ],
-        subCategories: products
-          .filter((p) => p.categorySlug === "upright-microscope")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-      {
-        name: "Stereo Microscope",
-        slug: "stereo-microscope",
-        heroImage: "/images/stereo-microscope/stereo-microscope.png",
-        intro: {
-          title: "Advanced Stereo Microscope Solutions",
-          description:
-            "The Stereo Microscope, featuring the Metagraph (ST), delivers high-quality 3D imaging for metallurgy, electronics, and biological applications. Compliant with ASTM E45, it offers low-magnification zoom (5x-80x), dual optical paths for depth perception, and ergonomic design. Ideal for quality control, circuit board inspection, and dissection in manufacturing, research, and education.",
-          categoryLabel: "Explore our stereo microscope solutions",
-          buttons: [
-            { text: "Discover Metagraph (ST)", variant: "primary" },
-            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
-          ],
-        },
-        semiAutomaticSection: {
-          title: "Stereo Microscope",
-          description:
-            "The Metagraph (ST) stereo microscope provides zoom magnification from 5x to 80x, with brightfield and reflected LED illumination. Its dual optical paths ensure true 3D visualization, ideal for inspecting opaque samples like metal surfaces, circuit boards, and biological specimens. Ergonomic features and a large working distance support prolonged, fatigue-free operation.",
-          label: "Microscopy Features",
-        },
-        specialtySection: {
-          title: "Specialty Microscopy Solutions",
-          description:
-            "Designed for precision tasks, the Metagraph (ST) supports digital imaging, fluorescence, and modular accessories like boom stands and auxiliary lenses. Its Greenough optical design ensures high depth of field, making it perfect for intricate dissections, microelectronics assembly, and detailed surface analysis in advanced research and industrial settings.",
-          label: "Advanced Microscopy Solutions",
-        },
-        solutionsBanner: {
-          title: "Comprehensive Microscopy Solutions",
-          description:
-            "Explore our Solutions section for ASTM E45-compliant protocols, guides for 3D imaging and surface inspection, and industry-specific applications to optimize your stereo microscope workflows.",
-          image: "/productsListing/Stereo_Microscope_Solutions.png",
-          label: "Tailored Microscopy Solutions",
-          buttons: [
-            { text: "Solutions by Industry", variant: "primary" },
-            { text: "Solutions by Application", variant: "secondary" },
-          ],
-        },
-        slides: products
-          .filter((p) => p.categorySlug === "stereo-microscope")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Stereo Microscope",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        products: products
-          .filter((p) => p.categorySlug === "stereo-microscope")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        items: [
-          {
-            id: 1,
-            name: "Stereo Microscope",
-            color: "rgba(80, 140, 160, 0.1)",
-            bgColor: "rgba(80, 140, 160, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "stereo-microscope")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          },
-        ],
-        productCards: products
-          .filter((p) => p.categorySlug === "stereo-microscope")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        specialtyProducts: [
-          {
-            id: 1,
-            name: "Metagraph (ST)",
-            description:
-              "Advanced stereo microscope with 5x-80x zoom, Greenough optics, and LED illumination, optimized for 3D inspection of metallographic samples and electronics, compliant with ASTM E45.",
-            image: "/images/stereo-microscope/metagraph-st.png",
-            delay: 0.1,
-            animationX: -50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-          {
-            id: 2,
-            name: "Digital Imaging Module",
-            description:
-              "Trinocular system with high-resolution camera for capturing and analyzing 3D images, streamlining documentation in quality control and research applications.",
-            image: "/images/stereo-microscope/digital-imaging.png",
-            delay: 0.2,
-            animationX: 50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-        ],
-        subCategories: products
-          .filter((p) => p.categorySlug === "stereo-microscope")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-      {
-        name: "Particle Size Analysis Systems",
-        slug: "particle-size-analysis-systems",
-        heroImage: "/images/particle-size-analysis-systems/particle-size-analysis-systems.png",
-        intro: {
-          title: "Precision Particle Size Analysis Solutions",
-          description:
-            "Our Particle Size Analysis Systems provide advanced stereo and metallurgical microscopy solutions for precise particle analysis, fully compliant with ISO 16232. Featuring automated filter scanning, classification of metallic, non-metallic, and fiber particles, motorized stages, and customizable reporting, these systems cater to automotive, aerospace, metallurgical, and industrial applications.",
-          categoryLabel: "Explore our particle analysis solutions",
-          buttons: [
-            { text: "Discover Particle Analysis Systems", variant: "primary" },
-            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
-          ],
-        },
-        semiAutomaticSection: {
-          title: "Particle Size Analysis Systems",
-          description:
-            "Our systems include Stereo models for particles >10 microns and Metallurgical models for particles >3 microns, both with automated filter scanning and ISO 16232-compliant classification. Metallurgical systems add particle height measurement and dual microscopy options for enhanced precision.",
-          label: "Our Particle Analysis Products",
-        },
-        specialtySection: {
-          title: "Specialty Particle Analysis Solutions",
-          description:
-            "For high-resolution, complex, or high-throughput applications, our specialty systems offer tailored automation, advanced microscopy, and custom reporting to meet stringent industry standards.",
-          label: "Advanced Particle Analysis Solutions",
-        },
-        solutionsBanner: {
-          title: "Comprehensive Particle Analysis Solutions",
-          description:
-            "Explore our Solutions section for ISO 16232-compliant methods, technical guides, and industry-specific applications to optimize your particle size analysis workflows.",
-          image: "/productsListing/Particle_Analysis_Solutions.png",
-          label: "Tailored Analysis Solutions",
-          buttons: [
-            { text: "Solutions by Industry", variant: "primary" },
-            { text: "Solutions by Material", variant: "secondary" },
-          ],
-        },
-        slides: products
-          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Particle Size Analysis Systems",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        products: products
-          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        items: [
-          {
-            id: 1,
-            name: "Particle Size Analysis Systems",
-            color: "rgba(70, 110, 160, 0.1)",
-            bgColor: "rgba(70, 110, 160, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "particle-size-analysis-systems")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          },
-        ],
-        productCards: products
-          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        specialtyProducts: [
-          {
-            id: 1,
-            name: "CleanView 100 (Stereo)",
-            description:
-              "Fully automatic stereo system with motorized stage, compliant with ISO 16232, featuring fast filter paper scanning and precise classification of particles >10 microns for cleanliness testing.",
-            image: "/images/particle-size-analysis-systems/cleanview-100.png",
-            delay: 0.1,
-            animationX: -50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-          {
-            id: 2,
-            name: "MetalScan 300 (Metallurgical)",
-            description:
-              "Fully automatic metallurgical system with stereo and metallurgical microscopes, motorized stage, and particle height measurement, compliant with ISO 16232 for particles >3 microns.",
-            image: "/images/particle-size-analysis-systems/metalscan-300.png",
-            delay: 0.2,
-            animationX: 50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-        ],
-        subCategories: products
-          .filter((p) => p.categorySlug === "particle-size-analysis-systems")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-      {
-        name: "Millipore Fluid Contamination Analysis Kit",
-        slug: "millipore-fluid-contamination-analysis-kit",
-        heroImage: "/images/millipore-fluid-contamination-analysis-kit/millipore-fluid-contamination-analysis-kit.png",
-        intro: {
-          title: "Comprehensive Fluid Contamination Analysis",
-          description:
-            "The Millipore Fluid Contamination Analysis Kit is a complete solution for analyzing particulate contamination in hydraulic fluids, lubricants, fuels, and water, compliant with ISO 16232 and other industry standards. Equipped with a vacuum/pressure pump, dispensing pressure vessel, filter paper, filter flask, solvent dispensers, petri slides, and dispensing bottles, this kit ensures accurate, reliable results for automotive, aerospace, and industrial quality control.",
-          categoryLabel: "Explore our contamination analysis solutions",
-          buttons: [
-            { text: "Discover the Millipore Kit", variant: "primary" },
-            { text: "Contact Our Experts", variant: "secondary", link: "/contact" },
-          ],
-        },
-        semiAutomaticSection: {
-          title: "Millipore Fluid Contamination Analysis Kit",
-          description:
-            "Designed for field and laboratory use, this kit includes all necessary components for sampling, filtering, and analyzing fluid contamination. From vacuum filtration to precise solvent dispensing, the kit supports gravimetric, microscopic, and colorimetric analysis to ensure clean parts and fluids in critical applications.",
-          label: "Kit Components",
-        },
-        specialtySection: {
-          title: "Specialty Contamination Analysis Solutions",
-          description:
-            "For advanced applications requiring high-volume filtration, custom solvent handling, or specialized storage, the Millipore kit offers robust components and accessories to meet stringent quality control requirements in industries like automotive and aerospace.",
-          label: "Advanced Contamination Solutions",
-        },
-        solutionsBanner: {
-          title: "Comprehensive Contamination Analysis Solutions",
-          description:
-            "Browse our Solutions section for technical guides, ISO 16232-compliant protocols, and industry-specific applications to optimize your fluid contamination analysis processes.",
-          image: "/productsListing/Contamination_Analysis_Solutions.png",
-          label: "Tailored Analysis Solutions",
-          buttons: [
-            { text: "Solutions by Industry", variant: "primary" },
-            { text: "Solutions by Material", variant: "secondary" },
-          ],
-        },
-        slides: products
-          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Millipore Fluid Contamination Analysis Kit",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        products: products
-          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        items: [
-          {
-            id: 1,
-            name: "Millipore Fluid Contamination Analysis Kit",
-            color: "rgba(50, 140, 120, 0.1)",
-            bgColor: "rgba(50, 140, 120, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          },
-        ],
-        productCards: products
-          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        specialtyProducts: [
-          {
-            id: 1,
-            name: "Vacuum/Pressure Pump",
-            description:
-              "Portable vacuum/pressure pump with 25 L/min flow rate and 35 PSIG pressure, designed for field or lab filtration, featuring a thermal overload switch for reliability.",
-            image: "/images/millipore-fluid-contamination-analysis-kit/vacuum-pressure-pump.png",
-            delay: 0.1,
-            animationX: -50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-          {
-            id: 2,
-            name: "Dispensing Pressure Vessel",
-            description:
-              "Autoclavable stainless steel vessel (5-20 L) meeting ASME-UM standards, ideal for high-volume filtration with pressure-operated filter holders, featuring cam-lock closure.",
-            image: "/images/millipore-fluid-contamination-analysis-kit/dispensing-pressure-vessel.png",
-            delay: 0.2,
-            animationX: 50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" },
-            ],
-          },
-        ],
-        subCategories: products
-          .filter((p) => p.categorySlug === "millipore-fluid-contamination-analysis-kit")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-      {
-        "name": "Image Analyzer",
-        "slug": "image-analyzer",
-        "heroImage": "/images/image-analyzer/image-analyzer.png",
-        "intro": {
-          "title": "Advanced Metallurgical Image Analysis",
-          "description": "The Image Analyzer is a comprehensive solution for metallurgical and materials science analysis, compliant with ASTM E112 and ISO 643 standards. Featuring tools for grain analysis, phase analysis, nodularity, inclusions, welding, porosity, and more, it delivers precise, automated measurements with customizable reporting for quality control in automotive, aerospace, and industrial applications.",
-          "categoryLabel": "Explore our image analysis solutions",
-          "buttons": [
-            { "text": "Discover Image Analyzer", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
-        },
-        "semiAutomaticSection": {
-          "title": "Image Analyzer",
-          "description": "Equipped with advanced image processing algorithms, the Image Analyzer automates grain size measurement, phase quantification, nodularity analysis, and defect evaluation. Tools like intercept and planimetric methods, point counting, and porosity estimation ensure accurate, repeatable results for metallographic analysis.",
-          "label": "Analysis Tools"
-        },
-        "specialtySection": {
-          "title": "Specialty Image Analysis Solutions",
-          "description": "For complex microstructures or specialized applications, the Image Analyzer offers tailored tools like B Type flake separation, welding analysis, and annotation, supporting detailed characterization and custom reporting.",
-          "label": "Advanced Analysis Solutions"
-        },
-        "solutionsBanner": {
-          "title": "Comprehensive Image Analysis Solutions",
-          "description": "Browse our Solutions section for ASTM E112-compliant protocols, technical guides, and industry-specific applications to optimize your metallurgical analysis workflows.",
-          "image": "/productsListing/Image_Analysis_Solutions.png",
-          "label": "Tailored Analysis Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
-        },
-        "slides": products
-          .filter((p) => p.categorySlug === "image-analyzer")
-          .slice(0, 3)
-          .map((p) => ({
-            "id": p.id,
-            "image": p.image,
-            "alt": p.alt,
-            "category": "Image Analyzer",
-            "title": p.name,
-            "description": p.description,
-            "reviews": p.reviews,
-            "rating": p.rating
-          })),
-        "products": products
-          .filter((p) => p.categorySlug === "image-analyzer")
-          .map((p) => ({
-            "name": p.name,
-            "image": p.image
-          })),
-        "items": [
-          {
-            "id": 1,
-            "name": "Image Analyzer",
-            "color": "rgba(80, 120, 150, 0.1)",
-            "bgColor": "rgba(80, 120, 150, 0.1)",
-            "subItems": products
-              .filter((p) => p.categorySlug === "image-analyzer")
-              .map((p) => ({
-                "name": p.name,
-                "apiCall": p.apiCall
-              }))
-          }
-        ],
-        "productCards": products
-          .filter((p) => p.categorySlug === "image-analyzer")
-          .map((p) => ({
-            "id": p.id,
-            "name": p.name,
-            "tag": p.tag,
-            "description": p.description,
-            "image": p.image,
-            "detail": p.detail,
-            "delay": 0.1 * (p.id - 1)
-          })),
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Grain Analysis (Intercept Method)",
-            "description": "Automates ASTM E112-compliant intercept method, counting grain boundary intersections for precise grain size measurement, optimized for elongated grains.",
-            "image": "/images/image-analyzer/grain-analysis-intercept.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Planimetry Method",
-            "description": "Counts grains in a known area per ASTM E112, delivering ±0.25 grain size unit precision for equiaxed grains with automated marking and reporting.",
-            "image": "/images/image-analyzer/planimetry-method.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": products
-          .filter((p) => p.categorySlug === "image-analyzer")
-          .map((p) => ({
-            "id": p.slug,
-            "name": p.name
-          }))
-      },
-    ],
-  },
+  
 
   // mainCategory: "Other Machines"
   {
