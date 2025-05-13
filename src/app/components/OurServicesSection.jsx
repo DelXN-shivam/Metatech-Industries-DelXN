@@ -17,21 +17,21 @@ const Services = () => {
     },
     {
       icon: '/images/Gears set.png',
-      image: '/images/Automatic-Sectioning.jpg',
+      image: '/images/Automatic-Sectioning.png',
       title: 'Automatic Sectioning',
       description: 'High-precision automated sectioning for consistent sample preparation',
       category: 'Cutting',
     },
     {
       icon: '/images/Laser.png',
-      image: '/images/Manual-Automatic-Polishing.jpg',
+      image: '/images/Manual-Automatic-Polishing.png',
       title: 'Manual/Automatic Polishing',
       description: 'Surface preparation solutions for metallographic analysis',
       category: 'Finishing',
     },
     {
       icon: '/images/Coffee maker.png',
-      image: '/images/3D-Surface-Profilometry.jpg',
+      image: '/images/3D-Surface-Profilometry.png',
       title: '3D Surface Profilometry',
       description: 'Advanced surface measurement with nanometer-level resolution',
       category: 'Analysis',
@@ -45,7 +45,7 @@ const Services = () => {
     },
     {
       icon: '/images/Laser.png',
-      image: '/images/Automated-Mounting.jpg',
+      image: '/images/Automated-Mounting.png',
       title: 'Automated Mounting',
       description: 'Precision mounting systems for sample preparation',
       category: 'Preparation',
