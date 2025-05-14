@@ -29,7 +29,7 @@ const Header = () => {
         ...acc,
         [key]: false
       }), {});
-      
+
       // Toggle the clicked category
       return {
         ...newState,
@@ -54,8 +54,8 @@ const Header = () => {
     if (categoryId) {
       setActiveCategory(categoryId);
       // Auto-expand category if it has subcategories and is active
-      if (mainCategories.some(mainCat => 
-        mainCat.categories.some(cat => 
+      if (mainCategories.some(mainCat =>
+        mainCat.categories.some(cat =>
           cat.slug === categoryId && cat.subCategories && cat.subCategories.length > 0
         )
       )) {
@@ -205,11 +205,11 @@ const Header = () => {
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
-                          transition={{ 
-                            duration: 0.25, 
-                            type: "spring", 
-                            stiffness: 300, 
-                            damping: 20 
+                          transition={{
+                            duration: 0.25,
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 20
                           }}
                           className="container mx-auto bg-white backdrop-blur-lg bg-opacity-95 rounded-xl shadow-2xl border border-sky-100"
                           style={{
@@ -269,17 +269,9 @@ const Header = () => {
                                                     : 'text-gray-700 font-bold hover:text-sky-600'
                                                     }`}
                                                 >
-                                                  <span
-                                                    className={`relative flex items-center justify-center ${activeCategory === category.slug ? '' : ''}`}
-                                                  >
-                                                    <span className={`
-                                                      w-1.5 h-1.5 rounded-full transition-all duration-300 
-                                                      ${activeCategory === category.slug ? 'bg-sky-500 scale-125' : 'bg-gray-400 group-hover:bg-sky-400'}
-                                                    `} />
-                                                  </span>
                                                   {category.name}
                                                   {activeCategory === category.slug && (
-                                                    <motion.span 
+                                                    <motion.span
                                                       className="ml-1 text-xs bg-sky-100 text-sky-700 px-1.5 py-0.5 rounded-full"
                                                       initial={{ opacity: 0, scale: 0.8 }}
                                                       animate={{ opacity: 1, scale: 1 }}

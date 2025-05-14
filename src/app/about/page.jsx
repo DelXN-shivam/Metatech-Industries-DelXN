@@ -145,13 +145,13 @@ const AboutUsPage = () => {
         <motion.div
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: "url('/images/about-us-bg-1.png')",
+            backgroundImage: "url('/images/about-us-bg-2.png')",
             y: heroBackgroundY
           }}
         />
         
         {/* Overlay with gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-blue-900/60 z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-blue-900/50 z-0"></div>
 
         {/* Content Container */}
         <motion.div 

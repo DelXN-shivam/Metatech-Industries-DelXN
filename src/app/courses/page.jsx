@@ -66,7 +66,7 @@ const CoursesPage = () => {
       icon: <Cutting className="h-6 w-6 text-red-600" />,
       image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80",
       capabilities: ["Abrasive cutting", "Precision sectioning", "Large sample capacity", "Minimal deformation"],
-      color: "bg-gradient-to-br from-red-500/10 to-red-600/20",
+      color: "bg-gradient-to-br from-red-500 to-red-200",
     },
     {
       id: 3,
@@ -120,7 +120,7 @@ const CoursesPage = () => {
       icon: <ImageAnalysis className="h-6 w-6 text-fuchsia-600" />,
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
       capabilities: ["Phase distribution", "Grain size analysis", "Porosity measurement", "Custom algorithms"],
-      color: "bg-gradient-to-br from-fuchsia-500/10 to-fuchsia-600/20",
+      color: "bg-gradient-to-br from-fuchsia-500 to-fuchsia-200",
     },
     {
       id: 9,
@@ -311,7 +311,6 @@ const CoursesPage = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
             Precision <span className="text-blue-600 relative">
               Metallurgical Services
-              <span className="absolute bottom-1 left-0 w-full h-1 bg-blue-200 rounded-full"></span>
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
