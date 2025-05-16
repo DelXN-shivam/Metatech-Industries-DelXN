@@ -269,18 +269,13 @@ export default function HeroSection() {
                     {/* Subtle glow effect with responsive sizing */}
                     <div className="absolute inset-0 -m-2 sm:-m-4 md:-m-6 rounded-full bg-blue-100/50 filter blur-xl sm:blur-2xl"></div>
                     
-                    <motion.img 
+                    <img 
                       src={`${currentData.image}`}
                       alt={`${currentData.model}`} 
                       className="max-w-[90%] max-h-[70%] object-contain h-auto w-auto"
                       style={{ 
                         filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.1))",
                         maxHeight: "clamp(200px, 50vh, 500px)"
-                      }}
-                      whileHover={{ 
-                        scale: 1.05,
-                        rotateZ: 2,
-                        transition: { duration: 0.3 }
                       }}
                     />
                   </div>
