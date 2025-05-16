@@ -1,4 +1,4 @@
-const consumables = [
+export const consumables = [
   // Cutting/Sectioning Consumables
   {
     id: 1,
@@ -1088,7 +1088,7 @@ const consumables = [
   }
 ];
 
-const mainConsumables = [
+export const mainConsumables = [
   {
     title: 'Cutting/Sectioning Consumables',
     slug: 'cutting-sectioning',
@@ -1210,8 +1210,7 @@ const mainConsumables = [
 ];
 
 
-
-const products = [
+export const products = [
   // Automatic Cutting Machines
   {
     id: 1,
