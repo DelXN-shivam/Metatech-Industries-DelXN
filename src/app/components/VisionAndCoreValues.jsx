@@ -236,22 +236,38 @@ const VisionMission = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
           </motion.div>
 
-          {/* Modern Card Layout for Core Values */}
+          {/* Modified Core Values Cards with Improved Hover Animation */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {coreValues.map((value, index) => (
               <motion.div
                 key={index}
                 className="group relative"
                 variants={itemVariants}
-                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                whileHover={{
+                  scale: 1.03,
+                  transition: { duration: 0.4, ease: "easeOut" }
+                }}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${value.color} opacity-20 rounded-xl transform group-hover:opacity-30 transition-opacity duration-300 blur-xl`}></div>
-                <div className="relative h-full bg-gray-800/80 border border-gray-700 backdrop-blur-sm p-6 rounded-xl group-hover:border-opacity-50 transition-all duration-300">
+                <div className={`absolute inset-0 bg-gradient-to-br ${value.color} opacity-10 rounded-xl transform transition-all duration-500 blur-lg group-hover:blur-xl group-hover:opacity-25`}></div>
+                <div className="relative h-full bg-gray-800/80 border border-gray-700 backdrop-blur-sm p-6 rounded-xl transition-all duration-400 group-hover:shadow-lg group-hover:shadow-black/20 group-hover:border-opacity-80 group-hover:border-gray-600">
                   <div className="flex flex-col h-full">
-                    <div className="mb-5">{value.icon}</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                    <p className="text-gray-300 text-sm flex-grow">{value.description}</p>
-                    <div className={`w-12 h-1 bg-gradient-to-r ${value.color} rounded-full mt-4`}></div>
+                    <motion.div 
+                      className="mb-5"
+                      whileHover={{ 
+                        rotate: [0, 5, -5, 5, 0], 
+                        transition: { duration: 0.5 } 
+                      }}
+                    >
+                      {value.icon}
+                    </motion.div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">{value.title}</h3>
+                    <p className="text-gray-300 text-sm flex-grow group-hover:text-gray-200 transition-colors duration-300">{value.description}</p>
+                    <motion.div 
+                      className={`w-12 h-1 bg-gradient-to-r ${value.color} rounded-full mt-4`}
+                      initial={{ width: "3rem" }}
+                      whileHover={{ width: "5rem" }}
+                      transition={{ duration: 0.3 }}
+                    ></motion.div>
                   </div>
                 </div>
               </motion.div>
