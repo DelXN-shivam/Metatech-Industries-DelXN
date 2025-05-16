@@ -108,26 +108,13 @@ const Footer = () => {
                                 <img src="/images/metatech_logo.png" alt="Metatech Logo" className="w-56" />
                             </div>
                         </motion.a>
-                        {/* <div className="bg-[#0f7db7]/10 backdrop-blur-sm p-6 rounded-xl border border-[#0f7db7]/20 shadow-xl shadow-blue-900/20">
-                            <h4 className="text-lg font-bold text-white mb-3 flex items-center">
-                                <span className="w-10 h-1 bg-[#0f7db7] rounded-full mr-3"></span>
-                                Why Choose Us?
-                            </h4>
-                            <p className="text-gray-300 leading-relaxed">
-                                With decades of expertise, cutting-edge technology, and unparalleled customer service, Metatech Industries is your trusted partner.
-                            </p>
-                        </div> */}
 
                         {/* Contact Us Section */}
                         <motion.div
-                            className="w-full"
+                            className="w-64"
                             variants={itemVariants}
                         >
-                            <h3 className="text-xl font-bold mb-6 text-white relative inline-flex items-center">
-                                <span className="w-2 h-6 bg-[#0f7db7] rounded-sm mr-3"></span>
-                                Contact Us
-                            </h3>
-                            <div className="bg-[#0f7db7]/10 backdrop-blur-sm rounded-xl p-6 border border-[#0f7db7]/20 shadow-xl shadow-blue-900/20">
+                            <div className="bg-[#0f7db7]/10 backdrop-blur-sm rounded-xl p-4 border border-[#0f7db7]/20 shadow-xl shadow-blue-900/20">
                                 <div className="flex items-start mb-4">
                                     <div className="bg-[#0f7db7] p-2 rounded-lg mr-4 flex-shrink-0">
                                         <FaMapMarkerAlt className="text-white" />
@@ -154,26 +141,6 @@ const Footer = () => {
                                         sales@metatechind.com
                                     </a>
                                 </div>
-
-                                {/* Social Media Icons */}
-                                {/* <div className="flex justify-start space-x-3 mt-4">
-                                    {socialIcons.map(({ Icon, href, color }, index) => (
-                                        <motion.a
-                                            key={index}
-                                            href={href}
-                                            className="p-2.5 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:text-white transition"
-                                            style={{ boxShadow: "0 4px 16px rgba(0,0,0,0.2)" }}
-                                            whileHover={{
-                                                scale: 1.15,
-                                                backgroundColor: color,
-                                                boxShadow: "0 8px 20px rgba(0,0,0,0.3)"
-                                            }}
-                                            transition={{ duration: 0.3 }}
-                                        >
-                                            <Icon size={18} />
-                                        </motion.a>
-                                    ))}
-                                </div> */}
                             </div>
                         </motion.div>
                     </motion.div>
@@ -237,18 +204,9 @@ const Footer = () => {
                                     <FaRegHandPointRight className="text-white" />
                                 </div>
                                 <p className="text-gray-300 text-sm">
-                                    Metatech Industries is committed to ensuring our website is accessible to everyone, including individuals with disabilities. If you are experiencing any difficulty using our website, please contact us at support@metatechind.com or call us at +91 94225 26706 to describe the issue or concern.
-                                </p>
-                            </div>
-
-                            <div className="flex items-center mb-4">
-                                <div className="bg-[#0f7db7] p-2 rounded-lg mr-4 flex-shrink-0">
-                                    <FaPhoneAlt className="text-white" />
-                                </div>
-                                <p href="" className="text-gray-300">
-                                    If you need assistance accessing the products, services, or information available on our website, we encourage you to reach out by phone at <a href="tel:+919422526706" className="text-purple-400 hover:text-white transition-colors">
+                                    Metatech Industries is committed to ensuring our website is accessible to everyone, including individuals with disabilities. If you are experiencing any difficulty using our website, please contact us at <a href='mailto:support@metatechind.com' className='text-amber-500 hover:text-white transition-colors'>support@metatechind.com</a> or call us at <a href="tel:+919422526706" className="text-purple-400 hover:text-white transition-colors">
                                         +91 94225 26706
-                                    </a> or via email at <a href='mailto:support@metatechind.com' className='text-amber-500'>support@metatechind.com</a>. We are here to help and will be happy to assist you.
+                                    </a> to describe the issue or concern.
                                 </p>
                             </div>
                         </div>
@@ -271,6 +229,10 @@ const Footer = () => {
                         >
                             <a href="https://delxntech.com/" target="_blank" rel="noopener noreferrer"> DelXN Technologies</a>
                         </motion.span>
+                    </div>
+                    <div className='p-4 space-x-8'>
+                    <a href="" className='hover:text-amber-600'>Privacy Policy</a>
+                    <a href="" className='hover:text-amber-600'>Terms & Conditions</a>
                     </div>
                 </div>
             </div>

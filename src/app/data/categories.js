@@ -1,3 +1,1216 @@
+const consumables = [
+  // Cutting/Sectioning Consumables
+  {
+    id: 1,
+    categorySlug: 'cutting-sectioning',
+    name: 'Abrasive Cut Off Wheels',
+    slug: 'abrasive-cut-off-wheels',
+    image: '/consumables/cutting-sectioning/abrasive-cut-off-wheels.png',
+    alt: 'Abrasive Cut Off Wheels Consumable',
+    details: {
+      description: 'Abrasive cut-off wheels for general-purpose metallographic cutting, suitable for a variety of materials',
+      type: ['Aluminum Oxide', 'Silicon Carbide'],
+      features: ['Cost-effective', 'Versatile for ferrous and non-ferrous materials', 'Burn-free sectioning'],
+      applications: ['Metallographic sample sectioning', 'High-volume cutting'],
+      sizes: ['250 mm', '300 mm', '350 mm'],
+      grits: [],
+      packaging: ['Pack of 10'],
+      specifications: {},
+      formats: ['Resin Bonded', 'Rubber Bonded'],
+      note: 'Compatible with automatic cutting machines like AutoCut'
+    }
+  },
+  {
+    id: 2,
+    categorySlug: 'cutting-sectioning',
+    name: 'Cutting Fluid',
+    slug: 'cutting-fluid',
+    image: '/consumables/cutting-sectioning/cutting-fluid.png',
+    alt: 'Cutting Fluid Consumable',
+    details: {
+      description: 'Fluid to reduce heat and friction during metallographic cutting, enhancing blade life',
+      type: 'Water-based',
+      features: ['Reduces heat generation', 'Prevents corrosion', 'Extends blade life'],
+      applications: ['Cooling and lubrication in abrasive cutting'],
+      sizes: [],
+      grits: [],
+      packaging: ['1 L', '5 L'],
+      specifications: {},
+      formats: [],
+      note: 'Suitable for use with abrasive cut-off wheels'
+    }
+  },
+  {
+    id: 3,
+    categorySlug: 'cutting-sectioning',
+    name: 'Diamond Wafering Blades',
+    slug: 'diamond-wafering-blades',
+    image: '/consumables/cutting-sectioning/diamond-wafering-blades.png',
+    alt: 'Diamond Wafering Blades Consumable',
+    details: {
+      description: 'High-precision diamond blades for cutting hard and brittle materials with minimal damage',
+      type: 'Diamond',
+      features: ['Precise cutting', 'Long operational life', 'Minimal material deformation'],
+      applications: ['Ceramics', 'Glass', 'Composites', 'Metallographic sample preparation'],
+      sizes: ['100 mm', '150 mm', '200 mm'],
+      grits: ['Fine', 'Medium'],
+      packaging: [],
+      specifications: {
+        bondType: ['Metal Bond', 'Resin Bond']
+      },
+      formats: [],
+      note: 'Requires periodic dressing for optimal performance'
+    }
+  },
+  {
+    id: 4,
+    categorySlug: 'cutting-sectioning',
+    name: 'CBN Wafering Blades',
+    slug: 'cbn-wafering-blades',
+    image: '/consumables/cutting-sectioning/cbn-wafering-blades.png',
+    alt: 'CBN Wafering Blades Consumable',
+    details: {
+      description: 'Cubic Boron Nitride blades for precise sectioning of ferrous materials and superalloys',
+      type: 'CBN',
+      features: ['High efficiency for ferrous materials', 'Reduced sectioning time', 'Precise cuts'],
+      applications: ['Iron-based alloys', 'Nickel superalloys', 'Cobalt alloys'],
+      sizes: ['100 mm', '150 mm', '200 mm'],
+      grits: ['Fine', 'Medium'],
+      packaging: [],
+      specifications: {
+        bondType: ['Metal Bond', 'Resin Bond']
+      },
+      formats: [],
+      note: 'Ideal for use with precision cutting saws like IsoCut series'
+    }
+  },
+  {
+    id: 5,
+    categorySlug: 'cutting-sectioning',
+    name: 'Special Coolant Oil for Diamond Cut Off Wheels',
+    slug: 'special-coolant-oil-diamond-cut-off-wheels',
+    image: '/consumables/cutting-sectioning/special-coolant-oil-diamond-cut-off-wheels.png',
+    alt: 'Special Coolant Oil for Diamond Cut Off Wheels Consumable',
+    details: {
+      description: 'Oil-based coolant designed to enhance cutting efficiency of diamond cut-off wheels',
+      type: 'Oil-based',
+      features: ['Prevents metal coating on blades', 'Prolongs blade life', 'Reduces heat'],
+      applications: ['Cutting metals with diamond wafering blades'],
+      sizes: [],
+      grits: [],
+      packaging: ['1 L', '5 L'],
+      specifications: {},
+      formats: [],
+      note: 'Recommended for high-lubrication needs during metal cutting'
+    }
+  },
+  // Moulding Consumables
+  {
+    id: 6,
+    categorySlug: 'moulding',
+    name: 'Bakelite/Phenolic Hot Moulding Powder',
+    slug: 'bakelite-phenolic-hot-moulding-powder',
+    image: '/consumables/moulding/bakelite-phenolic-hot-moulding-powder.png',
+    alt: 'Bakelite/Phenolic Hot Moulding Powder Consumable',
+    details: {
+      description: 'Superior quality powder for compression mounting with low shrinkage and high mechanical strength',
+      type: 'Compression Mounting',
+      features: ['Low shrinkage', 'High mechanical strength'],
+      applications: ['Metallography mounting'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {
+        hardness: '55 Shore D',
+        specificGravity: '1.4 Kgs',
+        shrinkage: '0.006 in/in in compression',
+        coefficientOfLinearThermalExpansion: '50 in/in/°C'
+      },
+      formats: ['Black', 'Red', 'Green'],
+      note: 'Ensure proper heating and pressure during moulding'
+    }
+  },
+  {
+    id: 7,
+    categorySlug: 'moulding',
+    name: 'Transparent Moulding Powder',
+    slug: 'transparent-moulding-powder',
+    image: '/consumables/moulding/transparent-moulding-powder.png',
+    alt: 'Transparent Moulding Powder Consumable',
+    details: {
+      description: 'Powder for transparent hot moulding',
+      type: 'Hot Moulding',
+      features: [],
+      applications: ['Transparent mounting'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Use for visual inspection of sample features'
+    }
+  },
+  {
+    id: 8,
+    categorySlug: 'moulding',
+    name: 'Black Epoxy Thermosetting Resin',
+    slug: 'black-epoxy-thermosetting-resin',
+    image: '/consumables/moulding/black-epoxy-thermosetting-resin.png',
+    alt: 'Black Epoxy Thermosetting Resin Consumable',
+    details: {
+      description: 'Glass fiber filled epoxy resin for mounting',
+      type: 'Epoxy Resins (Glass Fiber Filled)',
+      features: ['Superior edge retention', 'Tough grinding', 'Excellent flow characteristics', 'Chemical resistant', 'High hardness'],
+      applications: ['Edge retention in metallography'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Ideal for samples requiring minimal edge distortion'
+    }
+  },
+  {
+    id: 9,
+    categorySlug: 'moulding',
+    name: 'Diallyl Phthalate',
+    slug: 'diallyl-phthalate',
+    image: '/consumables/moulding/diallyl-phthalate.png',
+    alt: 'Diallyl Phthalate Consumable',
+    details: {
+      description: 'High hardness moulding material to prevent edge rounding',
+      type: '',
+      features: ['Higher hardness', 'Prevents edge rounding effect', 'Suitable for retaining small plating/coating layers'],
+      applications: ['Retaining small plating/coating layers', 'Front end/facing moulding'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Costly material; use in few mm thickness initially, followed by normal moulding material'
+    }
+  },
+  {
+    id: 10,
+    categorySlug: 'moulding',
+    name: 'Conductive Mould Material',
+    slug: 'conductive-mould-material',
+    image: '/consumables/moulding/conductive-mould-material.png',
+    alt: 'Conductive Mould Material Consumable',
+    details: {
+      description: 'Electrically conductive copper-filled thermosetting resin',
+      type: 'Copper filled thermosetting resin',
+      features: ['Electrically conductive'],
+      applications: ['Conductive mounting'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Use for SEM or conductive analysis'
+    }
+  },
+  {
+    id: 11,
+    categorySlug: 'moulding',
+    name: 'Mould Release Spray',
+    slug: 'mould-release-spray',
+    image: '/consumables/moulding/mould-release-spray.png',
+    alt: 'Mould Release Spray Consumable',
+    details: {
+      description: 'Lubricant spray for easy ejection in moulding',
+      type: '',
+      features: ['Facilitates easy ejection'],
+      applications: ['Hot and cold compression mounting'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Apply evenly before moulding process'
+    }
+  },
+  {
+    id: 12,
+    categorySlug: 'moulding',
+    name: 'Cold Mounting System',
+    slug: 'cold-mounting-system',
+    image: '/consumables/moulding/cold-mounting-system.png',
+    alt: 'Cold Mounting System Consumable',
+    details: {
+      description: 'System for fast and easy cold mounting, ideal for high volume production',
+      type: '',
+      features: ['Fast curing', 'Easy to use'],
+      applications: ['High volume production mounting'],
+      sizes: [],
+      grits: [],
+      packaging: ['Binder 400 ml + Hardener 400 gm', '1 kg pack'],
+      specifications: { curingCycle: '15 minutes' },
+      formats: [],
+      note: 'Ensure proper mixing ratio for optimal curing'
+    }
+  },
+  {
+    id: 13,
+    categorySlug: 'moulding',
+    name: 'Silicon Rubber Moulds',
+    slug: 'silicon-rubber-moulds',
+    image: '/consumables/moulding/silicon-rubber-moulds.png',
+    alt: 'Silicon Rubber Moulds Consumable',
+    details: {
+      description: 'Reusable moulds for cold mounting',
+      type: 'Reusable mould',
+      features: ['Reusable'],
+      applications: ['Cold mounting'],
+      sizes: ['20 mm', '25.4 mm', '30 mm', '31.75 mm', '40 mm', '50 mm', 'Custom as per customer requirement'],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Clean thoroughly between uses to maintain quality'
+    }
+  },
+  {
+    id: 14,
+    categorySlug: 'moulding',
+    name: 'Plastic Moulds',
+    slug: 'plastic-moulds',
+    image: '/consumables/moulding/plastic-moulds.png',
+    alt: 'Plastic Moulds Consumable',
+    details: {
+      description: 'Plastic moulds for mounting',
+      type: '',
+      features: [],
+      applications: ['Mounting'],
+      sizes: ['25.4 mm', '31.75 mm', '40 mm', 'Custom as per customer requirement'],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Disposable; replace after multiple uses'
+    }
+  },
+  {
+    id: 15,
+    categorySlug: 'moulding',
+    name: 'Mounting Clips (Plastic)',
+    slug: 'mounting-clips-plastic',
+    image: '/consumables/moulding/mounting-clips-plastic.png',
+    alt: 'Mounting Clips (Plastic) Consumable',
+    details: {
+      description: 'Clips to hold thin samples on edge for cold mounting encapsulation',
+      type: 'Plastic',
+      features: ['Holds thin samples securely'],
+      applications: ['Cold mounting encapsulation'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Use for thin or flexible samples'
+    }
+  },
+  {
+    id: 16,
+    categorySlug: 'moulding',
+    name: 'Mounting Clips (Stainless Steel)',
+    slug: 'mounting-clips-stainless-steel',
+    image: '/consumables/moulding/mounting-clips-stainless-steel.png',
+    alt: 'Mounting Clips (Stainless Steel) Consumable',
+    details: {
+      description: 'Clips to hold thin samples on edge for compression mounting encapsulation',
+      type: 'Stainless Steel',
+      features: ['Holds thin samples securely'],
+      applications: ['Compression mounting encapsulation'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Durable for repeated use in hot mounting'
+    }
+  },
+  // Grinding Consumables
+  {
+    id: 17,
+    categorySlug: 'grinding',
+    name: 'Silicon Carbide Abrasive Grinding Discs',
+    slug: 'silicon-carbide-abrasive-grinding-discs',
+    image: '/consumables/grinding/silicon-carbide-abrasive-grinding-discs.png',
+    alt: 'Silicon Carbide Abrasive Grinding Discs Consumable',
+    details: {
+      description: 'Waterproof silicon carbide abrasive discs for wet/dry grinding',
+      type: 'Silicon Carbide abrasive waterproof paper',
+      features: ['Wet/dry compatible', 'C weight paper quality'],
+      applications: ['General grinding'],
+      sizes: ['8 inch', '9 inch', '10 inch', '12 inch', 'A4 (for grits 2500, 3000, 5000)'],
+      grits: ['80', '120', '180', '220', '320', '400', '600', '800', '1000', '1200', '1500', '2000', '2500', '3000', '5000'],
+      packaging: [],
+      specifications: {},
+      formats: ['Plain', 'PSA Backed'],
+      note: 'Progress through grit sequence for best results'
+    }
+  },
+  {
+    id: 18,
+    categorySlug: 'grinding',
+    name: 'Aloxite/Zircon Grinding Discs',
+    slug: 'aloxite-zircon-grinding-discs',
+    image: '/consumables/grinding/aloxite-zircon-grinding-discs.png',
+    alt: 'Aloxite/Zircon Grinding Discs Consumable',
+    details: {
+      description: 'Grinding discs for spectro polishing machines',
+      type: ['Aloxite', 'Zircon'],
+      features: [],
+      applications: ['Spectro polishing'],
+      sizes: ['10 inch dia x 25.4 mm bore', '11 inch dia x 40.0 mm bore', '14 inch dia x 40.0 mm bore'],
+      grits: ['36', '40', '60', 'Custom as per customer requirement'],
+      packaging: [],
+      specifications: {},
+      formats: ['Plain', 'PSA', 'Paper Base', 'Cloth Base'],
+      note: 'Select appropriate type for material hardness'
+    }
+  },
+  {
+    id: 19,
+    categorySlug: 'grinding',
+    name: 'Sample Holder for Spectro Polishing',
+    slug: 'sample-holder-spectro-polishing',
+    image: '/consumables/grinding/sample-holder-spectro-polishing.png',
+    alt: 'Sample Holder for Spectro Polishing Consumable',
+    details: {
+      description: 'Holder for samples in spectro polishing machines',
+      type: '',
+      features: [],
+      applications: ['Spectro polishing'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Ensure secure sample placement to avoid slippage'
+    }
+  },
+  {
+    id: 20,
+    categorySlug: 'grinding',
+    name: 'Magnetic Sample/Coin Holder',
+    slug: 'magnetic-sample-coin-holder',
+    image: '/consumables/grinding/magnetic-sample-coin-holder.png',
+    alt: 'Magnetic Sample/Coin Holder Consumable',
+    details: {
+      description: 'Magnetic holder for samples or coins in spectro polishing machines',
+      type: 'Magnetic',
+      features: ['Magnetic attachment'],
+      applications: ['Spectro polishing'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Verify magnetic compatibility with machine'
+    }
+  },
+  {
+    id: 21,
+    categorySlug: 'grinding',
+    name: 'Abrasive Grinding Belts',
+    slug: 'abrasive-grinding-belts',
+    image: '/consumables/grinding/abrasive-grinding-belts.png',
+    alt: 'Abrasive Grinding Belts Consumable',
+    details: {
+      description: 'Abrasive belts for grinding applications',
+      type: ['Aluminum Oxide', 'Zirkon', 'Silicon Carbide'],
+      features: ['Customizable'],
+      applications: ['General grinding'],
+      sizes: ['100 x 915 mm', '100 x 1220 mm'],
+      grits: ['60', '80', '120', '220', '320', '400', '600'],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Customized belts available'
+    }
+  },
+  {
+    id: 22,
+    categorySlug: 'grinding',
+    name: 'Diamond Grinding Discs',
+    slug: 'diamond-grinding-discs',
+    image: '/consumables/grinding/diamond-grinding-discs.png',
+    alt: 'Diamond Grinding Discs Consumable',
+    details: {
+      description: 'Diamond abrasive discs for coarse and fine grinding of high hardness materials',
+      type: ['Metal Bonded', 'Resin Bonded'],
+      features: [
+        'Flexible (Metal/Resin Flex)',
+        'Color-coded',
+        'Open patterned',
+        'Aggressive cutting',
+        'Reduced loading (Metal Flex)',
+        'High quality diamond abrasive'
+      ],
+      applications: ['Coarse and fine grinding of high hardness materials'],
+      sizes: ['8 inch (203 mm)', '10 inch (254 mm)', '12 inch (305 mm)'],
+      grits: ['80', '120', '220', '320', '400', '500', '800', '1500', '3000'],
+      packaging: [],
+      specifications: {
+        metalBonded: 'Diamond abrasive grit bonded to a wheel by electroplating',
+        resinBonded: 'Diamond abrasive grit bonded to a flat aluminum disc with resin'
+      },
+      formats: ['Pressure Sensitive Adhesive (PSA)', 'Plain Back', 'Overhanging Cloth'],
+      note: 'Use for high hardness materials like ceramics or carbides'
+    }
+  },
+  {
+    id: 23,
+    categorySlug: 'grinding',
+    name: 'Magnetic Base Pad',
+    slug: 'magnetic-base-pad',
+    image: '/consumables/grinding/magnetic-base-pad.png',
+    alt: 'Magnetic Base Pad Consumable',
+    details: {
+      description: 'Magnetic base pad for attaching polishing papers/cloths',
+      type: '',
+      features: ['Permanently attached with PSA', 'Allows easy exchange of papers/cloths'],
+      applications: ['Grinding and polishing'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: ['Teflon-coated magnetic metal plate'],
+      note: 'Retrofit to any make'
+    }
+  },
+  {
+    id: 24,
+    categorySlug: 'grinding',
+    name: 'Polishing Pad with PSA Backing',
+    slug: 'polishing-pad-psa-backing',
+    image: '/consumables/grinding/polishing-pad-psa-backing.png',
+    alt: 'Polishing Pad with PSA Backing Consumable',
+    details: {
+      description: 'Polishing pad with pressure sensitive adhesive backing',
+      type: '',
+      features: [],
+      applications: ['Polishing'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: ['PSA Backing'],
+      note: 'Replace when adhesive weakens'
+    }
+  },
+  {
+    id: 25,
+    categorySlug: 'grinding',
+    name: 'Magnetic Stainless Steel Plate (MAGNETON)',
+    slug: 'magnetic-stainless-steel-plate',
+    image: '/consumables/grinding/magnetic-stainless-steel-plate.png',
+    alt: 'Magnetic Stainless Steel Plate (MAGNETON) Consumable',
+    details: {
+      description: 'Magnetic stainless steel plate for PSA-backed polishing papers/cloths',
+      type: 'MAGNETON PSA Base Working Wheel',
+      features: ['Supports PSA-backed materials'],
+      applications: ['Grinding and polishing'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Ensure clean surface for optimal adhesion'
+    }
+  },
+  // Polishing Consumables
+  {
+    id: 26,
+    categorySlug: 'polishing',
+    name: 'Diamond Paste (Monocrystalline)',
+    slug: 'diamond-paste-monocrystalline',
+    image: '/consumables/polishing/diamond-paste-monocrystalline.png',
+    alt: 'Diamond Paste (Monocrystalline) Consumable',
+    details: {
+      description: 'Monocrystalline diamond paste for free cutting action',
+      type: 'Monocrystalline',
+      features: ['Heavy concentration', 'Free cutting action'],
+      applications: ['Polishing'],
+      sizes: ['0.25 micron', '1 micron', '3 micron', '6 micron', '8 micron', '15 micron', '30 micron', '45 micron'],
+      grits: [],
+      packaging: ['5 gm syringe'],
+      specifications: {},
+      formats: [],
+      note: 'Apply sparingly with appropriate cloth'
+    }
+  },
+  {
+    id: 27,
+    categorySlug: 'polishing',
+    name: 'Aerosol Spray',
+    slug: 'aerosol-spray',
+    image: '/consumables/polishing/aerosol-spray.png',
+    alt: 'Aerosol Spray Consumable',
+    details: {
+      description: 'Spray for achieving accurate tolerances and flawless finishes',
+      type: '',
+      features: ['Virtually scratch-free surface', 'High degree of flatness and brilliance'],
+      applications: ['Precision polishing'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Shake well before use'
+    }
+  },
+  {
+    id: 28,
+    categorySlug: 'polishing',
+    name: 'Diamond Suspensions',
+    slug: 'diamond-suspensions',
+    image: '/consumables/polishing/diamond-suspensions.png',
+    alt: 'Diamond Suspensions Consumable',
+    details: {
+      description: 'Diamond suspensions for power lapping and general polishing',
+      type: ['Monocrystalline', 'Polycrystalline'],
+      features: ['Water/oil soluble'],
+      applications: ['Power lapping', 'General polishing', 'Automated diamond dispensing systems'],
+      sizes: ['0.25 micron', '1 micron', '3 micron', '6 micron', '9 micron', '15 micron', '30 micron', '45 micron'],
+      grits: [],
+      packaging: ['Bottle only', 'Finger pump', 'Trigger spray', 'Refill'],
+      specifications: {},
+      formats: [],
+      note: 'Select solubility based on polishing setup'
+    }
+  },
+  {
+    id: 29,
+    categorySlug: 'polishing',
+    name: 'Colloidal Silica',
+    slug: 'colloidal-silica',
+    image: '/consumables/polishing/colloidal-silica.png',
+    alt: 'Colloidal Silica Consumable',
+    details: {
+      description: 'White colloidal silica for reduced polishing time',
+      type: 'White',
+      features: ['Reduces polishing time', 'Economically priced', 'Non-coagulating', 'Dilutable with water'],
+      applications: ['Non-ferrous metals', 'Ductile materials like refractory metals'],
+      sizes: ['0.04 micron', '0.06 micron'],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Dilute with water for extended use'
+    }
+  },
+  {
+    id: 30,
+    categorySlug: 'polishing',
+    name: 'Alumina Polishing Suspension/Powder',
+    slug: 'alumina-polishing-suspension-powder',
+    image: '/consumables/polishing/alumina-polishing-suspension-powder.png',
+    alt: 'Alumina Polishing Suspension/Powder Consumable',
+    details: {
+      description: 'Lavigated alumina for routine laboratory polishing',
+      type: 'Universal grade',
+      features: [],
+      applications: ['Routine ferrous and non-ferrous laboratory applications'],
+      sizes: ['0.05 micron', '0.1 micron', '0.3 micron', '1.0 micron (imported)'],
+      grits: [],
+      packaging: ['Bottle', '500 gms'],
+      specifications: {},
+      formats: [],
+      note: 'Mix thoroughly before application'
+    }
+  },
+  {
+    id: 31,
+    categorySlug: 'polishing',
+    name: 'Polishing Cloths',
+    slug: 'polishing-cloths',
+    image: '/consumables/polishing/polishing-cloths.png',
+    alt: 'Polishing Cloths Consumable',
+    details: {
+      description: 'Cloths for various polishing applications',
+      type: [
+        'Synthetic fiber flocked on flexible waterproof carrier',
+        'Synthetic flocked on flexible cotton carrier',
+        'Synthetic flocked on flexible cotton carrier (heavy duty)',
+        'Silk cloth',
+        'Billiard cloth',
+        'Special Cloth'
+      ],
+      features: [],
+      applications: [
+        'Use with 3 micron diamond compound (waterproof carrier)',
+        'Use with 3-6 micron diamond compound (cotton carrier)',
+        'Use with 6-9 micron diamond compound (heavy duty)',
+        'Napless polishing (silk)',
+        'General/coarse application (billiard)',
+        'Fine diamond & colloidal silica (special cloth)'
+      ],
+      sizes: ['8 inch', '10 inch', '12 inch'],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: ['Plain', 'Self Adhesive (PSA)', 'Magnetic Back', 'Metal Back'],
+      note: 'Match cloth type to polishing compound'
+    }
+  },
+  {
+    id: 32,
+    categorySlug: 'polishing',
+    name: 'Imported Polishing Cloths',
+    slug: 'imported-polishing-cloths',
+    image: '/consumables/polishing/imported-polishing-cloths.png',
+    alt: 'Imported Polishing Cloths Consumable',
+    details: {
+      description: 'Imported cloths for polishing',
+      type: '',
+      features: [],
+      applications: ['Polishing'],
+      sizes: ['8 inch', '10 inch', '12 inch'],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'High-quality imported material; verify compatibility'
+    }
+  },
+  // In-Situ Metallography Kit Consumables (Page 6)
+  {
+    id: 33,
+    categorySlug: 'in-situ-metallography',
+    name: 'Grinding Discs (Various Grits)',
+    slug: 'grinding-discs-various-grits',
+    image: '/consumables/in-situ-metallography/grinding-discs-various-grits.png',
+    alt: 'Grinding Discs (Various Grits) Consumable',
+    details: {
+      description: 'Grinding discs for in-situ metallography',
+      type: '',
+      features: [],
+      applications: ['In-situ metallography'],
+      sizes: ['32 mm diameter'],
+      grits: ['80', '120', '180', '240', '320', '400', '600', '800', '1000', '1200'],
+      packaging: [],
+      specifications: {},
+      formats: ['PSA back'],
+      note: 'Use sequentially for smooth surface preparation'
+    }
+  },
+  {
+    id: 34,
+    categorySlug: 'in-situ-metallography',
+    name: 'Polishing Cloths (PSA Back)',
+    slug: 'polishing-cloths-psa-back',
+    image: '/consumables/in-situ-metallography/polishing-cloths-psa-back.png',
+    alt: 'Polishing Cloths (PSA Back) Consumable',
+    details: {
+      description: 'Polishing cloths for in-situ metallography',
+      type: '',
+      features: [],
+      applications: ['In-situ metallography'],
+      sizes: ['32 mm diameter'],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: ['PSA back'],
+      note: 'Use with fine polishing compounds'
+    }
+  },
+  {
+    id: 35,
+    categorySlug: 'in-situ-metallography',
+    name: 'Transparent Replica/Tape',
+    slug: 'transparent-replica-tape',
+    image: '/consumables/in-situ-metallography/transparent-replica-tape.png',
+    alt: 'Transparent Replica/Tape Consumable',
+    details: {
+      description: 'Transparent replica or tape for metallography',
+      type: 'Transparent',
+      features: [],
+      applications: ['In-situ metallography'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Handle carefully to avoid contamination'
+    }
+  },
+  {
+    id: 36,
+    categorySlug: 'in-situ-metallography',
+    name: 'Reflecting Replicas',
+    slug: 'reflecting-replicas',
+    image: '/consumables/in-situ-metallography/reflecting-replicas.png',
+    alt: 'Reflecting Replicas Consumable',
+    details: {
+      description: 'Green-colored replicas backed by aluminum foil for improved microscope observation',
+      type: 'Reflecting',
+      features: ['Improves light gain of microscope', 'Green color improves contrast'],
+      applications: ['In-situ metallography'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: ['Aluminum foil backed'],
+      note: 'Store in a dry environment'
+    }
+  },
+  {
+    id: 37,
+    categorySlug: 'in-situ-metallography',
+    name: 'Etching Chemicals',
+    slug: 'etching-chemicals',
+    image: '/consumables/in-situ-metallography/etching-chemicals.png',
+    alt: 'Etching Chemicals Consumable',
+    details: {
+      description: 'Chemicals for etching in metallography',
+      type: ['Nitric Acid', 'Methanol', 'Hydrochloric Acid', 'Ethanol', 'Acetone', 'Picric Acid'],
+      features: [],
+      applications: ['Etching in metallography'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Follow safety protocols during handling'
+    }
+  },
+  // Millipore Fluid Contamination Analysis Kit
+  {
+    id: 38,
+    categorySlug: 'millipore-fluid-contamination-analysis',
+    name: 'Vacuum/Pressure Pump',
+    slug: 'vacuum-pressure-pump',
+    image: '/consumables/millipore-fluid-contamination-analysis/vacuum-pressure-pump.png',
+    alt: 'Vacuum/Pressure Pump Consumable',
+    details: {
+      description: 'Pump for fluid contamination analysis',
+      type: '',
+      features: [],
+      applications: ['Fluid contamination analysis'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Calibrate pump for accurate pressure control'
+    }
+  },
+  {
+    id: 39,
+    categorySlug: 'millipore-fluid-contamination-analysis',
+    name: 'Filter Paper',
+    slug: 'filter-paper',
+    image: '/consumables/millipore-fluid-contamination-analysis/filter-paper.png',
+    alt: 'Filter Paper Consumable',
+    details: {
+      description: 'Filter paper for fluid contamination analysis',
+      type: '',
+      features: [],
+      applications: ['Fluid contamination analysis'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Use appropriate pore size for sample type'
+    }
+  },
+  {
+    id: 40,
+    categorySlug: 'millipore-fluid-contamination-analysis',
+    name: 'Dispensing Pressure Vessel',
+    slug: 'dispensing-pressure-vessel',
+    image: '/consumables/millipore-fluid-contamination-analysis/dispensing-pressure-vessel.png',
+    alt: 'Dispensing Pressure Vessel Consumable',
+    details: {
+      description: 'Vessel for dispensing in fluid contamination analysis',
+      type: '',
+      features: [],
+      applications: ['Fluid contamination analysis'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Clean thoroughly to prevent contamination'
+    }
+  },
+  {
+    id: 41,
+    categorySlug: 'millipore-fluid-contamination-analysis',
+    name: 'Filter Flask',
+    slug: 'filter-flask',
+    image: '/consumables/millipore-fluid-contamination-analysis/filter-flask.png',
+    alt: 'Filter Flask Consumable',
+    details: {
+      description: 'Flask for filtering in fluid contamination analysis',
+      type: '',
+      features: [],
+      applications: ['Fluid contamination analysis'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Ensure tight seal during filtration'
+    }
+  },
+  {
+    id: 42,
+    categorySlug: 'millipore-fluid-contamination-analysis',
+    name: 'Filter Jet Solvent Dispenser',
+    slug: 'filter-jet-solvent-dispenser',
+    image: '/consumables/millipore-fluid-contamination-analysis/filter-jet-solvent-dispenser.png',
+    alt: 'Filter Jet Solvent Dispenser Consumable',
+    details: {
+      description: 'Solvent dispenser for fluid contamination analysis',
+      type: '',
+      features: [],
+      applications: ['Fluid contamination analysis'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Use compatible solvents only'
+    }
+  },
+  {
+    id: 43,
+    categorySlug: 'millipore-fluid-contamination-analysis',
+    name: 'Dispensing Bottles',
+    slug: 'dispensing-bottles',
+    image: '/consumables/millipore-fluid-contamination-analysis/dispensing-bottles.png',
+    alt: 'Dispensing Bottles Consumable',
+    details: {
+      description: 'Bottles for dispensing in fluid contamination analysis',
+      type: '',
+      features: [],
+      applications: ['Fluid contamination analysis'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Label clearly to avoid cross-contamination'
+    }
+  },
+  {
+    id: 44,
+    categorySlug: 'millipore-fluid-contamination-analysis',
+    name: 'Petri Slides',
+    slug: 'petri-slides',
+    image: '/consumables/millipore-fluid-contamination-analysis/petri-slides.png',
+    alt: 'Petri Slides Consumable',
+    details: {
+      description: 'Slides for fluid contamination analysis',
+      type: '',
+      features: [],
+      applications: ['Fluid contamination analysis'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Optional; use for visual inspection of contaminants'
+    }
+  },
+  {
+    id: 45,
+    categorySlug: 'millipore-fluid-contamination-analysis',
+    name: 'Solvent Filtering Dispenser',
+    slug: 'solvent-filtering-dispenser',
+    image: '/consumables/millipore-fluid-contamination-analysis/solvent-filtering-dispenser.png',
+    alt: 'Solvent Filtering Dispenser Consumable',
+    details: {
+      description: 'Dispenser for solvent filtering in fluid contamination analysis',
+      type: '',
+      features: [],
+      applications: ['Fluid contamination analysis'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Regularly replace filters to maintain efficiency'
+    }
+  },
+  // Hardness Testing Consumables
+  {
+    id: 46,
+    categorySlug: 'hardness-testing',
+    name: 'Wet/Dry Silicon Carbide Grinding Discs',
+    slug: 'wet-dry-silicon-carbide-grinding-discs',
+    image: '/consumables/hardness-testing/wet-dry-silicon-carbide-grinding-discs.png',
+    alt: 'Wet/Dry Silicon Carbide Grinding Discs Consumable',
+    details: {
+      description: 'Silicon carbide discs for wet/dry grinding in hardness testing',
+      type: 'C Weight',
+      features: ['Manufactured in North America', 'Classified to US standards'],
+      applications: ['Hardness testing preparation'],
+      sizes: [],
+      grits: ['60', '80', '120', '180', '240', '320', '400', '600', '800', '1200'],
+      packaging: [],
+      specifications: {
+        gritComparison: {
+          usCAMI: ['60', '80', '120', '180', '240', '320', '400', '600', '800', '1200'],
+          fepaEurope: ['P60', 'P80', 'P120', 'P180', 'P220', 'P500', 'P800', 'P1200', 'P2400', 'P4000'],
+          micronSize: ['268', '192', '125', '76', '52', '35', '22', '14', '10', '5']
+        }
+      },
+      formats: [],
+      note: 'Use wet grinding for heat-sensitive samples'
+    }
+  },
+  // Magnetic Particle Inspection Consumables
+  {
+    id: 47,
+    categorySlug: 'magnetic-particle-inspection',
+    name: 'Fluorescent Yellow-Green Oil Base Magnetic Powder',
+    slug: 'fluorescent-oil-base-magnetic-powder',
+    image: '/consumables/magnetic-particle-inspection/fluorescent-oil-base-magnetic-powder.png',
+    alt: 'Fluorescent Yellow-Green Oil Base Magnetic Powder Consumable',
+    details: {
+      description: 'Fluorescent powder for magnetic particle inspection',
+      type: 'Fluorescent yellow-green oil base',
+      features: [],
+      applications: ['Magnetic particle inspection'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Use with UV light for best visibility'
+    }
+  },
+  {
+    id: 48,
+    categorySlug: 'magnetic-particle-inspection',
+    name: 'Fluorescent Magnetic Water Base Powder',
+    slug: 'fluorescent-water-base-magnetic-powder',
+    image: '/consumables/magnetic-particle-inspection/fluorescent-water-base-magnetic-powder.png',
+    alt: 'Fluorescent Magnetic Water Base Powder Consumable',
+    details: {
+      description: 'Fluorescent water-based powder for magnetic particle inspection',
+      type: 'Fluorescent water base',
+      features: [],
+      applications: ['Magnetic particle inspection'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Environmentally friendly; dilute as needed'
+    }
+  },
+  {
+    id: 49,
+    categorySlug: 'magnetic-particle-inspection',
+    name: 'MPI Carrier Oil',
+    slug: 'mpi-carrier-oil',
+    image: '/consumables/magnetic-particle-inspection/mpi-carrier-oil.png',
+    alt: 'MPI Carrier Oil Consumable',
+    details: {
+      description: 'Carrier oil for magnetic particle inspection',
+      type: '',
+      features: [],
+      applications: ['Magnetic particle inspection'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Mix thoroughly with magnetic powder'
+    }
+  },
+  {
+    id: 50,
+    categorySlug: 'magnetic-particle-inspection',
+    name: 'Liquid/Dye Penetrant Testing Chemicals',
+    slug: 'dye-penetrant-testing-chemicals',
+    image: '/consumables/magnetic-particle-inspection/dye-penetrant-testing-chemicals.png',
+    alt: 'Liquid/Dye Penetrant Testing Chemicals Consumable',
+    details: {
+      description: 'Chemicals for dye penetrant testing',
+      type: '',
+      features: [],
+      applications: ['Penetrant testing'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Follow dwell time instructions for best results'
+    }
+  },
+  {
+    id: 51,
+    categorySlug: 'magnetic-particle-inspection',
+    name: 'Electro Magnetic Yokes',
+    slug: 'electro-magnetic-yokes',
+    image: '/consumables/magnetic-particle-inspection/electro-magnetic-yokes.png',
+    alt: 'Electro Magnetic Yokes Consumable',
+    details: {
+      description: 'Yokes for magnetic particle inspection',
+      type: '',
+      features: [],
+      applications: ['Magnetic particle inspection'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Calibrate before use for accurate inspection'
+    }
+  },
+  {
+    id: 52,
+    categorySlug: 'magnetic-particle-inspection',
+    name: 'UV LED Lamps',
+    slug: 'uv-led-lamps',
+    image: '/consumables/magnetic-particle-inspection/uv-led-lamps.png',
+    alt: 'UV LED Lamps Consumable',
+    details: {
+      description: 'UV LED lamps for magnetic particle inspection',
+      type: '',
+      features: [],
+      applications: ['Magnetic particle inspection'],
+      sizes: [],
+      grits: [],
+      packaging: [],
+      specifications: {},
+      formats: [],
+      note: 'Use in low-light conditions for optimal fluorescence'
+    }
+  }
+];
+
+const mainConsumables = [
+  {
+    title: 'Cutting/Sectioning Consumables',
+    slug: 'cutting-sectioning',
+    icon: '🔪',
+    items: [
+      { name: 'Diamond Cutting Blades', slug: 'diamond-cutting-blades' },
+      { name: 'Abrasive Cutting Wheels', slug: 'abrasive-cutting-wheels' },
+      { name: 'Precision Wafering Blades', slug: 'precision-wafering-blades' },
+      { name: 'Resin-Bonded Abrasive Blades', slug: 'resin-bonded-abrasive-blades' },
+      { name: 'Cooling Lubricants', slug: 'cooling-lubricants' },
+    ],
+  },
+  {
+    title: 'Moulding Consumables',
+    slug: 'moulding',
+    icon: '🛠️',
+    items: [
+      { name: 'Bakelite/Phenolic Hot Moulding Powder', slug: 'bakelite-phenolic-hot-moulding-powder' },
+      { name: 'Transparent Moulding Powder', slug: 'transparent-moulding-powder' },
+      { name: 'Black Epoxy Thermosetting Resin', slug: 'black-epoxy-thermosetting-resin' },
+      { name: 'Diallyl Phthalate', slug: 'diallyl-phthalate' },
+      { name: 'Conductive Mould Material (Copper Filled)', slug: 'conductive-mould-material' },
+      { name: 'Mould Release Spray', slug: 'mould-release-spray' },
+      { name: 'Cold Mounting System (Binder + Hardener)', slug: 'cold-mounting-system' },
+      { name: 'Silicon Rubber Moulds', slug: 'silicon-rubber-moulds' },
+      { name: 'Plastic Moulds', slug: 'plastic-moulds' },
+      { name: 'Mounting Clips (Plastic)', slug: 'mounting-clips-plastic' },
+      { name: 'Mounting Clips (Stainless Steel)', slug: 'mounting-clips-stainless-steel' },
+    ],
+  },
+  {
+    title: 'Grinding Consumables',
+    slug: 'grinding',
+    icon: '⚙️',
+    items: [
+      { name: 'Silicon Carbide Abrasive Grinding Discs', slug: 'silicon-carbide-abrasive-grinding-discs' },
+      { name: 'Aloxite/Zircon Grinding Discs', slug: 'aloxite-zircon-grinding-discs' },
+      { name: 'Sample Holder for Spectro Polishing', slug: 'sample-holder-spectro-polishing' },
+      { name: 'Magnetic Sample/Coin Holder', slug: 'magnetic-sample-coin-holder' },
+      { name: 'Abrasive Grinding Belts', slug: 'abrasive-grinding-belts' },
+      { name: 'Diamond Grinding Discs (Metal/Resin Bonded)', slug: 'diamond-grinding-discs' },
+      { name: 'Magnetic Base Pad', slug: 'magnetic-base-pad' },
+      { name: 'Polishing Pad with PSA Backing', slug: 'polishing-pad-psa-backing' },
+      { name: 'Magnetic Stainless Steel Plate (MAGNETON)', slug: 'magnetic-stainless-steel-plate' },
+    ],
+  },
+  {
+    title: 'Polishing Consumables',
+    slug: 'polishing',
+    icon: '✨',
+    items: [
+      { name: 'Diamond Paste (Monocrystalline)', slug: 'diamond-paste-monocrystalline' },
+      { name: 'Aerosol Spray', slug: 'aerosol-spray' },
+      { name: 'Diamond Suspensions (Mono/Polycrystalline)', slug: 'diamond-suspensions' },
+      { name: 'Colloidal Silica', slug: 'colloidal-silica' },
+      { name: 'Alumina Polishing Suspension/Powder', slug: 'alumina-polishing-suspension-powder' },
+      { name: 'Polishing Cloths (Synthetic/Silk/Billiard)', slug: 'polishing-cloths' },
+      { name: 'Imported Polishing Cloths', slug: 'imported-polishing-cloths' },
+    ],
+  },
+  {
+    title: 'In-Situ Metallography Kit Consumables',
+    slug: 'in-situ-metallography',
+    icon: '🔬',
+    items: [
+      { name: 'Grinding Discs (Various Grits)', slug: 'grinding-discs-various-grits' },
+      { name: 'Polishing Cloths (PSA Back)', slug: 'polishing-cloths-psa-back' },
+      { name: 'Transparent Replica/Tape', slug: 'transparent-replica-tape' },
+      { name: 'Reflecting Replicas (Aluminum Foil Backed)', slug: 'reflecting-replicas' },
+      { name: 'Etching Chemicals (Nitric Acid, Methanol, etc.)', slug: 'etching-chemicals' },
+    ],
+  },
+  {
+    title: 'Millipore Fluid Contamination Analysis Kit',
+    slug: 'millipore-fluid-contamination-analysis',
+    icon: '🧪',
+    items: [
+      { name: 'Vacuum/Pressure Pump', slug: 'vacuum-pressure-pump' },
+      { name: 'Filter Paper', slug: 'filter-paper' },
+      { name: 'Dispensing Pressure Vessel', slug: 'dispensing-pressure-vessel' },
+      { name: 'Filter Flask', slug: 'filter-flask' },
+      { name: 'Filter Jet Solvent Dispenser', slug: 'filter-jet-solvent-dispenser' },
+      { name: 'Dispensing Bottles', slug: 'dispensing-bottles' },
+      { name: 'Petri Slides', slug: 'petri-slides' },
+      { name: 'Solvent Filtering Dispenser', slug: 'solvent-filtering-dispenser' },
+    ],
+  },
+  {
+    title: 'Hardness Testing Consumables',
+    slug: 'hardness-testing',
+    icon: '🛡️',
+    items: [
+      { name: 'Wet/Dry Silicon Carbide Grinding Discs', slug: 'wet-dry-silicon-carbide-grinding-discs' },
+    ],
+  },
+  {
+    title: 'Magnetic Particle Inspection Consumables',
+    slug: 'magnetic-particle-inspection',
+    icon: '🧲',
+    items: [
+      { name: 'Fluorescent Yellow-Green Oil Base Magnetic Powder', slug: 'fluorescent-oil-base-magnetic-powder' },
+      { name: 'Fluorescent Magnetic Water Base Powder', slug: 'fluorescent-water-base-magnetic-powder' },
+      { name: 'MPI Carrier Oil', slug: 'mpi-carrier-oil' },
+      { name: 'Liquid/Dye Penetrant Testing Chemicals', slug: 'dye-penetrant-testing-chemicals' },
+      { name: 'Electro Magnetic Yokes', slug: 'electro-magnetic-yokes' },
+      { name: 'UV LED Lamps', slug: 'uv-led-lamps' },
+    ],
+  },
+  {
+    title: 'Metallography Machines',
+    slug: 'metallography-machines',
+    icon: '🏭',
+    items: [
+      { name: 'Metacul - 50/80 (SACT)', slug: 'metacul-50-80-sact' },
+      { name: 'Micro Hardness Tester (Fully Automatic - MNH -18', slug: 'micro-hardness-tester-mnh-v' },
+      { name: 'Metall - Autopol (Semi Automatic Grinding Polishing)', slug: 'metall-autopol' },
+    ],
+  },
+];
+
+
+
 const products = [
   // Automatic Cutting Machines
   {
@@ -1140,7 +2353,7 @@ const products = [
       { part: "240-3511-200", config: "Metagraph - SPL with Polarized Light and DIC", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-     
+
     ],
     literature: [
       { title: "Metagraph - SPL User Manual", image: "/microscope-and-image-analyzer/inverted-microscope/metagraph-spl.png" },
@@ -1361,7 +2574,7 @@ const products = [
       { part: "260-3711-200", config: "CLEAN-EST (Metallurgical) with Motorized Stage", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
-      
+
     ],
     literature: [
       { title: "CLEAN-EST (Metallurgical) User Manual", image: "/microscope-and-image-analyzer/particle-size-analysis-systems/clean-est-metallurgical.png" },
@@ -1416,7 +2629,7 @@ const products = [
       { part: "270-3811-100", config: "Vacuum / Pressure Pump, 230V", voltage: "230V, 50/60Hz" }
     ],
     consumables: [
- 
+
     ],
     literature: [
       { title: "Vacuum / Pressure Pump User Manual", image: "/microscope-and-image-analyzer/millipore-fluid-contamination-analysis-kit/vacuum-pressure-pump.png" },
@@ -2314,6 +3527,7 @@ const products = [
     slug: "fully-automatic-mvh-v",
     description: "The Fully Automatic MVH-V is a state-of-the-art micro Vickers hardness tester designed for precise and automated hardness testing. Featuring motorized X-Y and Z motion, autofocus, auto reading, and automatic effective case graph generation, it supports a load range of 1g to 2000g (3000g optional). With manual override for all automation and an optional overview camera for component imaging and hardness profile direction, it is ideal for metallographic laboratories and quality control.",
     image: "/micro-hardness-tester/mvh-v.png",
+    omnitechLogo: "/images/omnitech_logo.png",
     alt: "Fully Automatic MVH-V Micro Hardness Tester",
     rating: 4.9,
     reviews: 48,
@@ -2380,6 +3594,7 @@ const products = [
     description: "The MVH-I C is a versatile micro/macro hardness tester with load cell-based technology and closed-loop control, offering both manual and computerized operation. With a load range from 10gf to 30kgf, optional autofocus, and an optional auto XY stage, it is designed for precise Vickers and Knoop hardness testing in metallographic and quality control applications.",
     image: "/micro-hardness-tester/mvh-ic.png",
     alt: "MVH-I C Micro Macro Hardness Tester Load Cell Based",
+    omnitechLogo: "/images/omnitech_logo.png",
     rating: 4.8,
     reviews: 42,
     tag: "Load Cell Hardness Testing",
@@ -3217,6 +4432,7 @@ const products = [
 ];
 
 export const mainCategories = [
+  //  mainCategory: "Cutting"
   {
     mainCategory: "Cutting",
     categories: [
@@ -3635,7 +4851,739 @@ export const mainCategories = [
       },
     ]
   },
-    // mainCategory: "Microscope and Image Analyzer"
+  // mainCategory: "Moulding / Grinding / Polishing"
+  {
+    mainCategory: "Moulding / Grinding / Polishing",
+    categories: [
+      {
+        name: "Moulding Machines",
+        slug: "moulding-machines",
+        heroImage: "/images/moulding-machines/moulding-machines.png",
+        intro: {
+          title: "High-Precision Moulding Solutions",
+          description: "Our Moulding Machines deliver advanced technology for shaping plastics, metals, and composites with unmatched precision and efficiency. From injection moulding to blow moulding and compression moulding, our solutions cater to industries like automotive, packaging, and medical device manufacturing.",
+          categoryLabel: "Explore our moulding solutions",
+          buttons: [
+            { text: "Discover Moulding Machines", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
+          ]
+        },
+        semiAutomaticSection: {
+          title: "Moulding Machines",
+          description: "Our range of moulding machines, including hydraulic, electric, and hybrid models, ensures high-speed production, energy efficiency, and precision for diverse applications, from small components to large industrial parts.",
+          label: "Our Moulding Products"
+        },
+        specialtySection: {
+          title: "Specialty Moulding Solutions",
+          description: "For complex geometries, cleanroom applications, or high-volume production, our specialty moulding machines provide customized solutions to meet stringent industry requirements.",
+          label: "Advanced Moulding Solutions"
+        },
+        solutionsBanner: {
+          title: "Comprehensive Moulding Solutions",
+          description: "Browse our Solutions section for technical resources, process optimization guides, and industry-specific applications to enhance your moulding operations.",
+          image: "/productsListing/Moulding_Solutions.png",
+          label: "Tailored Moulding Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" }
+          ]
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "moulding-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Moulding Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "moulding-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Moulding Machines",
+            color: "rgba(30, 150, 70, 0.1)",
+            bgColor: "rgba(30, 150, 70, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "moulding-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          }
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "moulding-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: products
+          .filter((p) => p.categorySlug === "moulding-machines" && p.tag === "Specialty")
+          .slice(0, 2)
+          .map((p, index) => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            image: p.image,
+            delay: 0.1 * (index + 1),
+            animationX: index % 2 === 0 ? -50 : 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" }
+            ]
+          })),
+        subCategories: products
+          .filter((p) => p.categorySlug === "moulding-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        name: "Grinding and Polishing Machines",
+        slug: "grinding-polishing-machines",
+        heroImage: "/images/grinding-polishing-machines/grinding-polishing-machines.png",
+        intro: {
+          title: "Superior Surface Finishing Solutions",
+          description: "Our Grinding and Polishing Machines deliver exceptional surface quality for metallographic, materialographic, and industrial applications. From semi-automatic grinders to fully automated polishing systems, our machines ensure precision, consistency, and efficiency for laboratory and production environments.",
+          categoryLabel: "Explore our grinding and polishing solutions",
+          buttons: [
+            { text: "Discover Grinding & Polishing Machines", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
+          ]
+        },
+        semiAutomaticSection: {
+          title: "Grinding and Polishing Machines",
+          description: "Achieve high-quality surface finishes with our range of grinding and polishing machines, designed for both manual and automated processes. Ideal for preparing samples for analysis or finishing industrial components with precision.",
+          label: "Our Grinding & Polishing Products"
+        },
+        specialtySection: {
+          title: "Specialty Grinding and Polishing Solutions",
+          description: "For applications requiring ultra-fine finishes, complex geometries, or high-throughput production, our specialty grinding and polishing machines offer customized performance to meet the most demanding specifications.",
+          label: "Advanced Surface Finishing Solutions"
+        },
+        solutionsBanner: {
+          title: "Comprehensive Grinding and Polishing Solutions",
+          description: "Explore our Solutions section for technical insights, recommended preparation methods, and industry-specific applications to optimize your surface finishing processes.",
+          image: "/productsListing/Grinding_Polishing_Solutions.png",
+          label: "Tailored Finishing Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" }
+          ]
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "grinding-polishing-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Grinding and Polishing Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "grinding-polishing-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Grinding and Polishing Machines",
+            color: "rgba(80, 120, 200, 0.1)",
+            bgColor: "rgba(80, 120, 200, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "grinding-polishing-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          }
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "grinding-polishing-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: products
+          .filter((p) => p.categorySlug === "grinding-polishing-machines" && p.tag === "Specialty")
+          .slice(0, 2)
+          .map((p, index) => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            image: p.image,
+            delay: 0.1 * (index + 1),
+            animationX: index % 2 === 0 ? -50 : 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" }
+            ]
+          })),
+        subCategories: products
+          .filter((p) => p.categorySlug === "grinding-polishing-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        name: "Automatic Spectro Sample Grinding Machines",
+        slug: "automatic-spectro-sample-grinding-machines",
+        heroImage: "/images/automatic-spectro-sample-grinding-machines/automatic-spectro-sample-grinding-machines.png",
+        intro: {
+          title: "Precision Grinding for Spectroscopic Analysis",
+          description: "Our Automatic Spectro Sample Grinding Machines are designed for high-precision preparation of metallic samples for spectroscopic analysis. These machines ensure flat, uniform surfaces with minimal operator intervention, ideal for metallurgical labs and quality control in steel and metal industries.",
+          categoryLabel: "Explore our spectro grinding solutions",
+          buttons: [
+            { text: "Discover Spectro Grinding Machines", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
+          ]
+        },
+        semiAutomaticSection: {
+          title: "Automatic Spectro Sample Grinding Machines",
+          description: "Automate the grinding process for spectroscopic samples with our advanced machines, delivering consistent surface finishes and high throughput for demanding laboratory and industrial applications.",
+          label: "Our Spectro Grinding Products"
+        },
+        specialtySection: {
+          title: "Specialty Spectro Grinding Solutions",
+          description: "For unique sample sizes, shapes, or stringent surface quality requirements, our specialty spectro grinding machines provide tailored solutions for optimal spectroscopic analysis.",
+          label: "Advanced Spectro Grinding Solutions"
+        },
+        solutionsBanner: {
+          title: "Comprehensive Spectro Grinding Solutions",
+          description: "Visit our Solutions section for technical guides, recommended grinding techniques, and industry-specific applications to enhance your spectroscopic sample preparation.",
+          image: "/productsListing/Spectro_Grinding_Solutions.png",
+          label: "Tailored Spectro Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" }
+          ]
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Spectro Sample Grinding Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Automatic Spectro Sample Grinding Machines",
+            color: "rgba(40, 140, 90, 0.1)",
+            bgColor: "rgba(40, 140, 90, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          }
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: products
+          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines" && p.tag === "Specialty")
+          .slice(0, 2)
+          .map((p, index) => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            image: p.image,
+            delay: 0.1 * (index + 1),
+            animationX: index % 2 === 0 ? -50 : 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" }
+            ]
+          })),
+        subCategories: products
+          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        name: "Semi Automatic Grinding Polishing Machines",
+        slug: "semi-automatic-grinding-polishing-machines",
+        heroImage: "/images/semi-automatic-grinding-polishing-machines/semi-automatic-grinding-polishing-machines.png",
+        intro: {
+          title: "Flexible Grinding and Polishing Solutions",
+          description: "Our Semi Automatic Grinding Polishing Machines combine operator control with automated precision, delivering high-quality surface finishes for metallographic, materialographic, and industrial applications. Perfect for labs and workshops requiring flexibility and consistency.",
+          categoryLabel: "Explore our semi-automatic solutions",
+          buttons: [
+            { text: "Discover Semi-Automatic Machines", variant: "primary" },
+            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
+          ]
+        },
+        semiAutomaticSection: {
+          title: "Semi Automatic Grinding Polishing Machines",
+          description: "Enhance productivity with semi-automatic machines that offer user-friendly controls and automated grinding/polishing cycles, ensuring repeatable results for diverse materials and sample types.",
+          label: "Our Semi-Automatic Products"
+        },
+        specialtySection: {
+          title: "Specialty Semi-Automatic Solutions",
+          description: "For applications requiring tailored processes or specific surface finishes, our specialty semi-automatic machines provide flexible solutions for complex grinding and polishing tasks.",
+          label: "Advanced Semi-Automatic Solutions"
+        },
+        solutionsBanner: {
+          title: "Comprehensive Semi-Automatic Solutions",
+          description: "Browse our Solutions section for technical resources, preparation techniques, and industry-specific applications to optimize your grinding and polishing workflows.",
+          image: "/productsListing/Semi_Automatic_Solutions.png",
+          label: "Tailored Finishing Solutions",
+          buttons: [
+            { text: "Solutions by Industry", variant: "primary" },
+            { text: "Solutions by Material", variant: "secondary" }
+          ]
+        },
+        slides: products
+          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Semi-Automatic Grinding Polishing Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        products: products
+          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        items: [
+          {
+            id: 1,
+            name: "Semi Automatic Grinding Polishing Machines",
+            color: "rgba(100, 60, 180, 0.1)",
+            bgColor: "rgba(100, 60, 180, 0.1)",
+            subItems: products
+              .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          }
+        ],
+        productCards: products
+          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        specialtyProducts: products
+          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines" && p.tag === "Specialty")
+          .slice(0, 2)
+          .map((p, index) => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            image: p.image,
+            delay: 0.1 * (index + 1),
+            animationX: index % 2 === 0 ? -50 : 50,
+            buttons: [
+              { text: "Product Details", variant: "primary" },
+              { text: "Technical Specs", variant: "secondary" }
+            ]
+          })),
+        subCategories: products
+          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        "name": "Multi-specimen Grinding Polishing Machines",
+        "slug": "multi-specimen-grinding-polishing-machines",
+        "heroImage": "/images/multi-specimen-grinding-polishing-machines/multi-specimen-grinding-polishing-machines.png",
+        "intro": {
+          "title": "High-Throughput Multi-Specimen Processing",
+          "description": "Our Multi-specimen Grinding Polishing Machines are engineered for simultaneous processing of multiple samples, delivering consistent, high-quality surface finishes for metallographic and materialographic analysis. Ideal for high-volume labs and industrial quality control.",
+          "categoryLabel": "Explore our multi-specimen solutions",
+          "buttons": [
+            { "text": "Discover Multi-Specimen Machines", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Multi-specimen Grinding Polishing Machines",
+          "description": "Maximize efficiency with machines designed to process multiple specimens simultaneously, ensuring uniform results and high throughput for metallographic and industrial applications.",
+          "label": "Our Multi-Specimen Products"
+        },
+        "specialtySection": {
+          "title": "Specialty Multi-Specimen Solutions",
+          "description": "For complex sample types or stringent finishing requirements, our specialty multi-specimen machines offer advanced automation and customization for superior surface preparation.",
+          "label": "Advanced Multi-Specimen Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Multi-Specimen Solutions",
+          "description": "Explore our Solutions section for technical insights, preparation methods, and industry-specific applications to streamline your multi-specimen grinding and polishing processes.",
+          "image": "/productsListing/Multi_Specimen_Solutions.png",
+          "label": "Tailored Multi-Specimen Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": products
+          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
+          .slice(0, 3)
+          .map((p) => ({
+            id: p.id,
+            image: p.image,
+            alt: p.alt,
+            category: "Grinding & Polishing Machines",
+            title: p.name,
+            description: p.description,
+            reviews: p.reviews,
+            rating: p.rating,
+          })),
+        "products": products
+          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
+          .map((p) => ({
+            name: p.name,
+            image: p.image,
+          })),
+        "items": [
+          {
+            "id": 1,
+            "name": "Multi-specimen Grinding Polishing Machines",
+            "color": "rgba(150, 80, 50, 0.1)",
+            "bgColor": "rgba(150, 80, 50, 0.1)",
+            "subItems": products
+              .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
+              .map((p) => ({
+                name: p.name,
+                apiCall: p.apiCall,
+              })),
+          }
+        ],
+        "productCards": products
+          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
+          .map((p) => ({
+            id: p.id,
+            name: p.name,
+            tag: p.tag,
+            description: p.description,
+            image: p.image,
+            detail: p.detail,
+            delay: 0.1 * (p.id - 1),
+          })),
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Hexamatic",
+            "description": "Fully automatic multi-specimen grinding and polishing system, capable of processing up to 12 samples simultaneously, ideal for high-volume metallographic laboratories.",
+            "image": "/images/multi-specimen-grinding-polishing-machines/hexamatic.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "MultiPrep-8",
+            "description": "Semi-automatic multi-specimen machine with programmable settings, designed for processing up to 8 samples with consistent, high-quality surface finishes.",
+            "image": "/images/multi-specimen-grinding-polishing-machines/multiprep-8.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": products
+          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
+          .map((p) => ({
+            id: p.slug,
+            name: p.name,
+          })),
+      },
+      {
+        "name": "Belt Grinders",
+        "slug": "belt-grinders",
+        "heroImage": "/images/belt-grinders/belt-grinders.png",
+        "intro": {
+          "title": "High-Performance Belt Grinder Solutions",
+          "description": "Belt Grinders, including MBG I and MBG II, deliver precision grinding, sharpening, and finishing for metalworking, knifemaking, and fabrication. Compliant with ASTM B368, they feature variable speed control, robust steel construction, and compatibility with 2x72-inch abrasive belts. Ideal for bladesmithing, automotive, and aerospace industries, these grinders excel in deburring, shaping, and polishing applications.",
+          "categoryLabel": "Explore our belt grinder solutions",
+          "buttons": [
+            { "text": "Discover Belt Grinders", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Belt Grinders",
+          "description": "Designed for durability and versatility, the MBG I and MBG II belt grinders offer variable speeds (100-3500 ft/min), heavy-duty steel chassis, and quick-release belt systems. Compatible with ceramic, zirconia, and aluminum oxide belts, they handle ferrous/non-ferrous metals, wood, and composites, ensuring precise material removal and surface finishing in workshops and industrial settings.",
+          "label": "Grinding Features"
+        },
+        "specialtySection": {
+          "title": "Specialty Grinding Solutions",
+          "description": "Optimized for demanding tasks like knife profiling, convex grinding, and micro-finishing, these grinders support modular tooling arms, articulating work rests, and horizontal/vertical configurations. Built for heavy use, they ensure consistent performance for custom metalwork, blacksmithing, and high-volume production.",
+          "label": "Advanced Grinding Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Grinding Solutions",
+          "description": "Explore our Solutions section for ASTM B368-compliant protocols, guides for abrasive belt selection, and industry-specific applications to optimize your belt grinder workflows.",
+          "image": "/productsListing/Belt_Grinders_Solutions.png",
+          "label": "Tailored Grinding Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": products
+          .filter((p) => p.categorySlug === "belt-grinders")
+          .slice(0, 3)
+          .map((p) => ({
+            "id": p.id,
+            "image": p.image,
+            "alt": p.alt,
+            "category": "Belt Grinders",
+            "title": p.name,
+            "description": p.description,
+            "reviews": p.reviews,
+            "rating": p.rating
+          })),
+        "products": products
+          .filter((p) => p.categorySlug === "belt-grinders")
+          .map((p) => ({
+            "name": p.name,
+            "image": p.image
+          })),
+        "items": [
+          {
+            "id": 1,
+            "name": "Belt Grinders",
+            "color": "rgba(70, 110, 150, 0.1)",
+            "bgColor": "rgba(70, 110, 150, 0.1)",
+            "subItems": products
+              .filter((p) => p.categorySlug === "belt-grinders")
+              .map((p) => ({
+                "name": p.name,
+                "apiCall": p.apiCall
+              }))
+          }
+        ],
+        "productCards": products
+          .filter((p) => p.categorySlug === "belt-grinders")
+          .map((p) => ({
+            "id": p.id,
+            "name": p.name,
+            "tag": p.tag,
+            "description": p.description,
+            "image": p.image,
+            "detail": p.detail,
+            "delay": 0.1 * (p.id - 1)
+          })),
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "MBG I",
+            "description": "Compact 2x72-inch belt grinder with 1.5 HP variable-speed motor and quick-release belt system, optimized for knifemaking and small workshop tasks, compliant with ASTM B368.",
+            "image": "/images/belt-grinders/mbg-i.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "MBG II",
+            "description": "Heavy-duty 2x72-inch belt grinder with 3 HP motor, tilting chassis, and horizontal/vertical configurations, designed for industrial fabrication and high-volume metalwork.",
+            "image": "/images/belt-grinders/mbg-ii.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": products
+          .filter((p) => p.categorySlug === "belt-grinders")
+          .map((p) => ({
+            "id": p.slug,
+            "name": p.name
+          }))
+      },
+      {
+        "name": "Heavy Duty Belt Grinder",
+        "slug": "heavy-duty-belt-grinder",
+        "heroImage": "/images/heavy-duty-belt-grinder/heavy-duty-belt-grinder.png",
+        "intro": {
+          "title": "Robust Heavy Duty Belt Grinder Solutions",
+          "description": "The Heavy Duty Belt Grinder delivers unmatched performance for high-volume grinding, sharpening, and finishing in metalworking, bladesmithing, and fabrication. Compliant with ASTM B368, it features a powerful 3 HP motor, variable speed control (100-4000 ft/min), and compatibility with 2x72-inch abrasive belts, making it ideal for automotive, aerospace, and knifemaking industries.",
+          "categoryLabel": "Explore our heavy duty belt grinder solutions",
+          "buttons": [
+            { "text": "Discover Heavy Duty Belt Grinder", "variant": "primary" },
+            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
+          ]
+        },
+        "semiAutomaticSection": {
+          "title": "Heavy Duty Belt Grinder",
+          "description": "Built for industrial demands, this grinder features a 3 HP motor, tilting steel chassis, and variable speed control for precise grinding. Compatible with ceramic, zirconia, and aluminum oxide belts, it handles tough materials like stainless steel, titanium, and composites, offering quick belt changes and horizontal/vertical configurations for versatility.",
+          "label": "Grinding Features"
+        },
+        "specialtySection": {
+          "title": "Specialty Grinding Solutions",
+          "description": "Engineered for heavy-duty tasks like knife profiling, convex grinding, and surface finishing, the grinder supports modular attachments, articulating work rests, and robust contact wheels. Its durable design ensures consistent performance in high-throughput environments, from custom metalwork to large-scale fabrication.",
+          "label": "Advanced Grinding Solutions"
+        },
+        "solutionsBanner": {
+          "title": "Comprehensive Grinding Solutions",
+          "description": "Explore our Solutions section for ASTM B368-compliant protocols, abrasive belt selection guides, and industry-specific applications to optimize your heavy duty belt grinder workflows.",
+          "image": "/productsListing/Heavy_Duty_Belt_Grinder_Solutions.png",
+          "label": "Tailored Grinding Solutions",
+          "buttons": [
+            { "text": "Solutions by Industry", "variant": "primary" },
+            { "text": "Solutions by Material", "variant": "secondary" }
+          ]
+        },
+        "slides": products
+          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
+          .slice(0, 3)
+          .map((p) => ({
+            "id": p.id,
+            "image": p.image,
+            "alt": p.alt,
+            "category": "Heavy Duty Belt Grinder",
+            "title": p.name,
+            "description": p.description,
+            "reviews": p.reviews,
+            "rating": p.rating
+          })),
+        "products": products
+          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
+          .map((p) => ({
+            "name": p.name,
+            "image": p.image
+          })),
+        "items": [
+          {
+            "id": 1,
+            "name": "Heavy Duty Belt Grinder",
+            "color": "rgba(80, 120, 150, 0.1)",
+            "bgColor": "rgba(80, 120, 150, 0.1)",
+            "subItems": products
+              .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
+              .map((p) => ({
+                "name": p.name,
+                "apiCall": p.apiCall
+              }))
+          }
+        ],
+        "productCards": products
+          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
+          .map((p) => ({
+            "id": p.id,
+            "name": p.name,
+            "tag": p.tag,
+            "description": p.description,
+            "image": p.image,
+            "detail": p.detail,
+            "delay": 0.1 * (p.id - 1)
+          })),
+        "specialtyProducts": [
+          {
+            "id": 1,
+            "name": "Standard Model",
+            "description": "Powerful 3 HP belt grinder with 2x72-inch belt, variable speed (100-4000 ft/min), and tilting chassis, optimized for high-volume grinding in industrial metalworking and knifemaking.",
+            "image": "/images/heavy-duty-belt-grinder/standard-model.png",
+            "delay": 0.1,
+            "animationX": -50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Vertical/Horizontal Model",
+            "description": "Versatile 3 HP belt grinder with dual horizontal/vertical configurations, ideal for complex grinding tasks like blade profiling and large-scale fabrication in heavy-duty environments.",
+            "image": "/images/heavy-duty-belt-grinder/vertical-horizontal-model.png",
+            "delay": 0.2,
+            "animationX": 50,
+            "buttons": [
+              { "text": "Product Details", "variant": "primary" },
+              { "text": "Technical Specs", "variant": "secondary" }
+            ]
+          }
+        ],
+        "subCategories": products
+          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
+          .map((p) => ({
+            "id": p.slug,
+            "name": p.name
+          }))
+      },
+    ]
+  },
+  // mainCategory: "Microscope and Image Analyzer"
   {
     mainCategory: "Microscope and Image Analyzer",
     categories: [
@@ -4569,740 +6517,6 @@ export const mainCategories = [
       },
     ],
   },
-  // mainCategory: "Moulding / Grinding / Polishing"
-  {
-    mainCategory: "Moulding / Grinding / Polishing",
-    categories: [
-      {
-        name: "Moulding Machines",
-        slug: "moulding-machines",
-        heroImage: "/images/moulding-machines/moulding-machines.png",
-        intro: {
-          title: "High-Precision Moulding Solutions",
-          description: "Our Moulding Machines deliver advanced technology for shaping plastics, metals, and composites with unmatched precision and efficiency. From injection moulding to blow moulding and compression moulding, our solutions cater to industries like automotive, packaging, and medical device manufacturing.",
-          categoryLabel: "Explore our moulding solutions",
-          buttons: [
-            { text: "Discover Moulding Machines", variant: "primary" },
-            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
-          ]
-        },
-        semiAutomaticSection: {
-          title: "Moulding Machines",
-          description: "Our range of moulding machines, including hydraulic, electric, and hybrid models, ensures high-speed production, energy efficiency, and precision for diverse applications, from small components to large industrial parts.",
-          label: "Our Moulding Products"
-        },
-        specialtySection: {
-          title: "Specialty Moulding Solutions",
-          description: "For complex geometries, cleanroom applications, or high-volume production, our specialty moulding machines provide customized solutions to meet stringent industry requirements.",
-          label: "Advanced Moulding Solutions"
-        },
-        solutionsBanner: {
-          title: "Comprehensive Moulding Solutions",
-          description: "Browse our Solutions section for technical resources, process optimization guides, and industry-specific applications to enhance your moulding operations.",
-          image: "/productsListing/Moulding_Solutions.png",
-          label: "Tailored Moulding Solutions",
-          buttons: [
-            { text: "Solutions by Industry", variant: "primary" },
-            { text: "Solutions by Material", variant: "secondary" }
-          ]
-        },
-        slides: products
-          .filter((p) => p.categorySlug === "moulding-machines")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Moulding Machines",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        products: products
-          .filter((p) => p.categorySlug === "moulding-machines")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        items: [
-          {
-            id: 1,
-            name: "Moulding Machines",
-            color: "rgba(30, 150, 70, 0.1)",
-            bgColor: "rgba(30, 150, 70, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "moulding-machines")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          }
-        ],
-        productCards: products
-          .filter((p) => p.categorySlug === "moulding-machines")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        specialtyProducts: products
-          .filter((p) => p.categorySlug === "moulding-machines" && p.tag === "Specialty")
-          .slice(0, 2)
-          .map((p, index) => ({
-            id: p.id,
-            name: p.name,
-            description: p.description,
-            image: p.image,
-            delay: 0.1 * (index + 1),
-            animationX: index % 2 === 0 ? -50 : 50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" }
-            ]
-          })),
-        subCategories: products
-          .filter((p) => p.categorySlug === "moulding-machines")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-      {
-        name: "Grinding and Polishing Machines",
-        slug: "grinding-polishing-machines",
-        heroImage: "/images/grinding-polishing-machines/grinding-polishing-machines.png",
-        intro: {
-          title: "Superior Surface Finishing Solutions",
-          description: "Our Grinding and Polishing Machines deliver exceptional surface quality for metallographic, materialographic, and industrial applications. From semi-automatic grinders to fully automated polishing systems, our machines ensure precision, consistency, and efficiency for laboratory and production environments.",
-          categoryLabel: "Explore our grinding and polishing solutions",
-          buttons: [
-            { text: "Discover Grinding & Polishing Machines", variant: "primary" },
-            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
-          ]
-        },
-        semiAutomaticSection: {
-          title: "Grinding and Polishing Machines",
-          description: "Achieve high-quality surface finishes with our range of grinding and polishing machines, designed for both manual and automated processes. Ideal for preparing samples for analysis or finishing industrial components with precision.",
-          label: "Our Grinding & Polishing Products"
-        },
-        specialtySection: {
-          title: "Specialty Grinding and Polishing Solutions",
-          description: "For applications requiring ultra-fine finishes, complex geometries, or high-throughput production, our specialty grinding and polishing machines offer customized performance to meet the most demanding specifications.",
-          label: "Advanced Surface Finishing Solutions"
-        },
-        solutionsBanner: {
-          title: "Comprehensive Grinding and Polishing Solutions",
-          description: "Explore our Solutions section for technical insights, recommended preparation methods, and industry-specific applications to optimize your surface finishing processes.",
-          image: "/productsListing/Grinding_Polishing_Solutions.png",
-          label: "Tailored Finishing Solutions",
-          buttons: [
-            { text: "Solutions by Industry", variant: "primary" },
-            { text: "Solutions by Material", variant: "secondary" }
-          ]
-        },
-        slides: products
-          .filter((p) => p.categorySlug === "grinding-polishing-machines")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Grinding and Polishing Machines",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        products: products
-          .filter((p) => p.categorySlug === "grinding-polishing-machines")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        items: [
-          {
-            id: 1,
-            name: "Grinding and Polishing Machines",
-            color: "rgba(80, 120, 200, 0.1)",
-            bgColor: "rgba(80, 120, 200, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "grinding-polishing-machines")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          }
-        ],
-        productCards: products
-          .filter((p) => p.categorySlug === "grinding-polishing-machines")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        specialtyProducts: products
-          .filter((p) => p.categorySlug === "grinding-polishing-machines" && p.tag === "Specialty")
-          .slice(0, 2)
-          .map((p, index) => ({
-            id: p.id,
-            name: p.name,
-            description: p.description,
-            image: p.image,
-            delay: 0.1 * (index + 1),
-            animationX: index % 2 === 0 ? -50 : 50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" }
-            ]
-          })),
-        subCategories: products
-          .filter((p) => p.categorySlug === "grinding-polishing-machines")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-      {
-        name: "Automatic Spectro Sample Grinding Machines",
-        slug: "automatic-spectro-sample-grinding-machines",
-        heroImage: "/images/automatic-spectro-sample-grinding-machines/automatic-spectro-sample-grinding-machines.png",
-        intro: {
-          title: "Precision Grinding for Spectroscopic Analysis",
-          description: "Our Automatic Spectro Sample Grinding Machines are designed for high-precision preparation of metallic samples for spectroscopic analysis. These machines ensure flat, uniform surfaces with minimal operator intervention, ideal for metallurgical labs and quality control in steel and metal industries.",
-          categoryLabel: "Explore our spectro grinding solutions",
-          buttons: [
-            { text: "Discover Spectro Grinding Machines", variant: "primary" },
-            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
-          ]
-        },
-        semiAutomaticSection: {
-          title: "Automatic Spectro Sample Grinding Machines",
-          description: "Automate the grinding process for spectroscopic samples with our advanced machines, delivering consistent surface finishes and high throughput for demanding laboratory and industrial applications.",
-          label: "Our Spectro Grinding Products"
-        },
-        specialtySection: {
-          title: "Specialty Spectro Grinding Solutions",
-          description: "For unique sample sizes, shapes, or stringent surface quality requirements, our specialty spectro grinding machines provide tailored solutions for optimal spectroscopic analysis.",
-          label: "Advanced Spectro Grinding Solutions"
-        },
-        solutionsBanner: {
-          title: "Comprehensive Spectro Grinding Solutions",
-          description: "Visit our Solutions section for technical guides, recommended grinding techniques, and industry-specific applications to enhance your spectroscopic sample preparation.",
-          image: "/productsListing/Spectro_Grinding_Solutions.png",
-          label: "Tailored Spectro Solutions",
-          buttons: [
-            { text: "Solutions by Industry", variant: "primary" },
-            { text: "Solutions by Material", variant: "secondary" }
-          ]
-        },
-        slides: products
-          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Spectro Sample Grinding Machines",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        products: products
-          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        items: [
-          {
-            id: 1,
-            name: "Automatic Spectro Sample Grinding Machines",
-            color: "rgba(40, 140, 90, 0.1)",
-            bgColor: "rgba(40, 140, 90, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          }
-        ],
-        productCards: products
-          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        specialtyProducts: products
-          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines" && p.tag === "Specialty")
-          .slice(0, 2)
-          .map((p, index) => ({
-            id: p.id,
-            name: p.name,
-            description: p.description,
-            image: p.image,
-            delay: 0.1 * (index + 1),
-            animationX: index % 2 === 0 ? -50 : 50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" }
-            ]
-          })),
-        subCategories: products
-          .filter((p) => p.categorySlug === "automatic-spectro-sample-grinding-machines")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-      {
-        name: "Semi Automatic Grinding Polishing Machines",
-        slug: "semi-automatic-grinding-polishing-machines",
-        heroImage: "/images/semi-automatic-grinding-polishing-machines/semi-automatic-grinding-polishing-machines.png",
-        intro: {
-          title: "Flexible Grinding and Polishing Solutions",
-          description: "Our Semi Automatic Grinding Polishing Machines combine operator control with automated precision, delivering high-quality surface finishes for metallographic, materialographic, and industrial applications. Perfect for labs and workshops requiring flexibility and consistency.",
-          categoryLabel: "Explore our semi-automatic solutions",
-          buttons: [
-            { text: "Discover Semi-Automatic Machines", variant: "primary" },
-            { text: "Contact Our Experts", variant: "secondary", link: "/contact" }
-          ]
-        },
-        semiAutomaticSection: {
-          title: "Semi Automatic Grinding Polishing Machines",
-          description: "Enhance productivity with semi-automatic machines that offer user-friendly controls and automated grinding/polishing cycles, ensuring repeatable results for diverse materials and sample types.",
-          label: "Our Semi-Automatic Products"
-        },
-        specialtySection: {
-          title: "Specialty Semi-Automatic Solutions",
-          description: "For applications requiring tailored processes or specific surface finishes, our specialty semi-automatic machines provide flexible solutions for complex grinding and polishing tasks.",
-          label: "Advanced Semi-Automatic Solutions"
-        },
-        solutionsBanner: {
-          title: "Comprehensive Semi-Automatic Solutions",
-          description: "Browse our Solutions section for technical resources, preparation techniques, and industry-specific applications to optimize your grinding and polishing workflows.",
-          image: "/productsListing/Semi_Automatic_Solutions.png",
-          label: "Tailored Finishing Solutions",
-          buttons: [
-            { text: "Solutions by Industry", variant: "primary" },
-            { text: "Solutions by Material", variant: "secondary" }
-          ]
-        },
-        slides: products
-          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Semi-Automatic Grinding Polishing Machines",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        products: products
-          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        items: [
-          {
-            id: 1,
-            name: "Semi Automatic Grinding Polishing Machines",
-            color: "rgba(100, 60, 180, 0.1)",
-            bgColor: "rgba(100, 60, 180, 0.1)",
-            subItems: products
-              .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          }
-        ],
-        productCards: products
-          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        specialtyProducts: products
-          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines" && p.tag === "Specialty")
-          .slice(0, 2)
-          .map((p, index) => ({
-            id: p.id,
-            name: p.name,
-            description: p.description,
-            image: p.image,
-            delay: 0.1 * (index + 1),
-            animationX: index % 2 === 0 ? -50 : 50,
-            buttons: [
-              { text: "Product Details", variant: "primary" },
-              { text: "Technical Specs", variant: "secondary" }
-            ]
-          })),
-        subCategories: products
-          .filter((p) => p.categorySlug === "semi-automatic-grinding-polishing-machines")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-      {
-        "name": "Multi-specimen Grinding Polishing Machines",
-        "slug": "multi-specimen-grinding-polishing-machines",
-        "heroImage": "/images/multi-specimen-grinding-polishing-machines/multi-specimen-grinding-polishing-machines.png",
-        "intro": {
-          "title": "High-Throughput Multi-Specimen Processing",
-          "description": "Our Multi-specimen Grinding Polishing Machines are engineered for simultaneous processing of multiple samples, delivering consistent, high-quality surface finishes for metallographic and materialographic analysis. Ideal for high-volume labs and industrial quality control.",
-          "categoryLabel": "Explore our multi-specimen solutions",
-          "buttons": [
-            { "text": "Discover Multi-Specimen Machines", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
-        },
-        "semiAutomaticSection": {
-          "title": "Multi-specimen Grinding Polishing Machines",
-          "description": "Maximize efficiency with machines designed to process multiple specimens simultaneously, ensuring uniform results and high throughput for metallographic and industrial applications.",
-          "label": "Our Multi-Specimen Products"
-        },
-        "specialtySection": {
-          "title": "Specialty Multi-Specimen Solutions",
-          "description": "For complex sample types or stringent finishing requirements, our specialty multi-specimen machines offer advanced automation and customization for superior surface preparation.",
-          "label": "Advanced Multi-Specimen Solutions"
-        },
-        "solutionsBanner": {
-          "title": "Comprehensive Multi-Specimen Solutions",
-          "description": "Explore our Solutions section for technical insights, preparation methods, and industry-specific applications to streamline your multi-specimen grinding and polishing processes.",
-          "image": "/productsListing/Multi_Specimen_Solutions.png",
-          "label": "Tailored Multi-Specimen Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
-        },
-        "slides": products
-          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
-          .slice(0, 3)
-          .map((p) => ({
-            id: p.id,
-            image: p.image,
-            alt: p.alt,
-            category: "Grinding & Polishing Machines",
-            title: p.name,
-            description: p.description,
-            reviews: p.reviews,
-            rating: p.rating,
-          })),
-        "products": products
-          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
-          .map((p) => ({
-            name: p.name,
-            image: p.image,
-          })),
-        "items": [
-          {
-            "id": 1,
-            "name": "Multi-specimen Grinding Polishing Machines",
-            "color": "rgba(150, 80, 50, 0.1)",
-            "bgColor": "rgba(150, 80, 50, 0.1)",
-            "subItems": products
-              .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
-              .map((p) => ({
-                name: p.name,
-                apiCall: p.apiCall,
-              })),
-          }
-        ],
-        "productCards": products
-          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
-          .map((p) => ({
-            id: p.id,
-            name: p.name,
-            tag: p.tag,
-            description: p.description,
-            image: p.image,
-            detail: p.detail,
-            delay: 0.1 * (p.id - 1),
-          })),
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Hexamatic",
-            "description": "Fully automatic multi-specimen grinding and polishing system, capable of processing up to 12 samples simultaneously, ideal for high-volume metallographic laboratories.",
-            "image": "/images/multi-specimen-grinding-polishing-machines/hexamatic.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "MultiPrep-8",
-            "description": "Semi-automatic multi-specimen machine with programmable settings, designed for processing up to 8 samples with consistent, high-quality surface finishes.",
-            "image": "/images/multi-specimen-grinding-polishing-machines/multiprep-8.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": products
-          .filter((p) => p.categorySlug === "multi-specimen-grinding-polishing-machines")
-          .map((p) => ({
-            id: p.slug,
-            name: p.name,
-          })),
-      },
-      {
-        "name": "Belt Grinders",
-        "slug": "belt-grinders",
-        "heroImage": "/images/belt-grinders/belt-grinders.png",
-        "intro": {
-          "title": "High-Performance Belt Grinder Solutions",
-          "description": "Belt Grinders, including MBG I and MBG II, deliver precision grinding, sharpening, and finishing for metalworking, knifemaking, and fabrication. Compliant with ASTM B368, they feature variable speed control, robust steel construction, and compatibility with 2x72-inch abrasive belts. Ideal for bladesmithing, automotive, and aerospace industries, these grinders excel in deburring, shaping, and polishing applications.",
-          "categoryLabel": "Explore our belt grinder solutions",
-          "buttons": [
-            { "text": "Discover Belt Grinders", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
-        },
-        "semiAutomaticSection": {
-          "title": "Belt Grinders",
-          "description": "Designed for durability and versatility, the MBG I and MBG II belt grinders offer variable speeds (100-3500 ft/min), heavy-duty steel chassis, and quick-release belt systems. Compatible with ceramic, zirconia, and aluminum oxide belts, they handle ferrous/non-ferrous metals, wood, and composites, ensuring precise material removal and surface finishing in workshops and industrial settings.",
-          "label": "Grinding Features"
-        },
-        "specialtySection": {
-          "title": "Specialty Grinding Solutions",
-          "description": "Optimized for demanding tasks like knife profiling, convex grinding, and micro-finishing, these grinders support modular tooling arms, articulating work rests, and horizontal/vertical configurations. Built for heavy use, they ensure consistent performance for custom metalwork, blacksmithing, and high-volume production.",
-          "label": "Advanced Grinding Solutions"
-        },
-        "solutionsBanner": {
-          "title": "Comprehensive Grinding Solutions",
-          "description": "Explore our Solutions section for ASTM B368-compliant protocols, guides for abrasive belt selection, and industry-specific applications to optimize your belt grinder workflows.",
-          "image": "/productsListing/Belt_Grinders_Solutions.png",
-          "label": "Tailored Grinding Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
-        },
-        "slides": products
-          .filter((p) => p.categorySlug === "belt-grinders")
-          .slice(0, 3)
-          .map((p) => ({
-            "id": p.id,
-            "image": p.image,
-            "alt": p.alt,
-            "category": "Belt Grinders",
-            "title": p.name,
-            "description": p.description,
-            "reviews": p.reviews,
-            "rating": p.rating
-          })),
-        "products": products
-          .filter((p) => p.categorySlug === "belt-grinders")
-          .map((p) => ({
-            "name": p.name,
-            "image": p.image
-          })),
-        "items": [
-          {
-            "id": 1,
-            "name": "Belt Grinders",
-            "color": "rgba(70, 110, 150, 0.1)",
-            "bgColor": "rgba(70, 110, 150, 0.1)",
-            "subItems": products
-              .filter((p) => p.categorySlug === "belt-grinders")
-              .map((p) => ({
-                "name": p.name,
-                "apiCall": p.apiCall
-              }))
-          }
-        ],
-        "productCards": products
-          .filter((p) => p.categorySlug === "belt-grinders")
-          .map((p) => ({
-            "id": p.id,
-            "name": p.name,
-            "tag": p.tag,
-            "description": p.description,
-            "image": p.image,
-            "detail": p.detail,
-            "delay": 0.1 * (p.id - 1)
-          })),
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "MBG I",
-            "description": "Compact 2x72-inch belt grinder with 1.5 HP variable-speed motor and quick-release belt system, optimized for knifemaking and small workshop tasks, compliant with ASTM B368.",
-            "image": "/images/belt-grinders/mbg-i.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "MBG II",
-            "description": "Heavy-duty 2x72-inch belt grinder with 3 HP motor, tilting chassis, and horizontal/vertical configurations, designed for industrial fabrication and high-volume metalwork.",
-            "image": "/images/belt-grinders/mbg-ii.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": products
-          .filter((p) => p.categorySlug === "belt-grinders")
-          .map((p) => ({
-            "id": p.slug,
-            "name": p.name
-          }))
-      },
-      {
-        "name": "Heavy Duty Belt Grinder",
-        "slug": "heavy-duty-belt-grinder",
-        "heroImage": "/images/heavy-duty-belt-grinder/heavy-duty-belt-grinder.png",
-        "intro": {
-          "title": "Robust Heavy Duty Belt Grinder Solutions",
-          "description": "The Heavy Duty Belt Grinder delivers unmatched performance for high-volume grinding, sharpening, and finishing in metalworking, bladesmithing, and fabrication. Compliant with ASTM B368, it features a powerful 3 HP motor, variable speed control (100-4000 ft/min), and compatibility with 2x72-inch abrasive belts, making it ideal for automotive, aerospace, and knifemaking industries.",
-          "categoryLabel": "Explore our heavy duty belt grinder solutions",
-          "buttons": [
-            { "text": "Discover Heavy Duty Belt Grinder", "variant": "primary" },
-            { "text": "Contact Our Experts", "variant": "secondary", "link": "/contact" }
-          ]
-        },
-        "semiAutomaticSection": {
-          "title": "Heavy Duty Belt Grinder",
-          "description": "Built for industrial demands, this grinder features a 3 HP motor, tilting steel chassis, and variable speed control for precise grinding. Compatible with ceramic, zirconia, and aluminum oxide belts, it handles tough materials like stainless steel, titanium, and composites, offering quick belt changes and horizontal/vertical configurations for versatility.",
-          "label": "Grinding Features"
-        },
-        "specialtySection": {
-          "title": "Specialty Grinding Solutions",
-          "description": "Engineered for heavy-duty tasks like knife profiling, convex grinding, and surface finishing, the grinder supports modular attachments, articulating work rests, and robust contact wheels. Its durable design ensures consistent performance in high-throughput environments, from custom metalwork to large-scale fabrication.",
-          "label": "Advanced Grinding Solutions"
-        },
-        "solutionsBanner": {
-          "title": "Comprehensive Grinding Solutions",
-          "description": "Explore our Solutions section for ASTM B368-compliant protocols, abrasive belt selection guides, and industry-specific applications to optimize your heavy duty belt grinder workflows.",
-          "image": "/productsListing/Heavy_Duty_Belt_Grinder_Solutions.png",
-          "label": "Tailored Grinding Solutions",
-          "buttons": [
-            { "text": "Solutions by Industry", "variant": "primary" },
-            { "text": "Solutions by Material", "variant": "secondary" }
-          ]
-        },
-        "slides": products
-          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
-          .slice(0, 3)
-          .map((p) => ({
-            "id": p.id,
-            "image": p.image,
-            "alt": p.alt,
-            "category": "Heavy Duty Belt Grinder",
-            "title": p.name,
-            "description": p.description,
-            "reviews": p.reviews,
-            "rating": p.rating
-          })),
-        "products": products
-          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
-          .map((p) => ({
-            "name": p.name,
-            "image": p.image
-          })),
-        "items": [
-          {
-            "id": 1,
-            "name": "Heavy Duty Belt Grinder",
-            "color": "rgba(80, 120, 150, 0.1)",
-            "bgColor": "rgba(80, 120, 150, 0.1)",
-            "subItems": products
-              .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
-              .map((p) => ({
-                "name": p.name,
-                "apiCall": p.apiCall
-              }))
-          }
-        ],
-        "productCards": products
-          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
-          .map((p) => ({
-            "id": p.id,
-            "name": p.name,
-            "tag": p.tag,
-            "description": p.description,
-            "image": p.image,
-            "detail": p.detail,
-            "delay": 0.1 * (p.id - 1)
-          })),
-        "specialtyProducts": [
-          {
-            "id": 1,
-            "name": "Standard Model",
-            "description": "Powerful 3 HP belt grinder with 2x72-inch belt, variable speed (100-4000 ft/min), and tilting chassis, optimized for high-volume grinding in industrial metalworking and knifemaking.",
-            "image": "/images/heavy-duty-belt-grinder/standard-model.png",
-            "delay": 0.1,
-            "animationX": -50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Vertical/Horizontal Model",
-            "description": "Versatile 3 HP belt grinder with dual horizontal/vertical configurations, ideal for complex grinding tasks like blade profiling and large-scale fabrication in heavy-duty environments.",
-            "image": "/images/heavy-duty-belt-grinder/vertical-horizontal-model.png",
-            "delay": 0.2,
-            "animationX": 50,
-            "buttons": [
-              { "text": "Product Details", "variant": "primary" },
-              { "text": "Technical Specs", "variant": "secondary" }
-            ]
-          }
-        ],
-        "subCategories": products
-          .filter((p) => p.categorySlug === "heavy-duty-belt-grinder")
-          .map((p) => ({
-            "id": p.slug,
-            "name": p.name
-          }))
-      },
-    ]
-  },
-  
-
   // mainCategory: "Other Machines"
   {
     mainCategory: "Other Machines",

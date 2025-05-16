@@ -150,14 +150,6 @@ const QueryAndMap = () => {
                             <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-md border border-[#0f7db7]/20">
                                 <GoogleMap />
                             </div>
-                            <div className="mt-3 p-3 bg-[#0f7db7]/10 rounded-lg text-sm">
-                                <p className="font-medium text-gray-700">
-                                    <strong>Office Location</strong>: 123 Business Park, Technology Avenue
-                                </p>
-                                <p className="text-gray-600">
-                                    <strong>Contact</strong>: +1 (555) 123-4567
-                                </p>
-                            </div>
                         </div>
                     </motion.div>
 

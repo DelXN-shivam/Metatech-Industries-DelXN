@@ -8,18 +8,18 @@ import { useInView } from 'react-intersection-observer';
 
 // Icons
 import { CheckCircle, ChevronRight, Globe, Award, Shield, Users } from 'lucide-react';
+import Experts from '../components/experts';
 
 const AboutUsPage = () => {
   // For parallax scrolling effect on hero section
   const { scrollY } = useScroll();
-  const heroBackgroundY = useTransform(scrollY, [0, 500], [0, 150]);
   const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
-  
+
   // For scroll-triggered animations
   const experienceControls = useAnimation();
   const servicesControls = useAnimation();
   const statsControls = useAnimation();
-  
+
   const [experienceRef, experienceInView] = useInView({ threshold: 0.2, triggerOnce: true });
   const [servicesRef, servicesInView] = useInView({ threshold: 0.1, triggerOnce: true });
   const [statsRef, statsInView] = useInView({ threshold: 0.3, triggerOnce: true });
@@ -75,7 +75,7 @@ const AboutUsPage = () => {
     visible: (custom) => ({
       opacity: 1,
       scale: 1,
-      transition: { 
+      transition: {
         duration: 0.5,
         delay: custom * 0.1,
         ease: [0.22, 1, 0.36, 1]
@@ -139,80 +139,8 @@ const AboutUsPage = () => {
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white overflow-hidden">
-      {/* Hero Section with Parallax */}
-      <section className="relative h-screen overflow-hidden">
-        {/* Parallax Background */}
-        <motion.div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ 
-            backgroundImage: "url('/images/about-us-bg-2.png')",
-            y: heroBackgroundY
-          }}
-        />
-        
-        {/* Overlay with gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-blue-900/50 z-0"></div>
-
-        {/* Content Container */}
-        <motion.div 
-          className="relative z-10 h-full flex flex-col"
-          style={{ opacity: heroOpacity }}
-        >
-
-          <div className="flex-grow flex flex-col md:flex-row items-center justify-center px-6 md:px-16 lg:px-24 max-w-7xl mx-auto">
-            <motion.div
-              className="md:w-1/2 flex justify-center mb-8 md:mb-0"
-              initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
-            >
-              <Image 
-                src="/images/40_Years_Image.png" 
-                alt="40 Years in Service" 
-                width={550} 
-                height={550} 
-                className="drop-shadow-2xl animate-pulse-slow" 
-              />
-            </motion.div>
-            
-            <motion.div 
-              className="md:w-1/2 text-white space-y-6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.8 }}
-            >
-              <div className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-sm font-medium mb-4">
-                Celebrating 40 Years of Excellence
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-300">
-                About Us
-              </h1>
-              <p className="text-lg md:text-xl leading-relaxed text-blue-100 max-w-lg">
-                At Metatech, we're not just a provider of Metallography solutions – we're your trusted partner in materials
-                analysis and innovation. With over 40 years of industry experience, we've honed our expertise to offer a comprehensive
-                suite of services and facilities that empower our clients to achieve their goals with confidence.
-              </p>
-              <motion.button 
-                className="mt-6 flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:shadow-lg hover:from-blue-600 hover:to-cyan-600 transition-all"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Learn Our Story <ChevronRight className="h-5 w-5" />
-              </motion.button>
-            </motion.div>
-          </div>
-          
-          {/* Scroll indicator */}
-          <motion.div 
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-          >
-            <div className="text-white text-sm mb-2">Scroll Down</div>
-            <div className="w-1 h-10 bg-gradient-to-b from-white to-transparent rounded-full"></div>
-          </motion.div>
-        </motion.div>
-      </section>
+      {/* Hero Section with image background and gradient */}
+      <Experts />
 
       {/* Vision and Mission Section */}
       <VisionMission />
@@ -227,7 +155,7 @@ const AboutUsPage = () => {
       >
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <motion.div 
+            <motion.div
               className="md:w-1/2"
               variants={fadeInUp}
             >
@@ -245,10 +173,10 @@ const AboutUsPage = () => {
                 educational institutions, and clients across the globe, we're dedicated to delivering reliable results and exceeding expectations.
                 Trust Metatech to be your partner in pushing the boundaries of materials analysis and achieving success in your endeavors.
               </p>
-              
+
               <div className="space-y-4">
                 {['Industry-leading expertise', 'Advanced analytical techniques', 'Dedicated support team'].map((item, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     className="flex items-center gap-3"
                     variants={itemFadeIn}
@@ -261,23 +189,23 @@ const AboutUsPage = () => {
                 ))}
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="md:w-1/2 relative"
               variants={scaleIn}
             >
               {/* Decorative elements */}
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-100 rounded-full blur-2xl opacity-70"></div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-cyan-100 rounded-full blur-3xl opacity-70"></div>
-              
+
               {/* Main image with hover effects */}
               <div className="relative z-10 rounded-2xl overflow-hidden group">
-                <Image 
-                  src="/images/experience.png" 
-                  alt="Our Experiences" 
-                  width={600} 
-                  height={450} 
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" 
+                <Image
+                  src="/images/experience.png"
+                  alt="Our Experiences"
+                  width={600}
+                  height={450}
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
@@ -297,19 +225,19 @@ const AboutUsPage = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="text-center"
                 custom={index}
                 variants={statCounter}
               >
-                <motion.div 
+                <motion.div
                   className="text-4xl md:text-5xl font-bold mb-2"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ 
+                  transition={{
                     duration: 2,
-                    delay: 0.5 + (index * 0.2) 
+                    delay: 0.5 + (index * 0.2)
                   }}
                 >
                   {stat.value}
@@ -340,8 +268,8 @@ const AboutUsPage = () => {
             Discover our comprehensive range of metallography and materials analysis services designed to meet the most demanding requirements.
           </p>
         </div>
-        
-        <motion.div 
+
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={staggerContainer}
         >
@@ -355,7 +283,7 @@ const AboutUsPage = () => {
               <div className="mb-6">{service.icon}</div>
               <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-6">{service.description}</p>
-              <motion.button 
+              <motion.button
                 className="flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -367,7 +295,7 @@ const AboutUsPage = () => {
         </motion.div>
 
         <div className="text-center mt-12">
-          <motion.button 
+          <motion.button
             className="px-8 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -394,7 +322,7 @@ const AboutUsPage = () => {
               What Our Clients Say
             </h2>
           </div>
-          
+
           <div className="flex flex-col md:flex-row gap-8">
             {[
               {
@@ -407,22 +335,22 @@ const AboutUsPage = () => {
                 quote: "The team's attention to detail and technical expertise is unmatched in the industry. Highly recommended.",
                 author: "Dr. Michael Chen",
                 position: "Research Director, Global Materials Institute",
-                image: "/api/placeholder/80/80"  
+                image: "/api/placeholder/80/80"
               }
             ].map((testimonial, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-white p-8 rounded-2xl shadow-lg"
                 variants={scaleIn}
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="h-14 w-14 rounded-full overflow-hidden">
-                    <Image 
-                      src={testimonial.image} 
-                      alt={testimonial.author} 
-                      width={80} 
-                      height={80} 
-                      className="object-cover" 
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.author}
+                      width={80}
+                      height={80}
+                      className="object-cover"
                     />
                   </div>
                   <div>
@@ -438,7 +366,7 @@ const AboutUsPage = () => {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section 
+      <motion.section
         className="py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white"
         initial="hidden"
         whileInView="visible"
@@ -450,7 +378,7 @@ const AboutUsPage = () => {
           <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
             Join the hundreds of organizations worldwide who trust Metatech for their materials analysis needs.
           </p>
-          <motion.button 
+          <motion.button
             className="px-8 py-3 bg-white text-blue-700 rounded-full font-medium hover:bg-blue-50 transition-colors shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -465,6 +393,3 @@ const AboutUsPage = () => {
 };
 
 export default AboutUsPage;
-
-// Add these to your globals.css or tailwind.config.js
-//

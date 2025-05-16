@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect,useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -133,9 +133,9 @@ export default function SubCategoryPage({ params: paramsPromise }) {
           <motion.div
             className={`w-full sm:w-80 bg-white border-r border-gray-100 h-screen overflow-y-auto lg:sticky lg:top-16 lg:h-[calc(100vh-64px)] z-40 transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
               } transition-transform duration-300 ease-in-out`}
-            // initial={{ x: -100, opacity: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
-            // transition={{ duration: 0.5 }}
+          // initial={{ x: -100, opacity: 0 }}
+          // animate={{ x: 0, opacity: 1 }}
+          // transition={{ duration: 0.5 }}
           >
             <Sidebar />
           </motion.div>
@@ -219,11 +219,22 @@ export default function SubCategoryPage({ params: paramsPromise }) {
                 <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 md:gap-8">
                   {/* Product Image Carousel */}
                   <motion.div
-                    className="w-full lg:w-1/2 relative bg-gradient-to-br from-[#0f7db7]/10 to-[#4babe5]/10 p-3 sm:p-4 md:p-6 rounded-xl shadow-md overflow-hidden flex flex-col items-center"
+                    className="w-full lg:w-1/2 relative p-3 sm:p-4 md:p-6 rounded-xl shadow-md overflow-hidden flex flex-col items-center"
                     whileHover={{ boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="space-y-3 sm:space-y-4 w-[85%]">
+                    {/* Added Logo in top-right corner */}
+                    {product.omnitechLogo && (
+                      <div className="absolute top-2 right-2 z-10 w-16 h-16 md:w-20 md:h-20">
+                        <img
+                          src={product.omnitechLogo}
+                          alt="Omnitech Logo"
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    )}
+
+                    <div className="space-y-3 sm:space-y-4 w-[120%]">
                       {/* Main Display Area */}
                       <motion.div
                         className="aspect-square w-[70%] mx-auto relative overflow-hidden rounded-lg"
@@ -387,115 +398,6 @@ export default function SubCategoryPage({ params: paramsPromise }) {
                 </div>
               </motion.div>
 
-              {/* Features Highlights */}
-              <motion.div
-                className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-              >
-                {[
-                  {
-                    title: 'High Performance',
-                    description: 'Optimized for high throughput and precision, ensuring consistent results across applications.',
-                    image: '/product/high-performance.png',
-                    icon: 'fas fa-tachometer-alt',
-                  },
-                  {
-                    title: 'User-Friendly Design',
-                    description: 'Intuitive controls and programmable settings for ease of use and repeatable outcomes.',
-                    image: '/product/user-friendly.png',
-                    icon: 'fas fa-tachometer-alt',
-                  },
-                  {
-                    title: 'Robust Construction',
-                    description: 'Built for durability and reliability in demanding industrial and laboratory environments.',
-                    image: '/product/robust-construction.png',
-                    icon: 'fas fa-tachometer-alt',
-                  },
-                  {
-                    title: 'Advanced Technology',
-                    description: 'Incorporates cutting-edge features for enhanced performance and efficiency.',
-                    image: '/product/advanced-technology.jpg',
-                    icon: 'fas fa-tachometer-alt',
-                  },
-                ].map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300"
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="h-40 relative overflow-hidden">
-                      <Image src={feature.image} alt={feature.title} fill className="object-cover" />
-                      <div className="absolute inset-0 bg-opacity-30 flex items-center justify-center p-6">
-                        <i className={`${feature.icon} text-white text-5xl`}></i>
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-lg font-bold mb-2 text-[#0f7db7]">{feature.title}</h3>
-                      <p className="text-gray-600">{feature.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-              {/* Ordering Section */}
-              {product.ordering && (
-                <motion.div
-                  className="mt-16"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <div className="flex items-center mb-6">
-                    <h2 className="text-2xl font-bold text-gray-800">Ordering</h2>
-                    <div className="flex-grow ml-4 h-0.5 bg-gradient-to-r from-[#0f7db7] to-transparent"></div>
-                  </div>
-                  <div className="overflow-x-auto">
-                    <table className="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md">
-                      <thead>
-                        <tr className="bg-gradient-to-r from-[#0f7db7] to-[#4babe5] text-white">
-                          <th className="py-3 px-4 text-left">Part Number</th>
-                          <th className="py-3 px-4 text-left">{product.name}</th>
-                          <th className="py-3 px-4 text-left">Voltage</th>
-                          <th className="py-3 px-4 text-left"></th>
-                        </tr>
-                      </thead>
-                      <tbody className="text-gray-700">
-                        {product.ordering.map((item, index) => (
-                          <motion.tr
-                            key={index}
-                            className={index % 2 === 0 ? 'bg-white hover:bg-[#0f7db7]/10' : 'bg-gray-50 hover:bg-[#0f7db7]/10'}
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                          >
-                            <td className="py-3 px-4 border-b">
-                              {item.part}
-                            </td>
-                            <td className="py-3 px-4 border-b">
-                              {item.mold ? `with ${item.mold}` : item.wheel ? `with ${item.wheel}` : ''}
-                            </td>
-                            <td className="py-3 px-4 border-b">{item.voltage}</td>
-                            <td className="py-3 px-4 border-b">
-                              <motion.button
-                                className="bg-[#0f7db7] text-white px-4 py-2 rounded hover:bg-[#4babe5] transition duration-300 shadow"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                              >
-                                REQUEST A QUOTE
-                              </motion.button>
-                            </td>
-                          </motion.tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </motion.div>
-              )}
-
               {/* Consumables and Accessories */}
               {product.consumables && product.literature && (
                 <div className="mt-16 flex flex-col md:flex-row gap-8">
@@ -656,129 +558,6 @@ export default function SubCategoryPage({ params: paramsPromise }) {
                   </div>
                 </motion.div>
               )}
-
-              {/* Videos Section */}
-              <motion.div
-                className="mt-16"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="flex items-center mb-6">
-                  <h2 className="text-2xl font-bold text-gray-800">Videos</h2>
-                  <div className="flex-grow ml-4 h-0.5 bg-gradient-to-r from-[#0f7db7] to-transparent"></div>
-                </div>
-                <div className="flex flex-col lg:flex-row">
-                  {/* Main Video Player */}
-                  <div className="lg:w-2/3 relative bg-black aspect-video">
-                    <video
-                      key={`video-${activeVideoIndex}`}
-                      className="absolute inset-0 w-full h-full object-contain bg-black"
-                      autoPlay
-                      controls
-                      muted
-                      onEnded={() => setIsVideoPlaying(false)}
-                      onPlay={() => setIsVideoPlaying(true)}
-                      onPause={() => setIsVideoPlaying(false)}
-                    >
-                      <source src={`/product/video${activeVideoIndex + 1}.mp4`} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                    {!isVideoPlaying && (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10 bg-black bg-opacity-70">
-                        <motion.div
-                          className="text-center px-8"
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.2 }}
-                        >
-                          <h3 className="text-3xl font-bold mb-3 text-[#0f7db7]">{product.name}</h3>
-                          <p className="mb-6 text-lg text-[#4babe5]">{videoThumbnails[activeVideoIndex].title}</p>
-                          <motion.button
-                            className="bg-[#0f7db7] text-white px-8 py-3 rounded-full flex items-center mx-auto hover:bg-[#4babe5] transition duration-300"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={() => {
-                              const videoElement = document.querySelector('video');
-                              videoElement.play();
-                              setIsVideoPlaying(true);
-                            }}
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="h-6 w-6 mr-2"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                            Play Video
-                          </motion.button>
-                        </motion.div>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Separator with Gradient */}
-                  <div className="hidden lg:flex flex-col items-center mx-4">
-                    <div className="w-px h-full bg-gradient-to-b from-transparent via-[#0f7db7] to-transparent opacity-50"></div>
-                    <div className="absolute top-1/2 -translate-y-1/2 bg-[#0f7db7] rounded-full p-2 shadow-lg">
-                      <i className="fas fa-play text-white text-sm"></i>
-                    </div>
-                  </div>
-
-                  {/* Video List */}
-                  <div className="lg:w-1/3 bg-gradient-to-br from-gray-800 to-gray-900 p-4 overflow-y-auto max-h-[600px] border-l border-gray-700">
-                    <h3 className="text-white mb-4 font-semibold flex items-center">
-                      <i className="fas fa-list-ul mr-2 text-[#0f7db7]"></i>
-                      Related Videos
-                    </h3>
-                    <div className="space-y-4">
-                      {videoThumbnails.map((video, index) => (
-                        <motion.div
-                          key={video.id}
-                          className={`cursor-pointer group ${index === activeVideoIndex ? 'ring-2 ring-[#0f7db7]' : ''}`}
-                          whileHover={{ scale: 1.02 }}
-                          onClick={() => {
-                            setActiveVideoIndex(index);
-                            setIsVideoPlaying(true);
-                            setTimeout(() => {
-                              const videoElement = document.querySelector('video');
-                              videoElement.play();
-                            }, 100);
-                          }}
-                        >
-                          <div className="relative aspect-video bg-gray-700 overflow-hidden rounded-lg">
-                            <video
-                              className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                              muted
-                              preload="metadata"
-                            >
-                              <source src={`/product/video${index + 1}.mp4#t=0.5`} type="video/mp4" />
-                            </video>
-                            <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                              <div className="bg-[#0f7db7] bg-opacity-80 rounded-full p-2">
-                                <i className="fas fa-play text-white"></i>
-                              </div>
-                            </div>
-                            <div className="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs py-1 px-2 rounded">
-                              {video.duration}
-                            </div>
-                          </div>
-                          <div className="mt-2">
-                            <h4 className="text-white text-sm font-medium truncate">{video.title}</h4>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </div>
         </div>
