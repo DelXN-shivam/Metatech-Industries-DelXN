@@ -648,8 +648,8 @@ const Header = () => {
           </div>
 
           {/* Login Button & Mobile Menu Toggle */}
-          <div className="flex items-center gap-2">
-            <Link
+          {/* <div className="flex items-center gap-2"> */}
+            {/* <Link
               href="/login"
               className={`hidden md:flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${scrollProgress > 0.5
                 ? 'text-white bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 shadow-sm hover:shadow'
@@ -658,10 +658,10 @@ const Header = () => {
             >
               <FaUserCircle className="text-lg" />
               <span>Login</span>
-            </Link>
+            </Link> */}
 
             {/* Mobile Menu Button */}
-            <button
+            {/* <button
               className="md:hidden p-2 rounded-lg transition-colors duration-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
@@ -681,8 +681,8 @@ const Header = () => {
                   <path d="M4 6h16M4 12h16M4 18h16" />
                 )}
               </svg>
-            </button>
-          </div>
+            </button> */}
+          {/* </div> */}
         </div>
       </div>
 
@@ -928,7 +928,7 @@ const Header = () => {
                 </nav>
 
                 {/* Mobile Login Button */}
-                <div className="pt-4 mt-auto border-t border-gray-100">
+                {/* <div className="pt-4 mt-auto border-t border-gray-100">
                   <Link
                     href="/login"
                     className="flex items-center justify-center gap-2 w-full py-3 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition-colors"
@@ -937,7 +937,7 @@ const Header = () => {
                     <FaUserCircle />
                     <span className="font-medium">Login to Your Account</span>
                   </Link>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </>
